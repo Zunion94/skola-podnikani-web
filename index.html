@@ -39,7 +39,7 @@
             const hotove = s ? Object.values(s.kapitoly).filter(Boolean).length : 0;
             info = s ? `${hotove}/${s.pocetKapitol} kapitol` + (s.test ? ` · test ${s.test.nejlepsi} %` : "") : "nezačato";
           }
-          const obsah = [el("span", { class: "tema__cislo" }, String(t.c)), el("span", { class: "tema__nazev" }, t.nazev), el("span", { class: "tema__stav" }, info)];
+          const obsah = [el("span", { class: "tema__cislo" }, String(t.c)), el("span", { class: "tema__nazev" }, t.nazev, t.pozadavky ? el("span", { class: "tema__pozadavky" }, t.pozadavky.join(" · ")) : null), el("span", { class: "tema__stav" }, info)];
           seznam.append(el("li", {}, t.soubor
             ? el("a", { class: "tema", href: t.soubor }, obsah)
             : el("div", { class: "tema tema--chysta" }, obsah)));

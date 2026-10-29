@@ -5,6 +5,7 @@
    Stránka tématu jen napíše obsah s data-atributy, tenhle soubor:
    - vyrobí horní lištu, obsah kapitol a ukazatel průběhu
    - přidá odkaz na zdrojové PDF (data-zdroj na <main>)
+   - vypíše maturitní požadavky z katalogu a propojí je s kapitolami (data-pozadavky)
    - přidá tlačítka „Mám prostudováno" ke kapitolám
    - oživí komponenty: data-flip, data-zalozky, data-tridicka, data-karticky, data-test
    - ukládá postup do localStorage (klíč "ucebna:v1")
@@ -145,6 +146,8 @@
       tlObsah.setAttribute("aria-expanded", String(!skryt));
     });
 
+    const pozadavky = initPozadavky(main, id, kapitoly, t);
+
     // Kapitoly: číslo, položka obsahu, tlačítko „hotovo"
     const odkazy = {};
     kapitoly.forEach((k, i) => {
@@ -166,11 +169,13 @@
       };
       b.addEventListener("click", () => {
         t.data.kapitoly[k.id] = !t.data.kapitoly[k.id];
-        t.uloz(); obnov();
+        t.uloz(); obnov(); pozadavky.obnov();
       });
       k.append(b);
       obnov();
     });
+
+    pozadavky.obnov();
 
     // Ukazatel čtení
     const naScroll = () => {
@@ -179,6 +184,63 @@
     };
     addEventListener("scroll", naScroll, { passive: true });
     naScroll();
+  }
+
+  /* ---------- Maturitní požadavky ----------
+     Text bere z window.KATALOG (assets/katalog.js), kapitoly se k nim hlásí
+     atributem data-pozadavky="1 2 3" (čísla bodů od 1). */
+  function initPozadavky(main, id, kapitoly, t) {
+    const nic = { obnov() {} };
+    const tema = (window.KATALOG || []).flatMap((p) => p.temata).find((x) => x.id === id);
+    if (!tema || !tema.pozadavky) return nic;
+
+    // Který bod pokrývají které kapitoly
+    const pokryti = tema.pozadavky.map(() => []);
+    kapitoly.forEach((k) => {
+      const cisla = (k.dataset.pozadavky || "").split(/[\s,]+/).filter(Boolean).map(Number);
+      cisla.forEach((n) => {
+        if (pokryti[n - 1]) pokryti[n - 1].push(k);
+        else console.warn(`Kapitola #${k.id} odkazuje na neexistující požadavek ${n}`);
+      });
+      // Štítky pod nadpisem kapitoly
+      if (cisla.length) {
+        const h2 = $("h2", k);
+        const radek = el("p", { class: "kapitola__pozadavky" }, el("span", {}, "Maturita:"),
+          cisla.filter((n) => tema.pozadavky[n - 1]).map((n) => el("span", { class: "pozadavek-stitek" }, tema.pozadavky[n - 1])));
+        h2 ? h2.after(radek) : k.prepend(radek);
+      }
+    });
+
+    const souhrn = el("span", { class: "pozadavky__stav" });
+    const polozky = tema.pozadavky.map((text, i) => {
+      const li = el("li", {}, el("span", { class: "pozadavky__text" }, text),
+        pokryti[i].length
+          ? el("span", { class: "pozadavky__odkazy" }, pokryti[i].map((k) =>
+              el("a", { href: "#" + k.id }, "→ " + ($("h2", k) ? $("h2", k).textContent.replace(/^\d+/, "").trim() : k.id))))
+          : el("span", { class: "pozadavky__chybi" }, "na stránce chybí"));
+      return li;
+    });
+    pokryti.forEach((p, i) => { if (!p.length) console.warn(`Maturitní požadavek ${i + 1} „${tema.pozadavky[i]}" nepokrývá žádná kapitola`); });
+
+    const box = el("details", { class: "odhal pozadavky" },
+      el("summary", {}, "📋 Maturitní požadavky ", souhrn),
+      el("div", { class: "odhal__obsah" },
+        el("p", { class: "ztlumene", style: "font-size:.9rem" }, "Oficiální body k otázce. ✓ = prostudoval/a jsi všechny kapitoly, které bod pokrývají."),
+        el("ol", {}, polozky)));
+    const cile = $(".hlavicka .cile", main);
+    if (cile) cile.after(box); else ($(".hlavicka", main) || main).append(box);
+
+    return {
+      obnov() {
+        let hotovo = 0;
+        polozky.forEach((li, i) => {
+          const h = pokryti[i].length > 0 && pokryti[i].every((k) => t.data.kapitoly[k.id]);
+          li.classList.toggle("hotovo", h);
+          if (h) hotovo++;
+        });
+        souhrn.textContent = `${hotovo}/${polozky.length}`;
+      },
+    };
   }
 
   /* ---------- Otočná karta: <div class="karta" data-flip> ---------- */

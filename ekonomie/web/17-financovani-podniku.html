@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>17. Financování podniku – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-17" data-nazev="17. Financování podniku" data-zpet="../../index.html" data-zdroj="../pdf/17 Financování podniku.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 17</span>
+    <h1>Financování podniku</h1>
+    <p class="hlavicka__perex">Odkud podnik bere peníze, komu patří a jak hlídat, aby mu nikdy nedošly. Vlastní a cizí kapitál, platební schopnost a cash flow.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>vysvětlit, co je <strong>financování</strong>, a rozdělit ho podle <strong>tří hledisek</strong></li>
+        <li>popsat <strong>běžné a mimořádné</strong> financování a financování při <strong>zakládání, rozšiřování a rušení</strong> podniku</li>
+        <li>vyjmenovat složky <strong>vlastního</strong> a <strong>cizího kapitálu</strong> a porovnat jejich výhody a rizika</li>
+        <li>vysvětlit <strong>platební schopnost</strong> a <strong>druhotnou platební neschopnost</strong></li>
+        <li>popsat <strong>cash flow</strong> a jeho tři části</li>
+        <li>vyjmenovat <strong>peněžní vztahy</strong> podniku s okolím</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Co je financování ===== -->
+  <section class="kapitola" id="uvod">
+    <h2>Co je financování</h2>
+    <div class="box box--definice">
+      <p><strong>Financování podniku</strong> je získávání a optimální vynakládání finančních zdrojů.</p>
+    </div>
+    <p>Dnes se pro finanční hospodaření podniku používá spíš termín <strong>řízení finančních zdrojů</strong>. Je to hlavní součást řízení podniku, má ho na starosti <strong>vrcholový management</strong> a cílem je <strong>finanční stabilita podniku</strong>. Z finanční situace se dá dobře vyčíst, jak podnik hospodaří.</p>
+
+    <h3>Jak poznat, že se financování daří</h3>
+    <p>Používá se pět ukazatelů. Klepni na kartu.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Solventnost</div>
+        <div class="karta__rub"><p style="margin:0">Množství financí, které má podnik k dispozici.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Stupeň zadluženosti</div>
+        <div class="karta__rub"><p style="margin:0">Kolik cizích zdrojů podnik používá.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Cash flow</div>
+        <div class="karta__rub"><p style="margin:0">Plánování toku peněz – kolik peněz přitéká a odtéká.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Likvidita</div>
+        <div class="karta__rub"><p style="margin:0">Zda je podnik schopný <strong>okamžitě</strong> hradit své závazky.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Finanční stabilita</div>
+        <div class="karta__rub"><p style="margin:0">Schopnost dosahovat výnosnosti v poměru k vloženému kapitálu – <strong>rentabilita</strong>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. Druhy financování ===== -->
+  <section class="kapitola" id="druhy" data-pozadavky="1">
+    <h2>Druhy financování</h2>
+    <p>Financování se třídí podle tří hledisek. Ta se navzájem <strong>prolínají</strong> – jedno financování má vždycky všechny tři vlastnosti najednou.</p>
+    <div data-zalozky>
+      <section data-zalozka="Původ kapitálu">
+        <p>Komu peníze patří?</p>
+        <ul>
+          <li>financování <strong>vlastním</strong> kapitálem</li>
+          <li>financování <strong>cizím</strong> kapitálem</li>
+        </ul>
+      </section>
+      <section data-zalozka="Pravidelnost">
+        <p>Jak často se to děje?</p>
+        <ul>
+          <li>financování <strong>běžné</strong></li>
+          <li>financování <strong>mimořádné</strong></li>
+        </ul>
+      </section>
+      <section data-zalozka="Doba">
+        <p>Na jak dlouho má podnik kapitál k dispozici?</p>
+        <ul>
+          <li><strong>krátkodobé</strong> – do 1 roku</li>
+          <li><strong>dlouhodobé</strong> – nad 1 rok</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="simulace" id="urci-druh">
+      <p style="margin-top:0"><strong>Urči druh financování:</strong> u každé situace vyber ve všech třech řádcích.</p>
+      <div class="urci__seznam"></div>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="kontrola">Zkontrolovat</button>
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+        <span class="vysledek" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. Běžné a mimořádné financování ===== -->
+  <section class="kapitola" id="bezne-mimoradne" data-pozadavky="3 4 5 6">
+    <h2>Běžné a mimořádné financování</h2>
+    <p>Financování se uskutečňuje ve čtyřech situacích:</p>
+    <ol>
+      <li>při <strong>zakládání</strong> podniku</li>
+      <li>při <strong>běžné činnosti</strong> podniku</li>
+      <li>při <strong>rozšiřování</strong> podniku</li>
+      <li>při <strong>rušení</strong> podniku</li>
+    </ol>
+    <p>Běžná činnost je <em>běžné</em> financování, ostatní tři jsou <em>mimořádné</em>. Podklady je jen vyjmenovávají, proto je níž doplněné vysvětlení.</p>
+
+    <div class="mrizka">
+      <div class="box box--doplneno" style="margin:0">
+        <h3 style="margin-top:0">Běžné financování</h3>
+        <p>Zajišťuje <strong>plynulý chod</strong> podniku – nákup materiálu a zboží, mzdy, energie, nájem. Opakuje se pravidelně. Kryje se hlavně z <strong>tržeb</strong>, při výkyvech krátkodobými zdroji (např. kontokorentní úvěr, odložená splatnost faktur).</p>
+      </div>
+      <div class="box box--doplneno" style="margin:0">
+        <h3 style="margin-top:0">Mimořádné financování</h3>
+        <p><strong>Jednorázové</strong>, při zvláštních událostech – založení, rozšíření, přeměna (fúze), ozdravení nebo zrušení podniku. Jde o velké částky, obvykle z <strong>dlouhodobých</strong> zdrojů.</p>
+      </div>
+    </div>
+
+    <h3>Mimořádné financování v životě podniku</h3>
+    <div data-zalozky>
+      <section data-zalozka="🌱 Zakládání">
+        <div class="box box--doplneno" style="margin:0">
+          <p>Nejdřív se zjistí, <strong>kolik peněz je potřeba</strong> – na dlouhodobý majetek (stroje, vybavení), počáteční zásoby, provoz do prvních tržeb a zakladatelské výdaje (poplatky, registrace).</p>
+          <p>Zdroje:</p>
+          <ul>
+            <li><strong>vklady zakladatelů</strong> – peněžité i nepeněžité, tvoří <strong>základní kapitál</strong></li>
+            <li>úvěr, leasing, dotace</li>
+          </ul>
+          <p>Nový podnik dostává úvěr těžko – banka nemá podle čeho posoudit, jestli bude splácet. Proto je na začátku hlavní vlastní kapitál.</p>
+        </div>
+      </section>
+      <section data-zalozka="📈 Rozšiřování">
+        <div class="box box--doplneno" style="margin:0">
+          <p>Nová hala, další stroje, vstup na nový trh. Zdroje:</p>
+          <ul>
+            <li><strong>samofinancování</strong> – z vlastních vnitřních zdrojů: nerozdělený zisk, odpisy</li>
+            <li><strong>zvýšení základního kapitálu</strong> – nové vklady společníků, emise nových akcií</li>
+            <li><strong>cizí zdroje</strong> – dlouhodobé úvěry, dluhopisy, leasing</li>
+          </ul>
+        </div>
+      </section>
+      <section data-zalozka="🔚 Rušení">
+        <div class="box box--doplneno" style="margin:0">
+          <ul>
+            <li><strong>Likvidace</strong> – likvidátor prodá majetek, z výtěžku <strong>nejdřív uhradí závazky</strong> (věřitelům) a teprve zbytek – <strong>likvidační zůstatek</strong> – dostanou společníci.</li>
+            <li><strong>Úpadek (insolvence)</strong> – podnik nemá na zaplacení dluhů. Majetek prodá insolvenční správce a věřitelé dostanou jen poměrnou část svých pohledávek (konkurs).</li>
+            <li><strong>Bez likvidace</strong> – při fúzi nebo rozdělení přejde majetek i dluhy na nástupnický podnik.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ===== 4. Vlastní kapitál ===== -->
+  <section class="kapitola" id="vlastni-kapital" data-pozadavky="2">
+    <h2>Vlastní kapitál</h2>
+    <div class="box box--definice">
+      <p><strong>Vlastní kapitál</strong> patří majiteli podniku a je základem podnikání. Jeho podíl na celkovém kapitálu ukazuje <strong>finanční jistotu a nezávislost</strong> podniku.</p>
+    </div>
+    <p>Není stálý – mění se podle výsledku hospodaření. Když má podnik zisk a majitelé si ho celý nevyplatí, vlastní kapitál <strong>roste</strong>. Při ztrátě <strong>klesá</strong>.</p>
+
+    <h3>Z čeho se skládá</h3>
+    <details class="odhal" open>
+      <summary>1) Základní kapitál (základní jmění)</summary>
+      <div class="odhal__obsah">
+        <p>Co podnikatel vloží do podnikání hned na začátku – peněžité a nepeněžité vklady společníků, případně kapitál z upsání akcií.</p>
+        <div class="mrizka" style="margin:8px 0">
+          <div class="ukazatel"><small>Akciová společnost</small><b>2 000 000 Kč</b></div>
+          <div class="ukazatel"><small>s.r.o.</small><b>1 Kč</b></div>
+          <div class="ukazatel"><small>Ostatní společnosti</small><b>libovolně</b></div>
+        </div>
+        <p>U a.s. a s.r.o. se vytváří <strong>povinně při založení</strong>.</p>
+        <ul>
+          <li><strong>zvyšuje se</strong> novými vklady společníků, přídělem z nerozděleného zisku, emisí nových akcií</li>
+          <li><strong>snižuje se</strong> jen do zákonného minima – když se snižují aktiva podniku nebo když vznikla ztráta, kterou nejde uhradit z rezervního fondu</li>
+        </ul>
+      </div>
+    </details>
+    <details class="odhal">
+      <summary>2) Kapitálové fondy</summary>
+      <div class="odhal__obsah">
+        <p>Podnik je vytváří vlastní činností. Patří sem hlavně <strong>emisní ážio</strong> (u a.s.) a další fondy – z dalších vkladů majitelů, fond darů apod.</p>
+        <div class="box box--definice"><p><strong>Emisní ážio</strong> = rozdíl mezi skutečnou prodejní (tržní) cenou akcií a jejich nominální hodnotou. Vzniká při emisi akcií.</p></div>
+      </div>
+    </details>
+    <details class="odhal">
+      <summary>3) Fondy ze zisku</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>Rezervní fond</strong> – povinně ze zákona (a.s., s.r.o.), nebo dobrovolně podle stanov. Pojistka proti nečekaným rizikům, kryje ztráty a pomáhá překonat špatné období.</li>
+          <li><strong>Statutární fondy</strong> – na konkrétní potřeby, např. sociální fond pro zaměstnance (FKSP), fond technického rozvoje.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="odhal">
+      <summary>4) Zisk</summary>
+      <div class="odhal__obsah">
+        <p>Část čistého zisku po zdanění, která se <strong>nerozdělí mezi majitele</strong> a slouží k rozvoji podnikání. Patří sem nerozdělený zisk běžného roku i minulých let, případně neuhrazená ztráta.</p>
+      </div>
+    </details>
+
+    <div class="simulace" id="azio">
+      <p style="margin-top:0"><strong>Spočítej emisní ážio:</strong></p>
+      <div class="posuvnik"><label for="az-n">Počet vydaných akcií</label><output id="az-n-o"></output><input id="az-n" type="range" min="1000" max="20000" step="1000" value="5000"></div>
+      <div class="posuvnik"><label for="az-nom">Nominální hodnota akcie</label><output id="az-nom-o"></output><input id="az-nom" type="range" min="100" max="2000" step="100" value="1000"></div>
+      <div class="posuvnik"><label for="az-cena">Prodejní (tržní) cena akcie</label><output id="az-cena-o"></output><input id="az-cena" type="range" min="100" max="3000" step="50" value="1300"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Do základního kapitálu</small><b id="az-zk"></b></div>
+        <div class="ukazatel"><small>Emisní ážio</small><b id="az-az"></b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Cizí kapitál ===== -->
+  <section class="kapitola" id="cizi-kapital" data-pozadavky="2">
+    <h2>Cizí kapitál</h2>
+    <div class="box box--definice">
+      <p><strong>Cizí kapitál</strong> jsou závazky podniku, které musí v určené době splatit.</p>
+    </div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Dlouhodobý – nad 1 rok</h3>
+        <ul>
+          <li>dlouhodobé bankovní úvěry</li>
+          <li>emise podnikových dluhopisů</li>
+          <li>leasingové dluhy</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Krátkodobý – do 1 roku</h3>
+        <ul>
+          <li>krátkodobé bankovní úvěry</li>
+          <li>závazky vůči dodavatelům – neuhrazené faktury</li>
+          <li>zálohy přijaté od odběratelů</li>
+          <li>krátkodobé půjčky od jiných věřitelů</li>
+          <li>závazky vůči zaměstnancům – nevyplacené mzdy</li>
+          <li>závazky vůči státu – neodvedené daně</li>
+          <li>výdaje příštích období</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box--tip">
+      <p>Cizí kapitál <strong>není zadarmo</strong> – platí se <strong>úrok</strong> a další výdaje (poplatky, provize). Používá se, když <strong>nestačí vlastní kapitál</strong>. Kdo ho poskytne, <strong>nezíská žádné řídicí pravomoci</strong> – banka do vedení firmy nemluví.</p>
+    </div>
+    <div class="box box--pozor">
+      <p>Cizí kapitál <strong>zvyšuje zadluženost</strong> a tím <strong>snižuje finanční stabilitu</strong>. Každý další dluh se získává hůř – věřitelé se bojí o peníze a banka kontroluje, na co půjčku podnik použije.</p>
+    </div>
+
+    <h3>Proč je cizí kapitál rizikovější</h3>
+    <p>Ve „špatných časech“ se podíly na zisku vyplácet nemusí – <strong>splátky úvěru ale ano</strong>. Porovnej dvě firmy:</p>
+    <div class="simulace" id="riziko">
+      <div class="posuvnik"><label for="ri-v">Jak se letos dařilo – výsledek před splátkami</label><output id="ri-v-o"></output><input id="ri-v" type="range" min="-400" max="1200" step="20" value="800"></div>
+      <div class="mrizka" style="margin-bottom:0">
+        <div class="ukazatel">
+          <small>Firma A – jen vlastní kapitál</small>
+          <b id="ri-a"></b>
+          <p id="ri-a-t" style="margin:.3em 0 0;font-size:.88rem"></p>
+        </div>
+        <div class="ukazatel">
+          <small>Firma B – s úvěrem (splátka + úrok 450 tis. Kč ročně)</small>
+          <b id="ri-b"></b>
+          <p id="ri-b-t" style="margin:.3em 0 0;font-size:.88rem"></p>
+        </div>
+      </div>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Vlastní, nebo cizí kapitál? A jestli cizí – krátkodobý, nebo dlouhodobý?",
+        "kose": ["Vlastní kapitál", "Dlouhodobý cizí", "Krátkodobý cizí"],
+        "polozky": [
+          ["základní kapitál", 0], ["emisní ážio", 0], ["rezervní fond", 0], ["nerozdělený zisk minulých let", 0],
+          ["úvěr na 5 let", 1], ["vydané dluhopisy", 1], ["leasingové dluhy", 1],
+          ["neuhrazená faktura dodavateli", 2], ["nevyplacené mzdy", 2], ["neodvedené daně", 2], ["záloha od odběratele", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 6. Platební schopnost ===== -->
+  <section class="kapitola" id="platebni-schopnost" data-pozadavky="7">
+    <h2>Zajišťování platební schopnosti</h2>
+    <div class="box box--definice">
+      <p><strong>Platební schopnost</strong> je stav, kdy podnik dokáže hradit své závazky – je <strong>solventní (likvidní)</strong>. Opakem je <strong>platební neschopnost</strong> – podnik nemá na zaplacení svých závazků.</p>
+    </div>
+
+    <h3>Druhotná platební neschopnost</h3>
+    <p>Podnik nemůže platit, ne protože by špatně hospodařil, ale <strong>protože jemu dluží jiné podniky</strong>. Klikni a sleduj, jak se problém šíří:</p>
+    <div class="simulace" id="retez">
+      <div class="retez"></div>
+      <p class="retez__text" style="margin-bottom:0"></p>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="dalsi">Odběratel nezaplatí</button>
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+      </div>
+    </div>
+
+    <div class="box box--tip">
+      <p>Jak se platební neschopnosti bránit: hlídat <strong>cash flow</strong> a porovnávat <strong>dobu obratu závazků</strong> s <strong>dobou obratu pohledávek</strong>. Ideální je, když odběratelé zaplatí <em>dřív</em>, než musí podnik platit dodavatelům.</p>
+    </div>
+  </section>
+
+  <!-- ===== 7. Cash flow ===== -->
+  <section class="kapitola" id="cash-flow" data-pozadavky="8">
+    <h2>Plánování peněžních toků (cash flow)</h2>
+    <div class="box box--definice">
+      <p><strong>Cash flow</strong> je přehled (porovnání) <strong>příjmů a výdajů</strong> za určité období. Sleduje se změna stavu peněžních prostředků.</p>
+    </div>
+    <div data-zalozky>
+      <section data-zalozka="Provozní činnost">
+        <p>Peníze spojené s <strong>provozem</strong> podniku – čistý provozní zisk, změny pohledávek, závazků, zásob.</p>
+      </section>
+      <section data-zalozka="Investiční činnost">
+        <p>Hlavně <strong>nákup a prodej dlouhodobého majetku</strong> – stroje, budovy, patenty.</p>
+      </section>
+      <section data-zalozka="Financování">
+        <p>Toky, které <strong>mění velikost kapitálu</strong> – čerpání a splácení úvěrů, emise dluhopisů a akcií, splácení dluhopisů, výplata dividend.</p>
+      </section>
+    </div>
+
+    <div class="simulace" id="cf">
+      <p style="margin-top:0"><strong>Naplánuj rok:</strong> podnik začíná se 200 tis. Kč na účtu.</p>
+      <div class="posuvnik"><label for="cf-p">CF z provozní činnosti</label><output id="cf-p-o"></output><input id="cf-p" type="range" min="-500" max="1000" step="20" value="300"></div>
+      <div class="posuvnik"><label for="cf-i">CF z investiční činnosti (koupě nového stroje = minus)</label><output id="cf-i-o"></output><input id="cf-i" type="range" min="-1000" max="300" step="20" value="-600"></div>
+      <div class="posuvnik"><label for="cf-f">CF z financování (úvěr = plus, splátka a dividendy = minus)</label><output id="cf-f-o"></output><input id="cf-f" type="range" min="-500" max="1000" step="20" value="200"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Na začátku</small><b>200 tis.</b></div>
+        <div class="ukazatel"><small>Změna za rok</small><b id="cf-z"></b></div>
+        <div class="ukazatel"><small>Na konci roku</small><b id="cf-k"></b></div>
+      </div>
+      <p id="cf-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Do které části cash flow patří?",
+        "kose": ["Provozní činnost", "Investiční činnost", "Financování"],
+        "polozky": [
+          ["příjem od odběratele za výrobky", 0], ["výplata mezd", 0], ["zaplacení faktury za materiál", 0],
+          ["nákup nového stroje", 1], ["prodej staré budovy", 1], ["nákup patentu", 1],
+          ["čerpání bankovního úvěru", 2], ["splátka úvěru", 2], ["výplata dividend", 2], ["emise akcií", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Peněžní vztahy ===== -->
+  <section class="kapitola" id="penezni-vztahy" data-pozadavky="9">
+    <h2>Peněžní vztahy podniku</h2>
+    <p>Tohle téma v podkladech chybí. Jde o to, <strong>s kým si podnik vyměňuje peníze</strong> – komu platí a od koho peníze dostává.</p>
+    <div class="box box--doplneno">
+      <p>Klepni na partnera a uvidíš, jaké peníze mezi ním a podnikem tečou.</p>
+      <div class="mrizka" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+        <div class="karta" data-flip><div class="karta__lic">🏛️ Stát</div><div class="karta__rub"><p style="margin:0"><b>Podnik platí:</b> daně, sociální a zdravotní pojištění, cla.<br><b>Dostává:</b> dotace, vratky DPH.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">🏦 Banky</div><div class="karta__rub"><p style="margin:0"><b>Platí:</b> splátky úvěrů, úroky, poplatky.<br><b>Dostává:</b> úvěry, úroky z vkladů.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">🚚 Dodavatelé</div><div class="karta__rub"><p style="margin:0"><b>Platí:</b> faktury za materiál, zboží a služby, zálohy.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">🛒 Odběratelé</div><div class="karta__rub"><p style="margin:0"><b>Dostává:</b> platby za výrobky a služby, přijaté zálohy.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">👷 Zaměstnanci</div><div class="karta__rub"><p style="margin:0"><b>Platí:</b> mzdy, zálohy, cestovní náhrady.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">👔 Vlastníci</div><div class="karta__rub"><p style="margin:0"><b>Dostává:</b> vklady do podniku.<br><b>Platí:</b> podíly na zisku, dividendy.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">🛡️ Pojišťovny</div><div class="karta__rub"><p style="margin:0"><b>Platí:</b> pojistné.<br><b>Dostává:</b> pojistné plnění při škodě.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 9. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – financování podniku",
+        "karty": [
+          ["Financování podniku", "Získávání a optimální vynakládání finančních zdrojů."],
+          ["Kdy se financování uskutečňuje", "Při zakládání, běžné činnosti, rozšiřování a rušení podniku."],
+          ["3 hlediska druhů financování", "Původ kapitálu (vlastní / cizí), pravidelnost (běžné / mimořádné), doba (krátkodobé do 1 roku / dlouhodobé nad 1 rok)."],
+          ["5 ukazatelů úspěšnosti financování", "Solventnost, stupeň zadluženosti, cash flow, likvidita, finanční stabilita (rentabilita)."],
+          ["Vlastní kapitál", "Patří majiteli, základ podnikání. Ukazuje finanční jistotu a nezávislost. Roste se ziskem, klesá se ztrátou."],
+          ["Složky vlastního kapitálu", "Základní kapitál, kapitálové fondy, fondy ze zisku, zisk."],
+          ["Minimální základní kapitál", "a.s. 2 mil. Kč, s.r.o. 1 Kč, ostatní libovolně."],
+          ["Emisní ážio", "Rozdíl mezi prodejní (tržní) cenou akcií a jejich nominální hodnotou."],
+          ["Rezervní fond", "Fond ze zisku – pojistka proti rizikům, kryje ztráty. Povinný u a.s. a s.r.o."],
+          ["Cizí kapitál", "Závazky, které podnik musí v určené době splatit. Stojí úrok + poplatky, věřitel nemá řídicí pravomoci."],
+          ["Dlouhodobý cizí kapitál", "Nad 1 rok: dlouhodobé úvěry, dluhopisy, leasingové dluhy."],
+          ["Krátkodobý cizí kapitál", "Do 1 roku: krátkodobé úvěry, neuhrazené faktury, přijaté zálohy, nevyplacené mzdy, neodvedené daně…"],
+          ["Proč je cizí kapitál rizikovější", "Zvyšuje zadluženost, snižuje stabilitu; splátky se musí platit i ve ztrátě."],
+          ["Platební schopnost", "Podnik dokáže hradit závazky = je solventní (likvidní)."],
+          ["Druhotná platební neschopnost", "Podnik nemůže platit, protože jemu dluží jiné podniky."],
+          ["Cash flow", "Přehled příjmů a výdajů za období. Části: provozní, investiční, finanční činnost."],
+          ["Peněžní vztahy podniku", "Se státem, bankami, dodavateli, odběrateli, zaměstnanci, vlastníky, pojišťovnami."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>🎤 Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Definice financování, řízení finančních zdrojů, 5 ukazatelů úspěšnosti.</li>
+          <li>Druhy financování – 3 hlediska, která se prolínají.</li>
+          <li>Běžné × mimořádné financování; financování při zakládání, rozšiřování a rušení podniku.</li>
+          <li>Vlastní kapitál – definice a 4 složky (ZK s minimy, ážio, fondy ze zisku, zisk).</li>
+          <li>Cizí kapitál – dlouhodobý a krátkodobý s příklady, cena (úrok), rizika a zadluženost.</li>
+          <li>Platební schopnost, platební neschopnost, druhotná platební neschopnost.</li>
+          <li>Cash flow – definice a 3 části.</li>
+          <li>Peněžní vztahy podniku s okolím.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 10. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 12,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Co je financování podniku?",
+           "moznosti": ["Získávání a optimální vynakládání finančních zdrojů", "Placení daní a pojištění", "Rozdělování zisku mezi majitele", "Půjčování peněz od banky"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Ukazatel, který říká, zda je podnik schopný <b>okamžitě</b> hradit své závazky, je…",
+           "moznosti": ["likvidita", "rentabilita", "stupeň zadluženosti", "cash flow"],
+           "spravne": 0, "vysvetleni": "Rentabilita vyjadřuje finanční stabilitu – výnosnost vůči vloženému kapitálu."},
+          {"typ": "vice", "otazka": "Podle jakých hledisek se dělí druhy financování?",
+           "moznosti": ["Podle původu kapitálu", "Podle pravidelnosti", "Podle doby, po kterou je kapitál k dispozici", "Podle velikosti podniku"],
+           "spravne": [0, 1, 2]},
+          {"typ": "jedna", "otazka": "Krátkodobé financování je financování…",
+           "moznosti": ["do 1 roku", "do 3 let", "do 5 let", "do 1 měsíce"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Financování při rozšiřování podniku je financování…",
+           "moznosti": ["mimořádné", "běžné", "vždy krátkodobé", "vždy cizím kapitálem"],
+           "spravne": 0, "vysvetleni": "Běžné je jen financování běžné činnosti. Zakládání, rozšiřování a rušení jsou mimořádné."},
+          {"typ": "jedna", "otazka": "Jaký je minimální základní kapitál <b>akciové společnosti</b>?",
+           "moznosti": ["2 000 000 Kč", "1 Kč", "200 000 Kč", "Není stanoven"],
+           "spravne": 0, "vysvetleni": "U s.r.o. stačí 1 Kč, u a.s. je to 2 mil. Kč."},
+          {"typ": "jedna", "otazka": "Jaký je minimální základní kapitál <b>s.r.o.</b>?",
+           "moznosti": ["1 Kč", "2 000 000 Kč", "100 000 Kč", "20 000 Kč"],
+           "spravne": 0},
+          {"typ": "vice", "otazka": "Co patří do <b>vlastního kapitálu</b>?",
+           "moznosti": ["Základní kapitál", "Emisní ážio", "Rezervní fond", "Bankovní úvěr", "Neuhrazené faktury dodavatelům"],
+           "spravne": [0, 1, 2], "vysvetleni": "Úvěr a neuhrazené faktury jsou cizí kapitál."},
+          {"typ": "jedna", "otazka": "Co je emisní ážio?",
+           "moznosti": ["Rozdíl mezi prodejní cenou akcií a jejich nominální hodnotou", "Úrok placený z dluhopisů", "Minimální výše základního kapitálu", "Podíl na zisku vyplácený akcionářům"],
+           "spravne": 0},
+          {"typ": "cislo", "otazka": "Firma vydala 2 000 akcií s nominální hodnotou 1 000 Kč a prodala je po 1 400 Kč. Jaké je emisní ážio?",
+           "spravne": 800000, "jednotka": "Kč", "vysvetleni": "(1 400 − 1 000) × 2 000 = 800 000 Kč."},
+          {"typ": "ano-ne", "otazka": "Vlastní kapitál je stálá veličina, nemění se.",
+           "spravne": false, "vysvetleni": "Mění se podle výsledku hospodaření – zisk ho zvyšuje, ztráta snižuje."},
+          {"typ": "jedna", "otazka": "Rezervní fond patří mezi…",
+           "moznosti": ["fondy ze zisku", "kapitálové fondy", "cizí kapitál", "základní kapitál"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Který zdroj je <b>dlouhodobý cizí kapitál</b>?",
+           "moznosti": ["Emise podnikových dluhopisů", "Nevyplacené mzdy", "Záloha přijatá od odběratele", "Neodvedené daně"],
+           "spravne": 0, "vysvetleni": "Ostatní možnosti jsou krátkodobé závazky (do 1 roku)."},
+          {"typ": "ano-ne", "otazka": "Banka, která podniku poskytne úvěr, získá řídicí pravomoci v podniku.",
+           "spravne": false, "vysvetleni": "Poskytovateli cizího kapitálu žádné řídicí pravomoci nevznikají."},
+          {"typ": "jedna", "otazka": "Proč je financování cizím kapitálem rizikovější?",
+           "moznosti": ["Splátky se musí platit i ve ztrátě, podíly na zisku ne", "Cizí kapitál se nesmí použít na investice", "Cizí kapitál snižuje zadluženost", "Věřitel může kdykoliv odvolat vedení"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Cizí kapitál finanční stabilitu podniku…",
+           "moznosti": ["snižuje", "zvyšuje", "neovlivňuje", "zvyšuje jen u a.s."],
+           "spravne": 0, "vysvetleni": "Zvyšuje zadluženost, a tím snižuje stabilitu."},
+          {"typ": "jedna", "otazka": "Co je druhotná platební neschopnost?",
+           "moznosti": ["Podnik nemůže platit, protože jemu dluží jiné podniky", "Podnik je podruhé v platební neschopnosti", "Podnik nemá peníze na mzdy", "Podnik nesplácí úvěr bance"],
+           "spravne": 0},
+          {"typ": "ano-ne", "otazka": "Pro platební schopnost je ideální, když odběratelé zaplatí dřív, než podnik musí platit dodavatelům.",
+           "spravne": true, "vysvetleni": "Proto se porovnává doba obratu pohledávek s dobou obratu závazků."},
+          {"typ": "jedna", "otazka": "Cash flow je…",
+           "moznosti": ["přehled příjmů a výdajů za určité období", "rozdíl výnosů a nákladů", "hodnota majetku podniku", "seznam dlužníků podniku"],
+           "spravne": 0, "vysvetleni": "Rozdíl výnosů a nákladů je výsledek hospodaření – to je jiná věc."},
+          {"typ": "jedna", "otazka": "Nákup nového stroje patří do cash flow z…",
+           "moznosti": ["investiční činnosti", "provozní činnosti", "oblasti financování", "mimořádné činnosti"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Výplata dividend patří do cash flow z…",
+           "moznosti": ["oblasti financování", "provozní činnosti", "investiční činnosti", "nepatří do cash flow"],
+           "spravne": 0, "vysvetleni": "Mění velikost kapitálu – stejně jako čerpání a splácení úvěrů."},
+          {"typ": "cislo", "otazka": "Podnik má na začátku roku 500 tis. Kč. CF z provozní činnosti je +300 tis., z investiční −700 tis., z financování +100 tis. Kolik tis. Kč má na konci roku?",
+           "spravne": 200, "jednotka": "tis. Kč", "vysvetleni": "500 + 300 − 700 + 100 = 200 tis. Kč."},
+          {"typ": "vice", "otazka": "Se kým má podnik peněžní vztahy?",
+           "moznosti": ["Se státem", "S bankami", "Se zaměstnanci", "S dodavateli a odběrateli"],
+           "spravne": [0, 1, 2, 3], "vysvetleni": "Platí všechno – a ještě s vlastníky a pojišťovnami."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .urci__situace { background: var(--bg); border-radius: var(--radius-sm); padding: 12px; margin: 10px 0; }
+  .urci__situace > p { margin: 0 0 8px; font-weight: 650; }
+  .urci__radek { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+  .urci__radek .chip { cursor: pointer; }
+  .retez { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; margin: 8px 0 12px; }
+  .retez__firma { flex: 1 1 90px; max-width: 160px; text-align: center; padding: 12px 8px; border-radius: var(--radius-sm); border: 2px solid var(--ok); background: var(--ok-soft); font-weight: 650; font-size: .9rem; transition: background .3s, border-color .3s; }
+  .retez__firma small { display: block; font-weight: 500; color: var(--text-muted); }
+  .retez__firma.problem { border-color: var(--bad); background: var(--bad-soft); }
+  .retez__sipka { color: var(--text-muted); font-size: .75rem; text-align: center; line-height: 1.2; }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, kc, cislo, zamichej, $ } = window.Ucebna;
+  const tis = (n) => (n > 0 ? "+" : "") + cislo(n) + " tis.";
+
+  /* --- Urči druh financování (3 hlediska u každé situace) --- */
+  (() => {
+    const box = $("#urci-druh");
+    const seznam = $(".urci__seznam", box), vysledek = $(".vysledek", box);
+    const OSY = [["vlastní", "cizí"], ["běžné", "mimořádné"], ["krátkodobé", "dlouhodobé"]];
+    const SITUACE = [
+      ["Nákup materiálu na příští měsíc z vlastních tržeb", [0, 0, 0]],
+      ["Úvěr na 10 let na stavbu nové výrobní haly", [1, 1, 1]],
+      ["Kontokorentní úvěr na výplatu mezd, splatný za 2 měsíce", [1, 0, 0]],
+      ["Emise nových akcií kvůli rozšíření výroby", [0, 1, 1]],
+      ["Zakladatelé vloží do nové s.r.o. své úspory", [0, 1, 1]],
+    ];
+    let volby = [];
+    function vykresli() {
+      seznam.innerHTML = ""; vysledek.textContent = "";
+      const poradi = zamichej(SITUACE);
+      volby = poradi.map(([text, spravne]) => {
+        const zvolene = [null, null, null];
+        const tlacitka = [];
+        const radky = OSY.map((moznosti, osa) => el("div", { class: "urci__radek" }, moznosti.map((m, j) => {
+          const b = el("button", { class: "chip", type: "button" }, m);
+          b.addEventListener("click", () => {
+            zvolene[osa] = j;
+            tlacitka.filter((t) => t.osa === osa).forEach((t) => t.b.classList.toggle("vybrany", t.j === j));
+            tlacitka.forEach((t) => t.b.classList.remove("spravne", "spatne"));
+          });
+          tlacitka.push({ b, osa, j });
+          return b;
+        })));
+        seznam.append(el("div", { class: "urci__situace" }, el("p", {}, text), radky));
+        return { spravne, zvolene, tlacitka };
+      });
+    }
+    $("[data-akce=kontrola]", box).addEventListener("click", () => {
+      let ok = 0;
+      volby.forEach(({ spravne, zvolene, tlacitka }) => {
+        let vse = true;
+        tlacitka.forEach(({ b, osa, j }) => {
+          b.classList.remove("vybrany", "spravne", "spatne");
+          if (j === spravne[osa]) b.classList.add("spravne");
+          else if (zvolene[osa] === j) b.classList.add("spatne");
+          if (zvolene[osa] !== spravne[osa]) vse = false;
+        });
+        if (vse) ok++;
+      });
+      vysledek.className = "vysledek " + (ok === volby.length ? "ok" : "bad");
+      vysledek.textContent = ok === volby.length ? "Výborně, všechno správně!" : `Celé správně ${ok} z ${volby.length}. Zelené = správná odpověď.`;
+    });
+    $("[data-akce=znovu]", box).addEventListener("click", vykresli);
+    vykresli();
+  })();
+
+  /* --- Emisní ážio --- */
+  (() => {
+    const v = (id) => +$("#" + id).value;
+    function spocti() {
+      const n = v("az-n"), nom = v("az-nom"), cena = v("az-cena");
+      $("#az-n-o").textContent = cislo(n) + " ks";
+      $("#az-nom-o").textContent = kc(nom);
+      $("#az-cena-o").textContent = kc(cena);
+      $("#az-zk").textContent = kc(n * nom);
+      const az = (cena - nom) * n;
+      $("#az-az").textContent = az >= 0 ? kc(az) : "pod nominálem";
+    }
+    $("#azio").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Riziko cizího kapitálu --- */
+  (() => {
+    const SPLATKA = 450;
+    function spocti() {
+      const vys = +$("#ri-v").value;
+      $("#ri-v-o").textContent = tis(vys) + " Kč";
+      const a = $("#ri-a"), b = $("#ri-b");
+      a.textContent = tis(vys) + " Kč";
+      a.style.color = vys >= 0 ? "var(--ok)" : "var(--bad)";
+      $("#ri-a-t").textContent = vys > 0
+        ? "Může vyplatit podíly na zisku – nebo zisk nechat ve firmě."
+        : "Letos se nic nevyplatí. Nepříjemné, ale nikomu nic nedluží.";
+      const po = vys - SPLATKA;
+      b.textContent = tis(po) + " Kč";
+      b.style.color = po >= 0 ? "var(--ok)" : "var(--bad)";
+      $("#ri-b-t").textContent = po >= 0
+        ? "Splátku zaplatila a ještě jí něco zbylo."
+        : "Splátku musí zaplatit tak jako tak – z rezerv nebo dalším dluhem. Když to trvá dlouho, hrozí bankrot.";
+    }
+    $("#ri-v").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Řetěz druhotné platební neschopnosti --- */
+  (() => {
+    const box = $("#retez");
+    const retez = $(".retez", box), text = $(".retez__text", box), tl = $("[data-akce=dalsi]", box);
+    const FIRMY = [["Odběratel", "obchod"], ["Naše firma", "výrobce"], ["Dodavatel", "materiál"], ["Jeho dodavatel", "doprava"]];
+    const KROKY = [
+      "Všechno funguje – každý zaplatí svému dodavateli včas.",
+      "Odběratel nezaplatí naší firmě za výrobky…",
+      "…naše firma hospodaří dobře, ale peníze nedostala – nemá z čeho zaplatit dodavateli. To je druhotná platební neschopnost.",
+      "…a problém se šíří dál: ani dodavatel nemůže platit svým dodavatelům.",
+    ];
+    const TLACITKA = ["Odběratel nezaplatí", "Co udělá naše firma?", "A dál?", "Znovu"];
+    let krok = 0;
+    const prvky = FIRMY.map(([n, p]) => el("div", { class: "retez__firma" }, n, el("small", {}, p)));
+    prvky.forEach((p, i) => { retez.append(p); if (i < prvky.length - 1) retez.append(el("div", { class: "retez__sipka" }, "platí", el("br"), "→")); });
+    function ukaz() {
+      prvky.forEach((p, i) => p.classList.toggle("problem", krok > 0 && i < krok));
+      text.textContent = KROKY[krok];
+      tl.textContent = TLACITKA[krok];
+    }
+    tl.addEventListener("click", () => { krok = (krok + 1) % KROKY.length; ukaz(); });
+    $("[data-akce=znovu]", box).addEventListener("click", () => { krok = 0; ukaz(); });
+    ukaz();
+  })();
+
+  /* --- Cash flow --- */
+  (() => {
+    const POCATEK = 200;
+    const v = (id) => +$("#" + id).value;
+    function spocti() {
+      ["cf-p", "cf-i", "cf-f"].forEach((id) => $("#" + id + "-o").textContent = tis(v(id)) + " Kč");
+      const zmena = v("cf-p") + v("cf-i") + v("cf-f"), konec = POCATEK + zmena;
+      const z = $("#cf-z"), k = $("#cf-k");
+      z.textContent = tis(zmena);
+      z.style.color = zmena >= 0 ? "var(--ok)" : "var(--bad)";
+      k.textContent = cislo(konec) + " tis.";
+      k.style.color = konec >= 0 ? "var(--ok)" : "var(--bad)";
+      $("#cf-t").innerHTML = konec < 0
+        ? "⚠️ <strong>Peníze dojdou.</strong> Podnik nebude mít na své závazky – hrozí platební neschopnost. Proto se cash flow plánuje dopředu: buď odložit investici, nebo si včas zajistit úvěr."
+        : "Podnik zůstane <strong>platebně schopný</strong>.";
+    }
+    $("#cf").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+});
+</script>
+</body>
+</html>

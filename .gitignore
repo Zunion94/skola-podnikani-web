@@ -1,4 +1,22 @@
+# Na GitHubu je jen to, co web potřebuje k běhu:
+# index.html, assets/, <predmet>/web/, <predmet>/pdf/, .nojekyll
+# Všechno níž zůstává jen lokálně.
+
+# Podklady pro tvorbu stránek (obsah je už ve stránkách a v assets/katalog.js)
+*/md/
+*/*.txt
+
+# Dokumentace a šablona pro tvorbu stránek
+docs/
+CLAUDE.md
+
+# Nastavení editoru a Claude Code
+.claude/
+.vscode/
+.idea/
+
+# Systémové soubory
 __pycache__/
 .DS_Store
 Thumbs.db
-.claude/settings.local.json
+desktop.ini
