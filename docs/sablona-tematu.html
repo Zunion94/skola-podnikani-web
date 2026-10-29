@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="cs">
+<!--
+  ŠABLONA TÉMATU – zkopíruj do <predmet>/web/<nazev-jako-md>.html
+  Nahraď všechno v [HRANATÝCH ZÁVORKÁCH]. Návod: docs/PRUVODCE.md
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[ČÍSLO]. [NÁZEV] – [Předmět]</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="[predmet]">
+<main class="obal" data-tema="[predmet]-[cislo]" data-nazev="[ČÍSLO]. [NÁZEV]" data-zpet="../../index.html" data-zdroj="../pdf/[Název zdrojového PDF].pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">[Předmět] · otázka [ČÍSLO]</span>
+    <h1>[NÁZEV]</h1>
+    <p class="hlavicka__perex">[Jedna dvě věty, o čem téma je.]</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>[bod z maturitních požadavků]</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. [Kapitola] ===== -->
+  <section class="kapitola" id="[kapitola-1]">
+    <h2>[Název kapitoly]</h2>
+    <div class="box box--definice">
+      <p><strong>[Pojem]</strong> je …</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "[Zadání]",
+        "kose": ["[Skupina A]", "[Skupina B]"],
+        "polozky": [["[pojem 1]", 0], ["[pojem 2]", 1]]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – [název]",
+        "karty": [
+          ["[Pojem]", "[Vysvětlení]"]
+        ]
+      }
+      </script>
+    </div>
+    <details class="odhal">
+      <summary>🎤 Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>[…]</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 12,
+        "otazky": [
+          {"typ": "jedna", "otazka": "[Otázka]", "moznosti": ["[správně]", "[špatně]", "[špatně]"], "spravne": 0, "vysvetleni": "[Proč]"}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ===== Widgety specifické pro toto téma (pokud nějaké jsou) ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { svg, kc, cislo, $ } = window.Ucebna;
+});
+</script>
+</body>
+</html>

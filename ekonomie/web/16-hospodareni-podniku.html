@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>16. Hospodaření podniku – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-16" data-nazev="16. Hospodaření podniku" data-zpet="../../index.html" data-zdroj="../pdf/16 Hospodaření podniku.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 16</span>
+    <h1>Hospodaření podniku</h1>
+    <p class="hlavicka__perex">Kolik podnik utratí, kolik vydělá a co zbude. Náklady, výnosy, bod zvratu a co se dělá se ziskem – nebo se ztrátou.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>vysvětlit, co jsou <strong>náklady</strong>, a rozčlenit je podle 4 hlavních hledisek</li>
+        <li>rozlišit <strong>fixní, variabilní a indiferentní</strong> náklady a najít <strong>bod zvratu</strong></li>
+        <li>popsat <strong>výnosy</strong> a jejich členění</li>
+        <li>spočítat <strong>výsledek hospodaření</strong> a říct, jak <strong>maximalizovat zisk</strong></li>
+        <li>vyjmenovat, jak se <strong>zisk rozděluje</strong> a jak se <strong>ztráta vypořádá</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Náklady ===== -->
+  <section class="kapitola" id="naklady">
+    <h2>Náklady</h2>
+    <p>Když se mluví o finančním hospodaření podniku, jde hlavně o <strong>náklady</strong> a <strong>výnosy</strong>. Začneme náklady.</p>
+    <div class="box box--definice">
+      <p><strong>Náklady</strong> jsou finanční (peněžní) ohodnocení vstupů potřebných pro výrobu.</p>
+    </div>
+    <p>Typicky jde o mzdové náklady, náklady na materiál, dopravu, energie… Stejné náklady se dají třídit podle různých hledisek. U maturity se ptají na tyto čtyři:</p>
+
+    <div data-zalozky>
+      <section data-zalozka="1) Podle druhu">
+        <p>Co bylo spotřebováno:</p>
+        <ul>
+          <li>spotřebovaný materiál</li>
+          <li>odpisy</li>
+          <li>mzdy</li>
+          <li>opravy a udržování</li>
+          <li>doprava apod.</li>
+        </ul>
+      </section>
+      <section data-zalozka="2) Podle účelu">
+        <p>Na co byly vynaloženy – na kterou činnost:</p>
+        <ul><li>náklady na činnost A</li><li>náklady na činnost B</li><li>náklady na činnost C…</li></ul>
+      </section>
+      <section data-zalozka="3) Podle org. složek">
+        <p>Kde v podniku vznikly – ve kterém středisku:</p>
+        <ul><li>náklady na středisko 1</li><li>náklady na středisko 2</li><li>náklady na středisko 3…</li></ul>
+      </section>
+      <section data-zalozka="4) Podle objemu výroby">
+        <p>Jak se mění, když podnik vyrábí víc nebo míň. Tohle je <strong>nejdůležitější členění</strong> – rozebereme ho níž podrobně.</p>
+        <ul><li><strong>fixní (FC)</strong></li><li><strong>variabilní (VC)</strong> – proporcionální, progresivní, degresivní</li><li><strong>indiferentní</strong></li></ul>
+      </section>
+    </div>
+
+    <h3>Náklady podle závislosti na objemu výroby</h3>
+    <p>Klepni na kartu a uvidíš vysvětlení.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Fixní náklady (FC)</div>
+        <div class="karta__rub"><p style="margin:0">Existují, <strong>i když podnik nevyrábí</strong> – s objemem výroby se nemění. Nájemné, odpisy, placené úroky z úvěru.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Variabilní náklady (VC)</div>
+        <div class="karta__rub"><p style="margin:0">Mění se <strong>podle objemu výroby</strong> – víc výroby = vyšší náklady. Materiál, mzdy dělníků.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Indiferentní náklady</div>
+        <div class="karta__rub"><p style="margin:0">Jejich výše <strong>na objemu výroby vůbec nezáleží</strong>. Pokuty a penále.</p></div>
+      </div>
+    </div>
+
+    <div class="box box--pozor">
+      <p>Fixní náklady se změnit <em>mohou</em> – ale jen <strong>skokem</strong>. Firma si pronajme další budovu, nájem vyskočí na vyšší úroveň a tam zase zůstane stejný.</p>
+    </div>
+
+    <h3>Tři druhy variabilních nákladů</h3>
+    <p>Záleží na tom, <em>jak rychle</em> rostou ve srovnání s výrobou. Přepínej a sleduj tvar křivky.</p>
+    <div class="simulace" id="vc-druhy">
+      <div class="zalozky__lista" role="tablist">
+        <button type="button" role="tab" data-druh="prop" aria-selected="true">Proporcionální</button>
+        <button type="button" role="tab" data-druh="prog" aria-selected="false">Progresivní</button>
+        <button type="button" role="tab" data-druh="degr" aria-selected="false">Degresivní</button>
+      </div>
+      <svg viewBox="0 0 320 200" style="max-width:440px;margin:8px auto" aria-label="Graf průběhu variabilních nákladů"></svg>
+      <p class="vc-popis" style="margin-bottom:0"></p>
+    </div>
+
+    <div class="box box--tip">
+      <p><strong>Pro</strong>porcionální = <strong>pro</strong>stě stejně rychle. <strong>Prog</strong>resivní = <strong>prog</strong>resivně, rychleji (přesčasy). <strong>Degr</strong>esivní = pomaleji (světlo svítí, ať se vyrábí 10 nebo 100 kusů).</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Zařaď náklady podle závislosti na objemu výroby",
+        "kose": ["Fixní", "Variabilní", "Indiferentní"],
+        "polozky": [
+          ["nájemné", 0], ["odpisy", 0], ["úroky z úvěru", 0],
+          ["spotřeba materiálu", 1], ["mzdy dělníků", 1], ["mzdy za přesčasy", 1], ["energie na osvětlení dílny", 1],
+          ["pokuta", 2], ["penále", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Další členění nákladů</h3>
+    <details class="odhal">
+      <summary>5) Přímé a nepřímé – lze je stanovit na 1 kus?</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>přímé</strong> – dají se stanovit na jednotku produkce (1 kus, 1 litr). Hlavně materiál a mzdy dělníků.</li>
+          <li><strong>nepřímé</strong> – na jednotku je stanovit nejde, nebo jen těžko. Spotřeba energií, mzdy ostatních zaměstnanců.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="odhal">
+      <summary>6) Účetní hledisko – kde a jak náklady vznikají</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>provozní</strong> – souvisí s hlavní činností: mzdy, energie, materiál, doprava, opravy, odpisy</li>
+          <li><strong>finanční</strong> – finanční záležitosti, např. placení úroků z úvěru</li>
+          <li><strong>mimořádné</strong> – nečekané a neplánované: škody, manko</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 2. Bod zvratu ===== -->
+  <section class="kapitola" id="bod-zvratu">
+    <h2>Bod zvratu</h2>
+    <p>Když spojíme náklady a tržby do jednoho grafu, uvidíme, od kolika vyrobených kusů začne podnik vydělávat.</p>
+    <div class="vzorec">TC = FC + VC</div>
+    <div class="box box--definice">
+      <p><strong>Bod zvratu (BZ)</strong> je objem výroby, při kterém se <strong>tržby rovnají celkovým nákladům</strong>. Podnik nemá zisk ani ztrátu. Před bodem zvratu je ve ztrátě, za ním v zisku.</p>
+    </div>
+
+    <div class="simulace" id="bz">
+      <p style="margin-top:0"><strong>Vyzkoušej si to:</strong> hýbej posuvníky a sleduj, kam se posune bod zvratu.</p>
+      <div class="legenda">
+        <span style="--c:var(--accent)">tržby</span>
+        <span style="--c:var(--bad)">TC celkové náklady</span>
+        <span style="--c:var(--warn)">VC variabilní</span>
+        <span style="--c:var(--text-muted)">FC fixní</span>
+      </div>
+      <svg viewBox="0 0 600 340" aria-label="Graf bodu zvratu"></svg>
+      <div class="posuvnik"><label for="bz-fc">Fixní náklady (FC)</label><output id="bz-fc-o"></output><input id="bz-fc" type="range" min="50000" max="500000" step="10000" value="200000"></div>
+      <div class="posuvnik"><label for="bz-p">Cena za kus</label><output id="bz-p-o"></output><input id="bz-p" type="range" min="50" max="500" step="5" value="250"></div>
+      <div class="posuvnik"><label for="bz-vc">Variabilní náklady na kus</label><output id="bz-vc-o"></output><input id="bz-vc" type="range" min="10" max="400" step="5" value="150"></div>
+      <div class="posuvnik"><label for="bz-q">Vyrobeno a prodáno</label><output id="bz-q-o"></output><input id="bz-q" type="range" min="0" max="5000" step="50" value="3000"></div>
+      <label style="display:flex;gap:8px;align-items:center;font-size:.9rem;margin:8px 0"><input id="bz-skok" type="checkbox" style="accent-color:var(--accent)"> Od 3 500 ks potřebujeme další halu (FC skokem +200 000 Kč)</label>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Bod zvratu</small><b id="bz-bz"></b></div>
+        <div class="ukazatel"><small>Tržby</small><b id="bz-tr"></b></div>
+        <div class="ukazatel"><small>Celkové náklady</small><b id="bz-tc"></b></div>
+        <div class="ukazatel"><small>Výsledek</small><b id="bz-hv"></b></div>
+      </div>
+    </div>
+
+    <div class="box box--priklad">
+      <p>Bez skoku fixních nákladů jde bod zvratu spočítat i vzorcem:</p>
+      <div class="vzorec">BZ = FC / (cena − VC na kus)</div>
+      <p>FC = 200 000 Kč, cena 250 Kč, VC na kus 150 Kč → každý kus „vydělá“ 100 Kč na fixní náklady → <strong>BZ = 200 000 / 100 = 2 000 ks</strong>.</p>
+    </div>
+
+    <details class="odhal">
+      <summary>Jak vypadají jednotlivé čáry v grafu?</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>FC</strong> – vodorovná čára, nezávisí na kusech. Při překročení kapacity skočí výš a zase je rovná.</li>
+          <li><strong>VC</strong> – začíná v nule (0 ks = 0 Kč) a roste s výrobou.</li>
+          <li><strong>TC</strong> – začíná na úrovni FC a roste souběžně s VC; kopíruje i skok FC.</li>
+          <li><strong>tržby</strong> – přímka z nuly, roste strměji než náklady.</li>
+          <li><strong>BZ</strong> – průsečík tržeb a TC.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 3. Výnosy ===== -->
+  <section class="kapitola" id="vynosy">
+    <h2>Výnosy</h2>
+    <div class="box box--definice">
+      <p><strong>Výnosy</strong> jsou oceněné výkony podniku – cena uskutečněných výstupů. Vznikají hlavně prodejem statků a služeb, ale i jinak (např. získané úroky z vkladů).</p>
+    </div>
+    <div class="box box--tip">
+      <p>Výnosům z prodeje statků a služeb říkáme <strong>tržby</strong>. Jsou hlavní složkou výnosů. Tržby ⊂ výnosy, ne naopak.</p>
+    </div>
+    <p>Výnosy se člení podobně jako náklady:</p>
+    <div data-zalozky>
+      <section data-zalozka="1) Podle druhu">
+        <ul>
+          <li><strong>provozní</strong> – z hlavní činnosti: prodej statků a služeb, prodej materiálu, nepotřebného majetku</li>
+          <li><strong>finanční</strong> – finanční záležitosti, např. připsané úroky z vkladů</li>
+          <li><strong>mimořádné</strong> – nečekané a neplánované: náhrada škody od pojišťovny, zaplacené manko</li>
+          <li><strong>tržby za vlastní výkony a zboží</strong></li>
+        </ul>
+      </section>
+      <section data-zalozka="2) Podle činností">
+        <ul><li>výnosy z činnosti A</li><li>výnosy z činnosti B</li><li>výnosy z činnosti C…</li></ul>
+      </section>
+      <section data-zalozka="3) Podle org. složek">
+        <ul><li>výnosy útvaru 1</li><li>výnosy útvaru 2</li><li>výnosy útvaru 3…</li></ul>
+      </section>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Náklad, nebo výnos? A jaký – provozní, finanční, nebo mimořádný?",
+        "kose": ["Provozní náklad", "Finanční náklad", "Mimořádný náklad", "Provozní výnos", "Finanční výnos", "Mimořádný výnos"],
+        "polozky": [
+          ["mzdy zaměstnanců", 0], ["spotřeba energie", 0],
+          ["zaplacené úroky z úvěru", 1],
+          ["škoda způsobená požárem", 2], ["manko na skladě", 2],
+          ["prodej výrobků", 3], ["prodej nepotřebného stroje", 3],
+          ["připsané úroky z vkladů", 4],
+          ["náhrada škody od pojišťovny", 5]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 4. Výsledek hospodaření ===== -->
+  <section class="kapitola" id="vysledek">
+    <h2>Výsledek hospodaření</h2>
+    <div class="box box--definice">
+      <p><strong>Výsledek hospodaření</strong> (hospodářský výsledek) zjistíme porovnáním výnosů a nákladů.</p>
+    </div>
+    <div class="vzorec">VH = výnosy − náklady</div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-left:5px solid var(--ok)"><strong>Zisk</strong><br>výnosy &gt; náklady</div>
+      <div class="box" style="margin:0;border-left:5px solid var(--bad)"><strong>Ztráta</strong><br>výnosy &lt; náklady</div>
+    </div>
+    <p>Výsledek hospodaření se zjišťuje ve dvou rovinách – <strong>provozní</strong> (provozní výnosy vs. provozní náklady) a <strong>finanční</strong> (finanční výnosy vs. finanční náklady).</p>
+
+    <div class="simulace" id="vh">
+      <p style="margin-top:0"><strong>Spočítej si:</strong> podnik za rok (v tis. Kč)</p>
+      <div class="posuvnik"><label for="vh-pv">Provozní výnosy</label><output id="vh-pv-o"></output><input id="vh-pv" type="range" min="0" max="2000" step="10" value="1200"></div>
+      <div class="posuvnik"><label for="vh-pn">Provozní náklady</label><output id="vh-pn-o"></output><input id="vh-pn" type="range" min="0" max="2000" step="10" value="1050"></div>
+      <div class="posuvnik"><label for="vh-fv">Finanční výnosy</label><output id="vh-fv-o"></output><input id="vh-fv" type="range" min="0" max="300" step="5" value="20"></div>
+      <div class="posuvnik"><label for="vh-fn">Finanční náklady</label><output id="vh-fn-o"></output><input id="vh-fn" type="range" min="0" max="300" step="5" value="80"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Provozní VH</small><b id="vh-p"></b></div>
+        <div class="ukazatel"><small>Finanční VH</small><b id="vh-f"></b></div>
+        <div class="ukazatel"><small>Celkem</small><b id="vh-c"></b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Maximalizace zisku ===== -->
+  <section class="kapitola" id="maximalizace">
+    <h2>Maximalizace zisku</h2>
+    <p>Zisk = výnosy − náklady. Podnik má tedy dvě páky:</p>
+    <details class="odhal" open>
+      <summary>Snížit náklady</summary>
+      <div class="odhal__obsah"><p>Lepší produktivita práce, nižší ceny vstupů – ale <strong>při stejné kvalitě</strong>.</p></div>
+    </details>
+    <details class="odhal">
+      <summary>Zvýšit výnosy – prodat víc</summary>
+      <div class="odhal__obsah"><p>Nalezení nových trhů, spokojenost zákazníků s výrobky.</p></div>
+    </details>
+    <details class="odhal">
+      <summary>Zvýšit výnosy – zvýšit cenu</summary>
+      <div class="odhal__obsah"><p>Jen tehdy, když zdražení <strong>nepovede ke snížení prodeje</strong>.</p></div>
+    </details>
+    <div class="box box--pozor">
+      <p>„Zdražíme a budeme mít větší zisk“ neplatí automaticky. Když kvůli vyšší ceně zákazníci přestanou kupovat, tržby klesnou. Zkus to v grafu bodu zvratu: vyšší cena posune BZ doleva – ale jen pokud se prodá stejně kusů.</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. Rozdělení zisku a vypořádání ztráty ===== -->
+  <section class="kapitola" id="zisk-ztrata">
+    <h2>Rozdělení zisku a vypořádání ztráty</h2>
+    <div class="box box--tip">
+      <p>O rozdělení a použití zisku rozhodují <strong>vlastníci podniku</strong>.</p>
+    </div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--ok)">
+        <h3 style="margin-top:0">Použití zisku</h3>
+        <ul>
+          <li>do rezervního fondu</li>
+          <li>do dalších fondů podniku</li>
+          <li>výplata odměn (podíly na zisku, dividendy)</li>
+          <li>na rezervy</li>
+          <li>mimořádné splátky úvěrů</li>
+          <li>rozvoj a modernizace podniku</li>
+          <li>ponechání bez účelu (nerozdělený zisk)</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--bad)">
+        <h3 style="margin-top:0">Úhrada ztráty</h3>
+        <ul>
+          <li>úhrada majitelem</li>
+          <li>z nerozděleného zisku minulých let</li>
+          <li>z rezervního fondu</li>
+          <li>převod ztráty do příštího roku</li>
+          <li>snížení základního kapitálu</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Co patří k použití zisku a co k úhradě ztráty?",
+        "kose": ["Použití zisku", "Úhrada ztráty"],
+        "polozky": [
+          ["výplata dividend", 0], ["mimořádná splátka úvěru", 0], ["modernizace podniku", 0], ["příděl do rezervního fondu", 0], ["nerozdělený zisk", 0],
+          ["převod do příštího roku", 1], ["snížení základního kapitálu", 1], ["čerpání rezervního fondu", 1], ["úhrada majitelem", 1], ["z nerozděleného zisku minulých let", 1]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 7. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – hospodaření podniku",
+        "karty": [
+          ["Náklady", "Peněžní ohodnocení vstupů potřebných pro výrobu."],
+          ["Výnosy", "Oceněné výkony podniku – cena uskutečněných výstupů."],
+          ["Tržby", "Výnosy z prodeje statků a služeb – hlavní složka výnosů."],
+          ["4 hlavní členění nákladů", "Podle druhu, podle účelu, podle organizačních složek, podle závislosti na objemu výroby."],
+          ["Fixní náklady", "Nemění se s objemem výroby (jen skokem). Nájemné, odpisy, úroky z úvěru."],
+          ["Variabilní náklady", "Mění se s objemem výroby. Proporcionální, progresivní, degresivní."],
+          ["Progresivní náklady", "Rostou rychleji než výroba – mzdy za přesčasy."],
+          ["Degresivní náklady", "Rostou pomaleji než výroba – osvětlení dílny, doprava."],
+          ["Indiferentní náklady", "Nezávisí na objemu výroby – pokuty, penále."],
+          ["Přímé × nepřímé náklady", "Přímé lze stanovit na 1 kus (materiál, mzdy dělníků), nepřímé ne (energie, mzdy ostatních)."],
+          ["Bod zvratu", "Objem výroby, kdy tržby = celkové náklady. Ani zisk, ani ztráta."],
+          ["TC", "Celkové náklady = FC + VC."],
+          ["Výsledek hospodaření", "Výnosy − náklady. Kladný = zisk, záporný = ztráta. Zjišťuje se v rovině provozní a finanční."],
+          ["Jak maximalizovat zisk", "Snížit náklady, zvýšit prodej, zvýšit cenu (jen když neklesne prodej)."],
+          ["Kdo rozhoduje o zisku", "Vlastníci podniku."],
+          ["Úhrada ztráty", "Majitel, nerozdělený zisk minulých let, rezervní fond, převod do příštího roku, snížení základního kapitálu."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>🎤 Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Úvod: hospodaření = hlavně náklady a výnosy.</li>
+          <li>Náklady – definice, 4 členění (druh, účel, org. složky, objem výroby), u objemu FC / VC (prop., prog., degr.) / indiferentní + příklady.</li>
+          <li>Navíc: přímé × nepřímé, provozní / finanční / mimořádné.</li>
+          <li>Graf FC, VC, TC, tržeb a bod zvratu – nakresli ho!</li>
+          <li>Výnosy – definice, tržby, 3 členění.</li>
+          <li>Výsledek hospodaření – zisk × ztráta, provozní a finanční rovina.</li>
+          <li>Maximalizace zisku – snížit náklady, zvýšit výnosy.</li>
+          <li>Rozdělení zisku (rozhodují vlastníci) a vypořádání ztráty.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 8. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 12,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Co jsou náklady?",
+           "moznosti": ["Peněžní ohodnocení vstupů potřebných pro výrobu", "Peníze získané z prodeje výrobků", "Rozdíl mezi výnosy a náklady", "Hodnota veškerého majetku podniku"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Který náklad je <b>fixní</b>?",
+           "moznosti": ["Nájemné", "Spotřeba materiálu", "Mzdy za práci přesčas", "Pokuta"],
+           "spravne": 0, "vysvetleni": "Nájemné platíme, i když nevyrábíme. Materiál a přesčasy jsou variabilní, pokuta indiferentní."},
+          {"typ": "jedna", "otazka": "Mzdy za práci přesčas jsou náklady…",
+           "moznosti": ["proporcionální", "progresivní", "degresivní", "indiferentní"],
+           "spravne": 1, "vysvetleni": "Rostou rychleji než objem výroby – přesčasy se platí víc."},
+          {"typ": "jedna", "otazka": "Energie na osvětlení dílny je příklad nákladů…",
+           "moznosti": ["proporcionálních", "progresivních", "degresivních", "fixních"],
+           "spravne": 2, "vysvetleni": "Rostou pomaleji než výroba – světlo svítí skoro stejně, ať se vyrábí víc nebo míň."},
+          {"typ": "jedna", "otazka": "Pokuty a penále patří mezi náklady…",
+           "moznosti": ["indiferentní", "fixní", "proporcionální", "přímé"],
+           "spravne": 0, "vysvetleni": "Jejich výše na objemu výroby vůbec nezáleží."},
+          {"typ": "ano-ne", "otazka": "Fixní náklady se nemohou nikdy změnit.",
+           "spravne": false, "vysvetleni": "Mohou se změnit skokem – např. pronájem další budovy – a pak zase zůstanou stejné."},
+          {"typ": "vice", "otazka": "Které náklady jsou <b>přímé</b>?",
+           "moznosti": ["Materiál", "Mzdy dělníků", "Spotřeba energií", "Mzdy administrativy"],
+           "spravne": [0, 1], "vysvetleni": "Přímé náklady lze stanovit na jednotku produkce. Energie a mzdy ostatních zaměstnanců jsou nepřímé."},
+          {"typ": "jedna", "otazka": "Placené úroky z úvěru jsou z účetního hlediska náklady…",
+           "moznosti": ["provozní", "finanční", "mimořádné", "indiferentní"],
+           "spravne": 1, "vysvetleni": "Souvisí s finančními záležitostmi podniku."},
+          {"typ": "jedna", "otazka": "Manko a škody jsou náklady…",
+           "moznosti": ["provozní", "finanční", "mimořádné", "variabilní"],
+           "spravne": 2, "vysvetleni": "Jsou nečekané a neplánované."},
+          {"typ": "jedna", "otazka": "Co je bod zvratu?",
+           "moznosti": ["Objem výroby, při kterém se tržby rovnají celkovým nákladům", "Okamžik, kdy fixní náklady skokem vzrostou", "Maximální kapacita výroby", "Objem výroby s nejvyšším ziskem"],
+           "spravne": 0, "vysvetleni": "V bodě zvratu podnik nemá zisk ani ztrátu."},
+          {"typ": "jedna", "otazka": "Jak je podnik na tom při objemu výroby <b>před</b> bodem zvratu?",
+           "moznosti": ["Je ve ztrátě", "Je v zisku", "Má nulové náklady", "Nemá žádné tržby"],
+           "spravne": 0, "vysvetleni": "Před BZ jsou celkové náklady vyšší než tržby."},
+          {"typ": "jedna", "otazka": "Celkové náklady TC se rovnají…",
+           "moznosti": ["FC + VC", "FC − VC", "tržby − FC", "VC × cena"],
+           "spravne": 0},
+          {"typ": "cislo", "otazka": "Fixní náklady jsou 120 000 Kč, cena výrobku 80 Kč a variabilní náklady na kus 50 Kč. Kolik kusů je bod zvratu?",
+           "spravne": 4000, "jednotka": "ks", "vysvetleni": "BZ = FC / (cena − VC na kus) = 120 000 / 30 = 4 000 ks."},
+          {"typ": "cislo", "otazka": "Výnosy podniku jsou 850 000 Kč, náklady 910 000 Kč. Jaký je výsledek hospodaření? (ztrátu napiš se znaménkem minus)",
+           "spravne": -60000, "jednotka": "Kč", "vysvetleni": "VH = 850 000 − 910 000 = −60 000 Kč, tedy ztráta."},
+          {"typ": "jedna", "otazka": "Co jsou tržby?",
+           "moznosti": ["Výnosy z prodeje statků a služeb", "Všechny příjmy podniku včetně úvěrů", "Zisk po zdanění", "Rozdíl výnosů a nákladů"],
+           "spravne": 0, "vysvetleni": "Tržby jsou hlavní složkou výnosů."},
+          {"typ": "ano-ne", "otazka": "Připsané úroky z vkladů jsou finanční výnos.",
+           "spravne": true},
+          {"typ": "ano-ne", "otazka": "Zvýšení ceny vždy zvýší zisk.",
+           "spravne": false, "vysvetleni": "Jen pokud zdražení nepovede ke snížení prodeje."},
+          {"typ": "jedna", "otazka": "Kdo rozhoduje o rozdělení a použití zisku?",
+           "moznosti": ["Vlastníci podniku", "Finanční úřad", "Zaměstnanci", "Banka, která podniku půjčila"],
+           "spravne": 0},
+          {"typ": "vice", "otazka": "Jak lze vypořádat <b>ztrátu</b>?",
+           "moznosti": ["Z rezervního fondu", "Převodem do příštího roku", "Snížením základního kapitálu", "Výplatou dividend", "Mimořádnou splátkou úvěru"],
+           "spravne": [0, 1, 2], "vysvetleni": "Dividendy a mimořádné splátky úvěru jsou naopak způsoby použití zisku."},
+          {"typ": "vice", "otazka": "Které možnosti patří k <b>použití zisku</b>?",
+           "moznosti": ["Rozvoj a modernizace podniku", "Výplata dividend", "Ponechání jako nerozdělený zisk", "Snížení základního kapitálu"],
+           "spravne": [0, 1, 2], "vysvetleni": "Snížení základního kapitálu je způsob úhrady ztráty."},
+          {"typ": "jedna", "otazka": "V jakých rovinách se zjišťuje výsledek hospodaření?",
+           "moznosti": ["Provozní a finanční", "Fixní a variabilní", "Přímé a nepřímé", "Státní a soukromé"],
+           "spravne": 0}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { svg, kc, cislo, $ } = window.Ucebna;
+
+  /* --- Tvar variabilních nákladů --- */
+  (() => {
+    const box = $("#vc-druhy");
+    const plocha = $("svg", box), popis = $(".vc-popis", box);
+    const W = 320, H = 200, L = 30, B = 175, T = 15, R = 305;
+    const DRUHY = {
+      prop: { f: (x) => x, text: "<strong>Proporcionální</strong> – rostou stejně rychle jako výroba. Dvakrát víc kusů = dvakrát víc materiálu." },
+      prog: { f: (x) => x * x, text: "<strong>Progresivní</strong> – rostou rychleji než výroba. Na velký objem se musí makat přesčas a přesčasy jsou dražší." },
+      degr: { f: (x) => Math.sqrt(x), text: "<strong>Degresivní</strong> – rostou pomaleji než výroba. Osvětlení dílny nebo doprava – plný kamion vyjde na kus levněji." },
+    };
+    function kresli(druh) {
+      plocha.innerHTML = "";
+      plocha.append(
+        svg("line", { x1: L, y1: B, x2: R, y2: B, style: "stroke:var(--border);stroke-width:2" }),
+        svg("line", { x1: L, y1: B, x2: L, y2: T, style: "stroke:var(--border);stroke-width:2" }),
+        Object.assign(svg("text", { x: R, y: B + 18, "text-anchor": "end" }), { textContent: "objem výroby" }),
+        Object.assign(svg("text", { x: L + 4, y: T + 4 }), { textContent: "Kč" }),
+        // Pomocná proporcionální přímka pro srovnání
+        svg("line", { x1: L, y1: B, x2: R, y2: T, style: "stroke:var(--text-muted);stroke-dasharray:4 4;opacity:.5" }));
+      const body = [];
+      for (let i = 0; i <= 40; i++) {
+        const x = i / 40;
+        body.push(`${L + x * (R - L)},${B - DRUHY[druh].f(x) * (B - T)}`);
+      }
+      plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke:var(--warn);stroke-width:4;stroke-linecap:round" }));
+      popis.innerHTML = DRUHY[druh].text;
+      box.querySelectorAll("[data-druh]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.druh === druh)));
+    }
+    box.querySelectorAll("[data-druh]").forEach((b) => b.addEventListener("click", () => kresli(b.dataset.druh)));
+    kresli("prop");
+  })();
+
+  /* --- Bod zvratu --- */
+  (() => {
+    const box = $("#bz");
+    const plocha = $("svg", box);
+    const vstup = (id) => $("#" + id);
+    const L = 64, R = 585, T = 26, B = 300, QMAX = 5000;
+    const SKOK_Q = 3500, SKOK_KC = 200000;
+
+    function spocti() {
+      const FC0 = +vstup("bz-fc").value, p = +vstup("bz-p").value, vc = +vstup("bz-vc").value, q = +vstup("bz-q").value;
+      const skok = vstup("bz-skok").checked;
+      const FC = (x) => FC0 + (skok && x >= SKOK_Q ? SKOK_KC : 0);
+      const TC = (x) => FC(x) + vc * x;
+      const TR = (x) => p * x;
+
+      // Body zvratu – objemy, kde se ztráta mění v zisk (se skokem FC mohou být dva)
+      const bzy = [];
+      for (let x = 1; x <= QMAX; x++) if (TR(x) >= TC(x) && TR(x - 1) < TC(x - 1)) bzy.push(x);
+
+      vstup("bz-fc-o").textContent = kc(FC0);
+      vstup("bz-p-o").textContent = kc(p);
+      vstup("bz-vc-o").textContent = kc(vc);
+      vstup("bz-q-o").textContent = cislo(q) + " ks";
+      $("#bz-bz").textContent = bzy.length ? bzy.map(cislo).join(" a ") + " ks" : (p <= vc ? "nikdy" : "> 5 000 ks");
+      $("#bz-tr").textContent = kc(TR(q));
+      $("#bz-tc").textContent = kc(TC(q));
+      const hv = TR(q) - TC(q);
+      const hvEl = $("#bz-hv");
+      hvEl.textContent = (hv > 0 ? "zisk " : hv < 0 ? "ztráta " : "") + kc(Math.abs(hv));
+      hvEl.style.color = hv > 0 ? "var(--ok)" : hv < 0 ? "var(--bad)" : "";
+
+      // Graf
+      // Osa y zaokrouhlená nahoru na „hezký“ krok (4 dílky)
+      const surovy = Math.max(TR(QMAX), TC(QMAX)) / 4;
+      const rad = 10 ** Math.floor(Math.log10(surovy));
+      const krok = [1, 2, 2.5, 5, 10].map((k) => k * rad).find((k) => k >= surovy);
+      const YMAX = krok * 4;
+      const sx = (x) => L + (x / QMAX) * (R - L);
+      const sy = (y) => B - (y / YMAX) * (B - T);
+      plocha.innerHTML = "";
+      const t = (x, y, s, a = "middle") => Object.assign(svg("text", { x, y, "text-anchor": a }), { textContent: s });
+
+      // Mřížka a osy
+      for (let i = 0; i <= 5; i++) {
+        const x = (QMAX / 5) * i;
+        plocha.append(svg("line", { x1: sx(x), y1: T, x2: sx(x), y2: B, style: "stroke:var(--border);opacity:.6" }), t(sx(x), B + 18, cislo(x)));
+      }
+      for (let i = 0; i <= 4; i++) {
+        const y = (YMAX / 4) * i;
+        plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.6" }), t(L - 6, sy(y) + 4, cislo(y / 1000) + " tis.", "end"));
+      }
+      plocha.append(t(R, B + 36, "ks", "end"), t(L - 6, 12, "Kč", "end"));
+
+      const cara = (f, styl) => {
+        const body = [];
+        for (let x = 0; x <= QMAX; x += 25) {
+          // Skok FC kreslíme jako svislý schod
+          if (skok && x === SKOK_Q) body.push(`${sx(x)},${sy(f(x - 1))}`);
+          body.push(`${sx(x)},${sy(f(x))}`);
+        }
+        plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke-linejoin:round;" + styl }));
+      };
+      cara(FC, "stroke:var(--text-muted);stroke-width:2;stroke-dasharray:6 4");
+      cara((x) => vc * x, "stroke:var(--warn);stroke-width:2.5");
+      cara(TC, "stroke:var(--bad);stroke-width:3.5");
+      cara(TR, "stroke:var(--accent);stroke-width:3.5");
+
+      // Aktuální objem – úsečka mezi tržbami a náklady
+      plocha.append(
+        svg("line", { x1: sx(q), y1: B, x2: sx(q), y2: T, style: "stroke:var(--text-muted);stroke-dasharray:2 4" }),
+        svg("line", { x1: sx(q), y1: sy(TR(q)), x2: sx(q), y2: sy(TC(q)), style: `stroke:${hv >= 0 ? "var(--ok)" : "var(--bad)"};stroke-width:8;opacity:.45;stroke-linecap:round` }));
+
+      for (const bz of bzy) {
+        plocha.append(
+          svg("circle", { cx: sx(bz), cy: sy(TR(bz)), r: 7, style: "fill:var(--surface);stroke:var(--text);stroke-width:3" }),
+          Object.assign(svg("text", { x: sx(bz) - 10, y: sy(TR(bz)) - 12, "text-anchor": "end", style: "fill:var(--text);font-weight:700;font-size:14px" }), { textContent: "BZ" }));
+      }
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Výsledek hospodaření --- */
+  (() => {
+    const v = (id) => +$("#" + id).value;
+    const tis = (n) => (n > 0 ? "+" : "") + cislo(n) + " tis.";
+    const barvi = (el, n) => { el.textContent = tis(n); el.style.color = n > 0 ? "var(--ok)" : n < 0 ? "var(--bad)" : ""; };
+    function spocti() {
+      ["vh-pv", "vh-pn", "vh-fv", "vh-fn"].forEach((id) => $("#" + id + "-o").textContent = cislo(v(id)) + " tis. Kč");
+      const p = v("vh-pv") - v("vh-pn"), f = v("vh-fv") - v("vh-fn");
+      barvi($("#vh-p"), p); barvi($("#vh-f"), f); barvi($("#vh-c"), p + f);
+    }
+    $("#vh").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+});
+</script>
+</body>
+</html>

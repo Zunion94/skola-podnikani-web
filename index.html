@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Učebna</title>
+  <link rel="stylesheet" href="assets/ucebna.css">
+  <script src="assets/katalog.js"></script>
+  <script src="assets/ucebna.js" defer></script>
+</head>
+<body>
+  <header class="lista">
+    <div class="lista__vnitrek" data-lista>
+      <div class="lista__nazev">📚 Učebna</div>
+    </div>
+  </header>
+
+  <main class="obal">
+    <div class="hlavicka">
+      <span class="stitek">Maturita</span>
+      <h1>Co se dnes naučíme?</h1>
+      <p class="hlavicka__perex">Vyber si téma. Postup a výsledky testů se ukládají jen v tomhle prohlížeči.</p>
+    </div>
+    <div id="predmety"></div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const { el, nactiStav } = window.Ucebna;
+      const stav = nactiStav().temata;
+      const cil = document.getElementById("predmety");
+
+      for (const p of window.KATALOG) {
+        const seznam = el("ul", { class: "temata" });
+        for (const t of p.temata) {
+          const s = t.id && stav[t.id];
+          let info = "připravujeme";
+          if (t.soubor) {
+            const hotove = s ? Object.values(s.kapitoly).filter(Boolean).length : 0;
+            info = s ? `${hotove}/${s.pocetKapitol} kapitol` + (s.test ? ` · test ${s.test.nejlepsi} %` : "") : "nezačato";
+          }
+          const obsah = [el("span", { class: "tema__cislo" }, String(t.c)), el("span", { class: "tema__nazev" }, t.nazev), el("span", { class: "tema__stav" }, info)];
+          seznam.append(el("li", {}, t.soubor
+            ? el("a", { class: "tema", href: t.soubor }, obsah)
+            : el("div", { class: "tema tema--chysta" }, obsah)));
+        }
+        const sekce = el("section", { class: "predmet" }, el("h2", {}, p.nazev), el("p", { class: "ztlumene" }, p.popis), seznam);
+        sekce.dataset.predmet = p.predmet;
+        cil.append(sekce);
+      }
+    });
+  </script>
+</body>
+</html>
