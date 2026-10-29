@@ -73,9 +73,25 @@
     };
   }
 
+  /* ---------- Ikony (čárové SVG, barva = currentColor) ---------- */
+  const CESTY = {
+    zpet: "M15 18l-6-6 6-6",
+    dokument: "M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4",
+    menu: "M4 7h16M4 12h16M4 17h10",
+    auto: "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M12 3v18",
+    light: "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4",
+    dark: "M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z",
+  };
+  function ikona(jmeno) {
+    const s = svg("svg", { viewBox: "0 0 24 24", class: "ikona", "aria-hidden": "true", fill: "none", stroke: "currentColor", "stroke-width": "1.8", "stroke-linecap": "round", "stroke-linejoin": "round" });
+    s.append(svg("path", { d: CESTY[jmeno] }));
+    // Polovina kruhu vyplněná = automatický motiv
+    if (jmeno === "auto") s.append(svg("path", { d: "M12 3a9 9 0 0 0 0 18z", fill: "currentColor", stroke: "none" }));
+    return s;
+  }
+
   /* ---------- Motiv (auto / světlý / tmavý) ---------- */
   const MOTIVY = ["auto", "light", "dark"];
-  const IKONY = { auto: "◐", light: "☀", dark: "☾" };
   function nastavMotiv(m) {
     if (m === "auto") document.documentElement.removeAttribute("data-theme");
     else document.documentElement.setAttribute("data-theme", m);
@@ -88,7 +104,7 @@
 
   function tlacitkoMotivu() {
     const b = el("button", { class: "lista__tlacitko", type: "button", title: "Přepnout světlý / tmavý režim" });
-    const obnov = () => { b.textContent = IKONY[aktualniMotiv()]; };
+    const obnov = () => { b.replaceChildren(ikona(aktualniMotiv())); };
     b.addEventListener("click", () => {
       const m = MOTIVY[(MOTIVY.indexOf(aktualniMotiv()) + 1) % MOTIVY.length];
       nastavMotiv(m); obnov();
@@ -120,15 +136,15 @@
 
     // Lišta
     const prubeh = el("i");
-    const tlObsah = el("button", { class: "lista__tlacitko", type: "button", title: "Obsah", "aria-expanded": "false" }, "☰");
+    const tlObsah = el("button", { class: "lista__tlacitko", type: "button", title: "Obsah", "aria-expanded": "false" }, ikona("menu"));
     const obsah = el("nav", { class: "obsah skryte", "aria-label": "Obsah" });
     const ol = el("ol");
     obsah.append(ol);
     const header = el("header", { class: "lista" },
       el("div", { class: "lista__vnitrek" },
-        el("a", { class: "lista__zpet", href: zpet }, "← Témata"),
+        el("a", { class: "lista__zpet", href: zpet }, ikona("zpet"), "Témata"),
         el("div", { class: "lista__nazev" }, nazev),
-        zdroj ? el("a", { class: "lista__tlacitko", href: zdroj, target: "_blank", rel: "noopener", title: "Otevřít zdrojové PDF", style: "text-decoration:none" }, "📄") : null,
+        zdroj ? el("a", { class: "lista__tlacitko", href: zdroj, target: "_blank", rel: "noopener", title: "Otevřít zdrojové PDF" }, ikona("dokument")) : null,
         tlObsah, tlacitkoMotivu()),
       obsah,
       el("div", { class: "lista__prubeh" }, prubeh));
@@ -137,7 +153,7 @@
     const hlavicka = $(".hlavicka", main);
     if (zdroj && hlavicka) {
       const perex = $(".hlavicka__perex", hlavicka);
-      const odkaz = el("a", { class: "zdroj-odkaz", href: zdroj, target: "_blank", rel: "noopener" }, "📄 Nakouknout do zdroje (PDF)");
+      const odkaz = el("a", { class: "zdroj-odkaz", href: zdroj, target: "_blank", rel: "noopener" }, ikona("dokument"), "Nakouknout do zdroje (PDF)");
       perex ? perex.after(odkaz) : hlavicka.append(odkaz);
     }
 
@@ -153,7 +169,7 @@
     kapitoly.forEach((k, i) => {
       const h2 = $("h2", k);
       const titulek = h2 ? h2.textContent.trim() : k.id;
-      if (h2 && !$(".cislo", h2)) h2.prepend(el("span", { class: "cislo" }, String(i + 1)));
+      if (h2 && !$(".cislo", h2)) h2.prepend(el("span", { class: "cislo" }, String(i + 1).padStart(2, "0")));
       const a = el("a", { href: "#" + k.id, onclick: () => { obsah.classList.add("skryte"); tlObsah.setAttribute("aria-expanded", "false"); } },
         el("span", { class: "fajfka" }, "✓"), titulek);
       odkazy[k.id] = a;
@@ -164,7 +180,7 @@
       const obnov = () => {
         const h = !!t.data.kapitoly[k.id];
         b.setAttribute("aria-pressed", String(h));
-        b.textContent = h ? "✓ Prostudováno" : "Mám prostudováno";
+        b.textContent = h ? "Prostudováno" : "Mám prostudováno";
         a.classList.toggle("hotovo", h);
       };
       b.addEventListener("click", () => {
@@ -223,7 +239,7 @@
     pokryti.forEach((p, i) => { if (!p.length) console.warn(`Maturitní požadavek ${i + 1} „${tema.pozadavky[i]}" nepokrývá žádná kapitola`); });
 
     const box = el("details", { class: "odhal pozadavky" },
-      el("summary", {}, "📋 Maturitní požadavky ", souhrn),
+      el("summary", {}, "Maturitní požadavky ", souhrn),
       el("div", { class: "odhal__obsah" },
         el("p", { class: "ztlumene", style: "font-size:.9rem" }, "Oficiální body k otázce. ✓ = prostudoval/a jsi všechny kapitoly, které bod pokrývají."),
         el("ol", {}, polozky)));
@@ -372,25 +388,33 @@
     const tlZnovu = el("button", { class: "btn btn--sek", type: "button" }, "Zamíchat znovu");
     const hotovo = el("div", { class: "test__souhrn skryte" });
 
+    const mira = el("i");
     box.append(
       el("div", { class: "balicek__hlava" }, el("span", {}, d.nazev || "Kartičky"), pocitadlo),
+      el("div", { class: "balicek__mira" }, mira),
       karta, hotovo,
       el("div", { class: "balicek__ovladani" }, tlNeumim, tlUmim, tlZnovu));
 
     function ukaz() {
       pocitadlo.textContent = `umím ${umim} / ${d.karty.length}`;
+      mira.style.width = (umim / d.karty.length) * 100 + "%";
       if (!fronta.length) {
         karta.classList.add("skryte");
         tlNeumim.classList.add("skryte"); tlUmim.classList.add("skryte");
         hotovo.classList.remove("skryte");
-        hotovo.innerHTML = "<div class='test__skore'>🎉</div><p>Prošel/a jsi všechny kartičky.</p>";
+        hotovo.innerHTML = "<div class='test__skore'>Hotovo</div><p>Prošel/a jsi všechny kartičky.</p>";
         return;
       }
       karta.classList.remove("skryte", "otocena");
       tlNeumim.classList.remove("skryte"); tlUmim.classList.remove("skryte");
       hotovo.classList.add("skryte");
       // Krátké zpoždění, ať se při otáčení zpět neukáže rub nové karty
-      setTimeout(() => { lic.innerHTML = fronta[0][0]; rub.innerHTML = fronta[0][1]; }, karta.dataset.bylo ? 150 : 0);
+      const zmen = () => {
+        lic.innerHTML = fronta[0][0]; rub.innerHTML = fronta[0][1];
+        // Restart animace příchodu nové karty
+        karta.classList.remove("prichazi"); void karta.offsetWidth; karta.classList.add("prichazi");
+      };
+      karta.dataset.bylo ? setTimeout(zmen, 150) : zmen();
       karta.dataset.bylo = "1";
     }
     tlUmim.addEventListener("click", () => { fronta.shift(); umim++; ukaz(); });
@@ -424,7 +448,7 @@
 
     // Zamíchá možnosti a přepočítá indexy správných odpovědí
     function pripravOtazku(o) {
-      if (o.typ === "ano-ne") return { ...o, moznosti: ["Ano, platí", "Ne, neplatí"], spravne: o.spravne ? 0 : 1, typ: "jedna", puvodni: o };
+      if (o.typ === "ano-ne") return { ...o, moznosti: ["Ano, platí", "Ne, neplatí"], spravne: [o.spravne ? 0 : 1], typ: "jedna", puvodni: o };
       if (o.typ === "cislo") return { ...o, puvodni: o };
       const poradi = o.zamichat === false ? o.moznosti.map((_, j) => j) : zamichej(o.moznosti.map((_, j) => j));
       const spr = [].concat(o.spravne);
@@ -439,8 +463,11 @@
       box.innerHTML = "";
       if (i >= sada.length) return souhrn();
       const o = sada[i];
+      const mira = el("i", { style: `width:${(i / sada.length) * 100}%` });
+      box.append(el("div", { class: "test__mira" }, mira));
+      requestAnimationFrame(() => requestAnimationFrame(() => { mira.style.width = ((i + 1) / sada.length) * 100 + "%"; }));
       const karta = el("div", { class: "test__otazka", "data-typ": o.typ });
-      karta.append(el("h4", {}, el("span", {}, `${i + 1}/${sada.length}`), el("span", { html: o.otazka, style: "color:inherit;font-weight:inherit;margin:0" })));
+      karta.append(el("div", { class: "test__cislo" }, `Otázka ${i + 1} z ${sada.length}`), el("h4", { html: o.otazka }));
       const tlKontrola = el("button", { class: "btn", type: "button", disabled: true }, "Zkontrolovat");
       const tlDalsi = el("button", { class: "btn skryte", type: "button" }, i + 1 < sada.length ? "Další otázka →" : "Zobrazit výsledek");
       let vyhodnot;
@@ -512,13 +539,27 @@
         t.data.test = { nejlepsi, posledni: proc, kdy: Date.now() };
         t.uloz();
       }
-      const hodnoceni = proc >= 90 ? "Výborně! Tohle umíš. 🎉" : proc >= 70 ? "Dobrá práce, ještě pár detailů." : proc >= 50 ? "Na půl cesty – projdi si chybné otázky." : "Zkus si téma ještě jednou projít.";
+      const hodnoceni = proc >= 90 ? "Výborně! Tohle umíš." : proc >= 70 ? "Dobrá práce, ještě pár detailů." : proc >= 50 ? "Na půl cesty – projdi si chybné otázky." : "Zkus si téma ještě jednou projít.";
       const tlZnovu = el("button", { class: "btn", type: "button" }, "Nový test");
       const tlChybne = el("button", { class: "btn btn--sek", type: "button" }, `Jen chybné (${chybne.length})`);
       tlZnovu.addEventListener("click", () => start(d.otazky));
       tlChybne.addEventListener("click", () => start(chybne));
+      // Kruhový ukazatel výsledku, který se „dotočí" na skóre
+      const R = 52, OBVOD = 2 * Math.PI * R;
+      const kruh = svg("svg", { class: "test__kruh", width: 128, height: 128, viewBox: "0 0 128 128" });
+      const hodnota = svg("circle", { class: "hodnota", cx: 64, cy: 64, r: R, "stroke-dasharray": OBVOD, "stroke-dashoffset": OBVOD, transform: "rotate(-90 64 64)" });
+      kruh.append(svg("circle", { class: "stopa", cx: 64, cy: 64, r: R }), hodnota);
+      const skore = el("div", { class: "test__skore" }, `0 / ${sada.length}`);
+      requestAnimationFrame(() => requestAnimationFrame(() => hodnota.setAttribute("stroke-dashoffset", OBVOD * (1 - body / sada.length))));
+      const start0 = performance.now();
+      const pocitej = (cas) => {
+        const k = Math.min(1, (cas - start0) / 1000);
+        skore.textContent = `${Math.round(body * (1 - (1 - k) ** 3))} / ${sada.length}`;
+        if (k < 1) requestAnimationFrame(pocitej);
+      };
+      requestAnimationFrame(pocitej);
       box.append(el("div", { class: "test__souhrn" },
-        el("div", { class: "test__skore" }, `${body} / ${sada.length}`),
+        kruh, skore,
         el("p", {}, `${proc} % – ${hodnoceni}`),
         el("p", { class: "ztlumene" }, `Nejlepší výsledek: ${nejlepsi} %`),
         el("div", { class: "test__ovladani" }, tlZnovu, chybne.length ? tlChybne : null)));
@@ -535,6 +576,27 @@
       tlStart));
   }
 
+  /* ---------- Plynulé objevování obsahu při scrollování ---------- */
+  function initAnimace() {
+    if (!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const prvky = $$(".obal > .hlavicka > *, .kapitola > :is(.box, .simulace, .tridicka, .balicek, .mrizka, .vzorec, details, [data-zalozky], .ilustrace, .test, h3), .ilustrace, .temata > li");
+    const pozoruj = new IntersectionObserver((zaznamy) => {
+      zaznamy.forEach((z) => {
+        if (!z.isIntersecting) return;
+        z.target.classList.add("je-videt");
+        pozoruj.unobserve(z.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    prvky.forEach((p, i) => {
+      p.classList.add("anim");
+      // Prvky viditelné hned po načtení naskočí postupně, ne všechny naráz
+      p.style.transitionDelay = Math.min(i, 8) * 40 + "ms";
+      p.addEventListener("transitionend", () => { p.style.transitionDelay = ""; }, { once: true });
+      pozoruj.observe(p);
+    });
+    document.documentElement.classList.add("anim-zap");
+  }
+
   /* ---------- Spuštění ---------- */
   function init() {
     initStranka();
@@ -543,10 +605,11 @@
     $$("[data-tridicka]").forEach(initTridicka);
     $$("[data-karticky]").forEach(initKarticky);
     $$("[data-test]").forEach(initTest);
+    initAnimace();
   }
 
   // Veřejné API pro vlastní widgety na stránkách
-  window.Ucebna = { el, svg, $, $$, zamichej, kc, cislo, nactiStav, tema };
+  window.Ucebna = { el, svg, ikona, $, $$, zamichej, kc, cislo, nactiStav, tema };
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();

@@ -11,7 +11,7 @@
 <body>
   <header class="lista">
     <div class="lista__vnitrek" data-lista>
-      <div class="lista__nazev">📚 Učebna</div>
+      <div class="lista__nazev" style="font-family:var(--serif);font-size:1.1rem;color:var(--text)">Učebna</div>
     </div>
   </header>
 
@@ -40,7 +40,7 @@
             info = s ? `${hotove}/${s.pocetKapitol} kapitol` + (s.test ? ` · test ${s.test.nejlepsi} %` : "") : "nezačato";
           }
           const obsah = [el("span", { class: "tema__cislo" }, String(t.c)), el("span", { class: "tema__nazev" }, t.nazev, t.pozadavky ? el("span", { class: "tema__pozadavky" }, t.pozadavky.join(" · ")) : null), el("span", { class: "tema__stav" }, info)];
-          seznam.append(el("li", {}, t.soubor
+          seznam.append(el("li", { style: `animation-delay:${Math.min(t.c, 12) * 30}ms` }, t.soubor
             ? el("a", { class: "tema", href: t.soubor }, obsah)
             : el("div", { class: "tema tema--chysta" }, obsah)));
         }
