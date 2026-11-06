@@ -1,0 +1,1239 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3. Trh – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-3" data-nazev="3. Trh" data-zpet="../../index.html" data-zdroj="../pdf/3 Trh.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 3</span>
+    <h1>Trh</h1>
+    <p class="hlavicka__perex">Kdo na trhu kupuje a kdo prodává, jak se z opačných zájmů stane jedna cena a co se stane, když trh sám nestačí. Křivky si tu osaháš na posuvnících.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>vysvětlit pojem <strong>trh</strong>, popsat jeho <strong>subjekty</strong> a <strong>rozdělit trh</strong> podle čtyř hledisek</li>
+        <li>definovat <strong>poptávku</strong>, nakreslit <strong>poptávkovou křivku</strong> a vyjmenovat <strong>faktory</strong>, které ji ovlivňují</li>
+        <li>definovat <strong>nabídku</strong>, nakreslit <strong>nabídkovou křivku</strong> a vyjmenovat její <strong>faktory</strong></li>
+        <li>rozlišit <strong>posun po křivce</strong> a <strong>posun celé křivky</strong></li>
+        <li>vysvětlit <strong>střet nabídky a poptávky</strong>, rovnovážnou cenu, přebytek a nedostatek</li>
+        <li>spočítat a vyložit <strong>cenovou elasticitu</strong></li>
+        <li>porovnat <strong>dokonalou a nedokonalou konkurenci</strong> a její formy</li>
+        <li>popsat <strong>selhání trhu</strong>: externality, veřejné statky, nedostatečnou konkurenci</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Trh, subjekty a rozdělení ===== -->
+  <section class="kapitola" id="pojem-trh" data-pozadavky="1 2 3">
+    <h2>Trh, jeho subjekty a rozdělení</h2>
+    <div class="box box--definice">
+      <p><strong>Trh</strong> je místo, kde se střetává poptávka a nabídka (kupující a prodávající) a kde dochází k výměně zboží za peníze.</p>
+    </div>
+
+    <h3>Subjekty trhu</h3>
+    <p>Na trhu vystupují tři subjekty. Každý z nich umí být kupujícím i prodávajícím, záleží jen na tom, o jaký trh jde.</p>
+    <figure class="ilustrace" aria-label="Domácnosti a firmy si vyměňují statky a výrobní faktory, stát obě strany reguluje">
+      <svg viewBox="0 0 400 170" style="max-width:520px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="150" y="8" width="100" height="36" rx="18" class="f-accent-soft s-accent"/>
+          <text x="200" y="31" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Stát</text>
+          <text x="200" y="64" text-anchor="middle" font-size="12.5" class="f-muted">kupuje i prodává + reguluje</text>
+        </g>
+        <path d="M150 26 H60 V88" pathLength="1" class="kresli s-accent f-none" stroke-width="1.5" style="--d:.3s"/>
+        <path d="M250 26 H340 V88" pathLength="1" class="kresli s-accent f-none" stroke-width="1.5" style="--d:.3s"/>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="10" y="88" width="100" height="62" rx="10" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="60" y="124" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Domácnosti</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="290" y="88" width="100" height="62" rx="10" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="340" y="124" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Firmy</text>
+        </g>
+        <g class="vyjed" style="--d:.8s">
+          <path d="M286 104 H116 M124 98 L116 104 L124 110" class="s-ink f-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="200" y="97" text-anchor="middle" font-size="13" class="f-ink">statky a služby</text>
+        </g>
+        <g class="vyjed" style="--d:1s">
+          <path d="M114 134 H284 M276 128 L284 134 L276 140" class="s-ink f-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="200" y="154" text-anchor="middle" font-size="13" class="f-ink">výrobní faktory</text>
+        </g>
+      </svg>
+      <figcaption>Na trhu statků prodávají firmy, na trhu výrobních faktorů domácnosti.</figcaption>
+    </figure>
+    <p>Klepni na kartu a podívej se, v jaké roli který subjekt vystupuje.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Domácnosti</div>
+        <div class="karta__rub"><p style="margin:0"><b>Kupující:</b> poptávají statky a služby.<br><b>Prodávající:</b> nabízejí firmám výrobní faktory.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Firmy</div>
+        <div class="karta__rub"><p style="margin:0"><b>Prodávající:</b> nabízejí statky a služby.<br><b>Kupující:</b> poptávají výrobní faktory.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Stát</div>
+        <div class="karta__rub"><p style="margin:0">Vystupuje jako <b>kupující i prodávající</b>. Navíc <b>reguluje trh</b> a vytváří podmínky pro jeho fungování.</p></div>
+      </div>
+    </div>
+
+    <h3>Členění trhu</h3>
+    <p>Trh se dělí podle čtyř hledisek.</p>
+    <div data-zalozky>
+      <section data-zalozka="Území">
+        <ul>
+          <li><strong>místní (regionální) trh</strong> – nabídka místních, krajových produktů</li>
+          <li><strong>národní (republikový) trh</strong></li>
+          <li><strong>mezinárodní trh</strong></li>
+          <li><strong>světový trh</strong></li>
+        </ul>
+      </section>
+      <section data-zalozka="Produkty">
+        <ul>
+          <li><strong>trh statků a služeb</strong></li>
+          <li><strong>trh výrobních faktorů</strong></li>
+          <li><strong>trh peněz</strong> – souvisí s trhem kapitálu</li>
+        </ul>
+      </section>
+      <section data-zalozka="Počet zákazníků">
+        <ul>
+          <li><strong>potenciální trh</strong> – všichni zákazníci, kteří mají o daný výrobek zájem</li>
+          <li><strong>použitelný trh</strong> – zákazníci, kteří mají o výrobek zájem a jsou schopni ho zaplatit</li>
+          <li><strong>cílový trh</strong> – část použitelného trhu, na kterou se firma zaměří</li>
+          <li><strong>podchycený trh</strong> – zákazníci, kteří si už výrobek koupili</li>
+        </ul>
+      </section>
+      <section data-zalozka="Druhy zboží">
+        <ul>
+          <li><strong>dílčí (částečný) trh</strong> – týká se jen jediného druhu zboží (např. automobily)</li>
+          <li><strong>agregátní (celkový) trh</strong> – týká se veškerého zboží</li>
+        </ul>
+      </section>
+    </div>
+
+    <figure class="ilustrace" aria-label="Čtyři trhy podle počtu zákazníků se postupně zužují">
+      <svg viewBox="0 0 400 166" style="max-width:500px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="10" y="6" width="380" height="34" rx="6" class="f-accent-soft s-accent"/>
+          <text x="200" y="28" text-anchor="middle" font-size="13" class="f-ink"><tspan font-weight="700">Potenciální</tspan> – mají zájem</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="45" y="46" width="310" height="34" rx="6" class="f-accent-soft s-accent"/>
+          <text x="200" y="68" text-anchor="middle" font-size="13" class="f-ink"><tspan font-weight="700">Použitelný</tspan> – zájem a peníze</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="80" y="86" width="240" height="34" rx="6" class="f-accent-soft s-accent"/>
+          <text x="200" y="108" text-anchor="middle" font-size="13" class="f-ink"><tspan font-weight="700">Cílový</tspan> – míří na ně firma</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <rect x="110" y="126" width="180" height="34" rx="6" class="f-accent"/>
+          <text x="200" y="148" text-anchor="middle" font-size="13" style="fill:var(--accent-text)"><tspan font-weight="700">Podchycený</tspan> – už koupili</text>
+        </g>
+      </svg>
+      <figcaption>Každý další trh je jen částí toho předchozího.</figcaption>
+    </figure>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Podle jakého hlediska je trh rozdělený?",
+        "kose": ["Území", "Produkty", "Počet zákazníků", "Druhy zboží"],
+        "polozky": [
+          ["místní trh", 0], ["národní trh", 0], ["světový trh", 0],
+          ["trh výrobních faktorů", 1], ["trh peněz", 1], ["trh statků a služeb", 1],
+          ["potenciální trh", 2], ["použitelný trh", 2], ["cílový trh", 2], ["podchycený trh", 2],
+          ["dílčí trh", 3], ["agregátní trh", 3]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Tržní mechanismus</h3>
+    <div class="box box--definice">
+      <p>Fungování hospodářského procesu v tržním systému zabezpečuje <strong>tržní mechanismus</strong>. Je založený na vzájemném působení a ovlivňování <strong>poptávky, nabídky a ceny</strong>. Reguluje množství vyráběného zboží a služeb.</p>
+    </div>
+  </section>
+
+  <!-- ===== 2. Poptávka ===== -->
+  <section class="kapitola" id="poptavka" data-pozadavky="4 5 6">
+    <h2>Poptávka</h2>
+    <div class="box box--definice">
+      <p><strong>Poptávka (demand)</strong> je ochota a schopnost spotřebitele kupovat za určitou cenu určité množství zboží. Můžeme také říct, že jde o množství zboží, které chtějí kupující za určitou cenu koupit.</p>
+    </div>
+
+    <h3>Typy poptávky</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Individuální</div>
+        <div class="karta__rub"><p style="margin:0">Poptávka <b>jednoho kupujícího</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Dílčí</div>
+        <div class="karta__rub"><p style="margin:0">Poptávka <b>všech lidí po jednom druhu</b> výrobku či služby.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Agregátní</div>
+        <div class="karta__rub"><p style="margin:0">Celková poptávka: poptávka <b>všech lidí po všech</b> statcích a službách.</p></div>
+      </div>
+    </div>
+
+    <h3>Poptávková křivka a zákon klesající poptávky</h3>
+    <div class="box box--definice">
+      <p><strong>Zákon klesající poptávky:</strong> s růstem ceny poptávka klesá. Čím vyšší je cena, tím méně kupujících je ochotno a schopno si za ni zboží koupit. A naopak: čím nižší cena, tím víc kupujících výrobek koupí.</p>
+    </div>
+    <p><strong>Poptávková křivka (funkce)</strong> to ukazuje v grafu. Na svislé ose je <strong>cena (P)</strong>, na vodorovné <strong>množství (Q)</strong>. Křivka <strong>D</strong> klesá zleva doprava. Vyzkoušej si to na kávě z automatu ve škole.</p>
+
+    <div class="simulace" id="sd">
+      <div class="legenda">
+        <span style="--c:var(--accent)">poptávka D teď</span>
+        <span style="--c:var(--text-muted)">čárkovaně: výchozí křivka</span>
+      </div>
+      <svg viewBox="0 0 400 310" style="max-width:560px;margin:0 auto" role="img" aria-label="Graf poptávkové křivky"></svg>
+      <div class="posuvnik"><label for="sd-p">Cena kávy (změna ceny)</label><output id="sd-p-o"></output><input id="sd-p" type="range" min="10" max="40" step="1" value="25"></div>
+      <div class="posuvnik"><label for="sd-f">Necenový faktor (příjmy, móda, substituty…)</label><output id="sd-f-o"></output><input id="sd-f" type="range" min="-100" max="100" step="20" value="0"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Poptávané množství</small><b id="sd-q"></b></div>
+        <div class="ukazatel"><small>Co se stalo</small><b id="sd-typ" style="font-size:.95rem"></b></div>
+      </div>
+      <p id="sd-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Podklady popisují poptávkovou funkci grafem. Dá se zapsat i rovnicí, tady je to jednoduchá přímka: <strong>Q = 500 − 10 × P</strong>. Při ceně 25 Kč je to 500 − 250 = 250 kelímků. Křivka v reálu nemusí být rovná, důležité je, že klesá.</p>
+    </div>
+
+    <h3>Faktory ovlivňující poptávku</h3>
+    <ul>
+      <li><strong>cena</strong></li>
+      <li><strong>velikost příjmů</strong></li>
+      <li><strong>existence substitutů a jejich ceny</strong> – statky, které mohou nahradit jiné statky</li>
+      <li><strong>ceny komplementů</strong> – statky, které doplňují jiné statky tak, že bez nich tyto statky nemůžou fungovat (například benzin do automobilu)</li>
+      <li><strong>preference spotřebitele</strong> – zvyky, móda apod.</li>
+      <li><strong>demografické změny</strong> – změna v počtu obyvatel, věku apod.</li>
+    </ul>
+
+    <h3>Posuny křivky poptávky</h3>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">a) Změna ceny</h3>
+        <p style="margin-bottom:0"><strong>Posun po křivce.</strong> Jde o změnu <strong>poptávaného množství</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">b) Změna jiného faktoru</h3>
+        <p style="margin-bottom:0"><strong>Posun celé křivky.</strong> Jde o změnu <strong>poptávky</strong>.</p>
+      </div>
+    </div>
+    <div class="box box--pozor">
+      <p>Když zdraží samotná káva a lidé jí koupí míň, <strong>křivka se nehýbe</strong>. Bod se jen posune po ní. U maturity řekni „kleslo poptávané množství“, ne „křivka se posunula“.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Podklady říkají, že se křivka posune, ale ne kam. Běžný postup:</p>
+      <ul>
+        <li><strong>doprava</strong> = poptávka roste, <strong>doleva</strong> = poptávka klesá</li>
+        <li>vyšší <strong>příjmy</strong> → u běžných statků doprava</li>
+        <li>dražší <strong>substitut</strong> → doprava (lidé přecházejí od dražší náhrady k tomuhle zboží)</li>
+        <li>dražší <strong>komplement</strong> → doleva (zdraží benzin, klesne poptávka po autech)</li>
+      </ul>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Co se stane v grafu poptávky po kávě?",
+        "kose": ["Posun po křivce", "Celá křivka doprava", "Celá křivka doleva"],
+        "polozky": [
+          ["zdraží samotná káva", 0], ["zlevní samotná káva", 0],
+          ["lidem vzrostou příjmy", 1], ["zdraží čaj (substitut)", 1], ["káva je v módě", 1], ["do města se přistěhují studenti", 1],
+          ["zdraží mléko do kávy (komplement)", 2], ["lidem klesnou příjmy", 2], ["zlevní čaj (substitut)", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 3. Nabídka ===== -->
+  <section class="kapitola" id="nabidka" data-pozadavky="7 8 9">
+    <h2>Nabídka</h2>
+    <div class="box box--definice">
+      <p><strong>Nabídka (supply)</strong> je ochota a schopnost prodávajícího nabízet za určitou cenu určité množství zboží. Zjednodušeně jde o množství zboží, které chtějí prodávající za určitou cenu prodat.</p>
+    </div>
+
+    <h3>Typy nabídky</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Individuální</div>
+        <div class="karta__rub"><p style="margin:0">Nabídka <b>jednoho výrobce</b> či prodejce.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Dílčí</div>
+        <div class="karta__rub"><p style="margin:0">Nabídka <b>jednoho výrobku všemi</b> výrobci či prodejci (součet individuálních nabídek).</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Agregátní</div>
+        <div class="karta__rub"><p style="margin:0">Celková nabídka: nabídka <b>všech výrobků a služeb</b> od všech firem.</p></div>
+      </div>
+    </div>
+
+    <h3>Nabídková křivka a zákon rostoucí nabídky</h3>
+    <div class="box box--definice">
+      <p><strong>Zákon rostoucí nabídky:</strong> s růstem ceny roste nabízené množství a naopak. Prodávající (výrobci) totiž chtějí při vyšší ceně prodat víc výrobků, aby měli větší zisk.</p>
+    </div>
+    <p><strong>Nabídková křivka (funkce) S</strong> proto roste zleva doprava. Osy jsou stejné jako u poptávky. Teď se na stejnou kávu podívej očima provozovatele automatů.</p>
+
+    <div class="simulace" id="ss">
+      <div class="legenda">
+        <span style="--c:var(--warn)">nabídka S teď</span>
+        <span style="--c:var(--text-muted)">čárkovaně: výchozí křivka</span>
+      </div>
+      <svg viewBox="0 0 400 310" style="max-width:560px;margin:0 auto" role="img" aria-label="Graf nabídkové křivky"></svg>
+      <div class="posuvnik"><label for="ss-p">Cena kávy (změna ceny)</label><output id="ss-p-o"></output><input id="ss-p" type="range" min="10" max="40" step="1" value="25"></div>
+      <div class="posuvnik"><label for="ss-f">Necenový faktor (vstupy, technologie, daně…)</label><output id="ss-f-o"></output><input id="ss-f" type="range" min="-100" max="100" step="20" value="0"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Nabízené množství</small><b id="ss-q"></b></div>
+        <div class="ukazatel"><small>Co se stalo</small><b id="ss-typ" style="font-size:.95rem"></b></div>
+      </div>
+      <p id="ss-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Rovnicí zapsaná nabídková funkce z obrázku: <strong>Q = 10 × P</strong>. Při ceně 25 Kč se nabízí 250 kelímků, při 30 Kč už 300.</p>
+    </div>
+
+    <h3>Faktory ovlivňující nabídku</h3>
+    <ul>
+      <li><strong>cena</strong></li>
+      <li><strong>ceny vstupů do výroby</strong> – změna cen surovin a energií, zvyšování mezd apod.</li>
+      <li><strong>ceny substitutů</strong></li>
+      <li><strong>technologie výroby</strong> – snížení nákladů díky zavedení nejnovějších technologií apod.</li>
+      <li><strong>změny vnějších podmínek podnikání</strong> – přírodní podmínky, výše daní apod.</li>
+    </ul>
+
+    <h3>Posuny křivky nabídky</h3>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">c) Změna ceny</h3>
+        <p style="margin-bottom:0"><strong>Posun po křivce.</strong> Jde o změnu <strong>nabízeného množství</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">d) Změna jiného faktoru</h3>
+        <p style="margin-bottom:0"><strong>Posun celé křivky.</strong> Jde o změnu <strong>nabídky</strong>.</p>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p>Kam se křivka posune: <strong>doprava</strong> = nabídka roste (levnější vstupy, lepší technologie, nižší daně), <strong>doleva</strong> = nabídka klesá (dražší vstupy, neúroda, vyšší daně). <strong>Substitut</strong> je tady zboží, které by firma mohla vyrábět místo tohohle. Když zdraží, vyplatí se přejít na něj a nabídka tohohle zboží klesá.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Co se stane v grafu nabídky kávy?",
+        "kose": ["Posun po křivce", "Celá křivka doprava", "Celá křivka doleva"],
+        "polozky": [
+          ["zdraží samotná káva", 0], ["zlevní samotná káva", 0],
+          ["nový stroj sníží náklady", 1], ["zlevní kávová zrna", 1], ["stát sníží daně", 1],
+          ["zdraží energie", 2], ["vzrostou mzdy", 2], ["neúroda kávy", 2], ["zdraží substitut, který by firma mohla vyrábět místo kávy", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 4. Střet nabídky a poptávky ===== -->
+  <section class="kapitola" id="stret" data-pozadavky="10">
+    <h2>Střet nabídky a poptávky</h2>
+    <p>Prodávající a kupující mají opačné zájmy. Kupující chce kupovat za co nejnižší cenu, prodávající prodávat za cenu co nejvyšší. Přesto kupující nakoupí a prodávající prodá. Na určité úrovni se tedy poptávka s nabídkou setkat musí, jinak by k nákupu ani prodeji nedošlo.</p>
+    <div class="box box--definice">
+      <p><strong>Rovnovážná cena (P<sub>E</sub>)</strong> je cena, při které se nabídka s poptávkou vyrovnají. Prodá se i koupí při ní stejné množství, tzv. <strong>rovnovážné množství (Q<sub>E</sub>)</strong>.</p>
+      <p>Místo, kde se nabídka s poptávkou střetne, je <strong>tržní rovnováha</strong> (rovnovážný bod). Značí se <strong>E – Equilibrium</strong>.</p>
+    </div>
+
+    <div class="simulace" id="trh">
+      <p style="margin-top:0"><strong>Trh kávy z automatu.</strong> Nastav cenu, nebo vyvolej událost. Pak nech trh, ať se srovná sám.</p>
+      <div class="legenda">
+        <span style="--c:var(--accent)">poptávka D</span>
+        <span style="--c:var(--warn)">nabídka S</span>
+        <span style="--c:var(--bad)">přebytek nebo nedostatek</span>
+        <span style="--c:var(--text-muted)">čárkovaně: výchozí křivky</span>
+      </div>
+      <svg viewBox="0 0 400 310" style="max-width:560px;margin:0 auto" role="img" aria-label="Graf poptávky a nabídky s rovnovážným bodem E"></svg>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Poptávané množství</small><b id="tr-qd"></b></div>
+        <div class="ukazatel"><small>Nabízené množství</small><b id="tr-qs"></b></div>
+        <div class="ukazatel"><small>Rovnovážná cena P<sub>E</sub></small><b id="tr-pe"></b></div>
+        <div class="ukazatel"><small>Rovnovážné množství Q<sub>E</sub></small><b id="tr-qe"></b></div>
+      </div>
+      <p id="tr-t" aria-live="polite" style="font-size:.92rem"></p>
+      <div class="tridicka__ovladani" style="margin-top:0">
+        <button class="btn" type="button" data-akce="srovnej">Nech trh srovnat cenu</button>
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+      </div>
+      <div class="posuvnik"><label for="tr-p">Cena na trhu</label><output id="tr-p-o"></output><input id="tr-p" type="range" min="10" max="40" step="1" value="30"></div>
+      <div class="posuvnik"><label for="tr-d">Posun poptávky (celá křivka)</label><output id="tr-d-o"></output><input id="tr-d" type="range" min="-100" max="100" step="20" value="0"></div>
+      <div class="posuvnik"><label for="tr-s">Posun nabídky (celá křivka)</label><output id="tr-s-o"></output><input id="tr-s" type="range" min="-100" max="100" step="20" value="0"></div>
+      <h4 style="margin:14px 0 6px">Co se stalo na trhu?</h4>
+      <div class="trh__udalosti"></div>
+    </div>
+
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Cena nižší než rovnovážná</h3>
+        <p style="margin-bottom:0"><strong>Převis poptávky (nedostatek).</strong> Poptávka je větší než nabídka.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Cena vyšší než rovnovážná</h3>
+        <p style="margin-bottom:0"><strong>Převis nabídky (přebytek).</strong> Nabídka je větší než poptávka.</p>
+      </div>
+    </div>
+    <div class="box box--tip">
+      <p>V grafu leží <strong>přebytek nahoře</strong> (nad bodem E, cena je moc vysoká) a <strong>nedostatek dole</strong> (pod bodem E, cena je moc nízká).</p>
+    </div>
+    <div class="box box--priklad">
+      <p>Cena 30 Kč: poptává se 200 kelímků, nabízí se 300. Přebytek je <strong>100 kelímků</strong>. Cena 20 Kč: poptává se 300, nabízí se 200. Nedostatek je <strong>100 kelímků</strong>. Jen při 25 Kč je to 250 = 250.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Proč se cena vrací k rovnováze: při přebytku prodejcům zboží zbývá, tak zlevňují. Při nedostatku se na zboží stojí fronty, tak prodejci zdražují. Oba tlaky tlačí cenu k P<sub>E</sub>. Tohle je tržní mechanismus v praxi.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5. Cenová elasticita ===== -->
+  <section class="kapitola" id="elasticita">
+    <h2>Cenová elasticita poptávky a nabídky</h2>
+    <div class="box box--definice">
+      <p><strong>Cenová elasticita</strong> je míra závislosti změny poptávaného či nabízeného množství na změně ceny. Říká, jak se změní poptávané či nabízené množství zboží, když se změní jeho cena.</p>
+    </div>
+    <div class="vzorec">E<sub>D</sub> = % změna poptávaného množství / % změna ceny</div>
+    <div class="vzorec">E<sub>S</sub> = % změna nabízeného množství / % změna ceny</div>
+
+    <h3>Tři možné výsledky</h3>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">E &gt; 1</h3>
+        <p><strong>Velmi elastická</strong> poptávka (nabídka).</p>
+        <p style="margin-bottom:0">Když je cena vyšší, nekupujeme (dovolená, byty, nemovitosti). Dopřejeme si je, až jsou levnější. Malá změna ceny způsobí velký rozdíl v nákupu.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">E = 1</h3>
+        <p><strong>Jednotkově elastická</strong> poptávka (nabídka).</p>
+        <p style="margin-bottom:0">Změna ceny statku ponechá spotřebitelské výdaje na statek beze změny. I když se cena zvýší, kupujeme (např. vzroste cena chleba, tak ho koupíme).</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--text-muted)">
+        <h3 style="margin-top:0">E &lt; 1</h3>
+        <p><strong>Málo elastická či neelastická</strong> poptávka (nabídka).</p>
+        <p style="margin-bottom:0">Luxusní, prestižní výrobky pro bohatší skupinu obyvatelstva. V době ekonomické krize se zájem o ně příliš nemění, stále nacházejí své zákazníky.</p>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p><strong>Příklady z podkladů se liší od běžných učebnic.</strong> Tam se chléb a další nezbytnosti (léky, potraviny) uvádějí jako <strong>málo elastické</strong> (E &lt; 1), protože je koupíš skoro za každou cenu. Luxusní zboží se u většiny kupujících uvádí spíš jako <strong>elastické</strong> (E &gt; 1). Výše jsou příklady přesně podle podkladů. Definice a vzorec platí v obou případech. Ověř si u učitele, které příklady chce slyšet.</p>
+    </div>
+
+    <div class="simulace" id="el">
+      <p style="margin-top:0"><strong>Spočítej elasticitu poptávky.</strong> Prodáváš 1 000 kusů za 100 Kč, spotřebitelé za ně utratí 100 000 Kč. Pak zdražíš.</p>
+      <div class="posuvnik"><label for="el-c">Cena vzroste o</label><output id="el-c-o"></output><input id="el-c" type="range" min="1" max="10" step="1" value="10"></div>
+      <div class="posuvnik"><label for="el-q">Prodané množství klesne o</label><output id="el-q-o"></output><input id="el-q" type="range" min="0" max="30" step="1" value="25"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Koeficient E<sub>D</sub></small><b id="el-e"></b></div>
+        <div class="ukazatel"><small>Výdaje spotřebitelů po zdražení</small><b id="el-v"></b></div>
+      </div>
+      <p id="el-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Dvě věci, které v podkladech nejsou. Elasticita poptávky vychází správně <strong>záporná</strong> (cena nahoru, množství dolů), proto se bere v <strong>absolutní hodnotě</strong>. A rovnost „E = 1, výdaje beze změny“ platí přesně jen pro velmi malé změny ceny. Proto i v kalkulačce vyjde při 10 % a 10 % o něco méně než 100 000 Kč.</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. Konkurence ===== -->
+  <section class="kapitola" id="konkurence" data-pozadavky="11">
+    <h2>Konkurence a dokonalá konkurence</h2>
+    <div class="box box--definice">
+      <p><strong>Konkurence</strong> je proces střetávání protichůdných zájmů tržních subjektů.</p>
+    </div>
+
+    <h3>Členění podle tržních stran</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">a) Na straně nabídky</div>
+        <div class="karta__rub"><p style="margin:0">Konkurence mezi <b>výrobci (prodejci)</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">b) Na straně poptávky</div>
+        <div class="karta__rub"><p style="margin:0">Konkurence mezi <b>kupujícími</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">c) Napříč trhem</div>
+        <div class="karta__rub"><p style="margin:0">Mezi <b>nabídkou a poptávkou</b>. Výrobci chtějí prodat vše za vysokou cenu, kupující koupit nejvíc za nejnižší cenu. K obchodu vede kompromis: <b>rovnovážná cena</b>.</p></div>
+      </div>
+    </div>
+
+    <h3>Formy konkurence mezi výrobci (prodejci)</h3>
+    <ul>
+      <li><strong>a) cenová</strong> – firmy si konkurují cenou</li>
+      <li><strong>b) necenová</strong> – firmy si konkurují necenovými faktory: kvalita výrobku, inovace výrobků, reklama, různé služby při prodeji (prodej na úvěr – splátky)</li>
+    </ul>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jak si tady firmy konkurují?",
+        "kose": ["Cenová konkurence", "Necenová konkurence"],
+        "polozky": [
+          ["sleva 20 % oproti konkurenci", 0], ["nejnižší cena ve městě", 0], ["zlevnění po zdražení u soupeře", 0],
+          ["kvalitnější materiál", 1], ["nový model s lepšími funkcemi", 1], ["reklamní kampaň", 1], ["prodej na splátky", 1]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Dokonalá konkurence</h3>
+    <p>Mluvíme o ní tehdy, když jsou splněné <strong>4 základní podmínky</strong>:</p>
+    <ol>
+      <li>na trhu působí <strong>velké množství malých firem</strong>, které díky své malé velikosti nemůžou ovlivnit cenu na trhu</li>
+      <li><strong>homogenní (stejnorodý)</strong> výrobek</li>
+      <li><strong>žádné nebo jen minimální bariéry</strong> – volný či snadný vstup do odvětví a výstup z něho</li>
+      <li><strong>všichni mají stejné informace</strong></li>
+    </ol>
+    <div class="box box--pozor">
+      <p>Dokonalá konkurence představuje <strong>ideální strukturu trhu</strong>, která vytváří nejlepší podmínky. <strong>Ve skutečnosti ale neexistuje.</strong> Neuváděj u ní reálný příklad.</p>
+    </div>
+  </section>
+
+  <!-- ===== 7. Nedokonalá konkurence ===== -->
+  <section class="kapitola" id="nedokonala" data-pozadavky="11">
+    <h2>Nedokonalá konkurence</h2>
+    <div class="box box--definice">
+      <p><strong>Nedokonalá konkurence</strong> nastává tehdy, když dojde k porušení <strong>alespoň jedné</strong> podmínky dokonalé konkurence. Má 3 základní formy: <strong>monopol, oligopol a monopolistickou konkurenci</strong>.</p>
+    </div>
+    <figure class="ilustrace" aria-label="Od dokonalé konkurence k monopolu ubývá firem">
+      <svg viewBox="0 0 400 150" style="max-width:520px">
+        <g class="vyjed f-accent" style="--d:.1s">
+          <circle cx="32" cy="12" r="4"/><circle cx="44" cy="12" r="4"/><circle cx="56" cy="12" r="4"/><circle cx="68" cy="12" r="4"/>
+          <circle cx="32" cy="24" r="4"/><circle cx="44" cy="24" r="4"/><circle cx="56" cy="24" r="4"/><circle cx="68" cy="24" r="4"/>
+          <circle cx="32" cy="36" r="4"/><circle cx="44" cy="36" r="4"/><circle cx="56" cy="36" r="4"/><circle cx="68" cy="36" r="4"/>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <circle cx="132" cy="12" r="4" class="f-accent"/><rect x="140" y="8" width="8" height="8" class="f-warn"/><circle cx="156" cy="12" r="4" class="f-accent"/><rect x="164" y="8" width="8" height="8" class="f-warn"/>
+          <rect x="128" y="20" width="8" height="8" class="f-warn"/><circle cx="144" cy="24" r="4" class="f-accent"/><rect x="152" y="20" width="8" height="8" class="f-warn"/><circle cx="168" cy="24" r="4" class="f-accent"/>
+          <circle cx="132" cy="36" r="4" class="f-accent"/><rect x="140" y="32" width="8" height="8" class="f-warn"/><circle cx="156" cy="36" r="4" class="f-accent"/><rect x="164" y="32" width="8" height="8" class="f-warn"/>
+        </g>
+        <g class="vyjed f-accent" style="--d:.5s">
+          <circle cx="232" cy="24" r="10"/><circle cx="256" cy="14" r="9"/><circle cx="270" cy="34" r="9"/>
+        </g>
+        <circle cx="350" cy="24" r="20" class="vyjed f-accent" style="--d:.7s"/>
+        <g class="vyjed" style="--d:.9s">
+          <text x="50" y="66" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">dokonalá</text>
+          <text x="50" y="82" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">konkurence</text>
+          <text x="150" y="66" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">monopolistická</text>
+          <text x="150" y="82" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">konkurence</text>
+          <text x="250" y="66" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">oligopol</text>
+          <text x="350" y="66" text-anchor="middle" font-size="12.5" font-weight="600" class="f-ink">monopol</text>
+        </g>
+        <path d="M14 106 H386 M378 100 L386 106 L378 112" pathLength="1" class="kresli s-muted f-none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="--d:1s"/>
+        <text x="200" y="130" text-anchor="middle" font-size="12.5" class="vyjed f-muted" style="--d:1.2s">ubývá firem, roste jejich vliv na cenu</text>
+      </svg>
+      <figcaption>Kolečka a čtverečky u monopolistické konkurence = odlišné výrobky.</figcaption>
+    </figure>
+
+    <div data-zalozky>
+      <section data-zalozka="Monopol">
+        <p>Na trhu existuje <strong>pouze jedna firma</strong>, její výrobky jsou jedinečné, jiné firmy je nevyrábějí. Jsou tu <strong>bariéry vstupu</strong> na trh. Firma si může <strong>diktovat cenu</strong> (např. Česká pošta, ČEZ, České dráhy).</p>
+        <ul>
+          <li><strong>přirozený monopol</strong> – distribuce elektřiny, vody, tepla</li>
+          <li><strong>administrativní monopol</strong> – zřízený státem, vstup na trh je vázán povolením státu</li>
+        </ul>
+        <div class="box box--doplneno" style="margin-bottom:0">
+          <p>Tři příklady z podkladů jsou zastaralé. Česká pošta má od roku 2013 na listovní zásilky konkurenci, elektřinu ti prodá i jiný dodavatel než ČEZ a na železnici jezdí vedle Českých drah i další dopravci. Monopolem dnes zůstává spíš <strong>distribuce</strong> elektřiny, vody a tepla.</p>
+        </div>
+      </section>
+      <section data-zalozka="Oligopol">
+        <p>Na trhu existuje <strong>několik větších firem</strong>, výrobek může být homogenní i diferencovaný. Při vstupu do odvětví mohou být určité překážky.</p>
+        <ul>
+          <li><strong>ryzí oligopol</strong> – výrobek je stejný (např. čerpací stanice)</li>
+          <li><strong>diferencovaný oligopol</strong> – výrobek je diferencovaný (např. automobilky)</li>
+        </ul>
+      </section>
+      <section data-zalozka="Monop. konkurence">
+        <p>Nejvíc se podobá dokonalé konkurenci, liší se <strong>pouze v povaze výrobku</strong>: výrobek je <strong>heterogenní, tedy diferencovaný</strong>. Na trhu je velké množství firem, vstup i výstup je volný či snadný. Např. restaurace, kosmetika.</p>
+      </section>
+    </div>
+
+    <div class="simulace" id="struktura">
+      <p style="margin-top:0"><strong>Urči tržní strukturu.</strong> Nastav vlastnosti trhu a uvidíš, o jakou formu jde.</p>
+      <div class="struktura__radky"></div>
+      <div class="box struktura__vysledek" aria-live="polite" style="margin-bottom:0"></div>
+    </div>
+
+    <h3>Na straně poptávky</h3>
+    <p>Specifické formy nedokonalé konkurence, kde je málo <strong>kupujících</strong>:</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Monopson</div>
+        <div class="karta__rub"><p style="margin:0">Monopol na straně poptávky: na trhu je <b>pouze jeden kupující</b> (např. zbraně pro armádu).</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Oligopson</div>
+        <div class="karta__rub"><p style="margin:0">Jen <b>několik odběratelů</b> (např. zbraně pro armádu a policii).</p></div>
+      </div>
+    </div>
+
+    <h3>Formy vznikajícího monopolu</h3>
+    <figure class="ilustrace" aria-label="Čtyři stupně spojení firem od kartelu po koncern">
+      <svg viewBox="0 0 400 170" style="max-width:500px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="10" y="118" width="88" height="44" rx="4" class="f-accent-soft s-accent"/>
+          <text x="54" y="145" text-anchor="middle" font-size="13.5" font-weight="600" class="f-ink">kartel</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="106" y="88" width="88" height="74" rx="4" class="f-accent-soft s-accent"/>
+          <text x="150" y="130" text-anchor="middle" font-size="13.5" font-weight="600" class="f-ink">syndikát</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="202" y="58" width="88" height="104" rx="4" class="f-accent-soft s-accent"/>
+          <text x="246" y="115" text-anchor="middle" font-size="13.5" font-weight="600" class="f-ink">trust</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <rect x="298" y="28" width="92" height="134" rx="4" class="f-accent"/>
+          <text x="344" y="100" text-anchor="middle" font-size="13.5" font-weight="600" style="fill:var(--accent-text)">koncern</text>
+          <text x="344" y="18" text-anchor="middle" font-size="12" class="f-muted">nejvyšší forma</text>
+        </g>
+      </svg>
+      <figcaption>Podle podkladů: čím vyšší schod, tím těsněji jsou firmy spojené.</figcaption>
+    </figure>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">a) Kartel</div>
+        <div class="karta__rub"><p style="margin:0"><b>Dohoda</b> mezi samostatnými konkurenty <b>o cenách</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">b) Syndikát</div>
+        <div class="karta__rub"><p style="margin:0">Konkurenti zůstávají právně samostatní, ale vůči dodavatelům či odběratelům vystupují <b>jako jeden celek</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">c) Trust</div>
+        <div class="karta__rub"><p style="margin:0">Firmy si zachovávají právní subjektivitu, ale dochází k <b>propojení v oblasti výroby</b>, firmy jsou na sobě závislé.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">d) Koncern</div>
+        <div class="karta__rub"><p style="margin:0">Firmy <b>ztrácí právní subjektivitu</b>, nejvyšší forma monopolu. Jde o <b>fúzi</b> (splynutí podniků v jeden) nebo <b>akvizici</b> (právní nebo ekonomické spojení podniků).</p></div>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p><strong>Trust a koncern</strong> se v učebnicích často popisují obráceně: v <strong>koncernu</strong> zůstávají firmy právně samostatné a jsou jen ekonomicky závislé, v <strong>trustu</strong> samostatnost ztrácejí. Tady je to podle podkladů. Ověř si u učitele, kterou verzi chce slyšet.</p>
+      <p>Cenové <strong>kartelové dohody</strong> jsou dnes v ČR zakázané zákonem o ochraně hospodářské soutěže. Dohlíží na to Úřad pro ochranu hospodářské soutěže (ÚOHS).</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Která forma nedokonalé konkurence to je?",
+        "kose": ["Přirozený monopol", "Ryzí oligopol", "Diferencovaný oligopol", "Monopolistická konkurence", "Monopson"],
+        "polozky": [
+          ["distribuce vody", 0], ["distribuce tepla", 0],
+          ["čerpací stanice", 1],
+          ["automobilky", 2],
+          ["restaurace", 3], ["kosmetika", 3],
+          ["jediný kupující zbraní pro armádu", 4]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Selhání trhu ===== -->
+  <section class="kapitola" id="selhani" data-pozadavky="12 13 14">
+    <h2>Selhání trhu</h2>
+    <div class="box box--definice">
+      <p><strong>Selhání trhu</strong> je stav, kdy trh neplní dostatečně účinně a spravedlivě své funkce. V takovém případě je vhodné, aby určitými opatřeními zasahoval <strong>stát</strong>.</p>
+    </div>
+
+    <h3>1. Externality</h3>
+    <p>Vznikají, když někdo <strong>nenese plně náklady</strong> své činnosti nebo když <strong>nedostane úplné výnosy</strong> své činnosti.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Pozitivní externality</div>
+        <div class="karta__rub"><p style="margin:0">Člověk si nemůže přisvojit veškeré výnosy ze své činnosti či majetku a část si přisvojují jiní. Např. <b>sadař má užitek ze včelaře</b>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Negativní externality</div>
+        <div class="karta__rub"><p style="margin:0">Člověk nenese plně všechny náklady své činnosti a část přenáší na jiné. Např. <b>kuřák v kanceláři s nekuřákem</b>.</p></div>
+      </div>
+    </div>
+
+    <div class="simulace" id="ext">
+      <p style="margin-top:0"><strong>Negativní externalita v číslech.</strong> Výroba jednoho výrobku stojí továrnu 60 Kč. Čísla jsou jen ilustrační.</p>
+      <div class="posuvnik"><label for="ext-s">Škoda na okolí (znečištěná řeka, hluk)</label><output id="ext-s-o"></output><input id="ext-s" type="range" min="0" max="60" step="10" value="40"></div>
+      <div class="posuvnik"><label for="ext-p">Kolik ze škody nechá stát zaplatit továrnu</label><output id="ext-p-o"></output><input id="ext-p" type="range" min="0" max="100" step="10" value="0"></div>
+      <div class="ext__pruh" role="img" aria-label="Rozdělení nákladů mezi továrnu a okolí">
+        <div class="ext__firma"></div>
+        <div class="ext__okoli"></div>
+      </div>
+      <div class="legenda">
+        <span style="--c:var(--accent)">platí továrna</span>
+        <span style="--c:var(--bad)">nese okolí</span>
+      </div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Skutečné náklady</small><b id="ext-c"></b></div>
+        <div class="ukazatel"><small>Platí továrna</small><b id="ext-f"></b></div>
+        <div class="ukazatel"><small>Nese okolí</small><b id="ext-o"></b></div>
+      </div>
+      <p id="ext-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Jak stát externality řeší: u negativních <strong>daně, poplatky, pokuty a zákazy</strong> (poplatek za znečištění), u pozitivních <strong>dotace</strong>. Cílem je, aby náklady nesl ten, kdo je způsobil.</p>
+    </div>
+
+    <h3>2. Veřejné statky</h3>
+    <div class="box box--definice">
+      <p><strong>Veřejné statky</strong> jsou statky, které poskytuje stát a nejsou poskytovány na tržním principu, ale na základě <strong>nárokovosti</strong>. Při jejich poskytování se zaměřujeme na <strong>celé skupiny osob</strong> (vzdělání, osvětlení, zdravotní péče apod.).</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>V učebnicích se u veřejných statků uvádějí ještě dva znaky. <strong>Nevylučitelnost:</strong> nikoho nemůžeš z užívání vyloučit (pouliční osvětlení svítí všem). <strong>Nespotřebovatelnost (nerivalita):</strong> když statek užíváš ty, nezbude ho méně pro druhé. Trh je nedodá, protože by za ně skoro nikdo dobrovolně neplatil, když je stejně může užívat zadarmo.</p>
+    </div>
+
+    <h3>3. Nedostatečná konkurence</h3>
+    <div class="box box--definice">
+      <p><strong>Nedostatečná konkurence</strong> je existence nedokonalé konkurence (monopol, oligopol, monopolistická konkurence). Stát někdy zasahuje tím, že <strong>reguluje ceny</strong>.</p>
+    </div>
+
+    <details class="odhal">
+      <summary>Další případy tržního selhání</summary>
+      <div class="odhal__obsah">
+        <p>Tržním selháním může být např. také:</p>
+        <ul>
+          <li>působení <strong>hospodářských cyklů</strong></li>
+          <li><strong>nespravedlivé rozdělení příjmů</strong></li>
+          <li><strong>nedostatečná tržní nabídka</strong></li>
+        </ul>
+      </div>
+    </details>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jaký případ tržního selhání to je?",
+        "kose": ["Pozitivní externalita", "Negativní externalita", "Veřejný statek", "Nedostatečná konkurence"],
+        "polozky": [
+          ["sadař má užitek ze včelaře", 0], ["soused opraví fasádu a hodnota okolních domů stoupne", 0],
+          ["kuřák v kanceláři s nekuřákem", 1], ["továrna znečišťuje řeku", 1],
+          ["pouliční osvětlení", 2], ["vzdělání", 2], ["zdravotní péče", 2],
+          ["jediná firma si diktuje cenu", 3], ["stát reguluje cenu monopolu", 3]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 9. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – trh",
+        "karty": [
+          ["Trh", "Místo, kde se střetává poptávka a nabídka a kde dochází k výměně zboží za peníze."],
+          ["Subjekty trhu", "Domácnosti, firmy, stát. Každý je kupující i prodávající, stát navíc trh reguluje."],
+          ["4 hlediska členění trhu", "Územní, podle produktů, podle počtu zákazníků, podle množství druhů zboží."],
+          ["Trhy podle počtu zákazníků", "Potenciální, použitelný, cílový, podchycený."],
+          ["Tržní mechanismus", "Vzájemné působení poptávky, nabídky a ceny. Reguluje množství vyráběného zboží a služeb."],
+          ["Poptávka", "Ochota a schopnost spotřebitele kupovat za určitou cenu určité množství zboží."],
+          ["Zákon klesající poptávky", "S růstem ceny poptávka klesá, s poklesem ceny roste."],
+          ["Faktory poptávky", "Cena, příjmy, substituty a jejich ceny, ceny komplementů, preference, demografické změny."],
+          ["Substitut × komplement", "Substitut statek nahrazuje. Komplement ho doplňuje tak, že bez něj nemůže fungovat (benzin do auta)."],
+          ["Nabídka", "Ochota a schopnost prodávajícího nabízet za určitou cenu určité množství zboží."],
+          ["Zákon rostoucí nabídky", "S růstem ceny roste nabízené množství a naopak. Výrobci chtějí větší zisk."],
+          ["Faktory nabídky", "Cena, ceny vstupů, ceny substitutů, technologie výroby, změny vnějších podmínek podnikání."],
+          ["Posun po křivce × posun křivky", "Změna ceny = posun po křivce (změna poptávaného / nabízeného množství). Jiný faktor = posun celé křivky (změna poptávky / nabídky)."],
+          ["Rovnovážná cena P<sub>E</sub>", "Cena, při které se nabídka s poptávkou vyrovnají. Prodá se i koupí stejné množství Q<sub>E</sub>. Bod E = Equilibrium."],
+          ["Přebytek × nedostatek", "Cena nad rovnovážnou = převis nabídky (přebytek). Cena pod rovnovážnou = převis poptávky (nedostatek)."],
+          ["Cenová elasticita", "% změna množství / % změna ceny. E &gt; 1 velmi elastická, E = 1 jednotkově elastická, E &lt; 1 málo elastická."],
+          ["4 podmínky dokonalé konkurence", "Mnoho malých firem, homogenní výrobek, žádné nebo minimální bariéry, stejné informace."],
+          ["3 formy nedokonalé konkurence", "Monopol, oligopol (ryzí, diferencovaný), monopolistická konkurence."],
+          ["Formy vznikajícího monopolu", "Kartel, syndikát, trust, koncern (fúze, akvizice)."],
+          ["Selhání trhu", "Trh neplní účinně a spravedlivě své funkce. Externality, veřejné statky, nedostatečná konkurence."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Pojem trh, subjekty (domácnosti, firmy, stát), tržní mechanismus.</li>
+          <li>Rozdělení trhu: území, produkty, počet zákazníků, množství druhů zboží.</li>
+          <li>Poptávka: definice, typy, křivka, zákon klesající poptávky, faktory, posun po křivce × posun křivky.</li>
+          <li>Nabídka: definice, typy, křivka, zákon rostoucí nabídky, faktory, posuny.</li>
+          <li>Střet nabídky a poptávky: nakresli graf, E, P<sub>E</sub>, Q<sub>E</sub>, přebytek a nedostatek.</li>
+          <li>Cenová elasticita: vzorec a tři varianty výsledku.</li>
+          <li>Konkurence: definice, strany trhu, cenová × necenová. Dokonalá: 4 podmínky.</li>
+          <li>Nedokonalá konkurence: monopol, oligopol, monopolistická konkurence, monopson, oligopson. Formy vznikajícího monopolu.</li>
+          <li>Selhání trhu: externality, veřejné statky, nedostatečná konkurence, další případy, role státu.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 10. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Co je trh?",
+           "moznosti": ["Souhrn všech firem jednoho odvětví v dané zemi", "Místo, kde se střetává poptávka a nabídka a mění se zboží za peníze", "Místo, kde stát stanovuje ceny a množství zboží", "Přehled zboží, které firmy v daném období vyrobily"],
+           "spravne": 1},
+          {"typ": "vice", "otazka": "Jak vystupují na trhu <b>domácnosti</b>?",
+           "moznosti": ["Poptávají statky a služby", "Nabízejí statky a služby firmám", "Nabízejí firmám výrobní faktory", "Poptávají výrobní faktory"],
+           "spravne": [0, 2], "vysvetleni": "Firmy to mají opačně: statky a služby nabízejí, výrobní faktory poptávají."},
+          {"typ": "ano-ne", "otazka": "Stát na trhu jen reguluje, sám nekupuje ani neprodává.",
+           "spravne": false, "vysvetleni": "Stát vystupuje jako kupující i prodávající a navíc reguluje trh a vytváří podmínky pro jeho fungování."},
+          {"typ": "jedna", "otazka": "Zákazníci, kteří mají o výrobek zájem a jsou schopni ho zaplatit, tvoří trh…",
+           "moznosti": ["potenciální", "cílový", "použitelný", "podchycený"],
+           "spravne": 2, "vysvetleni": "Potenciální trh má jen zájem. Cílový je část použitelného, na kterou se firma zaměří. Podchycený už koupil."},
+          {"typ": "jedna", "otazka": "Trh, který se týká jen jediného druhu zboží (např. automobilů), je…",
+           "moznosti": ["dílčí", "agregátní", "místní", "cílový"],
+           "spravne": 0, "vysvetleni": "Agregátní trh se týká veškerého zboží. Místní a cílový patří do jiných hledisek členění."},
+          {"typ": "jedna", "otazka": "Trh peněz patří do členění trhu…",
+           "moznosti": ["z územního hlediska", "podle počtu zákazníků", "podle množství druhů zboží", "podle produktů"],
+           "spravne": 3, "vysvetleni": "Podle produktů se dělí na trh statků a služeb, výrobních faktorů a peněz."},
+          {"typ": "jedna", "otazka": "Na vzájemném působení čeho je založený tržní mechanismus?",
+           "moznosti": ["Poptávky, nabídky a ceny", "Firem, domácností a státu", "Nákladů, výnosů a zisku", "Příjmů, výdajů a daní"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Poptávka všech lidí po jednom druhu výrobku je poptávka…",
+           "moznosti": ["individuální", "dílčí", "agregátní", "použitelná"],
+           "spravne": 1, "vysvetleni": "Individuální je poptávka jednoho kupujícího, agregátní poptávka všech lidí po všech statcích."},
+          {"typ": "jedna", "otazka": "Co říká zákon klesající poptávky?",
+           "moznosti": ["S růstem příjmů poptávka klesá", "S růstem ceny poptávka klesá", "S poklesem ceny poptávka klesá", "S růstem nabídky poptávka klesá"],
+           "spravne": 1},
+          {"typ": "jedna", "otazka": "Zdražila káva a lidé jí kupují méně. Co se stalo v grafu poptávky po kávě?",
+           "moznosti": ["Posun celé křivky doleva", "Posun celé křivky doprava", "Posun po křivce", "Křivka změnila sklon"],
+           "spravne": 2, "vysvetleni": "Změna ceny = posun po křivce. Změnilo se poptávané množství, ne poptávka."},
+          {"typ": "jedna", "otazka": "Lidem vzrostly příjmy a chtějí kupovat víc běžného zboží za každou cenu. Co se stane s křivkou poptávky?",
+           "moznosti": ["Posune se celá doprava", "Posune se celá doleva", "Bod se posune po křivce nahoru", "Bod se posune po křivce dolů"],
+           "spravne": 0, "vysvetleni": "Příjmy jsou necenový faktor, takže se posouvá celá křivka. Větší poptávka = doprava."},
+          {"typ": "jedna", "otazka": "Zdražil benzin. Co to udělá s poptávkou po automobilech?",
+           "moznosti": ["Vzroste, benzin je substitut", "Vzroste, benzin je komplement", "Klesne, benzin je substitut", "Klesne, benzin je komplement"],
+           "spravne": 3, "vysvetleni": "Benzin auto doplňuje, bez něj nefunguje. Dražší komplement snižuje poptávku po statku, který doplňuje."},
+          {"typ": "ano-ne", "otazka": "Substitut je statek, který jiný statek doplňuje tak, že bez něj nemůže fungovat.",
+           "spravne": false, "vysvetleni": "To je komplement. Substitut jiný statek nahrazuje."},
+          {"typ": "vice", "otazka": "Které faktory ovlivňují <b>poptávku</b>?",
+           "moznosti": ["Velikost příjmů", "Technologie výroby", "Preference spotřebitele", "Ceny vstupů do výroby", "Demografické změny"],
+           "spravne": [0, 2, 4], "vysvetleni": "Technologie a ceny vstupů jsou faktory nabídky."},
+          {"typ": "jedna", "otazka": "Proč podle zákona rostoucí nabídky nabízejí výrobci při vyšší ceně víc?",
+           "moznosti": ["Chtějí větší zisk", "Klesají jim náklady", "Stát jim to nařizuje", "Roste poptávka po zboží"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Firma zavedla novou technologii a výroba je levnější. Co se stane?",
+           "moznosti": ["Křivka nabídky se posune doleva", "Křivka nabídky se posune doprava", "Křivka poptávky se posune doprava", "Bod se posune po křivce nabídky"],
+           "spravne": 1, "vysvetleni": "Technologie je necenový faktor nabídky. Nabídka roste, celá křivka jde doprava."},
+          {"typ": "vice", "otazka": "Které faktory ovlivňují <b>nabídku</b>?",
+           "moznosti": ["Ceny vstupů do výroby", "Technologie výroby", "Změny vnějších podmínek podnikání", "Preference spotřebitele", "Demografické změny"],
+           "spravne": [0, 1, 2]},
+          {"typ": "jedna", "otazka": "Změna ceny zboží znamená u nabídky…",
+           "moznosti": ["změnu nabídky a posun celé křivky", "změnu nabízeného množství a posun po křivce", "změnu poptávky a posun po křivce", "změnu nabídky a posun po křivce"],
+           "spravne": 1},
+          {"typ": "jedna", "otazka": "Cena je <b>nižší</b> než rovnovážná. Co na trhu nastane?",
+           "moznosti": ["Převis nabídky (přebytek)", "Převis poptávky (nedostatek)", "Tržní rovnováha", "Selhání trhu"],
+           "spravne": 1, "vysvetleni": "Při nízké ceně chce víc lidí kupovat a méně firem prodávat, poptávka je větší než nabídka."},
+          {"typ": "ano-ne", "otazka": "Při ceně vyšší než rovnovážné je nabídka větší než poptávka.",
+           "spravne": true, "vysvetleni": "Je to převis nabídky, tedy přebytek."},
+          {"typ": "jedna", "otazka": "Bod E v grafu nabídky a poptávky znamená…",
+           "moznosti": ["elasticitu poptávky", "tržní rovnováhu", "externalitu", "převis poptávky"],
+           "spravne": 1, "vysvetleni": "E = Equilibrium. Místo, kde se střetne nabídka s poptávkou."},
+          {"typ": "cislo", "otazka": "Poptávané množství je 500 − 10 × P, nabízené 10 × P. Jaká je rovnovážná cena?",
+           "spravne": 25, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "500 − 10P = 10P, takže 500 = 20P a P = 25 Kč."},
+          {"typ": "cislo", "otazka": "Poptávané množství je 500 − 10 × P, nabízené 10 × P. Kolik kusů je přebytek při ceně 30 Kč?",
+           "spravne": 100, "jednotka": "ks", "tolerance": 0, "vysvetleni": "Nabízí se 10 × 30 = 300 ks, poptává 500 − 300 = 200 ks. Přebytek je 100 ks."},
+          {"typ": "cislo", "otazka": "Cena vzrostla o 10 % a poptávané množství kleslo o 20 %. Jaký je koeficient elasticity (v absolutní hodnotě)?",
+           "spravne": 2, "tolerance": 0, "vysvetleni": "20 % / 10 % = 2. Je to víc než 1, tedy velmi elastická poptávka."},
+          {"typ": "jedna", "otazka": "Malá změna ceny způsobí velký rozdíl v nákupu. Jaká je to poptávka?",
+           "moznosti": ["Jednotkově elastická, E = 1", "Málo elastická, E &lt; 1", "Velmi elastická, E &gt; 1", "Neelastická, E &lt; 1"],
+           "spravne": 2},
+          {"typ": "jedna", "otazka": "Konkurence mezi nabídkou a poptávkou se nazývá konkurence…",
+           "moznosti": ["na straně nabídky", "na straně poptávky", "napříč trhem", "necenová"],
+           "spravne": 2, "vysvetleni": "Výrobci chtějí vysokou cenu, kupující nízkou. Kompromisem je rovnovážná cena."},
+          {"typ": "jedna", "otazka": "Která možnost je <b>necenová</b> konkurence?",
+           "moznosti": ["Sleva oproti soupeři", "Výprodej skladu pod cenou", "Nejnižší cena na trhu", "Prodej na splátky"],
+           "spravne": 3, "vysvetleni": "Služby při prodeji, jako prodej na úvěr, patří k necenovým faktorům. Ostatní možnosti jsou souboj cenou."},
+          {"typ": "vice", "otazka": "Které podmínky patří k <b>dokonalé konkurenci</b>?",
+           "moznosti": ["Velké množství malých firem", "Homogenní výrobek", "Žádné nebo minimální bariéry", "Všichni mají stejné informace", "Diferencovaný výrobek"],
+           "spravne": [0, 1, 2, 3], "vysvetleni": "Diferencovaný výrobek má monopolistická konkurence."},
+          {"typ": "ano-ne", "otazka": "Dokonalá konkurence je ideální struktura trhu, která ve skutečnosti neexistuje.",
+           "spravne": true},
+          {"typ": "jedna", "otazka": "Kdy nastává nedokonalá konkurence?",
+           "moznosti": ["Když se poruší alespoň jedna podmínka dokonalé konkurence", "Když se poruší všechny podmínky dokonalé konkurence", "Jen když je na trhu jediná firma", "Jen když stát reguluje ceny"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "V čem se monopolistická konkurence liší od dokonalé?",
+           "moznosti": ["V počtu firem na trhu", "V bariérách vstupu", "V povaze výrobku", "V tom, že firmy nesmí změnit cenu"],
+           "spravne": 2, "vysvetleni": "Výrobek je heterogenní, diferencovaný. Firem je také velké množství a vstup je volný či snadný."},
+          {"typ": "jedna", "otazka": "Několik větších firem a stejný výrobek, např. čerpací stanice. O jakou formu jde?",
+           "moznosti": ["Diferencovaný oligopol", "Ryzí oligopol", "Přirozený monopol", "Monopolistická konkurence"],
+           "spravne": 1, "vysvetleni": "Stejný výrobek = ryzí oligopol. Automobilky mají odlišený výrobek, to je diferencovaný oligopol."},
+          {"typ": "jedna", "otazka": "Monopson je situace, kdy je na trhu…",
+           "moznosti": ["jediný prodávající", "několik prodávajících", "jediný kupující", "několik kupujících"],
+           "spravne": 2, "vysvetleni": "Monopol na straně poptávky, např. zbraně pro armádu. Několik kupujících je oligopson."},
+          {"typ": "jedna", "otazka": "Dohoda mezi samostatnými konkurenty o cenách je…",
+           "moznosti": ["kartel", "syndikát", "akvizice", "fúze"],
+           "spravne": 0, "vysvetleni": "U syndikátu vystupují konkurenti navenek jako jeden celek. Fúze a akvizice spojují podniky."},
+          {"typ": "jedna", "otazka": "Kuřák v kanceláři s nekuřákem je příklad…",
+           "moznosti": ["pozitivní externality", "negativní externality", "veřejného statku", "nedostatečné konkurence"],
+           "spravne": 1, "vysvetleni": "Část nákladů své činnosti přenáší na jiného."},
+          {"typ": "jedna", "otazka": "Sadař má užitek ze včelaře. Co to je?",
+           "moznosti": ["Pozitivní externalita", "Negativní externalita", "Veřejný statek", "Oligopson"],
+           "spravne": 0, "vysvetleni": "Včelař si nemůže přisvojit všechny výnosy své činnosti, část získává sadař."},
+          {"typ": "jedna", "otazka": "Na jakém principu se poskytují veřejné statky?",
+           "moznosti": ["Na tržním principu", "Na základě nárokovosti", "Na základě nejvyšší nabídky", "Podle výše příjmu"],
+           "spravne": 1},
+          {"typ": "ano-ne", "otazka": "Při nedostatečné konkurenci stát někdy zasahuje tím, že reguluje ceny.",
+           "spravne": true}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .trh__udalosti { display: flex; flex-wrap: wrap; gap: 6px; }
+  .trh__udalosti .chip { cursor: pointer; }
+  .struktura__radek { margin: 10px 0; }
+  .struktura__radek > p { margin: 0 0 6px; font-weight: 600; font-size: .92rem; }
+  .struktura__volby { display: flex; flex-wrap: wrap; gap: 6px; }
+  .struktura__volby .chip { cursor: pointer; }
+  .struktura__vysledek { background: var(--accent-soft); border-color: transparent; }
+  .ext__pruh { display: flex; height: 30px; margin: 12px 0 4px; border-radius: var(--radius-sm); overflow: hidden; background: var(--surface-2); }
+  .ext__pruh > div { transition: width .4s var(--ease); }
+  .ext__firma { background: var(--accent); }
+  .ext__okoli { background: var(--bad); }
+  .vzorec sub { font-size: .7em; }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, svg, kc, cislo, $ } = window.Ucebna;
+
+  /* --- Společný graf: osa x = množství Q, osa y = cena P --- */
+  const L = 46, R = 388, T = 14, B = 268, QMAX = 600, PMAX = 50;
+  const sx = (q) => L + (q / QMAX) * (R - L);
+  const sy = (p) => B - (p / PMAX) * (B - T);
+  const HALO = "paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round";
+  const zPoptavka = (p, posun) => 500 + posun - 10 * p;
+  const zNabidka = (p, posun) => 10 * p + posun;
+  const sPlusem = (n) => (n > 0 ? "+" : n < 0 ? "−" : "") + cislo(Math.abs(n));
+  const popisek = (x, y, s, attr = {}) => Object.assign(svg("text", { x, y, ...attr }), { textContent: s });
+  const silny = (x, y, s, trida, attr = {}) => popisek(x, y, s, { class: trida, "font-size": 14, "font-weight": 700, style: HALO, ...attr });
+
+  function osy(plocha) {
+    plocha.innerHTML = "";
+    for (let q = 100; q <= QMAX; q += 100) {
+      plocha.append(
+        svg("line", { x1: sx(q), y1: T, x2: sx(q), y2: B, style: "stroke:var(--border);opacity:.6" }),
+        popisek(sx(q), B + 16, cislo(q), { "text-anchor": "middle" }));
+    }
+    for (let p = 10; p <= PMAX; p += 10) {
+      plocha.append(
+        svg("line", { x1: L, y1: sy(p), x2: R, y2: sy(p), style: "stroke:var(--border);opacity:.6" }),
+        popisek(L - 6, sy(p) + 4, cislo(p), { "text-anchor": "end" }));
+    }
+    plocha.append(
+      svg("line", { x1: L, y1: T, x2: L, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
+      svg("line", { x1: L, y1: B, x2: R, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
+      popisek(L - 6, B + 16, "0", { "text-anchor": "end" }),
+      popisek(L + 6, T + 4, "cena P (Kč)", { style: HALO }),
+      popisek(R, B + 34, "množství Q (kelímků denně)", { "text-anchor": "end" }));
+  }
+
+  function krivka(plocha, f, styl) {
+    const body = [];
+    for (let p = 0; p <= PMAX; p += 1) {
+      const q = f(p);
+      if (q >= 0 && q <= QMAX) body.push(`${sx(q)},${sy(p)}`);
+    }
+    plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke-linecap:round;" + styl }));
+  }
+
+  const vodicka = (plocha, q, p) => plocha.append(
+    svg("line", { x1: L, y1: sy(p), x2: sx(q), y2: sy(p), style: "stroke:var(--text-muted);stroke-dasharray:3 4" }),
+    svg("line", { x1: sx(q), y1: sy(p), x2: sx(q), y2: B, style: "stroke:var(--text-muted);stroke-dasharray:3 4" }));
+
+  const bod = (plocha, q, p, styl) => plocha.append(svg("circle", { cx: sx(q), cy: sy(p), r: 6, style: styl }));
+
+  /* Šipka od výchozího bodu k novému, končí kousek před ním */
+  function sipka(plocha, x1, y1, x2, y2) {
+    const d = Math.hypot(x2 - x1, y2 - y1);
+    if (d < 20) return;
+    const ux = (x2 - x1) / d, uy = (y2 - y1) / d;
+    const kx = x2 - ux * 10, ky = y2 - uy * 10;
+    const hrot = `M${kx - ux * 8 - uy * 5} ${ky - uy * 8 + ux * 5} L${kx} ${ky} L${kx - ux * 8 + uy * 5} ${ky - uy * 8 - ux * 5}`;
+    plocha.append(
+      svg("line", { x1: x1 + ux * 8, y1: y1 + uy * 8, x2: kx, y2: ky, style: "stroke:var(--text);stroke-width:2;stroke-linecap:round" }),
+      svg("path", { d: hrot, class: "f-none", style: "stroke:var(--text);stroke-width:2;stroke-linecap:round;stroke-linejoin:round" }));
+  }
+
+  /* --- Jedna křivka: posun po křivce × posun celé křivky --- */
+  function jednaKrivka(id, jePoptavka) {
+    const box = $("#" + id), plocha = $("svg", box);
+    const vstupP = $("#" + id + "-p"), vstupF = $("#" + id + "-f");
+    const f = jePoptavka ? zPoptavka : zNabidka;
+    const barva = jePoptavka ? "var(--accent)" : "var(--warn)";
+    const slovo = jePoptavka ? "poptávané" : "nabízené";
+    const veta = jePoptavka ? "poptávka" : "nabídka";
+    const P0 = 25, Q0 = 250;
+
+    function spocti() {
+      const p = +vstupP.value, posun = +vstupF.value, q = f(p, posun);
+      $("#" + id + "-p-o").textContent = p + " Kč";
+      $("#" + id + "-f-o").textContent = posun === 0 ? "beze změny" : sPlusem(posun) + " ks při každé ceně";
+      $("#" + id + "-q").textContent = cislo(q) + " ks";
+
+      osy(plocha);
+      if (posun !== 0) krivka(plocha, (x) => f(x, 0), "stroke:var(--text-muted);stroke-width:2;stroke-dasharray:6 5");
+      krivka(plocha, (x) => f(x, posun), `stroke:${barva};stroke-width:3.5`);
+      const stitekP = jePoptavka ? 5 : 45;
+      plocha.append(silny(sx(f(stitekP, posun)) + 8, sy(stitekP) + (jePoptavka ? -6 : 14), jePoptavka ? "D" : "S", jePoptavka ? "f-accent" : "f-warn"));
+      vodicka(plocha, q, p);
+      if (p !== P0 || posun !== 0) {
+        bod(plocha, Q0, P0, "fill:var(--surface);stroke:var(--text-muted);stroke-width:2");
+        sipka(plocha, sx(Q0), sy(P0), sx(q), sy(p));
+      }
+      bod(plocha, q, p, `fill:${barva};stroke:var(--surface);stroke-width:2`);
+
+      const smer = posun > 0 ? "doprava" : "doleva";
+      let typ, text;
+      if (p === P0 && posun === 0) {
+        typ = "výchozí stav";
+        text = `Při ceně 25 Kč je ${slovo} množství 250 ks. Pohni jedním posuvníkem a sleduj, co se v grafu hýbe.`;
+      } else if (posun === 0) {
+        typ = "posun po křivce";
+        text = `Změnila se jen <strong>cena</strong>. Křivka stojí a bod se posunul po ní: <strong>${slovo} množství</strong> je ${cislo(q)} ks místo 250 ks.`;
+      } else if (p === P0) {
+        typ = `celá křivka ${smer}`;
+        text = `Cena je pořád 25 Kč, ale změnil se <strong>jiný faktor</strong>. Posunula se celá křivka ${smer}: změnila se <strong>${veta}</strong>. Při stejné ceně je to ${cislo(q)} ks místo 250 ks.`;
+      } else {
+        typ = `křivka ${smer} i po křivce`;
+        text = `Stalo se obojí. Jiný faktor posunul celou křivku ${smer} a změna ceny pak posunula bod po nové křivce. Výsledek je ${cislo(q)} ks.`;
+      }
+      $("#" + id + "-typ").textContent = typ;
+      $("#" + id + "-t").innerHTML = text;
+    }
+    [vstupP, vstupF].forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  }
+  jednaKrivka("sd", true);
+  jednaKrivka("ss", false);
+
+  /* --- Trh: rovnováha, přebytek a nedostatek --- */
+  (() => {
+    const box = $("#trh"), plocha = $("svg", box);
+    const vP = $("#tr-p"), vD = $("#tr-d"), vS = $("#tr-s");
+    const UDALOSTI = [
+      ["Lidem vzrostou příjmy", 60, 0, "Vyšší příjmy: poptávka roste, křivka D jde doprava."],
+      ["Káva je v módě", 40, 0, "Změna preferencí: poptávka roste, křivka D jde doprava."],
+      ["Zdraží čaj (substitut)", 40, 0, "Dražší substitut: poptávka po kávě roste, křivka D jde doprava."],
+      ["Zdraží mléko (komplement)", -40, 0, "Dražší komplement: poptávka po kávě klesá, křivka D jde doleva."],
+      ["Ze města se lidé stěhují", -60, 0, "Demografická změna: poptávka klesá, křivka D jde doleva."],
+      ["Zdraží kávová zrna", 0, -60, "Dražší vstupy: nabídka klesá, křivka S jde doleva."],
+      ["Nový úspornější stroj", 0, 60, "Lepší technologie: nabídka roste, křivka S jde doprava."],
+      ["Stát zvýší daně", 0, -40, "Horší vnější podmínky: nabídka klesá, křivka S jde doleva."],
+    ];
+    let cena = +vP.value, udalost = "", animace = 0;
+    const omezit = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const omez = (n) => Math.max(-100, Math.min(100, n));
+
+    function vykresli() {
+      const d = +vD.value, s = +vS.value;
+      const pe = (500 + d - s) / 20, qe = zNabidka(pe, s);
+      const qd = zPoptavka(cena, d), qs = zNabidka(cena, s);
+      const zaokr = Math.round(cena);
+      vP.value = zaokr;
+      $("#tr-p-o").textContent = zaokr + " Kč";
+      $("#tr-d-o").textContent = d === 0 ? "beze změny" : sPlusem(d) + " ks";
+      $("#tr-s-o").textContent = s === 0 ? "beze změny" : sPlusem(s) + " ks";
+      $("#tr-qd").textContent = cislo(Math.round(qd)) + " ks";
+      $("#tr-qs").textContent = cislo(Math.round(qs)) + " ks";
+      $("#tr-pe").textContent = pe + " Kč";
+      $("#tr-qe").textContent = cislo(qe) + " ks";
+
+      osy(plocha);
+      if (d !== 0) krivka(plocha, (p) => zPoptavka(p, 0), "stroke:var(--text-muted);stroke-width:1.5;stroke-dasharray:6 5");
+      if (s !== 0) krivka(plocha, (p) => zNabidka(p, 0), "stroke:var(--text-muted);stroke-width:1.5;stroke-dasharray:6 5");
+      krivka(plocha, (p) => zPoptavka(p, d), "stroke:var(--accent);stroke-width:3.5");
+      krivka(plocha, (p) => zNabidka(p, s), "stroke:var(--warn);stroke-width:3.5");
+      plocha.append(silny(sx(zPoptavka(5, d)) + 8, sy(5) - 6, "D", "f-accent"), silny(sx(zNabidka(45, s)) + 8, sy(45) + 14, "S", "f-warn"));
+
+      // Rovnováha: vodicí čáry a popisky P_E, Q_E
+      vodicka(plocha, qe, pe);
+      const pePopis = svg("text", { x: L + 6, y: sy(pe) - 5, class: "f-ink", "font-size": 12, style: HALO });
+      pePopis.innerHTML = `P<tspan dy="3" font-size="11">E</tspan><tspan dy="-3"> = ${pe} Kč</tspan>`;
+      const qePopis = svg("text", { x: sx(qe) + 5, y: B - 6, class: "f-ink", "font-size": 12, style: HALO });
+      qePopis.innerHTML = `Q<tspan dy="3" font-size="11">E</tspan><tspan dy="-3"> = ${cislo(qe)}</tspan>`;
+      plocha.append(pePopis, qePopis);
+
+      // Přebytek / nedostatek při aktuální ceně
+      const rozdil = Math.round(qs - qd);
+      if (Math.abs(cena - pe) > 0.25) {
+        const y = sy(cena), x1 = sx(Math.max(0, Math.min(qd, qs))), x2 = sx(Math.min(QMAX, Math.max(qd, qs)));
+        plocha.append(
+          svg("line", { x1: L, y1: y, x2: R, y2: y, style: "stroke:var(--bad);stroke-dasharray:2 4;opacity:.7" }),
+          svg("line", { x1, y1: y, x2, y2: y, style: "stroke:var(--bad);stroke-width:7;opacity:.5;stroke-linecap:round" }),
+          svg("circle", { cx: sx(qd), cy: y, r: 5, style: "fill:var(--accent);stroke:var(--surface);stroke-width:2" }),
+          svg("circle", { cx: sx(qs), cy: y, r: 5, style: "fill:var(--warn);stroke:var(--surface);stroke-width:2" }));
+        const stred = Math.max(L + 62, Math.min(R - 62, (x1 + x2) / 2));
+        const nad = rozdil > 0;
+        plocha.append(popisek(stred, nad ? Math.max(T + 24, y - 10) : Math.min(B - 22, y + 20),
+          (nad ? "přebytek " : "nedostatek ") + cislo(Math.abs(rozdil)) + " ks",
+          { "text-anchor": "middle", class: "f-bad", "font-size": 13, "font-weight": 700, style: HALO }));
+      }
+      // Bod E
+      plocha.append(
+        svg("circle", { cx: sx(qe), cy: sy(pe), r: 7, style: "fill:var(--surface);stroke:var(--text);stroke-width:3" }),
+        silny(sx(qe), sy(pe) - 13, "E", "f-ink", { "text-anchor": "middle" }));
+
+      // Text
+      const predtim = udalost ? udalost + " " : "";
+      const t = $("#tr-t");
+      const qdT = zPoptavka(zaokr, d), qsT = zNabidka(zaokr, s);
+      if (zaokr === pe) {
+        t.innerHTML = `${predtim}<strong>Tržní rovnováha.</strong> Při ceně ${pe} Kč se prodá i koupí stejné množství: ${cislo(qe)} ks.`;
+      } else if (zaokr > pe) {
+        t.innerHTML = `${predtim}Cena ${zaokr} Kč je <strong>vyšší</strong> než rovnovážná: nabízí se ${cislo(qsT)} ks, poptává ${cislo(qdT)} ks. <strong>Přebytek (převis nabídky) ${cislo(qsT - qdT)} ks.</strong> Prodejcům zboží zbývá, takže zlevňují.`;
+      } else {
+        t.innerHTML = `${predtim}Cena ${zaokr} Kč je <strong>nižší</strong> než rovnovážná: poptává se ${cislo(qdT)} ks, nabízí ${cislo(qsT)} ks. <strong>Nedostatek (převis poptávky) ${cislo(qdT - qsT)} ks.</strong> Zboží se nedostává, takže cena roste.`;
+      }
+    }
+
+    function zastav() { cancelAnimationFrame(animace); animace = 0; }
+
+    function srovnej() {
+      zastav();
+      const cil = (500 + +vD.value - +vS.value) / 20, start = cena, t0 = performance.now(), DELKA = 800;
+      if (omezit() || start === cil) { cena = cil; vykresli(); return; }
+      const krok = (t) => {
+        const x = Math.min(1, (t - t0) / DELKA), e = 1 - (1 - x) ** 3;
+        cena = start + (cil - start) * e;
+        vykresli();
+        if (x < 1) animace = requestAnimationFrame(krok);
+        else { cena = cil; vykresli(); animace = 0; }
+      };
+      animace = requestAnimationFrame(krok);
+    }
+
+    const obal = $(".trh__udalosti", box);
+    UDALOSTI.forEach(([nazev, dd, ds, vysvetleni]) => {
+      obal.append(el("button", { class: "chip", type: "button", onclick: () => {
+        zastav();
+        vD.value = omez(+vD.value + dd);
+        vS.value = omez(+vS.value + ds);
+        udalost = vysvetleni + " Cena se ale hned nemění.";
+        vykresli();
+      } }, nazev));
+    });
+    vP.addEventListener("input", () => { zastav(); cena = +vP.value; udalost = ""; vykresli(); });
+    [vD, vS].forEach((i) => i.addEventListener("input", () => { zastav(); udalost = ""; vykresli(); }));
+    $("[data-akce=srovnej]", box).addEventListener("click", () => { udalost = ""; srovnej(); });
+    $("[data-akce=znovu]", box).addEventListener("click", () => {
+      zastav();
+      vD.value = 0; vS.value = 0; cena = 30; udalost = "";
+      vykresli();
+    });
+    vykresli();
+  })();
+
+  /* --- Cenová elasticita --- */
+  (() => {
+    const c = $("#el-c"), q = $("#el-q");
+    const POCATEK = 100000;
+    const des = (n) => n.toLocaleString("cs-CZ", { maximumFractionDigits: 2 });
+    function spocti() {
+      const dc = +c.value, dq = +q.value, e = dq / dc;
+      const vydaje = Math.round(POCATEK * (1 + dc / 100) * (1 - dq / 100));
+      $("#el-c-o").textContent = dc + " %";
+      $("#el-q-o").textContent = dq + " %";
+      $("#el-e").textContent = des(e);
+      $("#el-v").textContent = kc(vydaje);
+      const t = $("#el-t");
+      if (e > 1) t.innerHTML = `${des(e)} je víc než 1: <strong>velmi elastická poptávka</strong>. Malá změna ceny způsobila velký rozdíl v nákupu. Výdaje spotřebitelů klesly.`;
+      else if (e === 1) t.innerHTML = "Přesně 1: <strong>jednotkově elastická poptávka</strong>. Množství se změnilo ve stejném poměru jako cena a výdaje zůstaly skoro stejné.";
+      else t.innerHTML = `${des(e)} je méně než 1: <strong>málo elastická poptávka</strong>. Lidé na zdražení skoro nereagují. Výdaje spotřebitelů vzrostly.`;
+    }
+    [c, q].forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Určení tržní struktury --- */
+  (() => {
+    const box = $("#struktura"), radkyBox = $(".struktura__radky", box), vysledek = $(".struktura__vysledek", box);
+    const RADKY = [
+      ["firmy", "Kolik firem je na trhu?", ["jedna", "několik větších", "velké množství malých"]],
+      ["vyrobek", "Jaký je výrobek?", ["stejný (homogenní)", "odlišený (diferencovaný)"]],
+      ["vstup", "Vstup na trh?", ["volný nebo snadný", "bariéry"]],
+      ["info", "Mají všichni stejné informace?", ["ano", "ne"]],
+    ];
+    const stav = { firmy: 2, vyrobek: 0, vstup: 0, info: 0 };
+    const prvky = {};
+    RADKY.forEach(([klic, otazka, moznosti]) => {
+      const tlacitka = moznosti.map((m, i) => el("button", { class: "chip", type: "button", onclick: () => { stav[klic] = i; vyhodnot(); } }, m));
+      const radek = el("div", { class: "struktura__radek" }, el("p", {}, otazka), el("div", { class: "struktura__volby" }, tlacitka));
+      prvky[klic] = { radek, tlacitka };
+      radkyBox.append(radek);
+    });
+    function vyrok() {
+      if (stav.firmy === 0) return ["Monopol", "Jedna firma s jedinečnými výrobky, bariéry vstupu, firma si může diktovat cenu. Přirozený monopol: distribuce elektřiny, vody, tepla. Administrativní monopol: zřídil ho stát."];
+      if (stav.firmy === 1) return stav.vyrobek === 0
+        ? ["Ryzí oligopol", "Několik větších firem a stejný výrobek. Např. čerpací stanice."]
+        : ["Diferencovaný oligopol", "Několik větších firem a odlišený výrobek. Např. automobilky."];
+      const porusene = [];
+      if (stav.vstup === 1) porusene.push("bariéry vstupu");
+      if (stav.info === 1) porusene.push("nestejné informace");
+      if (stav.vyrobek === 0 && !porusene.length) return ["Dokonalá konkurence", "Splněné všechny 4 podmínky. Ideální struktura trhu, která ve skutečnosti neexistuje."];
+      if (stav.vyrobek === 1 && !porusene.length) return ["Monopolistická konkurence", "Od dokonalé konkurence se liší jen odlišeným výrobkem. Např. restaurace, kosmetika."];
+      if (stav.vyrobek === 1) porusene.unshift("odlišený výrobek");
+      return ["Nedokonalá konkurence", `Porušené podmínky dokonalé konkurence: ${porusene.join(", ")}. Není to ale žádná ze tří základních forem. I monopolistická konkurence má volný vstup a od dokonalé se liší jen výrobkem.`];
+    }
+    function vyhodnot() {
+      RADKY.forEach(([klic]) => prvky[klic].tlacitka.forEach((b, i) => b.classList.toggle("vybrany", stav[klic] === i)));
+      prvky.vyrobek.radek.classList.toggle("skryte", stav.firmy === 0);
+      prvky.vstup.radek.classList.toggle("skryte", stav.firmy !== 2);
+      prvky.info.radek.classList.toggle("skryte", stav.firmy !== 2);
+      const [nazev, text] = vyrok();
+      vysledek.replaceChildren(el("h3", { style: "margin:0 0 4px" }, nazev), el("p", { style: "margin:0" }, text));
+    }
+    vyhodnot();
+  })();
+
+  /* --- Negativní externalita --- */
+  (() => {
+    const vS = $("#ext-s"), vP = $("#ext-p"), FIRMA = 60, MAX = 120;
+    const box = $("#ext");
+    function spocti() {
+      const skoda = +vS.value, podil = +vP.value;
+      const zaplati = (skoda * podil) / 100, firma = FIRMA + zaplati, okoli = skoda - zaplati;
+      $("#ext-s-o").textContent = skoda + " Kč";
+      $("#ext-p-o").textContent = podil + " %";
+      $("#ext-c").textContent = FIRMA + skoda + " Kč";
+      $("#ext-f").textContent = firma + " Kč";
+      $("#ext-o").textContent = okoli + " Kč";
+      $("#ext-o").style.color = okoli > 0 ? "var(--bad)" : "var(--ok)";
+      $(".ext__firma", box).style.width = (firma / MAX) * 100 + "%";
+      $(".ext__okoli", box).style.width = (okoli / MAX) * 100 + "%";
+      $("#ext-t").textContent = okoli > 0
+        ? `Továrna počítá s náklady ${firma} Kč, ale ve skutečnosti jsou ${FIRMA + skoda} Kč. Zbylých ${okoli} Kč přenáší na jiné: to je negativní externalita.`
+        : "Okolí nenese nic: všechny náklady platí ten, kdo je způsobil. Externalita zmizela.";
+    }
+    [vS, vP].forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();});
+</script>
+</body>
+</html>

@@ -42,7 +42,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 3, nazev: "Trh",
+        c: 3, nazev: "Trh", id: "ekonomie-3", soubor: "ekonomie/web/03-trh.html",
         pozadavky: [
           "Pojem trh",
           "Subjekty trhu",
@@ -108,7 +108,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 7, nazev: "Rozpočtová soustava",
+        c: 7, nazev: "Rozpočtová soustava", id: "ekonomie-7", soubor: "ekonomie/web/07-rozpoctova-soustava.html",
         pozadavky: [
           "Státní rozpočet",
           "Příjmové a výdajové složky státního rozpočtu",
@@ -199,7 +199,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 15, nazev: "Odměňování pracovníků",
+        c: 15, nazev: "Odměňování pracovníků", id: "ekonomie-15", soubor: "ekonomie/web/15-odmenovani-pracovniku.html",
         pozadavky: [
           "Struktura mzdy",
           "Mzdové výpočty",
@@ -257,7 +257,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 19, nazev: "Bankovní soustava",
+        c: 19, nazev: "Bankovní soustava", id: "ekonomie-19", soubor: "ekonomie/web/19-bankovni-soustava.html",
         pozadavky: [
           "Jednoúrovňový a dvouúrovňový bankovní systém",
           "ČNB",
@@ -265,8 +265,7 @@ window.KATALOG = [
           "Nejvyšší řídící orgán ČNB",
           "Nástroje ČNB",
           "Komerční banky a jejich charakteristika",
-          "Služby",
-          "Které komerční banky poskytují",
+          "Služby, které komerční banky poskytují",
           "Úrok a úroková sazba",
           "Stavební spoření",
           "Penzijní fondy",

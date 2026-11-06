@@ -1,0 +1,1609 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>19. Bankovní soustava – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-19" data-nazev="19. Bankovní soustava" data-zpet="../../index.html" data-zdroj="../pdf/19 Bankovní soustava.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 19</span>
+    <h1>Bankovní soustava</h1>
+    <p class="hlavicka__perex">Kdo u nás hlídá hodnotu peněz, co všechno ti nabídne banka, proč spoření roste samo a co dělá pojišťovna, když se něco pokazí.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>rozlišit <strong>jednoúrovňový a dvouúrovňový</strong> bankovní systém</li>
+        <li>popsat <strong>ČNB</strong> – cíl, <strong>sídlo</strong>, <strong>bankovní radu</strong> a funkce</li>
+        <li>rozdělit <strong>nástroje ČNB</strong> na přímé a nepřímé a vysvětlit, jak působí na ekonomiku</li>
+        <li>charakterizovat <strong>komerční banky</strong> a jejich aktivní, pasivní a neutrální operace</li>
+        <li>vyjmenovat <strong>služby bank</strong> a rozlišit druhy <strong>úvěrů</strong></li>
+        <li>vysvětlit <strong>úrok a úrokovou sazbu</strong>, spočítat úrok a popsat splácení úvěru (úmor, anuita)</li>
+        <li>popsat <strong>stavební spoření</strong> a <strong>penzijní fondy</strong> včetně státní podpory</li>
+        <li>vysvětlit, co dělají <strong>pojišťovny</strong>, a správně použít pojistné pojmy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Bankovní soustava a ČNB ===== -->
+  <section class="kapitola" id="soustava" data-pozadavky="1 2 3 4">
+    <h2>Bankovní soustava a ČNB</h2>
+    <p>Bankovní soustava je významná součást finančního systému. Jejím základním subjektem jsou <strong>banky</strong>, které vstupují do <strong>finančního zprostředkování</strong>. Banka může mít formu <strong>centrální</strong>, nebo <strong>obchodní (komerční)</strong> banky.</p>
+
+    <h3>Jednostupňová a dvoustupňová soustava</h3>
+    <p>Podle funkcí se soustava dělí na dva typy. Maturitní požadavky říkají <em>jednoúrovňová a dvouúrovňová</em>, podklady <em>jednostupňová a dvoustupňová</em>. Je to totéž.</p>
+    <figure class="ilustrace" aria-label="Jednostupňová soustava: jediná banka přímo ke klientům. Dvoustupňová: centrální banka, pod ní obchodní banky a teprve pod nimi klienti.">
+      <svg viewBox="0 0 400 200" style="max-width:520px">
+        <path d="M200 8 V192" pathLength="1" class="kresli s-line" stroke-width="1.5"/>
+        <text x="100" y="18" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Jednostupňová</text>
+        <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Dvoustupňová</text>
+        <g class="vyjed" style="--d:.2s">
+          <rect x="25" y="32" width="150" height="62" rx="8" class="f-accent-soft s-accent" stroke-width="1.5"/>
+          <text x="100" y="53" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Jediná banka</text>
+          <text x="100" y="70" text-anchor="middle" font-size="12" class="f-muted">měnová politika</text>
+          <text x="100" y="85" text-anchor="middle" font-size="12" class="f-muted">i styk s klienty</text>
+        </g>
+        <path d="M100 96 V154" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.5s"/>
+        <path d="M94 148 L100 156 L106 148" class="vyjed s-accent f-none" stroke-width="2" style="--d:.9s"/>
+        <g class="vyjed" style="--d:.9s">
+          <rect x="50" y="158" width="100" height="32" rx="16" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="100" y="179" text-anchor="middle" font-size="14" class="f-ink">Klienti</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="225" y="32" width="150" height="46" rx="8" class="f-accent-soft s-accent" stroke-width="1.5"/>
+          <text x="300" y="51" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Centrální banka</text>
+          <text x="300" y="68" text-anchor="middle" font-size="12" class="f-muted">emise, dohled</text>
+        </g>
+        <path d="M300 80 V96" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.6s"/>
+        <path d="M294 90 L300 98 L306 90" class="vyjed s-accent f-none" stroke-width="2" style="--d:.8s"/>
+        <g class="vyjed" style="--d:.8s">
+          <rect x="225" y="100" width="150" height="46" rx="8" class="f-surface s-accent" stroke-width="1.5"/>
+          <text x="300" y="119" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">Obchodní banky</text>
+          <text x="300" y="136" text-anchor="middle" font-size="12" class="f-muted">vklady, úvěry</text>
+        </g>
+        <path d="M300 148 V154" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:1s"/>
+        <g class="vyjed" style="--d:1.1s">
+          <rect x="250" y="158" width="100" height="32" rx="16" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="300" y="179" text-anchor="middle" font-size="14" class="f-ink">Klienti</text>
+        </g>
+      </svg>
+      <figcaption>Ve dvoustupňové soustavě centrální banka s běžnými klienty nejedná. Jejími klienty jsou stát a obchodní banky.</figcaption>
+    </figure>
+
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Jednostupňová</h3>
+        <p>U nás <strong>před rokem 1990</strong>.</p>
+        <ul>
+          <li>Existuje <strong>jediná banka</strong>, která plní makroekonomické funkce, případně pár specializovaných bank. U nás to byla <strong>Státní banka československá</strong>.</li>
+          <li>Jediná banka je ve styku s klienty a <strong>současně řeší i měnovou (monetární) politiku</strong>.</li>
+          <li>Případné ostatní banky jsou prakticky zcela závislé na rozhodnutích centrální banky. Nepodnikají v oblasti bankovnictví a mají velmi malé rozhodovací pravomoci.</li>
+          <li>Existuje zejména v <strong>centrálně plánovaných</strong> ekonomikách.</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Dvoustupňová</h3>
+        <p>U nás <strong>od 2. 1. 1990</strong>.</p>
+        <ul>
+          <li>Jedna banka (<strong>centrální</strong>) je oddělená od ostatních, <strong>obchodních</strong> bank.</li>
+          <li><strong>Obchodní banky</strong> neemitují peníze. Zejména přijímají vklady a poskytují úvěry.</li>
+          <li><strong>Centrální banka</strong> emituje bankovky, přijímá vklady a poskytuje úvěry státu a obchodním bankám.</li>
+          <li>Vyskytuje se zejména v <strong>tržních</strong> ekonomikách.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Samotná <strong>Česká národní banka</strong> vznikla až <strong>1. 1. 1993</strong>, po rozdělení Československa a Státní banky československé. V roce 1990 tedy začala dvoustupňová soustava ještě pod Státní bankou československou.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Patří to k jednostupňové, nebo k dvoustupňové soustavě?",
+        "kose": ["Jednostupňová", "Dvoustupňová"],
+        "polozky": [
+          ["jediná banka řeší měnovou politiku i styk s klienty", 0],
+          ["Státní banka československá jako jediná banka", 0],
+          ["centrálně plánované ekonomiky", 0],
+          ["ostatní banky bez rozhodovacích pravomocí", 0],
+          ["u nás před rokem 1990", 0],
+          ["centrální banka oddělená od obchodních bank", 1],
+          ["obchodní banky přijímají vklady a poskytují úvěry", 1],
+          ["centrální banka půjčuje státu a obchodním bankám", 1],
+          ["tržní ekonomiky", 1],
+          ["u nás od roku 1990", 1]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Česká národní banka</h3>
+    <div class="box box--definice">
+      <p><strong>Hlavním cílem</strong> centrální banky je <strong>péče o cenovou stabilitu</strong>, tedy zajistit stabilitu cen a měny. Česká národní banka je <strong>nezávislá na vládě</strong>.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>V praxi to znamená <strong>inflační cílování</strong>. ČNB se snaží držet inflaci kolem <strong>2 %</strong>. Když je cíl splněný, ceny rostou pomalu a předvídatelně a peníze si drží hodnotu.</p>
+    </div>
+
+    <div class="mrizka">
+      <div class="ukazatel"><small>Sídlo ČNB</small><b>Praha</b></div>
+      <div class="ukazatel"><small>Regionální zastoupení</small><b>7</b></div>
+      <div class="ukazatel"><small>Nejvyšší řídicí orgán</small><b>bankovní rada</b></div>
+    </div>
+    <p><strong>7 regionálních zastoupení</strong>: Praha, Ústí nad Labem, Plzeň, České Budějovice, Hradec Králové, Brno a Ostrava.</p>
+
+    <figure class="ilustrace" aria-label="Bankovní rada má sedm členů: guvernéra, dva viceguvernéry a čtyři další členy. Všechny jmenuje prezident republiky.">
+      <svg viewBox="0 0 400 112" style="max-width:520px">
+        <text x="200" y="14" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">prezident republiky jmenuje</text>
+        <path d="M60 24 H370" pathLength="1" class="kresli s-accent" stroke-width="1.5"/>
+        <path d="M200 18 V24" class="s-accent" stroke-width="1.5"/>
+        <g class="vyjed" style="--d:.3s">
+          <path d="M60 24 V34" class="s-accent" stroke-width="1.5"/>
+          <circle cx="60" cy="52" r="17" class="f-accent"/>
+          <text x="60" y="57" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-text)">G</text>
+          <text x="60" y="92" text-anchor="middle" font-size="13" class="f-ink">guvernér</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <path d="M150 24 V36 M196 24 V36" class="s-accent" stroke-width="1.5"/>
+          <circle cx="150" cy="52" r="15" class="f-accent-soft s-accent" stroke-width="2"/>
+          <circle cx="196" cy="52" r="15" class="f-accent-soft s-accent" stroke-width="2"/>
+          <text x="150" y="57" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">V</text>
+          <text x="196" y="57" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">V</text>
+          <text x="173" y="92" text-anchor="middle" font-size="13" class="f-ink">2 viceguvernéři</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <path d="M268 24 V38 M302 24 V38 M336 24 V38 M370 24 V38" class="s-accent" stroke-width="1.5"/>
+          <circle cx="268" cy="52" r="14" class="f-surface s-accent" stroke-width="1.5"/>
+          <circle cx="302" cy="52" r="14" class="f-surface s-accent" stroke-width="1.5"/>
+          <circle cx="336" cy="52" r="14" class="f-surface s-accent" stroke-width="1.5"/>
+          <circle cx="370" cy="52" r="14" class="f-surface s-accent" stroke-width="1.5"/>
+          <text x="319" y="92" text-anchor="middle" font-size="13" class="f-ink">4 další členové</text>
+        </g>
+      </svg>
+      <figcaption>Bankovní rada: 1 + 2 + 4 = 7 členů, jmenovaných na nejvýše dvě šestiletá období.</figcaption>
+    </figure>
+    <p>Guvernérem je nyní <strong>Aleš Michl</strong> (od 1. 7. 2022).</p>
+    <div class="box box--tip">
+      <p>Tři věci, které u zkoušení musí padnout hned: <strong>Praha</strong>, <strong>bankovní rada</strong>, <strong>7 členů jmenuje prezident</strong>. Vláda do toho nemluví, ČNB je na ní nezávislá.</p>
+    </div>
+
+    <h3>Funkce centrální banky</h3>
+    <p>Je jich devět. Klepni na kartu.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip><div class="karta__lic">Měnová politika</div><div class="karta__rub"><p style="margin:0">Uskutečňování měnové (monetární) politiky.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Emisní funkce</div><div class="karta__rub"><p style="margin:0">Vydávání a stahování bankovek a mincí.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Peněžní oběh a platební styk</div><div class="karta__rub"><p style="margin:0">Řízení peněžního oběhu a platebního styku.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Regulace a dohled</div><div class="karta__rub"><p style="margin:0">Dohled nad činností ostatních bank.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Banka bank</div><div class="karta__rub"><p style="margin:0">Přijímá vklady ostatních bank a poskytuje bankám úvěry.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Cenné papíry</div><div class="karta__rub"><p style="margin:0">Obchodování s cennými papíry.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Banka státu</div><div class="karta__rub"><p style="margin:0">Vedení účtu státu, správa státního dluhu.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Reprezentace státu</div><div class="karta__rub"><p style="margin:0">Zastupuje stát ve Světové bance (SB) a Mezinárodním měnovém fondu (MMF).</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Rezervy a kurzy</div><div class="karta__rub"><p style="margin:0">Tvorba a správa měnových rezerv, stanovení kurzů měn (valutový, devizový).</p></div></div>
+    </div>
+    <div class="box box--doplneno">
+      <p>Tři upřesnění k dnešní praxi:</p>
+      <ul>
+        <li><strong>Dohled</strong>: od roku 2006 ČNB dohlíží na celý finanční trh, tedy i na pojišťovny, penzijní společnosti a kapitálový trh.</li>
+        <li><strong>Kurz koruny</strong> se dnes tvoří na devizovém trhu. ČNB kurzy každý pracovní den vyhlašuje a do trhu může zasáhnout.</li>
+        <li><strong>Státní dluh</strong> řídí v ČR hlavně Ministerstvo financí, ČNB vede účty státu a technicky pomáhá s obchody.</li>
+      </ul>
+    </div>
+
+    <h3>Dva směry měnové politiky</h3>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Expanzivní</h3>
+        <p><strong>Zvyšování</strong> množství peněz v ekonomice.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Restriktivní</h3>
+        <p><strong>Snižování</strong> množství peněz v ekonomice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. Nástroje ČNB ===== -->
+  <section class="kapitola" id="nastroje" data-pozadavky="5">
+    <h2>Nástroje ČNB</h2>
+    <p>Nástroje jsou to, co banka využívá k uskutečňování svých cílů a úkolů. Dělí se na <strong>přímé</strong> a <strong>nepřímé</strong>.</p>
+    <div data-zalozky>
+      <section data-zalozka="Přímé">
+        <p><strong>Adresné</strong> – můžou být použity jen vůči vybrané bance.</p>
+        <ul>
+          <li><strong>Pravidla likvidity</strong> – určení závazné struktury aktiv a pasiv obchodních bank.</li>
+          <li><strong>Úvěrové kontingenty</strong> – určení limitů úvěrů, úvěrových stropů.</li>
+          <li><strong>Povinné vklady</strong> – povinné vedení běžných účtů státních institucí.</li>
+          <li><strong>Doporučení, výzvy, dohody</strong> – nepsaná pravidla mezi centrální bankou a obchodními bankami.</li>
+        </ul>
+      </section>
+      <section data-zalozka="Nepřímé">
+        <p><strong>Plošné</strong> – platí pro všechny banky na trhu.</p>
+        <ul>
+          <li><strong>Regulace výše povinných minimálních rezerv</strong> – část peněz (z vkladů), kterou musí mít každá obchodní banka uloženou u centrální banky.</li>
+          <li><strong>Regulace úrokových sazeb</strong>:
+            <ul>
+              <li><strong>diskontní sazba</strong> – základní úroková sazba, za kterou si obchodní banky půjčují peníze od centrální banky</li>
+              <li><strong>repo sazba</strong> – úroková sazba, za kterou si obchodní banky půjčují peníze od centrální banky na základě reeskontu směnek</li>
+              <li><strong>lombardní sazba</strong> – úroková sazba, za kterou si obchodní banky půjčují peníze od centrální banky oproti zástavě cenných papírů</li>
+            </ul>
+          </li>
+          <li><strong>Operace na volném trhu</strong> – nákup a prodej státních cenných papírů centrální bankou (např. státní pokladniční poukázky, popř. státní dluhopisy).</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="box box--tip">
+      <p>Přímé = <strong>p</strong>římo na konkrétní banku. Nepřímé = plošně na všechny, banka se pak rozhoduje sama, jen za změněných podmínek.</p>
+    </div>
+
+    <details class="odhal">
+      <summary>Eskont a reeskont směnek</summary>
+      <div class="odhal__obsah">
+        <p>Obchodní banka může <strong>eskontovat</strong> = odkoupit od svého klienta směnku (krátkodobý cenný papír) před uplynutím doby její splatnosti.</p>
+        <p>Banka pak může nabídnout směnku i centrální bance. To je <strong>reeskont směnky centrální bankou</strong>. Úroková sazba u této operace se nazývá <strong>repo sazba (refinanční sazba)</strong> a bývá o něco vyšší než diskontní sazba. Reeskont je většinou na krátkou dobu (<strong>14 dnů</strong>).</p>
+      </div>
+    </details>
+
+    <div class="box box--doplneno">
+      <p>Podklady popisují sazby klasicky, jak je to v učebnicích. Dnes ČNB pracuje se sazbami takhle:</p>
+      <ul>
+        <li><strong>2T repo sazba</strong> je hlavní sazba ČNB. Platí pro dvoutýdenní repo operace, při kterých banky ukládají u ČNB přebytečné peníze a jako zajištění dostanou cenné papíry. Směnky v tom už roli nehrají.</li>
+        <li><strong>Diskontní sazba</strong> je spodní hranice: tolik dostanou banky za peníze uložené u ČNB přes noc.</li>
+        <li><strong>Lombardní sazba</strong> je horní hranice: za tolik si banky půjčí od ČNB přes noc oproti zástavě cenných papírů.</li>
+      </ul>
+      <p>Výše sazeb se v čase mění, aktuální najdeš na webu ČNB. Povinné minimální rezervy byly u nás dlouhodobě 2 %, i to se může změnit.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Je to přímý, nebo nepřímý nástroj?",
+        "kose": ["Přímý (adresný)", "Nepřímý (plošný)"],
+        "polozky": [
+          ["pravidla likvidity", 0],
+          ["úvěrové kontingenty", 0],
+          ["povinné vklady", 0],
+          ["doporučení, výzvy, dohody", 0],
+          ["povinné minimální rezervy", 1],
+          ["diskontní sazba", 1],
+          ["repo sazba", 1],
+          ["lombardní sazba", 1],
+          ["operace na volném trhu", 1]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Jak nástroje působí na ekonomiku</h3>
+    <div class="box box--doplneno">
+      <p>Podklady nástroje jen vyjmenovávají. Tady je jejich mechanismus. Sedni si do křesla bankovní rady: vyber směr politiky a nástroj.</p>
+      <div class="simulace" id="pult" style="margin-bottom:0">
+        <div class="pult__volba" data-skupina="smer">
+          <button class="chip" type="button" data-v="exp">Expanzivní</button>
+          <button class="chip" type="button" data-v="res">Restriktivní</button>
+        </div>
+        <div class="pult__volba" data-skupina="nastroj">
+          <button class="chip" type="button" data-v="sazby">Úrokové sazby</button>
+          <button class="chip" type="button" data-v="pmr">Povinné rezervy</button>
+          <button class="chip" type="button" data-v="trh">Volný trh</button>
+        </div>
+        <ol class="pult__retez" aria-live="polite"></ol>
+        <p class="pult__zaver" style="margin-bottom:0"></p>
+      </div>
+
+      <p style="margin-top:16px">Proč tak silně působí rezervy? Banka z vkladu nechá povinnou část u ČNB a zbytek půjčí. Půjčené peníze skončí na účtu někoho jiného, ta banka zase část půjčí dál. Tak obchodní banky <strong>vytvářejí bezhotovostní peníze</strong>, i když bankovky neemitují.</p>
+      <div class="simulace" id="pmr" style="margin-bottom:0">
+        <svg viewBox="0 0 400 54" style="max-width:520px;margin:0 auto" aria-label="Vklad 100 000 Kč rozdělený na povinnou rezervu a částku k půjčení">
+          <rect x="1" y="6" width="398" height="28" rx="5" class="f-accent-soft"/>
+          <rect id="pmr-pruh" x="1" y="6" width="40" height="28" rx="5" class="f-warn" style="transition:width .5s"/>
+          <text x="1" y="48" font-size="12" class="f-warn" font-weight="600">rezerva u ČNB</text>
+          <text x="399" y="48" text-anchor="end" font-size="12" class="f-accent" font-weight="600">banka může půjčit</text>
+        </svg>
+        <div class="posuvnik"><label for="pmr-r">Povinné minimální rezervy</label><output id="pmr-r-o"></output><input id="pmr-r" type="range" min="1" max="25" step="1" value="10"></div>
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Vklad klienta</small><b>100 000 Kč</b></div>
+          <div class="ukazatel"><small>Rezerva u ČNB</small><b id="pmr-a"></b></div>
+          <div class="ukazatel"><small>Může půjčit</small><b id="pmr-b"></b></div>
+          <div class="ukazatel"><small>Teoreticky vklady celkem</small><b id="pmr-c"></b></div>
+        </div>
+        <p style="margin-bottom:0;font-size:.9rem">Poslední číslo je teoretický strop: 100 000 Kč ÷ rezervy. Ve skutečnosti je nižší, protože část peněz zůstane v hotovosti a banky nepůjčují všechno.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. Komerční banky ===== -->
+  <section class="kapitola" id="komercni" data-pozadavky="6">
+    <h2>Komerční banky a jejich charakteristika</h2>
+    <div class="box box--definice">
+      <p><strong>Obchodní (komerční) banka</strong> je zprostředkovatel finančních prostředků, který na základě přijatých vkladů a <strong>na vlastní účet a riziko</strong> realizuje úvěrové a investiční obchody. Základní funkcí je <strong>finanční zprostředkování</strong>.</p>
+    </div>
+    <figure class="ilustrace" aria-label="Vkladatelé dávají bance vklady a dostávají úrok z vkladu. Banka půjčuje dlužníkům a dostává úrok z úvěru. Rozdíl je úroková marže.">
+      <svg viewBox="0 0 400 145" style="max-width:520px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="4" y="50" width="104" height="50" rx="8" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="56" y="80" text-anchor="middle" font-size="14" class="f-ink">Vkladatelé</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="150" y="50" width="100" height="50" rx="8" class="f-accent"/>
+          <text x="200" y="80" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">Banka</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="292" y="50" width="104" height="50" rx="8" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="344" y="80" text-anchor="middle" font-size="14" class="f-ink">Dlužníci</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <path d="M110 64 H146 M140 59 L147 64 L140 69" class="s-accent f-none" stroke-width="2"/>
+          <text x="128" y="38" text-anchor="middle" font-size="12" font-weight="600" class="f-accent">vklady</text>
+          <path d="M252 64 H288 M282 59 L289 64 L282 69" class="s-accent f-none" stroke-width="2"/>
+          <text x="271" y="38" text-anchor="middle" font-size="12" font-weight="600" class="f-accent">úvěry</text>
+        </g>
+        <g class="vyjed" style="--d:1s">
+          <path d="M148 86 H112 M118 81 L111 86 L118 91" class="s-warn f-none" stroke-width="2"/>
+          <text x="104" y="118" text-anchor="middle" font-size="12" font-weight="600" class="f-warn">úrok z vkladu</text>
+          <path d="M290 86 H254 M260 81 L253 86 L260 91" class="s-warn f-none" stroke-width="2"/>
+          <text x="296" y="118" text-anchor="middle" font-size="12" font-weight="600" class="f-warn">úrok z úvěru</text>
+        </g>
+        <text x="200" y="139" text-anchor="middle" font-size="13" class="f-ink vyjed" style="--d:1.2s">rozdíl úroků = úroková marže</text>
+      </svg>
+      <figcaption>Banka peníze od jedněch přijímá a druhým půjčuje. Z rozdílu úroků žije.</figcaption>
+    </figure>
+
+    <h3>Tři zásady podnikání banky</h3>
+    <p>Banka podniká na základě tří zásad: <strong>rentability, likvidity a jistoty</strong>. Podklady je jen jmenují, klepni na kartu.</p>
+    <div class="box box--doplneno">
+      <div class="mrizka" style="margin:0">
+        <div class="karta" data-flip><div class="karta__lic">Rentabilita</div><div class="karta__rub"><p style="margin:0">Banka chce vydělat. Musí mít ze svých obchodů zisk.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">Likvidita</div><div class="karta__rub"><p style="margin:0">Musí umět kdykoli vyplatit vklady a platit své závazky.</p></div></div>
+        <div class="karta" data-flip><div class="karta__lic">Jistota</div><div class="karta__rub"><p style="margin:0">Musí omezovat riziko, že jí dlužníci peníze nevrátí.</p></div></div>
+      </div>
+      <p style="margin-bottom:0;margin-top:12px">Jdou proti sobě: nejvyšší výnos mají rizikové a dlouhé úvěry, které jsou málo jisté a málo likvidní. Banka proto hledá rovnováhu.</p>
+    </div>
+
+    <h3>Operace obchodních bank</h3>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Aktivní</h3>
+        <p>Banka je v postavení <strong>věřitele</strong>: poskytování úvěrů, nákup dluhopisů.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Pasivní</h3>
+        <p>Banka je v postavení <strong>dlužníka</strong>: přijímání vkladů, emise cenných papírů.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--text-muted)">
+        <h3 style="margin-top:0">Neutrální</h3>
+        <p>Banka <strong>není v dlužnicko-věřitelském vztahu</strong>: poradenská činnost, směnárenská činnost, faktoring.</p>
+      </div>
+    </div>
+    <div class="box box--definice">
+      <p><strong>Faktoring</strong>: faktoringová společnost, často banka, se stává věřitelem a přebírá od dodavatele veškeré riziko, že kupující nebude schopen či ochoten zaplatit.</p>
+    </div>
+    <div class="box box--pozor">
+      <p>Vklad je pro tebe majetek, ale pro banku <strong>dluh</strong>. Musí ti ho vrátit, proto je přijetí vkladu <strong>pasivní</strong> operace. Úvěr je naopak pro banku pohledávka, proto <strong>aktivní</strong>.</p>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Je to aktivní, pasivní, nebo neutrální operace banky?",
+        "kose": ["Aktivní", "Pasivní", "Neutrální"],
+        "polozky": [
+          ["poskytnutí úvěru", 0],
+          ["hypotéka klientovi", 0],
+          ["nákup dluhopisů", 0],
+          ["přijetí vkladu", 1],
+          ["peníze na tvém spořicím účtu", 1],
+          ["emise cenných papírů", 1],
+          ["poradenská činnost", 2],
+          ["směnárenská činnost", 2],
+          ["faktoring", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Z čeho má banka zisk? Hlavně z <strong>úrokové marže</strong>, tedy rozdílu mezi úrokem z úvěrů a úrokem z vkladů, a z poplatků. Zkus si to:</p>
+      <div class="simulace" id="marze" style="margin-bottom:0">
+        <div class="posuvnik"><label for="ma-o">Vklady, které banka přijme a půjčí dál</label><output id="ma-o-o"></output><input id="ma-o" type="range" min="1000000" max="20000000" step="1000000" value="10000000"></div>
+        <div class="posuvnik"><label for="ma-v">Úrok, který platí vkladatelům</label><output id="ma-v-o"></output><input id="ma-v" type="range" min="0" max="8" step="0.5" value="3"></div>
+        <div class="posuvnik"><label for="ma-u">Úrok, který dostává od dlužníků</label><output id="ma-u-o"></output><input id="ma-u" type="range" min="1" max="15" step="0.5" value="7"></div>
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Zaplatí vkladatelům</small><b id="ma-a"></b></div>
+          <div class="ukazatel"><small>Dostane od dlužníků</small><b id="ma-b"></b></div>
+          <div class="ukazatel"><small>Rozdíl pro banku</small><b id="ma-c"></b></div>
+        </div>
+        <p id="ma-t" style="margin-bottom:0;font-size:.92rem"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Služby komerčních bank ===== -->
+  <section class="kapitola" id="sluzby" data-pozadavky="7">
+    <h2>Služby, které komerční banky poskytují</h2>
+    <p>Podklady uvádějí dva přehledy, které se překrývají. Tady jsou spojené:</p>
+    <div class="mrizka">
+      <div class="box" style="margin:0">
+        <h3 style="margin-top:0">Peníze a úvěry</h3>
+        <ul>
+          <li>poskytování úvěrů</li>
+          <li>přijímání vkladů</li>
+          <li>finanční pronájem (leasing)</li>
+          <li>obchodování s devizami a cennými papíry</li>
+          <li>zprostředkování obchodů s cennými papíry</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0">
+        <h3 style="margin-top:0">Účty a platby</h3>
+        <ul>
+          <li>zakládání a vedení účtů</li>
+          <li>bezhotovostní platební styk (domácí i zahraniční)</li>
+          <li>vydávání platebních prostředků (karty, šeky, …)</li>
+          <li>směnárenská činnost</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0">
+        <h3 style="margin-top:0">Ostatní</h3>
+        <ul>
+          <li>bezpečnostní schránky a ukládání cenností</li>
+          <li>poradenské služby</li>
+        </ul>
+      </div>
+    </div>
+
+    <div data-zalozky>
+      <section data-zalozka="Bankovní účet">
+        <div class="box box--definice"><p><strong>Bankovní účet</strong> je účet pro každodenní hospodaření s osobními a rodinnými finančními prostředky.</p></div>
+        <ul>
+          <li><strong>Vklady:</strong> převodem z jiného účtu (mzda, důchod, sociální dávky), nebo v hotovosti.</li>
+          <li><strong>Výběry:</strong> kdykoli v hotovosti, nebo převodem na jiný účet.</li>
+          <li><strong>Pravidelné platby:</strong> trvalé příkazy, nebo <strong>SIPO (sdružené inkaso plateb obyvatelstva)</strong>.</li>
+          <li><strong>Balíček služeb:</strong> někdy je s účtem spojený balíček nadstandardních služeb, některé zdarma nebo za výhodnější poplatek. Při měsíčním paušálu si spočítej, jestli se ti vůbec vyplatí.</li>
+          <li><strong>Přímé bankovnictví:</strong> telebanking, GSM banking, internet banking, homebanking. Účet spravuješ <strong>24 hodin denně, 7 dní v týdnu</strong>.</li>
+        </ul>
+        <h4>Jak se účet zakládá</h4>
+        <ul>
+          <li>V každé bance na základě <strong>smlouvy o běžném účtu</strong>. Nabídka je široká, účet vede každá banka.</li>
+          <li>Podmínkou je dosažení věku <strong>18 let</strong>. Pro nezletilé může účet zřídit jejich <strong>zákonný zástupce</strong>.</li>
+          <li>Abys mohl s účtem disponovat, banka většinou požaduje okamžité složení <strong>minimálního vkladu</strong>.</li>
+          <li>Na běžném účtu jdou provádět hotovostní i bezhotovostní operace.</li>
+          <li>Běžný účet je obvykle úročen, ale sazba je <strong>velmi nízká</strong>.</li>
+        </ul>
+        <div class="box box--doplneno" style="margin-bottom:0">
+          <p>Dnešní realita je volnější: účet se často vede zdarma a bez minimálního vkladu, banky mají i studentské a dětské účty a hlavní cestou je <strong>mobilní aplikace</strong>. Podmínky se liší banka od banky.</p>
+        </div>
+      </section>
+      <section data-zalozka="Platební karty">
+        <p><strong>Platební karty</strong> mají vztah k hotovostnímu i bezhotovostnímu platebnímu styku. Lze je dělit podle řady kritérií. Karty vydávají obvykle prostřednictvím obchodních bank tzv. <strong>karetní asociace</strong>:</p>
+        <ul>
+          <li>MasterCard</li>
+          <li>VISA</li>
+          <li>American Express</li>
+          <li>Diners Club</li>
+        </ul>
+        <p>V současné době se využívají <strong>bezkontaktní</strong> platební karty.</p>
+        <div class="box box--doplneno" style="margin-bottom:0">
+          <p>Nejdůležitější dělení je podle toho, čí peníze utrácíš. <strong>Debetní karta</strong> platí z tvých peněz na účtu. <strong>Kreditní karta</strong> platí z úvěru od banky, který pak splácíš.</p>
+        </div>
+      </section>
+    </div>
+
+    <h3>Úvěry podle délky splatnosti</h3>
+    <p><strong>Úvěrové produkty (služby)</strong> se liší podle toho, na jak dlouho jsou poskytnuty, komu jsou poskytnuty, na jaký účel atd.</p>
+    <div data-zalozky>
+      <section data-zalozka="Krátkodobé">
+        <p>Se splatností <strong>do 1 roku</strong>.</p>
+        <details class="odhal" open>
+          <summary>Kontokorentní úvěr</summary>
+          <div class="odhal__obsah">
+            <p>Poskytuje se na <strong>kontokorentním účtu</strong>, který vzniká spojením běžného a úvěrového účtu. Klient může přečerpat zůstatek na běžném účtu do <strong>stanoveného limitu</strong>. Když ho přečerpá nad limit, banka ho penalizuje zvýšenými úroky. Klient tak čerpá úvěr automaticky podle potřeby, když na běžném účtu nemá dost peněz.</p>
+          </div>
+        </details>
+        <details class="odhal">
+          <summary>Směnečné úvěry</summary>
+          <div class="odhal__obsah">
+            <p><strong>Směnka</strong> (vlastní, cizí) = listina, závazek dlužníka uhradit věřiteli stanovený peněžní obnos ve stanoveném termínu.</p>
+            <ul>
+              <li><strong>Eskontní úvěr</strong> – banka odkoupí (eskontuje) směnku klienta před lhůtou splatnosti. Když dlužník směnku v termínu splatnosti nesplatí, žádá banka úhradu od posledního majitele směnky.</li>
+              <li><strong>Akceptační úvěr</strong> – banka neposkytne klientovi přímo peníze, ale <strong>akceptuje cizí směnku</strong> vystavenou klientem (příjemcem akceptačního úvěru). Tím se banka stává <strong>hlavním směnečným dlužníkem</strong>. Tenhle cenný papír se nazývá <strong>bankovní akcept</strong> a patří mezi cenné papíry peněžního trhu. Akceptační úvěr dává banka jen nejlepším a ověřeným klientům.</li>
+            </ul>
+            <div class="box box--doplneno" style="margin-bottom:0">
+              <p><strong>Vlastní směnka</strong> říká „zaplatím“, dlužník ji vystaví sám na sebe. <strong>Cizí směnka</strong> říká „zaplaťte“, vystavitel v ní přikazuje někomu jinému, aby zaplatil.</p>
+            </div>
+          </div>
+        </details>
+        <details class="odhal">
+          <summary>Revolvingový úvěr</summary>
+          <div class="odhal__obsah">
+            <p>Banka klientovi umožňuje <strong>opakované čerpání úvěru</strong>. Výhoda: nemusí se pokaždé sepisovat nová smlouva o úvěru. Základní podmínkou je splacení předešlé půjčky.</p>
+          </div>
+        </details>
+        <details class="odhal">
+          <summary>Lombardní úvěr</summary>
+          <div class="odhal__obsah">
+            <p>Úvěr jištěný <strong>zástavou movité věci</strong> (cenné papíry, zboží).</p>
+          </div>
+        </details>
+      </section>
+      <section data-zalozka="Středně a dlouhodobé">
+        <p>Se splatností <strong>nad jeden rok</strong>.</p>
+        <details class="odhal" open>
+          <summary>Hypoteční úvěr</summary>
+          <div class="odhal__obsah">
+            <p>Je určený <strong>výhradně k financování bytových potřeb</strong>: pořízení nemovitosti, financování výstavby nebo rekonstrukce, modernizace či opravy nemovitosti.</p>
+            <ul>
+              <li><strong>Zajištění:</strong> zástavní právo k nemovitosti. Když je klient nesolventní, banka může uhradit jeho závazky ze zástavy, tedy prodejem nemovitosti.</li>
+              <li><strong>Splatnost:</strong> i několik desítek let (až 20, 30 let).</li>
+              <li><strong>Kdo poskytuje:</strong> většinou se tím zabývají specializované hypoteční banky, které získávají zdroje z <strong>hypotečních zástavních listů</strong>.</li>
+              <li><strong>Výše:</strong> od dubna 2017 je možné si vzít úvěr ve výši 90 % odhadní hodnoty nemovitosti, 10 % si žadatel musí sehnat jinde.</li>
+            </ul>
+            <div class="box box--doplneno">
+              <p>Hranice 90 % je starý údaj. ČNB limity od té doby měnila. Od roku 2022 se obvykle uvádí <strong>80 %</strong> hodnoty nemovitosti, u žadatelů do 36 let 90 %. Limity se můžou dál měnit, aktuální stav si ověř na webu ČNB. Hypotéky dnes navíc běžně poskytují i univerzální banky.</p>
+            </div>
+            <p><strong>Dva základní typy podle účelu:</strong></p>
+            <div class="mrizka" style="margin:8px 0 0">
+              <div class="karta" data-flip><div class="karta__lic">Účelový hypoteční úvěr</div><div class="karta__rub"><p style="margin:0">Jen na účely definované bankou, většinou investice do nemovitosti, objektu bydlení, i na potřeby bydlení v objektu, který nemusí být v osobním vlastnictví klienta.</p></div></div>
+              <div class="karta" data-flip><div class="karta__lic">Neúčelový (americká hypotéka)</div><div class="karta__rub"><p style="margin:0">Bez omezení použití. Může financovat i movité věci: automobil, studium dětí v zahraničí, zájezd kolem světa.</p></div></div>
+            </div>
+          </div>
+        </details>
+        <details class="odhal">
+          <summary>Spotřební (spotřebitelský) úvěr</summary>
+          <div class="odhal__obsah">
+            <p>Všechny úvěry poskytované <strong>fyzickým osobám, domácnostem</strong> na nákup spotřebního zboží (televize, pračky), bytových doplňků a jiných předmětů spotřebního charakteru.</p>
+            <ul>
+              <li>Úroková míra bývá obvykle <strong>pevná</strong> po celou dobu trvání úvěru.</li>
+              <li>Zajištění banka posuzuje individuálně. U nižší částky ho často nepožaduje.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+    </div>
+
+    <div class="simulace" id="poradna">
+      <p style="margin-top:0"><strong>Poraď klientovi:</strong> který úvěr mu pomůže?</p>
+      <div class="kviz"></div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Úrok a úroková sazba ===== -->
+  <section class="kapitola" id="urok" data-pozadavky="8">
+    <h2>Úrok a úroková sazba</h2>
+    <div class="box box--definice">
+      <p><strong>Úrok</strong> představuje peněžní prostředky, které dlužník platí bance jako věřiteli za poskytnutí úvěru. Vypočítá se z dlužné částky podle úrokové míry.</p>
+      <p><strong>Úroková míra</strong>, někdy označovaná jako <strong>úroková sazba</strong>, je úrok vyjádřený relativně, nejčastěji v procentech, z hodnoty poskytnutých peněžních prostředků.</p>
+    </div>
+    <div class="box box--tip">
+      <p>Úrok jsou <strong>koruny</strong>, sazba jsou <strong>procenta</strong>. Půjčíš si 100 000 Kč na rok se sazbou 8 %, zaplatíš úrok 8 000 Kč.</p>
+    </div>
+
+    <h3>Jednoduché a složené úročení</h3>
+    <div class="box box--doplneno">
+      <p>Úrok funguje i opačně: když máš peníze ve spořicím účtu, jsi věřitel ty a úrok platí banka tobě. Podstatné je, z čeho se počítá.</p>
+      <div class="mrizka">
+        <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+          <h3 style="margin-top:0">Jednoduché</h3>
+          <p>Úrok se počítá pořád jen ze <strong>základního vkladu</strong>. Přibývá každý rok stejně.</p>
+        </div>
+        <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+          <h3 style="margin-top:0">Složené</h3>
+          <p>Připsaný úrok se přidá k vkladu a <strong>další rok se úročí i on</strong>. Úrok z úroku.</p>
+        </div>
+      </div>
+      <div class="vzorec">úrok za rok = vklad × sazba</div>
+      <div class="vzorec">složené: konečná částka = vklad × (1 + sazba)<sup>počet let</sup></div>
+      <p><strong>Daň z úroku:</strong> z úroků na vkladech fyzických osob se u nás strhává <strong>15% srážková daň</strong>, banka ji odvádí sama. Sazba se může změnit, princip zůstává: počítá se z úroku, ne z celého vkladu.</p>
+      <div class="box box--priklad" style="margin-bottom:0">
+        <p>Vklad 100 000 Kč, sazba 4 %, rok. Úrok 4 000 Kč, daň 15 % z něj je 600 Kč, na účet ti přijde <strong>3 400 Kč</strong>. Skutečně tedy vyděláš 3,4 %.</p>
+      </div>
+    </div>
+
+    <div class="simulace" id="uroceni">
+      <div class="legenda">
+        <span style="--c:var(--accent)">složené úročení</span>
+        <span style="--c:var(--warn)">jednoduché úročení</span>
+        <span style="--c:var(--text-muted)">vložená částka</span>
+      </div>
+      <svg id="ur-graf" viewBox="0 0 400 232" aria-label="Růst vkladu při jednoduchém a složeném úročení"></svg>
+      <div class="posuvnik"><label for="ur-v">Vklad</label><output id="ur-v-o"></output><input id="ur-v" type="range" min="10000" max="500000" step="10000" value="100000"></div>
+      <div class="posuvnik"><label for="ur-s">Úroková sazba za rok</label><output id="ur-s-o"></output><input id="ur-s" type="range" min="0.5" max="12" step="0.5" value="4"></div>
+      <div class="posuvnik"><label for="ur-n">Doba</label><output id="ur-n-o"></output><input id="ur-n" type="range" min="1" max="40" step="1" value="20"></div>
+      <label class="prepinac"><input id="ur-dan" type="checkbox"> Strhávat daň z úroku 15 %</label>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Jednoduché – na konci</small><b id="ur-j"></b></div>
+        <div class="ukazatel"><small>Složené – na konci</small><b id="ur-k"></b></div>
+        <div class="ukazatel"><small>Složené vydělá navíc</small><b id="ur-r"></b></div>
+        <div class="ukazatel"><small>Daň státu (složené)</small><b id="ur-d"></b></div>
+      </div>
+      <p id="ur-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <h3>Způsob splácení úvěru</h3>
+    <p>Splátky můžou být <strong>nestejné</strong>, nebo <strong>stejné</strong>. Každá splátka má dvě části:</p>
+    <div class="mrizka">
+      <div class="karta" data-flip><div class="karta__lic">Úmor</div><div class="karta__rub"><p style="margin:0">Splátka <strong>jistiny</strong>, tedy půjčené částky. Jen úmor snižuje dluh.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Úrok</div><div class="karta__rub"><p style="margin:0">Cena za půjčené peníze, počítá se ze zbývajícího dluhu.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Anuita</div><div class="karta__rub"><p style="margin:0">Termín, který se často používá pro <strong>součet úmoru a úroku</strong>.</p></div></div>
+    </div>
+    <div class="vzorec">anuita = úmor + úrok</div>
+
+    <div class="box box--doplneno">
+      <p>U <strong>stejných splátek</strong> platíš každé období stejně. Úrok postupně klesá, takže roste úmor. U <strong>nestejných splátek</strong> je typicky stejný úmor, úrok klesá, takže klesá i celá splátka. Začínáš výš, ale na úrocích zaplatíš méně.</p>
+      <div class="box box--priklad" style="margin-bottom:0">
+        <p>Úvěr 300 000 Kč, 10 % ročně, 3 roky, úmor 100 000 Kč ročně:</p>
+        <ul>
+          <li>1. rok: úrok 10 % z 300 000 = 30 000 Kč, splátka <strong>130 000 Kč</strong></li>
+          <li>2. rok: úrok 10 % z 200 000 = 20 000 Kč, splátka <strong>120 000 Kč</strong></li>
+          <li>3. rok: úrok 10 % z 100 000 = 10 000 Kč, splátka <strong>110 000 Kč</strong></li>
+        </ul>
+        <p>Úroky celkem 60 000 Kč. Při stejných splátkách by každý rok šlo 120 634 Kč a úroky by byly 61 903 Kč.</p>
+      </div>
+    </div>
+
+    <div class="simulace" id="splaceni">
+      <div class="pult__volba" data-skupina="rezim">
+        <button class="chip vybrany" type="button" data-v="stejne">Stejné splátky</button>
+        <button class="chip" type="button" data-v="nestejne">Nestejné splátky</button>
+      </div>
+      <div class="legenda">
+        <span style="--c:var(--accent)">úmor</span>
+        <span style="--c:var(--warn)">úrok</span>
+      </div>
+      <svg id="sp-graf" viewBox="0 0 400 218" aria-label="Sloupce splátek po letech rozdělené na úmor a úrok"></svg>
+      <div class="posuvnik"><label for="sp-d">Výše úvěru</label><output id="sp-d-o"></output><input id="sp-d" type="range" min="100000" max="6000000" step="100000" value="3000000"></div>
+      <div class="posuvnik"><label for="sp-s">Úroková sazba za rok</label><output id="sp-s-o"></output><input id="sp-s" type="range" min="1" max="15" step="0.5" value="5"></div>
+      <div class="posuvnik"><label for="sp-n">Doba splácení</label><output id="sp-n-o"></output><input id="sp-n" type="range" min="2" max="30" step="1" value="20"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Splátka 1. rok</small><b id="sp-a"></b></div>
+        <div class="ukazatel"><small>Splátka poslední rok</small><b id="sp-b"></b></div>
+        <div class="ukazatel"><small>Úroky celkem</small><b id="sp-c"></b></div>
+      </div>
+      <p id="sp-t" style="margin-bottom:0;font-size:.92rem"></p>
+      <p style="margin-bottom:0;font-size:.85rem" class="ztlumene">Pro přehlednost počítáme s jednou splátkou za rok. Skutečné úvěry se splácejí měsíčně, princip je stejný.</p>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Když porovnáváš půjčky, koukej na <strong>RPSN</strong> (roční procentní sazba nákladů). Na rozdíl od samotné úrokové sazby zahrnuje i poplatky. A u spoření hlídej <strong>inflaci</strong>: když je vyšší než úrok po dani, peníze na účtu sice přibývají, ale koupíš si za ně méně.</p>
+    </div>
+  </section>
+
+  <!-- ===== 6. Stavební spoření a penzijní fondy ===== -->
+  <section class="kapitola" id="sporeni" data-pozadavky="9 10">
+    <h2>Stavební spoření a penzijní fondy</h2>
+
+    <h3>Stavební spoření</h3>
+    <div class="box box--definice">
+      <p><strong>Stavební spoření</strong> nabízí kromě zhodnocení peněz také možnost financovat bydlení pomocí <strong>úvěru ze stavebního spoření</strong>. Výhodou je <strong>státní podpora</strong>.</p>
+    </div>
+    <ul>
+      <li>Ve <strong>stavební spořitelně</strong> podepíšeš smlouvu a dopředu si stanovíš <strong>cílovou částku</strong>.</li>
+      <li>Na cílové částce závisí poplatek za uzavření, většinou je to procento z cílové částky.</li>
+      <li>Frekvence spoření je na tobě: měsíčně, pololetně, ročně, nebo nepravidelně různé částky.</li>
+    </ul>
+
+    <figure class="ilustrace" aria-label="Časová osa stavebního spoření: po dvou letech může vzniknout nárok na řádný úvěr, po šesti letech končí vázací doba.">
+      <svg viewBox="0 0 400 112" style="max-width:540px">
+        <text x="157" y="16" text-anchor="middle" font-size="13" font-weight="600" class="f-accent vyjed" style="--d:.9s">vázací doba 6 let</text>
+        <path d="M30 56 H378" pathLength="1" class="kresli s-line" stroke-width="3" stroke-linecap="round"/>
+        <path d="M30 56 H285" pathLength="1" class="kresli s-accent" stroke-width="3" stroke-linecap="round" style="--d:.2s"/>
+        <path d="M30 26 H285" class="vyjed s-accent" stroke-width="1" style="--d:.9s"/>
+        <g class="vyjed" style="--d:.3s">
+          <circle cx="30" cy="56" r="7" class="f-accent"/>
+          <text x="30" y="44" text-anchor="middle" font-size="12" class="f-muted">0</text>
+          <text x="6" y="80" font-size="12" class="f-ink">smlouva</text>
+        </g>
+        <g class="vyjed" style="--d:.6s">
+          <circle cx="115" cy="56" r="7" class="f-surface s-accent" stroke-width="2.5"/>
+          <text x="115" y="44" text-anchor="middle" font-size="12" class="f-muted">2 roky</text>
+          <text x="150" y="80" text-anchor="middle" font-size="12" class="f-ink">možný řádný úvěr</text>
+          <text x="150" y="96" text-anchor="middle" font-size="12" class="f-muted">při 40–50 % částky</text>
+        </g>
+        <g class="vyjed" style="--d:1s">
+          <circle cx="285" cy="56" r="7" class="f-accent"/>
+          <text x="285" y="44" text-anchor="middle" font-size="12" class="f-muted">6 let</text>
+          <text x="295" y="80" text-anchor="middle" font-size="12" class="f-ink">výběr bez sankcí</text>
+          <text x="295" y="96" text-anchor="middle" font-size="12" class="f-muted">k jakémukoli účelu</text>
+        </g>
+      </svg>
+      <figcaption>Dvě data na zapamatování: 2 roky pro úvěr, 6 let pro volný výběr.</figcaption>
+    </figure>
+
+    <p>Peníze nejdou kdykoli bez sankcí vybrat. <strong>Vázací doba je šest let</strong>, potom můžeš naspořenou částku použít k jakémukoli účelu.</p>
+    <div class="box box--pozor">
+      <p>Kdo chce peníze čerpat dřív, musí se rozloučit se <strong>státní podporou</strong> a také s <strong>připsanými úroky z vkladů</strong>.</p>
+    </div>
+    <div class="mrizka">
+      <div class="karta" data-flip><div class="karta__lic">Řádný úvěr ze stavebního spoření</div><div class="karta__rub"><p style="margin:0">Podmínka: spořit minimálně <strong>2 roky</strong> a naspořit alespoň <strong>40 nebo 50 %</strong> cílové částky.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Překlenovací úvěr</div><div class="karta__rub"><p style="margin:0">Když podmínky nesplníš. „Překlene“ dobu do nároku na řádný úvěr. Jen na financování potřeb spjatých s <strong>nemovitostí</strong>.</p></div></div>
+    </div>
+
+    <h4>Státní podpora</h4>
+    <p>Klient má za každý započatý rok spoření nárok na státní podporu. Za rok 2024 nově činí <strong>5 %</strong> z vložené částky za rok, maximálně se ale počítá z <strong>20 000 Kč</strong>. Od státu tak můžeš získat maximálně <strong>1 000 Kč</strong> (dříve 2 000 Kč).</p>
+    <div class="box box--definice">
+      <p><strong>Zdanění státní podpory od roku 2024:</strong> vyplacená podpora nově podléhá zdanění od výše <strong>50 000 Kč</strong>. Když se tahle částka nepřekročí, nemusí se uvádět do daňového přiznání. Problém může nastat při ukončení dlouhé fáze spoření: banka najednou vyplatí celou podporu, která v součtu hranici 50 000 Kč překročí. Pak ji musíš uvést v daňovém přiznání za daný rok.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Pravidla státní podpory se mění se státním rozpočtem. Čísla výše platí podle podkladů pro rok 2024, aktuální stav si ověř.</p>
+    </div>
+
+    <div class="simulace" id="stavebko">
+      <p style="margin-top:0"><strong>Naplánuj si spoření:</strong> pro jednoduchost bez úroků a poplatků.</p>
+      <div class="posuvnik"><label for="st-v">Vložíš za rok</label><output id="st-v-o"></output><input id="st-v" type="range" min="0" max="40000" step="1000" value="20000"></div>
+      <div class="posuvnik"><label for="st-c">Cílová částka</label><output id="st-c-o"></output><input id="st-c" type="range" min="100000" max="500000" step="50000" value="200000"></div>
+      <div class="posuvnik"><label for="st-r">Kolik let od uzavření smlouvy uplynulo</label><output id="st-r-o"></output><input id="st-r" type="range" min="1" max="8" step="1" value="3"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Podpora za rok</small><b id="st-p"></b></div>
+        <div class="ukazatel"><small>Podpora celkem</small><b id="st-pc"></b></div>
+        <div class="ukazatel"><small>Naspořeno z cílové částky</small><b id="st-n"></b></div>
+      </div>
+      <div class="mrizka" style="margin-bottom:0">
+        <div class="ukazatel"><small>Výběr peněz</small><p id="st-vyber" style="margin:.2em 0 0;font-size:.9rem"></p></div>
+        <div class="ukazatel"><small>Řádný úvěr</small><p id="st-uver" style="margin:.2em 0 0;font-size:.9rem"></p></div>
+      </div>
+    </div>
+
+    <h3>Penzijní fondy</h3>
+    <div class="box box--definice">
+      <p><strong>Penzijní fond</strong> je fond, který bývá využíván ke spoření na penzi. <strong>Doplňkové penzijní spoření se státním příspěvkem</strong> je forma spoření podporovaná státem, která umožní zajistit si objem prostředků pro zabezpečení ve stáří.</p>
+    </div>
+    <ul>
+      <li>Zakládá se na <strong>pravidelných měsíčních příspěvcích</strong>. Na účet penzijního fondu je jde poukazovat i za delší období (čtvrtletí, pololetí, rok).</li>
+      <li>K příspěvkům dostává klient navíc <strong>státní příspěvky</strong> a <strong>podíly na zisku fondu</strong> a může využít <strong>daňová zvýhodnění</strong>.</li>
+      <li>Na penzijní připojištění může přispívat i <strong>zaměstnavatel</strong>.</li>
+      <li>Placení si může klient přizpůsobovat své situaci: snížit, zvýšit, nebo zažádat o přerušení či odklad.</li>
+    </ul>
+    <div class="mrizka">
+      <div class="ukazatel"><small>Minimum (od 1. 7. 2024)</small><b>500 Kč</b><small>státní příspěvek 100 Kč</small></div>
+      <div class="ukazatel"><small>Pro maximum (od 1. 7. 2024)</small><b>1 700 Kč</b><small>státní příspěvek 340 Kč</small></div>
+    </div>
+    <div class="box box--doplneno">
+      <p>Mezi těmito hranicemi platí: <strong>100 Kč + 20 % z částky nad 500 Kč</strong>. Daňově se od základu daně dá odečíst to, co v roce přesáhne 1 700 Kč měsíčně, nejvýš 48 000 Kč ročně. Tyhle částky se můžou změnit.</p>
+      <p>Pojmy: od roku 2013 se nově uzavírá <strong>doplňkové penzijní spoření</strong> u <strong>penzijních společností</strong> v účastnických fondech. Starší <strong>penzijní připojištění</strong> (transformované fondy) doběhá u lidí, kteří ho uzavřeli dřív, a právě u něj jsou typické podíly na zisku.</p>
+    </div>
+
+    <div class="simulace" id="penze">
+      <p style="margin-top:0"><strong>Kolik přidá stát?</strong> Posuň, kolik si měsíčně spoříš.</p>
+      <svg viewBox="0 0 400 74" style="max-width:520px;margin:0 auto" aria-label="Státní příspěvek jako pruh do maxima 340 Kč">
+        <text x="0" y="14" font-size="12" class="f-muted">státní příspěvek</text>
+        <text id="pe-popis" x="400" y="14" text-anchor="end" font-size="13" font-weight="600" class="f-ink"></text>
+        <rect x="0" y="22" width="400" height="24" rx="5" class="f-surface2"/>
+        <rect id="pe-pruh" x="0" y="22" width="0" height="24" rx="5" class="f-accent" style="transition:width .5s"/>
+        <text x="0" y="64" font-size="12" class="f-muted">0 Kč</text>
+        <text x="400" y="64" text-anchor="end" font-size="12" class="f-muted">max. 340 Kč</text>
+      </svg>
+      <div class="posuvnik"><label for="pe-v">Tvůj příspěvek za měsíc</label><output id="pe-v-o"></output><input id="pe-v" type="range" min="0" max="3000" step="100" value="1000"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Stát přidá za měsíc</small><b id="pe-m"></b></div>
+        <div class="ukazatel"><small>Stát přidá za rok</small><b id="pe-r"></b></div>
+        <div class="ukazatel"><small>Na účtu za rok celkem</small><b id="pe-c"></b></div>
+      </div>
+      <p id="pe-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+  </section>
+
+  <!-- ===== 7. Pojišťovny ===== -->
+  <section class="kapitola" id="pojistovny" data-pozadavky="11">
+    <h2>Pojišťovny</h2>
+    <div class="box box--definice">
+      <p><strong>Smyslem pojištění</strong> je zabezpečení pojištěného pro případ nahodilých nepříznivých událostí.</p>
+    </div>
+    <p>Pojištění nemůže zabránit ztrátám na majetku, vrátit zdraví nebo život. Je ale předpokladem pro zmírnění následků. Pojištění zajistí možnost:</p>
+    <ul>
+      <li>věc nahradit nebo opravit,</li>
+      <li>podnikateli nahradit ztráty vyvolané přerušením výroby způsobené požárem,</li>
+      <li>zdravotně postiženému poskytnout finanční náhrady a případně i rentu,</li>
+      <li>důchodci zvýšit životní úroveň nad rámec možností jeho zákonného důchodu.</li>
+    </ul>
+
+    <h3>Činnosti komerčních pojišťoven</h3>
+    <p>Předmětem podnikání není jen pojišťovací činnost.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip><div class="karta__lic">Pojišťovací</div><div class="karta__rub"><p style="margin:0">Sjednávání a správa pojištění, vyřizování pojistných událostí, pojistné plnění.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Zajišťovací</div><div class="karta__rub"><p style="margin:0">Převzetí části rizika od ostatních pojišťoven.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Zábranná</div><div class="karta__rub"><p style="margin:0">Prevence, předcházení škodám. Škody poškozují pojišťovny, pojištěné i stát.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Asistenční služby</div><div class="karta__rub"><p style="margin:0">Odvoz do hotelu po nehodě, obstarání opravy vozidla, doprava do zdravotnického zařízení aj.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Poradenská</div><div class="karta__rub"><p style="margin:0">Poradenská činnost v oblasti pojištění.</p></div></div>
+    </div>
+
+    <h3>Základní pojmy</h3>
+    <figure class="ilustrace" aria-label="Pojistník platí pojistné pojistiteli. Při pojistné události u pojištěného vyplatí pojistitel pojistné plnění oprávněné osobě.">
+      <svg viewBox="0 0 400 160" style="max-width:520px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="4" y="16" width="116" height="36" rx="8" class="f-surface s-accent" stroke-width="1.5"/>
+          <text x="62" y="39" text-anchor="middle" font-size="14" class="f-ink">Pojistník</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="280" y="16" width="116" height="36" rx="8" class="f-accent"/>
+          <text x="338" y="39" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">Pojistitel</text>
+        </g>
+        <path d="M122 34 H276" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.3s"/>
+        <path d="M270 29 L277 34 L270 39" class="vyjed s-accent f-none" stroke-width="2" style="--d:.8s"/>
+        <text x="200" y="26" text-anchor="middle" font-size="13" font-weight="600" class="f-accent vyjed" style="--d:.6s">pojistné</text>
+
+        <path d="M62 54 V108" class="vyjed s-muted" stroke-width="1.5" stroke-dasharray="4 4" style="--d:.9s"/>
+        <text x="70" y="86" font-size="12" class="f-muted vyjed" style="--d:.9s">často tentýž člověk</text>
+
+        <g class="vyjed" style="--d:1.1s">
+          <rect x="4" y="110" width="116" height="36" rx="8" class="f-surface s-line" stroke-width="1.5"/>
+          <text x="62" y="133" text-anchor="middle" font-size="14" class="f-ink">Pojištěný</text>
+        </g>
+        <path d="M122 128 H258" class="vyjed s-warn" stroke-width="2" stroke-dasharray="5 4" style="--d:1.3s"/>
+        <text x="190" y="120" text-anchor="middle" font-size="12" font-weight="600" class="f-warn vyjed" style="--d:1.3s">pojistná událost</text>
+
+        <path d="M338 54 V106" pathLength="1" class="kresli s-ok" stroke-width="2" style="--d:1.5s"/>
+        <path d="M333 100 L338 107 L343 100" class="vyjed s-ok f-none" stroke-width="2" style="--d:1.9s"/>
+        <text x="330" y="86" text-anchor="end" font-size="12" font-weight="600" class="f-ok vyjed" style="--d:1.6s">pojistné plnění</text>
+        <g class="vyjed" style="--d:1.8s">
+          <rect x="260" y="110" width="136" height="36" rx="8" class="f-surface s-ok" stroke-width="1.5"/>
+          <text x="328" y="133" text-anchor="middle" font-size="14" class="f-ink">Oprávněná osoba</text>
+        </g>
+      </svg>
+      <figcaption>Pojistné platí pojistník, pojistné plnění vyplácí pojistitel. Podobná slova, opačný směr peněz.</figcaption>
+    </figure>
+
+    <details class="odhal" open>
+      <summary>Subjekty pojištění</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>Pojistitel</strong> – nejběžněji používaný název pro pojišťovnu.</li>
+          <li><strong>Pojistník</strong> – subjekt, který uzavře s pojistitelem pojistnou smlouvu. Ve velké většině případů je současně pojištěným, ale nemusí to tak být vždy.</li>
+          <li><strong>Pojištěný</strong> – subjekt, na jehož majetek, život, zdraví nebo odpovědnost za škodu se pojištění vztahuje.</li>
+          <li><strong>Oprávněná osoba (obmyšlený)</strong> – subjekt, kterému v případě pojištění ve prospěch jiné osoby vznikne při pojistné události právo na pojistné plnění.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="odhal">
+      <summary>Ostatní pojmy</summary>
+      <div class="odhal__obsah">
+        <ul>
+          <li><strong>Pojistné riziko</strong> – možnost vzniku pojistné události vyvolané pojistným nebezpečím a míra pravděpodobnosti jejího rozsahu. Je to souhrn pojistitelných rizik krytých příslušným druhem pojištění tak, jak jsou převzata konkrétní pojišťovnou.</li>
+          <li><strong>Pojistná událost</strong> – skutečnost, se kterou je spojen vznik povinnosti pojistitele plnit, tedy vyplatit celou pojistnou částku, případně její část.</li>
+          <li><strong>Pojistné</strong> – peněžní částka, kterou pojistník platí pojistiteli za pojistnou ochranu.</li>
+          <li><strong>Pojistná doba</strong> – časové období, na které se pojištění sjednává.</li>
+          <li><strong>Pojistné plnění</strong> – smluvená částka, kterou pojistitel vyplatí v případě pojistné události.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="simulace" id="role">
+      <p style="margin-top:0"><strong>Kdo je kdo?</strong> Eva si u pojišťovny Alfa sjedná životní pojištění pro manžela Petra. Platí 800 Kč měsíčně, smlouva je na 20 let. Když Petr zemře, dostane 1 000 000 Kč jejich dcera Jana.</p>
+      <div class="kviz"></div>
+    </div>
+
+    <h3>Členění pojištění</h3>
+    <p>Rozlišujeme dvě formy: nekomerční a komerční.</p>
+    <div data-zalozky>
+      <section data-zalozka="Nekomerční">
+        <p>Není řešené komerčními pojišťovnami, ale <strong>státem</strong>, případně jinými institucemi: <strong>sociální</strong> pojištění, <strong>zdravotní</strong> pojištění, <strong>penzijní</strong> pojištění.</p>
+      </section>
+      <section data-zalozka="Komerční">
+        <p>Typické formy pojištění provozované komerčními pojišťovnami (pojišťovacími podniky):</p>
+        <ul>
+          <li><strong>dobrovolné</strong> pojištění</li>
+          <li><strong>povinné smluvní</strong> – např. pojištění lékařů, myslivců</li>
+          <li><strong>zákonné</strong> – povinné ručení, pojištění odpovědnosti za škodu způsobenou zaměstnanci při pracovním úrazu nebo nemoci z povolání</li>
+        </ul>
+        <div class="box box--doplneno" style="margin-bottom:0">
+          <p>Podklady řadí <strong>povinné ručení</strong> k zákonnému pojištění. Dnes se v odborné literatuře většinou uvádí jako <strong>povinné smluvní</strong>: zákon ti ho nařizuje, ale smlouvu si sám uzavřeš s vybranou pojišťovnou. U maturity můžeš tenhle rozdíl zmínit.</p>
+        </div>
+      </section>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Je to nekomerční, nebo komerční pojištění?",
+        "kose": ["Nekomerční", "Komerční"],
+        "polozky": [
+          ["sociální pojištění", 0],
+          ["zdravotní pojištění", 0],
+          ["penzijní pojištění řešené státem", 0],
+          ["pojištění lékařů", 1],
+          ["pojištění myslivců", 1],
+          ["kapitálové životní pojištění", 1],
+          ["dobrovolné pojištění vozidla", 1]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Druhy pojištění</h3>
+    <p>Pojistné produkty se všeobecně dělí na <strong>životní</strong> a <strong>neživotní</strong>. Pro zjednodušení je jde dělit i do tří skupin: pojištění <strong>osob, majetku a odpovědnosti za škodu</strong>.</p>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Životní</h3>
+        <ul>
+          <li>kapitálové životní pojištění</li>
+          <li>investiční životní pojištění</li>
+          <li>úrazové pojištění</li>
+          <li>pojištění pro případ hospitalizace</li>
+          <li>pojištění denních dávek při pracovní neschopnosti aj.</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Neživotní</h3>
+        <ul>
+          <li>majetkové pojištění</li>
+          <li>pojištění zemědělských rizik</li>
+          <li>pojištění vozidel apod.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p>Pozor na rozdíl v členění: zákon o pojišťovnictví řadí <strong>úrazové pojištění a pojištění nemoci</strong> mezi neživotní. Na trhu se ale často sjednávají jako připojištění k životní pojistce, proto jsou v podkladech u životního. Oba pohledy dávají smysl, jen je potřeba říct, ze kterého vycházíš.</p>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Zařaď do tří skupin pojištění",
+        "kose": ["Osob", "Majetku", "Odpovědnosti za škodu"],
+        "polozky": [
+          ["kapitálové životní pojištění", 0],
+          ["úrazové pojištění", 0],
+          ["pojištění pro případ hospitalizace", 0],
+          ["pojištění domu pro případ požáru", 1],
+          ["pojištění zemědělských rizik", 1],
+          ["havarijní pojištění auta", 1],
+          ["povinné ručení", 2],
+          ["pojištění lékařů za škodu na pacientovi", 2],
+          ["odpovědnost za škodu při pracovním úrazu zaměstnance", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Peníze ===== -->
+  <section class="kapitola" id="penize">
+    <h2>Peníze</h2>
+    <p>Tohle není v maturitních požadavcích, ale v podkladech to je a hodí se to jako úvod celého tématu.</p>
+    <div class="box box--definice">
+      <p><strong>Peníze</strong> v obecném pojetí jsou jakékoli aktivum, které je všeobecně přijímáno jako prostředek směny. Nemusí to být jen bankovky a mince.</p>
+    </div>
+
+    <h3>Historický vývoj peněz</h3>
+    <figure class="ilustrace" aria-label="Vývoj peněz: barter, všeobecný ekvivalent, kovové peníze, papírové peníze, bezhotovostní peníze.">
+      <svg viewBox="0 0 400 76" style="max-width:560px">
+        <path d="M36 20 H350" pathLength="1" class="kresli s-accent" stroke-width="2.5"/>
+        <g class="vyjed" style="--d:.2s"><circle cx="36" cy="20" r="8" class="f-accent"/><text x="36" y="48" text-anchor="middle" font-size="12" class="f-ink">barter</text></g>
+        <g class="vyjed" style="--d:.45s"><circle cx="112" cy="20" r="8" class="f-accent"/><text x="112" y="48" text-anchor="middle" font-size="12" class="f-ink">všeobecný</text><text x="112" y="63" text-anchor="middle" font-size="12" class="f-ink">ekvivalent</text></g>
+        <g class="vyjed" style="--d:.7s"><circle cx="192" cy="20" r="8" class="f-accent"/><text x="192" y="48" text-anchor="middle" font-size="12" class="f-ink">kovové</text><text x="192" y="63" text-anchor="middle" font-size="12" class="f-ink">peníze</text></g>
+        <g class="vyjed" style="--d:.95s"><circle cx="270" cy="20" r="8" class="f-accent"/><text x="270" y="48" text-anchor="middle" font-size="12" class="f-ink">papírové</text><text x="270" y="63" text-anchor="middle" font-size="12" class="f-ink">peníze</text></g>
+        <g class="vyjed" style="--d:1.2s"><circle cx="350" cy="20" r="8" class="f-accent"/><text x="350" y="48" text-anchor="middle" font-size="12" class="f-ink">bezhotovostní</text><text x="350" y="63" text-anchor="middle" font-size="12" class="f-ink">peníze</text></g>
+      </svg>
+      <figcaption>Pořád méně „věci“ a pořád víc důvěry.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Barterový systém</strong> – výměna zboží za zboží.</li>
+      <li><strong>Všeobecný ekvivalent</strong> – aktivum, se kterým se platilo: plátno, kůže, dobytek, jantar, drahé kovy.</li>
+      <li><strong>Kovové peníze</strong> – plnohodnotné (mince z drahých kovů), neplnohodnotné (ze slitin).</li>
+      <li><strong>Papírové peníze</strong> – státovky, bankovky.</li>
+      <li><strong>Bezhotovostní peníze.</strong></li>
+    </ul>
+    <div class="box box--doplneno">
+      <p><strong>Bezhotovostní peníze</strong> jsou peníze na bankovních účtech. Nedržíš je v ruce a platíš jimi převodem nebo kartou.</p>
+    </div>
+
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Státovky</h3>
+        <p>Papírové platidlo vydávané <strong>státem</strong>. Původně cenný papír na určitou peněžní částku, neúročitelný. U pokladen státu byl přijímán na zaplacení státních pohledávek, např. daní.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Bankovky</h3>
+        <p>Cenný papír na určitou peněžní částku, <strong>bezúročné</strong>. Ze zákona jsou přijímány jako platební prostředek.</p>
+      </div>
+    </div>
+    <div class="box box--pozor">
+      <p>Rozdíl bankovky a státovky je <strong>pouze právní</strong>, ekonomická podstata je stejná. V ČR obíhají jako platné peníze pouze <strong>bankovky a mince</strong>.</p>
+    </div>
+
+    <div class="simulace" id="razeni">
+      <p style="margin-top:0"><strong>Seřaď vývoj peněz</strong> od nejstaršího. Klepej postupně.</p>
+      <div class="razeni__hotovo"></div>
+      <div class="razeni__zbyva"></div>
+      <div class="tridicka__ovladani">
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+        <span class="vysledek" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <h3>Funkce peněz</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip><div class="karta__lic">Prostředek směny</div><div class="karta__rub"><p style="margin:0">Umožňují placení za zboží a služby.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Zúčtovací jednotka</div><div class="karta__rub"><p style="margin:0">Pomocí peněz můžeme vyjádřit cenu zboží a služeb.</p></div></div>
+      <div class="karta" data-flip><div class="karta__lic">Uchovatel hodnot</div><div class="karta__rub"><p style="margin:0">Relativní uchování hodnoty do budoucna.</p></div></div>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Kterou funkci peněz tady vidíš?",
+        "kose": ["Prostředek směny", "Zúčtovací jednotka", "Uchovatel hodnot"],
+        "polozky": [
+          ["zaplatíš kávu v kavárně", 0],
+          ["pošleš nájem za byt", 0],
+          ["na regálu je cedulka 49 Kč", 1],
+          ["porovnáš ceny dvou telefonů", 1],
+          ["odkládáš si každý měsíc na kolo", 2],
+          ["babička má úspory na horší časy", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 9. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – bankovní soustava",
+        "karty": [
+          ["Jednostupňová × dvoustupňová soustava", "Jednostupňová: jediná banka řeší měnovou politiku i klienty, u nás před rokem 1990, plánované ekonomiky. Dvoustupňová: centrální banka oddělená od obchodních, u nás od 2. 1. 1990, tržní ekonomiky."],
+          ["Hlavní cíl ČNB", "Péče o cenovou stabilitu – stabilita cen a měny. ČNB je nezávislá na vládě."],
+          ["Sídlo ČNB", "Praha + 7 regionálních zastoupení: Praha, Ústí nad Labem, Plzeň, České Budějovice, Hradec Králové, Brno, Ostrava."],
+          ["Bankovní rada", "Nejvyšší řídicí orgán ČNB: guvernér, 2 viceguvernéři, 4 další členové. Jmenuje prezident na nejvýše dvě šestiletá období."],
+          ["Funkce centrální banky", "Měnová politika, emise, peněžní oběh a platební styk, dohled, banka bank, cenné papíry, banka státu, reprezentace státu, rezervy a kurzy."],
+          ["Expanzivní × restriktivní politika", "Expanzivní zvyšuje množství peněz v ekonomice, restriktivní ho snižuje."],
+          ["Přímé nástroje ČNB", "Adresné: pravidla likvidity, úvěrové kontingenty, povinné vklady, doporučení, výzvy a dohody."],
+          ["Nepřímé nástroje ČNB", "Plošné: povinné minimální rezervy, diskontní, repo a lombardní sazba, operace na volném trhu."],
+          ["Povinné minimální rezervy", "Část peněz z vkladů, kterou musí mít každá obchodní banka uloženou u centrální banky."],
+          ["Obchodní banka", "Zprostředkovatel finančních prostředků. Na vlastní účet a riziko. Zásady: rentabilita, likvidita, jistota."],
+          ["Aktivní, pasivní, neutrální operace", "Aktivní: banka je věřitel. Pasivní: banka je dlužník. Neutrální: není v dlužnicko-věřitelském vztahu."],
+          ["Krátkodobé úvěry", "Do 1 roku. Kontokorentní (přečerpání do limitu), směnečné (eskontní, akceptační), revolvingový (opakované čerpání), lombardní (zástava movité věci)."],
+          ["Hypoteční úvěr", "Na bytové potřeby, zajištěný zástavním právem k nemovitosti. Neúčelový = americká hypotéka."],
+          ["Úrok × úroková sazba", "Úrok je částka, kterou dlužník platí věřiteli. Sazba (míra) je úrok vyjádřený relativně, nejčastěji v procentech."],
+          ["Anuita", "Součet úmoru (splátky jistiny) a úroku."],
+          ["Stavební spoření", "Vázací doba 6 let. Řádný úvěr: min. 2 roky a 40–50 % cílové částky. Překlenovací úvěr jen na nemovitost."],
+          ["Penzijní spoření", "Od 1. 7. 2024: příspěvek 500 Kč = státní příspěvek 100 Kč, 1 700 Kč = 340 Kč. Přispívat může i zaměstnavatel."],
+          ["Činnosti pojišťoven", "Pojišťovací, zajišťovací, zábranná, asistenční služby, poradenská."],
+          ["Pojistník × pojištěný × oprávněná osoba", "Pojistník uzavře smlouvu. Pojištěný je ten, na koho se pojištění vztahuje. Oprávněná osoba dostane pojistné plnění."],
+          ["Pojistné × pojistné plnění", "Pojistné platí pojistník pojistiteli. Pojistné plnění vyplácí pojistitel při pojistné události."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Banky ve finančním systému, jednostupňová × dvoustupňová soustava (kdy u nás, jaké ekonomiky).</li>
+          <li>ČNB: cíl cenová stabilita, nezávislost, sídlo Praha a 7 zastoupení, bankovní rada (složení, kdo jmenuje), funkce.</li>
+          <li>Expanzivní a restriktivní politika. Nástroje: přímé a nepřímé, povinné rezervy, sazby, operace na volném trhu.</li>
+          <li>Komerční banky: definice, zásady rentability, likvidity a jistoty, aktivní, pasivní a neutrální operace.</li>
+          <li>Služby: účty, platební styk, karty, směnárna, schránky, poradenství, úvěry podle splatnosti s příklady.</li>
+          <li>Úrok a úroková sazba, jednoduché a složené úročení, daň z úroku, splácení (úmor, úrok, anuita).</li>
+          <li>Stavební spoření: vázací doba, státní podpora, řádný a překlenovací úvěr.</li>
+          <li>Penzijní fondy: princip, státní příspěvek, zaměstnavatel, daňové zvýhodnění.</li>
+          <li>Pojišťovny: smysl pojištění, činnosti, základní pojmy, nekomerční a komerční pojištění, životní a neživotní.</li>
+          <li>Pokud zbude čas: peníze, jejich vývoj a tři funkce.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 10. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Co je typické pro <b>jednostupňovou</b> bankovní soustavu?",
+           "moznosti": ["Jediná banka řeší měnovou politiku a zároveň jedná s klienty", "Centrální banka je oddělená od obchodních bank", "Obchodní banky samostatně podnikají v bankovnictví", "Centrální banka půjčuje jen státu a obchodním bankám"],
+           "spravne": 0, "vysvetleni": "Ostatní možnosti popisují dvoustupňovou soustavu. Ta odděluje centrální banku od obchodních."},
+          {"typ": "ano-ne", "otazka": "Ve dvoustupňové soustavě emitují bankovky obchodní banky.",
+           "spravne": false, "vysvetleni": "Bankovky emituje centrální banka. Obchodní banky zejména přijímají vklady a poskytují úvěry."},
+          {"typ": "jedna", "otazka": "Co je <b>hlavním cílem</b> ČNB?",
+           "moznosti": ["Péče o cenovou stabilitu", "Co nejvyšší zaměstnanost", "Financování státního rozpočtu", "Zisk z obchodů s cennými papíry"],
+           "spravne": 0, "vysvetleni": "Konkrétně jde o zajištění stability cen a měny."},
+          {"typ": "jedna", "otazka": "Kde má ČNB <b>sídlo</b>?",
+           "moznosti": ["V Praze", "V Brně", "V Ostravě", "V Hradci Králové"],
+           "spravne": 0, "vysvetleni": "Brno, Ostrava i Hradec Králové mají jen regionální zastoupení."},
+          {"typ": "jedna", "otazka": "Který orgán je <b>nejvyšším řídicím orgánem</b> ČNB?",
+           "moznosti": ["Bankovní rada", "Dozorčí rada", "Vláda", "Ministerstvo financí"],
+           "spravne": 0, "vysvetleni": "Bankovní rada. ČNB je navíc na vládě nezávislá."},
+          {"typ": "cislo", "otazka": "Kolik členů má <b>bankovní rada</b> ČNB celkem?",
+           "spravne": 7, "jednotka": "členů", "tolerance": 0, "vysvetleni": "Guvernér + 2 viceguvernéři + 4 další členové = 7."},
+          {"typ": "jedna", "otazka": "Kdo jmenuje členy bankovní rady?",
+           "moznosti": ["Prezident republiky", "Předseda vlády", "Poslanecká sněmovna", "Ministr financí"],
+           "spravne": 0, "vysvetleni": "Prezident je jmenuje na nejvýše dvě šestiletá období."},
+          {"typ": "vice", "otazka": "Které činnosti patří mezi <b>funkce centrální banky</b>?",
+           "moznosti": ["Vydávání bankovek a mincí", "Dohled nad ostatními bankami", "Přijímání vkladů ostatních bank", "Vedení běžných účtů domácností", "Poskytování hypoték občanům"],
+           "spravne": [0, 1, 2], "vysvetleni": "Domácnostem slouží obchodní banky. Centrální banka je banka bank a banka státu."},
+          {"typ": "jedna", "otazka": "Expanzivní monetární politika znamená…",
+           "moznosti": ["zvyšování množství peněz v ekonomice", "snižování množství peněz v ekonomice", "zvyšování daní a snižování výdajů", "pevné stanovení všech cen státem"],
+           "spravne": 0, "vysvetleni": "Opačná, restriktivní politika množství peněz snižuje."},
+          {"typ": "vice", "otazka": "Které nástroje ČNB jsou <b>přímé</b>?",
+           "moznosti": ["Úvěrové kontingenty", "Pravidla likvidity", "Povinné vklady", "Lombardní sazba", "Operace na volném trhu"],
+           "spravne": [0, 1, 2], "vysvetleni": "Lombardní sazba a operace na volném trhu platí plošně, jsou tedy nepřímé."},
+          {"typ": "jedna", "otazka": "Čím se vyznačují <b>nepřímé</b> nástroje ČNB?",
+           "moznosti": ["Platí plošně pro všechny banky na trhu", "Můžou být použity jen vůči vybrané bance", "Jsou to nepsaná pravidla mezi bankami", "Určují konkrétní bance strop úvěrů"],
+           "spravne": 0, "vysvetleni": "Adresnost, nepsaná pravidla a úvěrové stropy patří k přímým nástrojům."},
+          {"typ": "jedna", "otazka": "Povinné minimální rezervy jsou…",
+           "moznosti": ["část peněz z vkladů, kterou musí banka mít u centrální banky", "peníze státních institucí na povinných běžných účtech", "limit úvěrů, který banka nesmí překročit", "zástava cenných papírů při půjčce od centrální banky"],
+           "spravne": 0, "vysvetleni": "Státní účty jsou povinné vklady, limit úvěrů je kontingent, zástava cenných papírů souvisí s lombardní sazbou."},
+          {"typ": "jedna", "otazka": "ČNB chce <b>snížit</b> množství peněz v ekonomice. Co udělá?",
+           "moznosti": ["Zvýší povinné minimální rezervy", "Sníží povinné minimální rezervy", "Sníží úrokové sazby", "Nakoupí od bank státní cenné papíry"],
+           "spravne": 0, "vysvetleni": "Vyšší rezervy znamenají, že banky můžou půjčit méně. Ostatní možnosti peníze přidávají."},
+          {"typ": "jedna", "otazka": "Co je <b>reeskont směnky</b>?",
+           "moznosti": ["Obchodní banka nabídne směnku centrální bance", "Klient prodá směnku obchodní bance", "Banka akceptuje cizí směnku klienta", "Dlužník zaplatí směnku v termínu splatnosti"],
+           "spravne": 0, "vysvetleni": "Odkup směnky od klienta obchodní bankou je eskont. Reeskont je další krok, k centrální bance."},
+          {"typ": "vice", "otazka": "Na kterých zásadách podniká obchodní banka?",
+           "moznosti": ["Rentabilita", "Likvidita", "Jistota", "Cenová stabilita", "Solidarita"],
+           "spravne": [0, 1, 2], "vysvetleni": "Cenová stabilita je cíl centrální banky, ne zásada podnikání obchodní banky."},
+          {"typ": "jedna", "otazka": "Přijímání vkladů je pro banku operace…",
+           "moznosti": ["pasivní", "aktivní", "neutrální", "emisní"],
+           "spravne": 0, "vysvetleni": "Banka je ve vztahu k vkladateli dlužník, musí mu peníze vrátit."},
+          {"typ": "jedna", "otazka": "Směnárenská činnost je pro banku operace…",
+           "moznosti": ["neutrální", "aktivní", "pasivní", "úvěrová"],
+           "spravne": 0, "vysvetleni": "Banka při směně není ani věřitel, ani dlužník."},
+          {"typ": "vice", "otazka": "Co nabízejí <b>komerční banky</b> jako službu?",
+           "moznosti": ["Bezpečnostní schránky", "Směnárenskou činnost", "Platební karty", "Vydávání bankovek", "Stanovení povinných rezerv"],
+           "spravne": [0, 1, 2], "vysvetleni": "Vydávání bankovek a povinné rezervy jsou věc centrální banky."},
+          {"typ": "jedna", "otazka": "Účet můžeš přečerpat do stanoveného limitu. Jaký úvěr to je?",
+           "moznosti": ["Kontokorentní", "Eskontní", "Lombardní", "Hypoteční"],
+           "spravne": 0, "vysvetleni": "Kontokorentní účet vzniká spojením běžného a úvěrového účtu. Nad limit platíš zvýšené úroky."},
+          {"typ": "jedna", "otazka": "Který úvěr je jištěný <b>zástavou movité věci</b>?",
+           "moznosti": ["Lombardní", "Hypoteční", "Revolvingový", "Kontokorentní"],
+           "spravne": 0, "vysvetleni": "Typicky cennými papíry nebo zbožím. Hypotéku jistí nemovitost."},
+          {"typ": "jedna", "otazka": "U kterého úvěru banka neposkytne klientovi přímo peníze, ale stane se hlavním směnečným dlužníkem?",
+           "moznosti": ["Akceptačního", "Eskontního", "Revolvingového", "Spotřebního"],
+           "spravne": 0, "vysvetleni": "Banka akceptuje cizí směnku. Vzniká bankovní akcept. Dostanou ho jen nejlepší a ověření klienti."},
+          {"typ": "ano-ne", "otazka": "U revolvingového úvěru je základní podmínkou dalšího čerpání splacení předešlé půjčky.",
+           "spravne": true, "vysvetleni": "Výhodou je, že se nemusí pokaždé sepisovat nová smlouva."},
+          {"typ": "jedna", "otazka": "Čím je zajištěn <b>hypoteční úvěr</b>?",
+           "moznosti": ["Zástavním právem k nemovitosti", "Zástavou cenných papírů", "Akceptovanou směnkou", "Státní podporou"],
+           "spravne": 0, "vysvetleni": "Když klient neplatí, banka může závazky uhradit prodejem nemovitosti."},
+          {"typ": "jedna", "otazka": "Jak se říká <b>americké hypotéce</b> jinak?",
+           "moznosti": ["Neúčelový hypoteční úvěr", "Účelový hypoteční úvěr", "Překlenovací úvěr", "Spotřebitelský úvěr"],
+           "spravne": 0, "vysvetleni": "Peníze z ní můžeš použít na cokoli, třeba na auto nebo zájezd kolem světa."},
+          {"typ": "jedna", "otazka": "Jak se nazývá <b>součet úmoru a úroku</b> ve splátce?",
+           "moznosti": ["Anuita", "Jistina", "Marže", "Eskont"],
+           "spravne": 0, "vysvetleni": "Úmor je splátka jistiny. Dohromady s úrokem tvoří anuitu."},
+          {"typ": "ano-ne", "otazka": "Úrok je vyjádřený v korunách, úroková sazba relativně, nejčastěji v procentech.",
+           "spravne": true, "vysvetleni": "Úroková míra neboli sazba je úrok vyjádřený relativně z hodnoty poskytnutých peněz."},
+          {"typ": "cislo", "otazka": "Půjčíš si 50 000 Kč na 1 rok se sazbou 6 %. Kolik zaplatíš na úroku?",
+           "spravne": 3000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "50 000 × 0,06 = 3 000 Kč."},
+          {"typ": "cislo", "otazka": "Vklad 100 000 Kč, sazba 5 %, 1 rok, daň z úroku 15 %. Kolik <b>čistého úroku</b> dostaneš?",
+           "spravne": 4250, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "Úrok 5 000 Kč, daň 15 % z něj je 750 Kč, zbývá 4 250 Kč."},
+          {"typ": "cislo", "otazka": "Vklad 10 000 Kč, sazba 10 %, <b>složené</b> úročení, 2 roky, bez daně. Kolik je na účtu na konci?",
+           "spravne": 12100, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "Po 1. roce 11 000 Kč, po 2. roce 11 000 × 1,1 = 12 100 Kč. Při jednoduchém úročení by to bylo jen 12 000 Kč."},
+          {"typ": "jedna", "otazka": "Jak dlouhá je <b>vázací doba</b> stavebního spoření?",
+           "moznosti": ["6 let", "2 roky", "4 roky", "10 let"],
+           "spravne": 0, "vysvetleni": "2 roky jsou minimální doba spoření pro řádný úvěr. Volný výběr je až po 6 letech."},
+          {"typ": "ano-ne", "otazka": "Kdo vybere stavební spoření před koncem vázací doby, přijde o státní podporu i o připsané úroky z vkladů.",
+           "spravne": true, "vysvetleni": "Proto se vyplatí vydržet celou vázací dobu."},
+          {"typ": "jedna", "otazka": "Na co lze použít <b>překlenovací úvěr</b> ze stavebního spoření?",
+           "moznosti": ["Jen na potřeby spjaté s nemovitostí", "Na cokoli bez omezení", "Jen na spotřební zboží", "Jen na splacení jiného úvěru"],
+           "spravne": 0, "vysvetleni": "Překlene dobu do vzniku nároku na řádný úvěr a je vázaný na nemovitost."},
+          {"typ": "jedna", "otazka": "Podle pravidel od 1. 7. 2024: kolik musíš měsíčně přispívat na penzijní spoření, abys dostal <b>maximální</b> státní příspěvek?",
+           "moznosti": ["1 700 Kč", "500 Kč", "1 000 Kč", "340 Kč"],
+           "spravne": 0, "vysvetleni": "Při 1 700 Kč měsíčně je státní příspěvek 340 Kč. Dolní hranice je 500 Kč se státním příspěvkem 100 Kč."},
+          {"typ": "ano-ne", "otazka": "Na penzijní spoření zaměstnance může přispívat i zaměstnavatel.",
+           "spravne": true, "vysvetleni": "Příspěvky zaměstnavatele jsou běžný zaměstnanecký benefit."},
+          {"typ": "jedna", "otazka": "Pojišťovna platí kampaň proti požárům a kontroly hasicích přístrojů. Jaká je to činnost?",
+           "moznosti": ["Zábranná", "Zajišťovací", "Asistenční", "Poradenská"],
+           "spravne": 0, "vysvetleni": "Zábranná činnost směřuje k prevenci, tedy k předcházení škodám."},
+          {"typ": "jedna", "otazka": "Převzetí části rizika od ostatních pojišťoven je činnost…",
+           "moznosti": ["zajišťovací", "pojišťovací", "zábranná", "asistenční"],
+           "spravne": 0, "vysvetleni": "Pojišťovna tak rozkládá velká rizika mezi víc pojišťoven."},
+          {"typ": "jedna", "otazka": "Kdo <b>uzavírá</b> s pojišťovnou pojistnou smlouvu?",
+           "moznosti": ["Pojistník", "Pojištěný", "Oprávněná osoba", "Pojistitel"],
+           "spravne": 0, "vysvetleni": "Často je pojistník zároveň pojištěným, ale nemusí to tak být. Pojistitel je samotná pojišťovna."},
+          {"typ": "jedna", "otazka": "Částka, kterou pojišťovna vyplatí při pojistné události, je…",
+           "moznosti": ["pojistné plnění", "pojistné", "pojistné riziko", "pojistná doba"],
+           "spravne": 0, "vysvetleni": "Pojistné je naopak částka, kterou platí pojistník pojišťovně."},
+          {"typ": "vice", "otazka": "Které pojištění patří mezi <b>nekomerční</b>?",
+           "moznosti": ["Sociální pojištění", "Zdravotní pojištění", "Investiční životní pojištění", "Pojištění zemědělských rizik"],
+           "spravne": [0, 1], "vysvetleni": "Nekomerční pojištění řeší stát, případně jiné instituce, ne komerční pojišťovny."},
+          {"typ": "vice", "otazka": "Jaké jsou <b>funkce peněz</b>?",
+           "moznosti": ["Prostředek směny", "Zúčtovací jednotka", "Uchovatel hodnot", "Měnová rezerva státu"],
+           "spravne": [0, 1, 2], "vysvetleni": "Měnové rezervy tvoří a spravuje centrální banka, není to funkce peněz."},
+          {"typ": "ano-ne", "otazka": "V ČR obíhají jako platné peníze i státovky.",
+           "spravne": false, "vysvetleni": "Jen bankovky a mince. Rozdíl mezi státovkou a bankovkou je pouze právní."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .pult__volba { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+  .pult__volba .chip { cursor: pointer; }
+  .pult__retez { list-style: none; counter-reset: krok; margin: 12px 0; padding: 0; display: grid; gap: 6px; }
+  .pult__retez li { counter-increment: krok; position: relative; padding: 9px 12px 9px 42px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); animation: rozbal .4s var(--ease) backwards; animation-delay: calc(var(--i) * .12s); }
+  .pult__retez li::before { content: counter(krok); position: absolute; left: 11px; top: 9px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: .78rem; font-weight: 700; background: var(--accent); color: var(--accent-text); }
+  .pult__zaver { font-size: .94rem; }
+  .prepinac { display: flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 500; margin: 12px 0; cursor: pointer; }
+  .prepinac input { accent-color: var(--accent); width: 18px; height: 18px; }
+  .kviz__krok { font-size: .78rem; color: var(--text-muted); margin: 0 0 4px; }
+  .kviz__text { font-weight: 600; margin: 0 0 10px; }
+  .kviz__volby { display: flex; flex-wrap: wrap; gap: 6px; }
+  .kviz__volby .chip { cursor: pointer; }
+  .kviz__volby .chip:disabled { cursor: default; }
+  .kviz__proc { font-size: .92rem; margin: 12px 0 0; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--surface-2); animation: rozbal .3s var(--ease); }
+  .razeni__hotovo { display: grid; gap: 6px; margin-bottom: 8px; }
+  .razeni__hotovo .chip { display: block; width: 100%; text-align: left; }
+  .razeni__zbyva { display: flex; flex-wrap: wrap; gap: 6px; }
+  .razeni__zbyva .chip { cursor: pointer; }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, kc, cislo, zamichej, svg, $, $$ } = window.Ucebna;
+
+  const proc = (n) => n.toLocaleString("cs-CZ", { maximumFractionDigits: 1 }) + " %";
+  const barva = (b, kladne) => { b.style.color = kladne ? "var(--ok)" : "var(--bad)"; };
+  const roky = (n) => n + (n === 1 ? " rok" : n < 5 ? " roky" : " let");
+  const kratce = (y) => y >= 1e6
+    ? (y / 1e6).toLocaleString("cs-CZ", { maximumFractionDigits: 1 }) + " mil."
+    : cislo(y / 1000) + " tis.";
+  const textSvg = (x, y, s, a = "middle") => Object.assign(svg("text", { x, y, "text-anchor": a }), { textContent: s });
+  // Hezký krok osy: aby na ose bylo 3–5 popisků
+  const krokOsy = (m) => { const p = 10 ** Math.floor(Math.log10(m)), r = m / p; return (r <= 2 ? 0.5 : r <= 5 ? 1 : 2) * p; };
+
+  /* --- Krokovaný kvíz: otázka, volby, vysvětlení, další --- */
+  function kviz(box, polozky, vsechnyVolby) {
+    const koren = $(".kviz", box);
+    let poradi, i, body;
+    function start() { poradi = zamichej(polozky); i = 0; body = 0; ukaz(); }
+    function ukaz() {
+      const [text, spravna, vysvetleni] = poradi[i];
+      const volby = el("div", { class: "kviz__volby" });
+      const pokracuj = el("div", { class: "tridicka__ovladani" });
+      const tlacitka = zamichej(vsechnyVolby).map((v) => {
+        const b = el("button", { class: "chip", type: "button" }, v);
+        b.addEventListener("click", () => {
+          const ok = v === spravna;
+          if (ok) body++;
+          tlacitka.forEach((t) => {
+            t.disabled = true;
+            if (t.textContent === spravna) t.classList.add("spravne");
+          });
+          if (!ok) b.classList.add("spatne");
+          koren.insertBefore(el("p", { class: "kviz__proc" }, vysvetleni), pokracuj);
+          const dalsi = el("button", { class: "btn", type: "button" }, i + 1 < poradi.length ? "Další" : "Výsledek");
+          dalsi.addEventListener("click", () => { i++; i < poradi.length ? ukaz() : konec(); });
+          pokracuj.append(dalsi);
+        });
+        return b;
+      });
+      volby.append(...tlacitka);
+      koren.replaceChildren(
+        el("p", { class: "kviz__krok" }, `Otázka ${i + 1} z ${poradi.length}`),
+        el("p", { class: "kviz__text" }, text),
+        volby,
+        pokracuj
+      );
+    }
+    function konec() {
+      const znovu = el("button", { class: "btn btn--sek", type: "button" }, "Znovu");
+      znovu.addEventListener("click", start);
+      koren.replaceChildren(
+        el("p", { class: "vysledek " + (body === poradi.length ? "ok" : "bad"), style: "margin:0" },
+          body === poradi.length ? `Všech ${body} správně.` : `Správně ${body} z ${poradi.length}. Zkus to ještě jednou.`),
+        el("div", { class: "tridicka__ovladani" }, znovu)
+      );
+    }
+    start();
+  }
+
+  /* --- Pult bankovní rady: řetěz od nástroje k ekonomice --- */
+  (() => {
+    const box = $("#pult");
+    const retez = $(".pult__retez", box), zaver = $(".pult__zaver", box);
+    const RETEZY = {
+      exp: {
+        sazby: ["ČNB sníží úrokové sazby.", "Obchodní banky si půjčují levněji.", "Levnější jsou i úvěry, lidé a firmy si půjčují víc."],
+        pmr: ["ČNB sníží povinné minimální rezervy.", "Bankám z vkladů zbyde víc volných peněz.", "Můžou poskytnout víc úvěrů."],
+        trh: ["ČNB od bank nakupuje státní cenné papíry.", "Banky za ně dostanou peníze.", "Mají víc peněz na úvěry."],
+      },
+      res: {
+        sazby: ["ČNB zvýší úrokové sazby.", "Obchodní banky si půjčují dráž.", "Dražší jsou i úvěry, lidé a firmy si půjčují méně."],
+        pmr: ["ČNB zvýší povinné minimální rezervy.", "Bankám z vkladů zbyde méně volných peněz.", "Můžou poskytnout méně úvěrů."],
+        trh: ["ČNB bankám prodává státní cenné papíry.", "Banky za ně platí, peníze jim ubudou.", "Mají méně peněz na úvěry."],
+      },
+    };
+    const KONEC = {
+      exp: ["V ekonomice přibude peněz.", "<strong>Expanzivní politika:</strong> roste poptávka, ekonomika se rozjíždí. Riziko je vyšší inflace."],
+      res: ["V ekonomice ubude peněz.", "<strong>Restriktivní politika:</strong> poptávka slábne a inflace se tlumí. Riziko je zpomalení ekonomiky."],
+    };
+    const stav = { smer: "exp", nastroj: "sazby" };
+    function vykresli() {
+      $$(".pult__volba", box).forEach((sk) => {
+        $$(".chip", sk).forEach((b) => b.classList.toggle("vybrany", stav[sk.dataset.skupina] === b.dataset.v));
+      });
+      const kroky = [...RETEZY[stav.smer][stav.nastroj], KONEC[stav.smer][0]];
+      retez.replaceChildren(...kroky.map((t, i) => el("li", { style: `--i:${i}` }, t)));
+      zaver.innerHTML = KONEC[stav.smer][1];
+    }
+    $$(".pult__volba", box).forEach((sk) => {
+      $$(".chip", sk).forEach((b) => b.addEventListener("click", () => {
+        stav[sk.dataset.skupina] = b.dataset.v;
+        vykresli();
+      }));
+    });
+    vykresli();
+  })();
+
+  /* --- Povinné minimální rezervy --- */
+  (() => {
+    const VKLAD = 100000;
+    function spocti() {
+      const r = +$("#pmr-r").value;
+      const rezerva = VKLAD * r / 100;
+      $("#pmr-r-o").textContent = r + " %";
+      $("#pmr-a").textContent = kc(rezerva);
+      $("#pmr-b").textContent = kc(VKLAD - rezerva);
+      $("#pmr-c").textContent = kc(VKLAD / (r / 100));
+      $("#pmr-pruh").setAttribute("width", 398 * r / 100);
+      $("#pmr-pruh").style.width = (398 * r / 100) + "px";
+    }
+    $("#pmr-r").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Úroková marže --- */
+  (() => {
+    function spocti() {
+      const o = +$("#ma-o").value, v = +$("#ma-v").value, u = +$("#ma-u").value;
+      $("#ma-o-o").textContent = kc(o);
+      $("#ma-v-o").textContent = proc(v);
+      $("#ma-u-o").textContent = proc(u);
+      const a = o * v / 100, b = o * u / 100, r = b - a;
+      $("#ma-a").textContent = kc(a);
+      $("#ma-b").textContent = kc(b);
+      const c = $("#ma-c");
+      c.textContent = kc(r);
+      barva(c, r >= 0);
+      $("#ma-t").textContent = r > 0
+        ? `Úroková marže je ${proc(u - v)}. Z ní banka platí provoz a pokrývá dlužníky, kteří nesplatí.`
+        : "Banka by platila víc, než dostává. Tak se dlouho podnikat nedá, porušila by zásadu rentability.";
+    }
+    $("#marze").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Poraď klientovi: který úvěr --- */
+  kviz($("#poradna"), [
+    ["Před výplatou ti občas chybí pár tisíc a chceš mít možnost jít na účtu do mínusu.", "kontokorentní",
+      "Přečerpáváš běžný účet do stanoveného limitu a úvěr se čerpá automaticky."],
+    ["Firma má směnku od odběratele splatnou za 3 měsíce, ale peníze potřebuje hned.", "eskontní",
+      "Banka směnku odkoupí před lhůtou splatnosti."],
+    ["Ověřený velký klient potřebuje, aby banka převzala závazek ze směnky. Peníze od ní nepotřebuje.", "akceptační",
+      "Banka akceptuje cizí směnku a stane se hlavním směnečným dlužníkem."],
+    ["Firma si chce v průběhu roku opakovaně půjčovat a nechce pokaždé sepisovat novou smlouvu.", "revolvingový",
+      "Opakované čerpání, podmínkou je splacení předešlé půjčky."],
+    ["Firma má akcie, nechce je prodat, ale potřebuje peníze. Dá je bance do zástavy.", "lombardní",
+      "Lombardní úvěr je jištěný zástavou movité věci, tedy cenných papírů nebo zboží."],
+    ["Kupuješ byt a banka chce mít jako zástavu právě tenhle byt.", "hypoteční účelový",
+      "Peníze jdou na bytové potřeby a úvěr je zajištěný zástavním právem k nemovitosti."],
+    ["Máš splacený dům a chceš peníze na zájezd kolem světa. Dům dáš do zástavy.", "americká hypotéka",
+      "Neúčelový hypoteční úvěr nemá žádná omezení použití."],
+    ["Chceš si koupit pračku a televizi a splácet je, jde o menší částku bez zástavy.", "spotřební",
+      "Spotřební úvěr je na zboží pro domácnost. U nižší částky banka zajištění často nepožaduje."],
+  ], ["kontokorentní", "eskontní", "akceptační", "revolvingový", "lombardní", "hypoteční účelový", "americká hypotéka", "spotřební"]);
+
+  /* --- Jednoduché a složené úročení --- */
+  (() => {
+    const plocha = $("#ur-graf");
+    const L = 54, R = 392, T = 12, B = 196;
+    const DAN = 0.15;
+    function spocti() {
+      const V = +$("#ur-v").value, s = +$("#ur-s").value, n = +$("#ur-n").value, dan = $("#ur-dan").checked;
+      $("#ur-v-o").textContent = kc(V);
+      $("#ur-s-o").textContent = proc(s);
+      $("#ur-n-o").textContent = roky(n);
+      const i = (s / 100) * (dan ? 1 - DAN : 1);
+      const jedn = (t) => V * (1 + i * t), sloz = (t) => V * (1 + i) ** t;
+      const J = jedn(n), K = sloz(n);
+      $("#ur-j").textContent = kc(J);
+      $("#ur-k").textContent = kc(K);
+      $("#ur-r").textContent = kc(K - J);
+      // Daň: čistý úrok je (1 − daň) z hrubého, takže daň = čistý × daň / (1 − daň)
+      $("#ur-d").textContent = dan ? kc((K - V) * DAN / (1 - DAN)) : "vypnuto";
+      const zdvoj = Math.log(2) / Math.log(1 + i);
+      $("#ur-t").innerHTML = `Při čisté sazbě ${proc(i * 100)} se peníze se složeným úročením zdvojnásobí asi za <strong>${cislo(zdvoj)} let</strong>.`
+        + (dan ? ` Stát si vezme 15 % z každého připsaného úroku, proto je růst pomalejší.` : "");
+
+      const yMax = K * 1.05;
+      const sx = (t) => L + (t / n) * (R - L), sy = (y) => B - (y / yMax) * (B - T);
+      plocha.replaceChildren();
+      const krokY = krokOsy(yMax);
+      for (let y = 0; y <= yMax; y += krokY) {
+        plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.7" }),
+          textSvg(L - 6, sy(y) + 4, y === 0 ? "0" : kratce(y), "end"));
+      }
+      const krokX = n <= 6 ? 1 : n <= 12 ? 2 : n <= 30 ? 5 : 10;
+      for (let t = 0; t <= n; t += krokX) plocha.append(textSvg(sx(t), B + 17, String(t)));
+      plocha.append(textSvg(R, B + 30, "roky", "end"));
+      const cara = (f, styl) => {
+        const body = [];
+        for (let t = 0; t <= n; t++) body.push(`${sx(t).toFixed(1)},${sy(f(t)).toFixed(1)}`);
+        plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke-linejoin:round;stroke-linecap:round;" + styl }));
+      };
+      cara(() => V, "stroke:var(--text-muted);stroke-width:1.5;stroke-dasharray:4 4");
+      cara(jedn, "stroke:var(--warn);stroke-width:3");
+      cara(sloz, "stroke:var(--accent);stroke-width:3");
+    }
+    $("#uroceni").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Splácení úvěru: stejné a nestejné splátky --- */
+  (() => {
+    const box = $("#splaceni"), plocha = $("#sp-graf");
+    const L = 54, R = 392, T = 10, B = 184;
+    let rezim = "stejne";
+    // Vrátí pro každý rok { umor, urok }
+    function plan(D, i, n, typ) {
+      const radky = [];
+      const A = D * i / (1 - (1 + i) ** -n);
+      let zustatek = D;
+      for (let r = 0; r < n; r++) {
+        const urok = zustatek * i;
+        const umor = typ === "stejne" ? A - urok : D / n;
+        radky.push({ urok, umor });
+        zustatek -= umor;
+      }
+      return radky;
+    }
+    const celkem = (p) => p.reduce((s, r) => s + r.urok, 0);
+    function spocti() {
+      const D = +$("#sp-d").value, s = +$("#sp-s").value, n = +$("#sp-n").value, i = s / 100;
+      $("#sp-d-o").textContent = kc(D);
+      $("#sp-s-o").textContent = proc(s);
+      $("#sp-n-o").textContent = roky(n);
+      const stejne = plan(D, i, n, "stejne"), nestejne = plan(D, i, n, "nestejne");
+      const p = rezim === "stejne" ? stejne : nestejne;
+      const splatka = (r) => r.umor + r.urok;
+      $("#sp-a").textContent = kc(splatka(p[0]));
+      $("#sp-b").textContent = kc(splatka(p[n - 1]));
+      $("#sp-c").textContent = kc(celkem(p));
+      const rozdil = celkem(stejne) - celkem(nestejne);
+      $("#sp-t").innerHTML = `Nestejné splátky ušetří na úrocích <strong>${kc(rozdil)}</strong>, ale první splátka je o ${kc(splatka(nestejne[0]) - splatka(stejne[0]))} vyšší.`;
+
+      // Stejné měřítko pro oba režimy, ať je vidět rozdíl při přepnutí
+      const yMax = Math.max(splatka(nestejne[0]), splatka(stejne[0])) * 1.05;
+      const sy = (y) => (y / yMax) * (B - T);
+      plocha.replaceChildren();
+      const krokY = krokOsy(yMax);
+      for (let y = 0; y <= yMax; y += krokY) {
+        const py = B - sy(y);
+        plocha.append(svg("line", { x1: L, y1: py, x2: R, y2: py, style: "stroke:var(--border);opacity:.7" }),
+          textSvg(L - 6, py + 4, y === 0 ? "0" : kratce(y), "end"));
+      }
+      const sirka = (R - L) / n;
+      p.forEach((r, k) => {
+        const x = L + k * sirka + sirka * 0.12, w = sirka * 0.76;
+        const hU = sy(r.umor), hI = sy(r.urok);
+        plocha.append(
+          svg("rect", { x, y: B - hU, width: w, height: hU, class: "f-accent" }),
+          svg("rect", { x, y: B - hU - hI, width: w, height: hI, class: "f-warn" })
+        );
+      });
+      const krokX = n <= 6 ? 1 : n <= 12 ? 2 : 5;
+      plocha.append(textSvg(L + sirka / 2, B + 16, "1"));
+      for (let t = krokX; t <= n; t += krokX) if (t > 1) plocha.append(textSvg(L + (t - 0.5) * sirka, B + 16, String(t)));
+      plocha.append(textSvg(R, B + 28, "rok splácení", "end"));
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    $$(".chip", box).forEach((b) => b.addEventListener("click", () => {
+      rezim = b.dataset.v;
+      $$(".chip", box).forEach((x) => x.classList.toggle("vybrany", x === b));
+      spocti();
+    }));
+    spocti();
+  })();
+
+  /* --- Stavební spoření --- */
+  (() => {
+    function spocti() {
+      const v = +$("#st-v").value, c = +$("#st-c").value, r = +$("#st-r").value;
+      $("#st-v-o").textContent = kc(v);
+      $("#st-c-o").textContent = kc(c);
+      $("#st-r-o").textContent = roky(r);
+      const podpora = 0.05 * Math.min(v, 20000);
+      const podil = v * r / c * 100;
+      $("#st-p").textContent = kc(podpora);
+      $("#st-pc").textContent = kc(podpora * r);
+      $("#st-n").textContent = proc(Math.round(podil));
+      $("#st-vyber").innerHTML = r >= 6
+        ? "<strong>Bez sankcí</strong>, k jakémukoli účelu. Vázací doba skončila."
+        : `Ještě ${roky(6 - r)} vázací doby. Při dřívějším výběru přijdeš o státní podporu i připsané úroky.`;
+      let uver;
+      if (r < 2) uver = "Zatím ne, musíš spořit aspoň 2 roky. Na bydlení zbývá překlenovací úvěr.";
+      else if (podil >= 50) uver = "<strong>Podmínky splněné</strong>: 2 roky a naspořeno přes 50 %.";
+      else if (podil >= 40) uver = "Záleží na smlouvě: stačí-li 40 %, máš nárok. Kde se chce 50 %, ještě ne.";
+      else uver = "Zatím ne, naspořeno je méně než 40 %. Na bydlení zbývá překlenovací úvěr.";
+      $("#st-uver").innerHTML = uver;
+    }
+    $("#stavebko").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Státní příspěvek na penzi --- */
+  (() => {
+    const prispevek = (x) => (x < 500 ? 0 : x >= 1700 ? 340 : 100 + 0.2 * (x - 500));
+    function spocti() {
+      const x = +$("#pe-v").value, p = prispevek(x);
+      $("#pe-v-o").textContent = kc(x);
+      $("#pe-m").textContent = kc(p);
+      $("#pe-r").textContent = kc(p * 12);
+      $("#pe-c").textContent = kc((x + p) * 12);
+      $("#pe-popis").textContent = kc(p);
+      $("#pe-pruh").style.width = (400 * p / 340) + "px";
+      $("#pe-pruh").setAttribute("width", 400 * p / 340);
+      $("#pe-t").innerHTML = x < 500
+        ? "Pod <strong>500 Kč</strong> měsíčně stát nepřispívá vůbec."
+        : x < 1700
+          ? `Stát přidává ${kc(p)}. Do maxima ti chybí ${kc(1700 - x)} měsíčně.`
+          : x === 1700
+            ? "Přesně na maximu. Stát přidává <strong>340 Kč</strong>, tedy 20 % z tvého příspěvku."
+            : "Státní příspěvek už neroste, zůstává 340 Kč. Částka nad 1 700 Kč ale může snížit základ daně.";
+    }
+    $("#pe-v").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Kdo je kdo v pojistné smlouvě --- */
+  kviz($("#role"), [
+    ["Kdo je Eva?", "pojistník", "Eva uzavřela smlouvu a platí. Tím je pojistník."],
+    ["Kdo je Petr?", "pojištěný", "Pojištění se vztahuje na Petrův život."],
+    ["Kdo je Jana?", "oprávněná osoba", "Při pojistné události jí vznikne právo na peníze."],
+    ["Co je pojišťovna Alfa?", "pojistitel", "Pojistitel je běžný název pro pojišťovnu."],
+    ["Co je 800 Kč měsíčně?", "pojistné", "Částka, kterou pojistník platí za pojistnou ochranu."],
+    ["Co je 20 let?", "pojistná doba", "Období, na které se pojištění sjednává."],
+    ["Co je Petrovo úmrtí?", "pojistná událost", "Skutečnost, se kterou je spojena povinnost pojistitele plnit."],
+    ["Co je 1 000 000 Kč pro Janu?", "pojistné plnění", "Smluvená částka vyplacená při pojistné události."],
+  ], ["pojistník", "pojištěný", "oprávněná osoba", "pojistitel", "pojistné", "pojistná doba", "pojistná událost", "pojistné plnění"]);
+
+  /* --- Seřazení vývoje peněz --- */
+  (() => {
+    const box = $("#razeni");
+    const hotovo = $(".razeni__hotovo", box), zbyva = $(".razeni__zbyva", box), vysledek = $(".vysledek", box);
+    const VYVOJ = ["barterový systém", "všeobecný ekvivalent", "kovové peníze", "papírové peníze", "bezhotovostní peníze"];
+    let dalsi;
+    function start() {
+      dalsi = 0;
+      hotovo.replaceChildren();
+      vysledek.textContent = "";
+      vysledek.className = "vysledek";
+      zbyva.replaceChildren(...zamichej(VYVOJ).map((t) => {
+        const b = el("button", { class: "chip", type: "button" }, t);
+        b.addEventListener("click", () => {
+          if (t === VYVOJ[dalsi]) {
+            dalsi++;
+            b.remove();
+            hotovo.append(el("div", { class: "chip spravne" }, `${dalsi}. ${t}`));
+            if (dalsi === VYVOJ.length) { vysledek.className = "vysledek ok"; vysledek.textContent = "Správné pořadí."; }
+          } else {
+            b.classList.remove("spatne");
+            void b.offsetWidth;
+            b.classList.add("spatne");
+          }
+        });
+        return b;
+      }));
+    }
+    $("[data-akce=znovu]", box).addEventListener("click", start);
+    start();
+  })();
+});
+</script>
+</body>
+</html>

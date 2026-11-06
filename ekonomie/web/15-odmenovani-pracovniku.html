@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>15. Odměňování pracovníků – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-15" data-nazev="15. Odměňování pracovníků" data-zpet="../../index.html" data-zdroj="../pdf/15 Odměňování pracovníků.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 15</span>
+    <h1>Odměňování pracovníků</h1>
+    <p class="hlavicka__perex">Z čeho se skládá výplata, proč ti z 26 000 Kč přijde na účet necelých 23 000 Kč a jak pracovní poměr vzniká a končí.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>rozlišit <strong>mzdu a plat</strong> a vyjmenovat <strong>typy mezd</strong></li>
+        <li>popsat <strong>strukturu mzdy</strong> – základní mzdu, pobídkové složky a náhrady mzdy</li>
+        <li>spočítat <strong>čistou mzdu z hrubé</strong> včetně slev na dani</li>
+        <li>vysvětlit <strong>sociální a zdravotní pojištění</strong> – kdo kolik platí a co se z něj hradí</li>
+        <li>popsat <strong>vznik a ukončení pracovního poměru</strong> podle zákoníku práce</li>
+        <li>rozlišit <strong>DPP a DPČ</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Mzda, plat a typy mezd ===== -->
+  <section class="kapitola" id="typy-mezd" data-pozadavky="1">
+    <h2>Mzda, plat a typy mezd</h2>
+    <p><strong>Mzda</strong> a <strong>plat</strong> jsou dva různé pojmy se stejným významem. Rozdíl je v tom, kdo je dostává:</p>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Mzda</h3>
+        <p style="margin:0">Dostávají ji pracovníci v <strong>soukromém sektoru</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Plat</h3>
+        <p style="margin:0">Náleží zaměstnancům ve <strong>státní sféře</strong>.</p>
+      </div>
+    </div>
+
+    <div class="box box--definice">
+      <p><strong>Mzda</strong> je cenou za práci.</p>
+    </div>
+
+    <h3>Typy mezd</h3>
+    <p>Klepni na kartu a zjisti, na čem výše mzdy závisí.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Časová</div>
+        <div class="karta__rub"><p style="margin:0">Závisí na <strong>odpracovaném čase</strong>. Pro lidi, jejichž výkon nejde měřit (vedoucí, administrativa), nebo kteří nemůžou ovlivnit pracovní tempo. Je dána hodinovou sazbou, nebo jako měsíční stálý plat.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Úkolová</div>
+        <div class="karta__rub"><p style="margin:0">Závisí na <strong>odvedené práci</strong>. Tam, kde jde výkon změřit – např. dělníci vyrábějící určitý počet kusů za určitou dobu.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Podílová</div>
+        <div class="karta__rub"><p style="margin:0">Závisí na <strong>dosažených výsledcích</strong>, je to určitý podíl (provize) z nich. Vyšší výsledky = vyšší mzda. Často u prodejců a dealerů.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Kombinovaná (smíšená)</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Kombinace více typů</strong> mezd, například časové a podílové.</p></div>
+      </div>
+    </div>
+    <p>V některých oblastech (např. v zemědělství) se můžeš setkat i s <strong>naturální mzdou</strong>: část mzdy či odměn se vyplácí v naturáliích, třeba v bramborách nebo obilí.</p>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jaký typ mzdy tenhle člověk nejspíš dostává?",
+        "kose": ["Časová", "Úkolová", "Podílová", "Kombinovaná"],
+        "polozky": [
+          ["účetní s měsíčním stálým platem", 0],
+          ["vedoucí oddělení", 0],
+          ["brigádník za 180 Kč na hodinu", 0],
+          ["dělnice placená za každý vyrobený kus", 1],
+          ["švadlena placená za ušité kusy", 1],
+          ["dealer aut jen z provize", 2],
+          ["realitní makléř s podílem z prodeje", 2],
+          ["prodavač: hodinová sazba + provize z prodeje", 3]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 2. Struktura mzdy ===== -->
+  <section class="kapitola" id="struktura" data-pozadavky="1">
+    <h2>Struktura mzdy</h2>
+    <p>Mzda se skládá z několika složek. Jejich souhrn tvoří <strong>hrubou mzdu</strong>.</p>
+    <figure class="ilustrace" aria-label="Hrubá mzda je součet základní mzdy, pobídkových složek a náhrad mzdy">
+      <svg viewBox="0 0 400 196" style="max-width:500px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="10" y="20" width="190" height="44" rx="8" class="f-accent-soft s-accent"/>
+          <text x="105" y="47" text-anchor="middle" font-size="14" class="f-ink">Základní mzda</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="10" y="76" width="190" height="44" rx="8" class="f-accent-soft s-accent"/>
+          <text x="105" y="103" text-anchor="middle" font-size="14" class="f-ink">Pobídkové složky</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <rect x="10" y="132" width="190" height="44" rx="8" class="f-accent-soft s-accent"/>
+          <text x="105" y="159" text-anchor="middle" font-size="14" class="f-ink">Náhrady mzdy</text>
+        </g>
+        <path d="M206 20 Q214 20 214 28 V92 L222 98 L214 104 V168 Q214 176 206 176" pathLength="1" class="kresli s-accent f-none" stroke-width="1.5" style="--d:.7s"/>
+        <g class="vyjed" style="--d:1s">
+          <rect x="232" y="68" width="158" height="60" rx="8" class="f-accent"/>
+          <text x="311" y="94" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">Hrubá mzda</text>
+          <text x="311" y="113" text-anchor="middle" font-size="12" style="fill:var(--accent-text)">základ všech výpočtů</text>
+        </g>
+      </svg>
+      <figcaption>Tři složky dohromady dávají hrubou mzdu. Teprve z ní se počítají srážky.</figcaption>
+    </figure>
+
+    <div data-zalozky>
+      <section data-zalozka="Základní mzda">
+        <p>Je dána <strong>množstvím odvedené práce</strong>. Rozeznáváš mzdu časovou, úkolovou, podílovou a smíšenou (viz předchozí kapitola).</p>
+      </section>
+      <section data-zalozka="Pobídkové složky">
+        <ul>
+          <li><strong>odměny</strong> – za určité výsledky práce</li>
+          <li><strong>příplatky</strong> – za práci v noci, za přesčas, ve svátek, v sobotu a neděli, ve ztíženém prostředí</li>
+          <li><strong>prémie</strong> – závisí na dosažení určitých výsledků, stanovují se často procentem ze mzdy</li>
+          <li><strong>osobní ohodnocení</strong></li>
+          <li><strong>podíly na zisku</strong></li>
+          <li>tzv. <strong>13. plat</strong></li>
+        </ul>
+      </section>
+      <section data-zalozka="Náhrady mzdy">
+        <p>Za dobu, kdy zaměstnanec <strong>nepracoval, ale měl by na mzdu nárok</strong>:</p>
+        <ul>
+          <li><strong>náhrada za dovolenou</strong></li>
+          <li><strong>dávky nemocenského pojištění</strong> – vyplácí se od 1. dne, firma platí prvních 14 dnů</li>
+          <li><strong>odstupné</strong></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Přesněji k nemoci: prvních 14 kalendářních dnů platí zaměstnavatel <strong>náhradu mzdy</strong>, od 15. dne vyplácí <strong>nemocenskou</strong> (dávku) stát přes správu sociálního zabezpečení. Odstupné zákoník práce řeší zvlášť, není to náhrada mzdy v užším smyslu. U maturity klidně řekni obojí: podle podkladů a jak je to přesně.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Do které složky mzdy to patří?",
+        "kose": ["Základní mzda", "Pobídkové složky", "Náhrady mzdy"],
+        "polozky": [
+          ["hodinová sazba × odpracované hodiny", 0],
+          ["úkolová mzda za vyrobené kusy", 0],
+          ["příplatek za noční směnu", 1],
+          ["prémie 10 % ze mzdy", 1],
+          ["13. plat", 1],
+          ["osobní ohodnocení", 1],
+          ["podíl na zisku", 1],
+          ["náhrada za dovolenou", 2],
+          ["peníze za prvních 14 dnů nemoci", 2],
+          ["odstupné", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 3. Výpočet mzdy ===== -->
+  <section class="kapitola" id="vypocet" data-pozadavky="2">
+    <h2>Výpočet mzdy</h2>
+    <p>Vycházíš z <strong>hrubé mzdy</strong>, tedy součtu základní mzdy, pobídkových složek a náhrad mzdy. Od ní odečteš srážky a dostaneš <strong>čistou mzdu</strong>.</p>
+
+    <h3>Srážky z hrubé mzdy</h3>
+    <ul>
+      <li><strong>sociální pojištění</strong> – zaměstnanec ho odvádí na důchodové zabezpečení a nemocenské pojištění (6,5 %) + <strong>od 1. 1. 2024 nemocenské pojištění placené zaměstnancem 0,6 %</strong>, celkem <strong>7,1 %</strong></li>
+      <li><strong>zdravotní pojištění</strong> – určené zdravotním pojišťovnám na úhradu lékařských ošetření apod., <strong>4,5 %</strong></li>
+      <li><strong>záloha na daň z příjmu</strong> – <strong>15 %</strong></li>
+    </ul>
+    <div class="vzorec">čistá mzda = hrubá mzda − SP − ZP<br>− záloha po slevách</div>
+    <div class="box box--tip">
+      <p>Sociální i zdravotní pojištění i zálohu počítáš <strong>z hrubé mzdy</strong>. Pojistné zaokrouhluješ <strong>vždy na celé Kč nahoru</strong>.</p>
+    </div>
+
+    <h3>Slevy na dani</h3>
+    <p>Snižují výši daně – odečítáš je přímo <strong>od zálohy na daň</strong>, ne od mzdy.</p>
+    <div class="mrizka">
+      <div class="ukazatel"><small>Sleva na poplatníka (každý zaměstnanec)</small><b>2 570 Kč</b></div>
+      <div class="ukazatel"><small>Dítě – na jedno dítě</small><b>1 267 Kč</b></div>
+      <div class="ukazatel"><small>Dítě – na druhé dítě</small><b>1 860 Kč</b></div>
+      <div class="ukazatel"><small>Dítě – na třetí a každé další</small><b>2 320 Kč</b></div>
+    </div>
+    <p>Sleva na dítě se jinak jmenuje <strong>daňové zvýhodnění</strong>. Další slevy: na <strong>manželku či manžela v domácnosti</strong> (podmínkou je, že pečuje o dítě do 3 let a nemá příjem vyšší než 68 000 Kč) a <strong>při invaliditě</strong>.</p>
+
+    <h3>Příklad z podkladů</h3>
+    <div class="box box--priklad">
+      <p>Základní měsíční mzda 25 000 Kč, odměna 1 000 Kč. Zaměstnanec je ženatý a má 1 dítě, v měsíci neměl dovolenou a nebyl nemocný. Má podepsané <strong>prohlášení poplatníka</strong> (růžový formulář).</p>
+      <div class="rozpis">
+        <div><span>Základní mzda</span><span>25 000,-</span></div>
+        <div><span>Odměny</span><span>1 000,-</span></div>
+        <div class="rozpis__soucet"><span>Hrubá mzda</span><span>26 000,-</span></div>
+        <div><span>Zdravotní pojištění (4,5 % z hrubé mzdy)</span><span>1 170,-</span></div>
+        <div><span>Sociální pojištění (7,1 % z hrubé mzdy)</span><span>1 846,-</span></div>
+        <div><span>Záloha na daň z příjmu (15 % z hrubé mzdy)</span><span>3 900,-</span></div>
+        <div><span>– sleva na poplatníka</span><span>- 2 570,-</span></div>
+        <div><span>– sleva na dítě</span><span>- 1 267,-</span></div>
+        <div><span>Záloha po slevách a zvýhodněních</span><span>63,-</span></div>
+        <div class="rozpis__soucet"><span>Čistá mzda (hrubá − SP − ZP − záloha po slevách)</span><span>22 921,-</span></div>
+      </div>
+      <p style="margin-bottom:0">Zaměstnavatel za něj navíc platí <strong>sociální pojištění 24,8 %</strong> z hrubé mzdy = 6 448 Kč a <strong>zdravotní pojištění 9 %</strong> z hrubé mzdy = 2 340 Kč.</p>
+    </div>
+    <div class="box box--pozor">
+      <p>V příkladu je zaměstnanec ženatý, a přesto se žádná sleva na manželku neodečítá. Sleva má podmínky (viz výš) a v podkladovém výpočtu se nepoužije. Nezapomeň ani, že slevy jdou <strong>od daně</strong>, ne od hrubé mzdy.</p>
+    </div>
+
+    <h3>Spočítej si to sám</h3>
+    <div class="simulace" id="mzda">
+      <p style="margin-top:0"><strong>Mzdová kalkulačka krok za krokem.</strong> Počítá postupem z podkladů, se sazbami a slevami ve <strong>stavu od 1. 1. 2024</strong>. Výchozí hodnoty jsou příklad z podkladů.</p>
+      <div class="posuvnik"><label for="mz-z">Základní mzda</label><output id="mz-z-o"></output><input id="mz-z" type="range" min="22500" max="90000" step="500" value="25000"></div>
+      <div class="posuvnik"><label for="mz-p">Pobídkové složky (odměny, příplatky, prémie…)</label><output id="mz-p-o"></output><input id="mz-p" type="range" min="0" max="20000" step="500" value="1000"></div>
+      <div class="posuvnik"><label for="mz-n">Náhrady mzdy (např. za dovolenou)</label><output id="mz-n-o"></output><input id="mz-n" type="range" min="0" max="20000" step="500" value="0"></div>
+      <p class="mz-popisek">Počet dětí, na které uplatňuje slevu</p>
+      <div class="mz-deti" role="group" aria-label="Počet dětí">
+        <button class="chip" type="button" data-deti="0">0</button>
+        <button class="chip" type="button" data-deti="1">1</button>
+        <button class="chip" type="button" data-deti="2">2</button>
+        <button class="chip" type="button" data-deti="3">3</button>
+        <button class="chip" type="button" data-deti="4">4</button>
+      </div>
+      <label class="mz-volba"><input id="mz-prohl" type="checkbox" checked> Má podepsané prohlášení poplatníka (bez něj se slevy v měsíční výplatě neuplatní)</label>
+
+      <ol class="mz-kroky"></ol>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="dalsi">Další krok</button>
+        <button class="btn btn--sek" type="button" data-akce="vse">Ukázat vše</button>
+        <button class="btn btn--sek" type="button" data-akce="priklad">Příklad z podkladů</button>
+      </div>
+
+      <div class="mz-vysledek skryte">
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Hrubá mzda</small><b id="mz-hruba"></b></div>
+          <div class="ukazatel"><small>Čistá mzda</small><b id="mz-cista"></b></div>
+          <div class="ukazatel"><small>Stojí zaměstnavatele celkem</small><b id="mz-naklad"></b></div>
+        </div>
+        <p class="mz-popisek" style="margin-top:14px">Kam jdou peníze, které za tuhle práci firma vydá</p>
+        <div class="mz-pas" aria-hidden="true">
+          <i data-pas="cista" style="background:var(--accent)"></i>
+          <i data-pas="zp" style="background:var(--warn)"></i>
+          <i data-pas="sp" style="background:var(--warn);opacity:.6"></i>
+          <i data-pas="dan" style="background:var(--text-muted)"></i>
+          <i data-pas="firma" style="background:var(--border)"></i>
+        </div>
+        <div class="legenda">
+          <span style="--c:var(--accent)">čistá mzda <b id="mz-l-cista"></b></span>
+          <span style="--c:var(--warn)">ZP zaměstnance <b id="mz-l-zp"></b></span>
+          <span style="--c:var(--warn)">SP zaměstnance <b id="mz-l-sp"></b></span>
+          <span style="--c:var(--text-muted)">záloha na daň <b id="mz-l-dan"></b></span>
+          <span style="--c:var(--border)">SP a ZP zaměstnavatele <b id="mz-l-firma"></b></span>
+        </div>
+        <p id="mz-text" style="margin-bottom:0;font-size:.92rem"></p>
+      </div>
+    </div>
+
+    <div class="box box--doplneno">
+      <p><strong>Podle jakého stavu kalkulačka počítá.</strong> Sazby a slevy jsou z podkladů, stav od 1. 1. 2024. Ke dni 6. 11. 2026 se v roce 2026 používají stejné: pojistné 7,1 % + 4,5 % a 24,8 % + 9 %, sleva na poplatníka 2 570 Kč i zvýhodnění na děti. Pro rok 2027 si je ověř, sazby se mění zákonem.</p>
+      <p><strong>Co kalkulačka záměrně neřeší.</strong> Posuvníky jsou nastavené tak, aby se tyhle výjimky neuplatnily nebo nezměnily výsledek:</p>
+      <ul>
+        <li><strong>Základ daně se zaokrouhluje</strong> na celé stovky nahoru. Podklady to neuvádějí. Posuvníky jdou po 500 Kč, takže výsledek vychází stejně.</li>
+        <li><strong>Sazba 23 %</strong> platí na příjem nad 3násobek průměrné mzdy měsíčně (v roce 2026 nad 146 901 Kč). Kalkulačka končí na 130 000 Kč.</li>
+        <li><strong>Minimální základ zdravotního pojištění</strong> je minimální mzda (v roce 2026 je 22 400 Kč). Proto základní mzda na posuvníku začíná na 22 500 Kč.</li>
+        <li><strong>Náhrada mzdy za nemoc</strong> se nezapočítává do základu pojistného, proto v kalkulačce počítej jen s náhradami typu dovolená.</li>
+      </ul>
+      <p><strong>Daňový bonus.</strong> Když je sleva na dítě vyšší než zbylá daň, stát rozdíl zaměstnanci <strong>doplatí</strong>. Měsíčně se vyplatí, pokud příjem dosáhne aspoň poloviny minimální mzdy a bonus je aspoň 50 Kč. Sleva na poplatníka takhle nefunguje – daň sníží nejvýš na nulu. Zkus to v kalkulačce: základní mzda 22 500 Kč, bez pobídek a náhrad, dvě děti.</p>
+      <p><strong>Sleva na manželku/manžela</strong> (24 840 Kč za rok) se v měsíční výplatě nepočítá. Uplatní se až po skončení roku, proto ji kalkulačka nemá. <strong>Sleva na studenta</strong> se od roku 2024 zrušila. Takzvaná <strong>superhrubá mzda</strong> ze starších učebnic platila naposledy v roce 2020.</p>
+    </div>
+
+    <h3>Výplata</h3>
+    <p>Pokud zaměstnanec nemá žádné jiné srážky (např. spoření, výživné), které mu zaměstnavatel sráží přímo ze mzdy, je čistá mzda částkou, kterou dostane <strong>k výplatě</strong>. Mzda se vyplácí <strong>zpětně</strong> ke stanovenému termínu, <strong>bezhotovostně</strong> na bankovní účet, případně v hotovosti na pracovišti.</p>
+  </section>
+
+  <!-- ===== 4. Sociální a zdravotní pojištění ===== -->
+  <section class="kapitola" id="pojisteni" data-pozadavky="3">
+    <h2>Sociální a zdravotní pojištění</h2>
+    <div class="box box--definice">
+      <p>Jde o <strong>povinné odvody</strong>, které snižují příjmy poplatníka.</p>
+    </div>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Poplatníci</div>
+        <div class="karta__rub"><p style="margin:0">Zaměstnanci, zaměstnavatelé a OSVČ.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Plátci</div>
+        <div class="karta__rub"><p style="margin:0">Zaměstnavatelé a OSVČ.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Co to je pro firmu</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Daňově uznatelný náklad</strong> (výdaj).</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Co to je pro zaměstnance</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Srážka ze mzdy.</strong></p></div>
+      </div>
+    </div>
+
+    <figure class="ilustrace" aria-label="Zaměstnavatel odvádí sociální pojištění do státního rozpočtu a zdravotní pojištění zdravotním pojišťovnám">
+      <svg viewBox="0 0 400 206" style="max-width:500px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="10" y="81" width="112" height="44" rx="8" class="f-accent"/>
+          <text x="66" y="108" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-text)">Zaměstnavatel</text>
+        </g>
+        <path d="M122 96 L207 45" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.3s"/>
+        <path d="M122 110 L207 161" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.5s"/>
+        <g class="vyjed" style="--d:.8s">
+          <path d="M198 43 L207 45 L203 54" class="s-accent f-none" stroke-width="2"/>
+          <rect x="215" y="14" width="175" height="64" rx="8" class="f-surface s-line"/>
+          <text x="302" y="35" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Sociální pojištění</text>
+          <text x="302" y="52" text-anchor="middle" font-size="12" class="f-muted">státní rozpočet</text>
+          <text x="302" y="69" text-anchor="middle" font-size="12" class="f-accent">7,1 % + 24,8 %</text>
+        </g>
+        <g class="vyjed" style="--d:1s">
+          <path d="M203 152 L207 161 L198 163" class="s-accent f-none" stroke-width="2"/>
+          <rect x="215" y="128" width="175" height="64" rx="8" class="f-surface s-line"/>
+          <text x="302" y="149" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Zdravotní pojištění</text>
+          <text x="302" y="166" text-anchor="middle" font-size="12" class="f-muted">zdravotní pojišťovny</text>
+          <text x="302" y="183" text-anchor="middle" font-size="12" class="f-accent">4,5 % + 9 %</text>
+        </g>
+      </svg>
+      <figcaption>První číslo je část zaměstnance (srazí se mu ze mzdy), druhé část zaměstnavatele. Odvádí obojí zaměstnavatel.</figcaption>
+    </figure>
+
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Sociální pojištění</h3>
+        <p><strong>Je příjmem státního rozpočtu.</strong> Hradí se z něj:</p>
+        <ul>
+          <li>dávky nemocenského pojištění (nemocenská, mateřská)</li>
+          <li>dávky důchodového pojištění</li>
+          <li>příspěvek na státní politiku zaměstnanosti (podpora v nezaměstnanosti, rekvalifikace)</li>
+        </ul>
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Zaměstnavatel</small><b>24,8 %</b></div>
+          <div class="ukazatel"><small>Zaměstnanec</small><b>7,1 %</b></div>
+        </div>
+        <p style="margin:.6em 0 0;font-size:.9rem">7,1 % = 6,5 % + 0,6 % nemocenské pojištění. Vše z hrubé mzdy.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Zdravotní pojištění</h3>
+        <p><strong>Není příjmem státního rozpočtu.</strong> Vytváří se z něj fond zdravotního pojištění, ze kterého se hradí <strong>léčebná péče</strong> (prostřednictvím zdravotních pojišťoven).</p>
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Zaměstnavatel</small><b>9 %</b></div>
+          <div class="ukazatel"><small>Zaměstnanec</small><b>4,5 %</b></div>
+        </div>
+        <p style="margin:.6em 0 0;font-size:.9rem">Vše z hrubé mzdy.</p>
+      </div>
+    </div>
+    <div class="box box--tip">
+      <p>Zaměstnavatel platí <strong>víc</strong> než zaměstnanec. U zdravotního přesně dvojnásobek: 9 % oproti 4,5 %.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Z kterého pojištění se to hradí?",
+        "kose": ["Sociální pojištění", "Zdravotní pojištění"],
+        "polozky": [
+          ["nemocenská", 0],
+          ["mateřská", 0],
+          ["starobní důchod", 0],
+          ["podpora v nezaměstnanosti", 0],
+          ["rekvalifikace", 0],
+          ["ošetření u lékaře", 1],
+          ["léčebná péče v nemocnici", 1]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 5. Vznik pracovního poměru ===== -->
+  <section class="kapitola" id="vznik" data-pozadavky="4">
+    <h2>Vznik pracovního poměru</h2>
+    <p>Existují <strong>tři způsoby</strong> vzniku pracovního poměru:</p>
+    <div data-zalozky>
+      <section data-zalozka="Pracovní smlouva">
+        <p>Asi <strong>nejběžnější</strong> způsob. Náležitosti smlouvy se podle důležitosti dělí na dvě skupiny:</p>
+        <ul>
+          <li><strong>podstatné náležitosti</strong> – bez nich je pracovní smlouva <strong>neplatná</strong>: druh práce, místo výkonu práce, den nástupu do práce</li>
+          <li><strong>ostatní náležitosti</strong> – sjednávají se v rámci uzavření pracovního poměru, ale nemusejí být ve smlouvě (musí být sjednány písemně): např. výše mzdy, délka pracovní doby, ujednání o dovolené, zkušební době apod.</li>
+        </ul>
+      </section>
+      <section data-zalozka="Jmenování">
+        <p>Takto se uzavírá pracovní poměr u <strong>řídících pracovníků</strong>. Jmenuje je jejich nadřízený: majitel podniku jmenuje ředitele, ředitel jmenuje svého zástupce apod.</p>
+      </section>
+      <section data-zalozka="Volba">
+        <p>U míst, kde zvolený představitel <strong>reprezentuje zájmy a názory těch, kteří ho zvolili</strong>. Například starosta (zájmy obyvatel města) nebo předseda představenstva (zájmy akcionářů).</p>
+      </section>
+    </div>
+    <div class="box box--doplneno">
+      <p>Platný zákoník práce (č. 262/2006 Sb.) uvádí jako vznik pracovního poměru jen <strong>pracovní smlouvu a jmenování</strong>. Volba je ve starších učebnicích a v podkladech, proto ji u maturity vyjmenuj, ale můžeš dodat, že dnešní volení představitelé obvykle v pracovním poměru nejsou (funkci vykonávají na jiném právním základě).</p>
+    </div>
+
+    <div class="simulace" id="smlouva">
+      <p style="margin-top:0"><strong>Sestav pracovní smlouvu.</strong> Zaškrtni, co v ní je, a sleduj, jestli je platná.</p>
+      <div class="sm-mrizka"></div>
+      <p class="sm-vyrok" aria-live="polite" style="margin-bottom:0"></p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jak podle podkladů vznikl pracovní poměr?",
+        "kose": ["Pracovní smlouva", "Jmenování", "Volba"],
+        "polozky": [
+          ["svářeč nastupuje do firmy", 0],
+          ["učitelka podepisuje nástup do školy", 0],
+          ["majitel určí nového ředitele", 1],
+          ["ředitel určí svého zástupce", 1],
+          ["obyvatelé města si vyberou starostu", 2],
+          ["akcionáře zastupuje předseda představenstva", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 6. Ukončení pracovního poměru ===== -->
+  <section class="kapitola" id="ukonceni" data-pozadavky="4">
+    <h2>Ukončení pracovního poměru</h2>
+    <p>Podklady uvádějí šest způsobů:</p>
+    <div data-zalozky>
+      <section data-zalozka="Dohoda">
+        <p><strong>Oboustranný akt</strong>: zaměstnavatel a zaměstnanec se dohodnou na ukončení. Dohoda musí být <strong>písemně</strong>, důvod může i nemusí být uveden.</p>
+      </section>
+      <section data-zalozka="Výpověď">
+        <p><strong>Jednostranný akt</strong>: jedna strana se rozhodne ukončit pracovní poměr bez ohledu na souhlas druhé.</p>
+        <ul>
+          <li><strong>zaměstnanec</strong> nemusí uvádět důvod</li>
+          <li><strong>zaměstnavatel</strong> může dát výpověď jen z důvodů uvedených v zákoníku práce (např. pro neuspokojivé výsledky, porušení pracovní kázně, nadbytečnost apod.)</li>
+        </ul>
+        <p>Výpověď musí být <strong>prokazatelně doručena</strong> druhé straně. Pracovní poměr končí po uplynutí <strong>výpovědní doby</strong> (obvykle 2 měsíce), která začíná dnem doručení druhé straně.</p>
+        <p>Při výpovědi pro <strong>nadbytečnost</strong> náleží zaměstnanci <strong>odstupné</strong> v minimální výši 1 až 3 průměrných měsíčních platů, podle délky trvání pracovního poměru (kalkulačka je níž).</p>
+      </section>
+      <section data-zalozka="Okamžité zrušení">
+        <p><strong>Výjimečný prostředek</strong>, jen z důvodů uvedených v zákoníku práce.</p>
+        <ul>
+          <li><strong>zaměstnavatel</strong> – např. zaměstnanec hrubě poruší pracovní kázeň nebo je odsouzen pro úmyslný trestný čin k nepodmíněnému trestu na dobu delší než 1 rok</li>
+          <li><strong>zaměstnanec</strong> – např. nevyplacení mzdy do 15 dnů od výplatního termínu</li>
+        </ul>
+      </section>
+      <section data-zalozka="Ve zkušební době">
+        <p>Pokud je ve smlouvě sjednána <strong>zkušební doba</strong> (nejvýše 3 měsíce), může během ní <strong>kterákoliv strana</strong> ukončit pracovní poměr i <strong>bez uvedení důvodu</strong>. Oznámení musí být <strong>písemně</strong> a druhé straně doručeno alespoň <strong>3 dny před ukončením</strong> poměru.</p>
+      </section>
+      <section data-zalozka="Uplynutí doby">
+        <p>Když byl pracovní poměr uzavřen na <strong>dobu určitou</strong>, skončí vypršením smlouvy.</p>
+      </section>
+      <section data-zalozka="Smrt zaměstnance">
+        <p><strong>Smrtí zaměstnance</strong> uzavřený pracovní poměr skončí.</p>
+      </section>
+    </div>
+
+    <figure class="ilustrace" aria-label="Výpovědní doba začíná dnem doručení výpovědi a trvá obvykle dva měsíce">
+      <svg viewBox="0 0 400 106" style="max-width:520px">
+        <path d="M40 60 H360" pathLength="1" class="kresli s-accent" stroke-width="3" stroke-linecap="round"/>
+        <g class="vyjed" style="--d:.1s">
+          <circle cx="40" cy="60" r="8" class="f-accent s-accent" stroke-width="2"/>
+          <text x="40" y="38" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">15. 3.</text>
+          <text x="10" y="90" font-size="12" class="f-muted">výpověď doručena</text>
+        </g>
+        <text x="200" y="46" text-anchor="middle" font-size="12" class="vyjed f-accent" style="--d:.6s">výpovědní doba 2 měsíce</text>
+        <g class="vyjed" style="--d:1.1s">
+          <circle cx="360" cy="60" r="8" class="f-surface s-accent" stroke-width="2.5"/>
+          <text x="360" y="38" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">15. 5.</text>
+          <text x="390" y="90" text-anchor="end" font-size="12" class="f-muted">pracovní poměr končí</text>
+        </g>
+      </svg>
+      <figcaption>Doba běží od dne doručení, a tak končí ve stejný den v měsíci (data jsou jen příklad).</figcaption>
+    </figure>
+
+    <div class="box box--doplneno">
+      <p>Od <strong>1. 6. 2025</strong> platí novela zákoníku práce, a část údajů se změnila:</p>
+      <ul>
+        <li><strong>zkušební doba</strong> může být nově až <strong>4 měsíce</strong> (u vedoucích zaměstnanců 8), v podkladech jsou 3 měsíce</li>
+        <li><strong>výpovědní doba</strong> začíná dnem doručení – přesně jak píšou podklady. Ve starších materiálech najdeš, že začínala prvním dnem následujícího měsíce, to už neplatí</li>
+        <li>výpovědní doba je zpravidla aspoň 2 měsíce, u některých důvodů výpovědi (porušení povinností, nesplňování požadavků) stačí 1 měsíc</li>
+      </ul>
+      <p>Odstupné dostane zaměstnanec při výpovědi nejen pro nadbytečnost, ale i při zrušení nebo přemístění zaměstnavatele. Zákoník práce se mění, před maturitou si případně přesné údaje ověř.</p>
+    </div>
+
+    <div class="simulace" id="odstupne">
+      <p style="margin-top:0"><strong>Spočítej minimální odstupné</strong> při výpovědi pro nadbytečnost.</p>
+      <div class="posuvnik"><label for="od-r">Jak dlouho pracovní poměr trval</label><output id="od-r-o"></output><input id="od-r" type="range" min="0.5" max="5" step="0.5" value="1.5"></div>
+      <div class="posuvnik"><label for="od-v">Průměrný měsíční výdělek</label><output id="od-v-o"></output><input id="od-v" type="range" min="20000" max="80000" step="1000" value="35000"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Násobek průměrného výdělku</small><b id="od-n"></b></div>
+        <div class="ukazatel"><small>Minimální odstupné</small><b id="od-c"></b></div>
+      </div>
+      <p style="margin-bottom:0;font-size:.9rem">Do 1 roku 1 průměrný výdělek, 1 až 2 roky 2 průměrné výdělky, 2 a více let 3 průměrné výdělky.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jak skončil pracovní poměr v téhle situaci?",
+        "kose": ["Dohoda", "Výpověď", "Okamžité zrušení", "Ve zkušební době", "Uplynutí doby"],
+        "polozky": [
+          ["šéf a zaměstnanec se písemně shodnou na konci k 30. 6.", 0],
+          ["zaměstnanec si našel lepší práci a důvod neuvádí", 1],
+          ["firma zaměstnance kvůli nadbytečnosti propustí", 1],
+          ["zaměstnavatel nevyplatil mzdu ani 15 dnů po termínu", 2],
+          ["zaměstnanec dostal 2 roky nepodmíněně za úmyslný trestný čin", 2],
+          ["druhý týden v nové práci, oznámení 3 dny předem, bez důvodu", 3],
+          ["smlouva na dobu určitou do 31. 8. vypršela", 4]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 7. DPP a DPČ ===== -->
+  <section class="kapitola" id="dohody" data-pozadavky="5">
+    <h2>Dohoda o pracovní činnosti a dohoda o provedení práce</h2>
+    <p>Tohle téma v podkladech úplně chybí. Jde o <strong>dohody o pracích konaných mimo pracovní poměr</strong> – typicky brigády a menší přivýdělky.</p>
+    <div class="box box--doplneno">
+      <div class="mrizka">
+        <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+          <h3 style="margin-top:0">DPP – dohoda o provedení práce</h3>
+          <ul style="margin-bottom:0">
+            <li>nejvýše <strong>300 hodin</strong> za kalendářní rok u jednoho zaměstnavatele</li>
+            <li><strong>písemná</strong> forma</li>
+            <li>hodí se na krátkou brigádu nebo jednorázový úkol</li>
+            <li>pojistné se platí jen při vyšším výdělku – v roce 2026 od <strong>12 000 Kč</strong> měsíčně</li>
+          </ul>
+        </div>
+        <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+          <h3 style="margin-top:0">DPČ – dohoda o pracovní činnosti</h3>
+          <ul style="margin-bottom:0">
+            <li>průměrně nejvýše <strong>polovina týdenní pracovní doby</strong> (při 40 h týdně tedy 20 h)</li>
+            <li><strong>písemná</strong> forma</li>
+            <li>hodí se na dlouhodobý pravidelný přivýdělek</li>
+            <li>pojistné se platí od nižšího výdělku – v roce 2026 od <strong>4 500 Kč</strong> měsíčně</li>
+          </ul>
+        </div>
+      </div>
+      <p>Společné:</p>
+      <ul>
+        <li>nejsou to pracovní poměr, ale zákoník práce je upravuje; patří k nim alespoň <strong>minimální mzda</strong> (2026: 134,40 Kč za hodinu)</li>
+        <li>od roku 2024 mají dohodáři za splnění podmínek nárok na <strong>dovolenou</strong> a zaměstnavatel jim musí práci rozvrhnout předem</li>
+        <li>dohoda se dá ukončit dohodou, nebo výpovědí s <strong>15denní</strong> výpovědní dobou, u výpovědi není potřeba důvod</li>
+        <li>záloha na daň funguje podobně jako u mzdy, když je podepsané prohlášení poplatníka. Bez něj se v roce 2026 u nízkých příjmů používá 15% srážková daň; od 2027 ji má nahradit záloha</li>
+      </ul>
+      <p style="margin-bottom:0">Částky 12 000 a 4 500 Kč se s průměrnou mzdou každý rok mění. Zapamatuj si princip: <strong>u DPP je hranice pro odvody vyšší</strong> než u DPČ.</p>
+    </div>
+
+    <div class="simulace" id="dohoda">
+      <p style="margin-top:0"><strong>Vejde se to do dohody?</strong> Nastav si brigádu a sleduj limity z rámečku výš.</p>
+      <div class="posuvnik"><label for="do-t">Hodin týdně</label><output id="do-t-o"></output><input id="do-t" type="range" min="2" max="40" step="1" value="10"></div>
+      <div class="posuvnik"><label for="do-n">Počet týdnů v roce</label><output id="do-n-o"></output><input id="do-n" type="range" min="1" max="52" step="1" value="20"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Hodin za rok</small><b id="do-h"></b></div>
+        <div class="ukazatel"><small>DPP (do 300 h za rok)</small><b id="do-dpp"></b></div>
+        <div class="ukazatel"><small>DPČ (průměrně do 20 h týdně)</small><b id="do-dpc"></b></div>
+      </div>
+      <p id="do-t-text" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Která dohoda se pro to hodí nebo koho se to týká? (podle rámečku výš)",
+        "kose": ["DPP", "DPČ", "Obě"],
+        "polozky": [
+          ["limit 300 hodin za rok", 0],
+          ["vyšší hranice výdělku pro odvody", 0],
+          ["třítýdenní brigáda ve skladu o prázdninách", 0],
+          ["průměrně nejvýše polovina týdenní pracovní doby", 1],
+          ["celoroční přivýdělek 15 hodin týdně", 1],
+          ["musí být uzavřena písemně", 2],
+          ["výpověď s 15denní výpovědní dobou", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – odměňování pracovníků",
+        "karty": [
+          ["Mzda × plat", "Stejný význam. Mzda v soukromém sektoru, plat ve státní sféře."],
+          ["Typy mezd", "Časová, úkolová, podílová, kombinovaná (smíšená). Případně naturální."],
+          ["Časová mzda", "Závisí na odpracovaném čase. Pro lidi, jejichž výkon nejde měřit. Hodinová sazba, nebo měsíční stálý plat."],
+          ["Úkolová mzda", "Závisí na odvedené práci – kde jde výkon změřit, např. kusy."],
+          ["Podílová mzda", "Podíl (provize) z dosažených výsledků. Prodejci, dealeři."],
+          ["Hrubá mzda", "Základní mzda + pobídkové složky + náhrady mzdy."],
+          ["Pobídkové složky", "Odměny, příplatky, prémie, osobní ohodnocení, podíly na zisku, 13. plat."],
+          ["Náhrady mzdy", "Za dobu, kdy zaměstnanec nepracoval, ale má nárok: náhrada za dovolenou, dávky nemocenského pojištění, odstupné."],
+          ["Srážky z hrubé mzdy", "SP 7,1 %, ZP 4,5 %, záloha na daň 15 % (po slevách)."],
+          ["Čistá mzda", "Hrubá mzda − SP − ZP − záloha po slevách."],
+          ["Slevy na dani", "Na poplatníka 2 570 Kč; na dítě 1 267 / 1 860 / 2 320 Kč; manžel(ka); invalidita. Odečítají se od daně."],
+          ["Pojistné platí zaměstnavatel", "SP 24,8 % a ZP 9 % z hrubé mzdy."],
+          ["Sociální pojištění", "Příjem státního rozpočtu. Nemocenská, mateřská, důchody, státní politika zaměstnanosti."],
+          ["Zdravotní pojištění", "Není příjem státního rozpočtu. Fond zdravotního pojištění, léčebná péče přes pojišťovny."],
+          ["Vznik pracovního poměru", "Pracovní smlouva, jmenování, volba."],
+          ["Podstatné náležitosti smlouvy", "Druh práce, místo výkonu práce, den nástupu. Bez nich je smlouva neplatná."],
+          ["Ukončení pracovního poměru", "Dohoda, výpověď, okamžité zrušení, zrušení ve zkušební době, uplynutí doby, smrt zaměstnance."],
+          ["Odstupné při nadbytečnosti", "Do 1 roku 1, 1 až 2 roky 2, 2 a více let 3 průměrné výdělky."],
+          ["DPP", "Nejvýše 300 hodin za rok u jednoho zaměstnavatele. Písemně."],
+          ["DPČ", "Průměrně nejvýše polovina týdenní pracovní doby. Písemně."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Mzda a plat, mzda jako cena za práci. Typy mezd: časová, úkolová, podílová, kombinovaná, naturální.</li>
+          <li>Struktura mzdy: základní mzda, pobídkové složky, náhrady mzdy = hrubá mzda.</li>
+          <li>Výpočet: z hrubé mzdy SP 7,1 %, ZP 4,5 % (nahoru na celé Kč), záloha 15 %, slevy na dani, čistá mzda. Ukaž příklad 26 000 → 22 921 Kč.</li>
+          <li>Odvody zaměstnavatele: SP 24,8 %, ZP 9 %.</li>
+          <li>Sociální a zdravotní pojištění: poplatníci a plátci, kam peníze jdou a co se z nich hradí.</li>
+          <li>Vznik pracovního poměru: smlouva (podstatné a ostatní náležitosti), jmenování, volba. Můžeš zmínit, že dnešní zákoník práce volbu neuvádí.</li>
+          <li>Ukončení: dohoda, výpověď (výpovědní doba, odstupné), okamžité zrušení, zkušební doba, uplynutí doby, smrt. Zmiň novelu od 1. 6. 2025.</li>
+          <li>DPP a DPČ: limity, písemná forma, rozdíl v odvodech.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 9. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení. Výpočty jsou podle sazeb z podkladů (stav od 1. 1. 2024).</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Jaký je rozdíl mezi mzdou a platem?",
+           "moznosti": ["Mzda je v soukromém sektoru, plat ve státní sféře", "Mzda je hrubá částka, plat je částka čistá", "Mzda je v dělnických profesích, plat v kancelářích", "Mzda se vyplácí týdně, plat vždy měsíčně"],
+           "spravne": 0, "vysvetleni": "Význam je stejný, rozdíl je v tom, kdo pracovníka zaměstnává."},
+          {"typ": "jedna", "otazka": "Dealer aut dostává mzdu jako provizi z prodaných vozů. Jaký je to typ mzdy?",
+           "moznosti": ["časová", "úkolová", "podílová", "naturální"],
+           "spravne": 2, "vysvetleni": "Provize je podíl z dosažených výsledků – mzda podílová."},
+          {"typ": "jedna", "otazka": "U koho se podle podkladů používá časová mzda?",
+           "moznosti": ["U dělníků vyrábějících určitý počet kusů", "U zaměstnanců, jejichž výkon nelze měřit", "U prodejců a dealerů s provizí", "U pracovníků placených v naturáliích"],
+           "spravne": 1, "vysvetleni": "Třeba vedoucí a administrativa, případně ti, kdo nemůžou ovlivnit pracovní tempo."},
+          {"typ": "vice", "otazka": "Co tvoří <b>hrubou mzdu</b>?",
+           "moznosti": ["Základní mzda", "Pobídkové složky", "Náhrady mzdy", "Záloha na daň", "Zdravotní pojištění"],
+           "spravne": [0, 1, 2], "vysvetleni": "Záloha a pojištění se od hrubé mzdy odečítají, netvoří ji."},
+          {"typ": "vice", "otazka": "Které položky jsou <b>pobídkové složky</b> mzdy?",
+           "moznosti": ["Prémie", "Příplatek za noční práci", "13. plat", "Náhrada za dovolenou", "Odstupné"],
+           "spravne": [0, 1, 2], "vysvetleni": "Náhrada za dovolenou a odstupné jsou podle podkladů náhrady mzdy."},
+          {"typ": "jedna", "otazka": "Náhrada mzdy je peněžní plnění za dobu, kdy zaměstnanec…",
+           "moznosti": ["pracoval přesčas nebo ve svátek", "dosáhl výborných výsledků", "nepracoval, ale má na mzdu nárok", "byl ve výpovědní době"],
+           "spravne": 2, "vysvetleni": "Třeba dovolená. Přesčas a svátek jsou důvody pro příplatek, tedy pobídkovou složku."},
+          {"typ": "ano-ne", "otazka": "Sociální a zdravotní pojištění zaměstnance se počítá z čisté mzdy.",
+           "spravne": false, "vysvetleni": "Počítá se z hrubé mzdy. Čistá mzda je až výsledek."},
+          {"typ": "ano-ne", "otazka": "Sociální a zdravotní pojištění se zaokrouhluje na celé koruny nahoru.",
+           "spravne": true, "vysvetleni": "Podle podkladů vždy nahoru."},
+          {"typ": "jedna", "otazka": "Podle podkladů platí zaměstnanec sociální pojištění ve výši…",
+           "moznosti": ["4,5 %", "6,0 %", "7,1 %", "24,8 %"],
+           "spravne": 2, "vysvetleni": "6,5 % + od 1. 1. 2024 0,6 % nemocenské pojištění."},
+          {"typ": "jedna", "otazka": "Kolik platí zaměstnavatel zdravotního pojištění z hrubé mzdy?",
+           "moznosti": ["4,5 %", "7,1 %", "9 %", "24,8 %"],
+           "spravne": 2, "vysvetleni": "Dvojnásobek části zaměstnance, tedy 9 %. 24,8 % je jeho sociální pojištění."},
+          {"typ": "jedna", "otazka": "Od čeho se odečítají slevy na dani?",
+           "moznosti": ["Od hrubé mzdy", "Od sociálního pojištění", "Od zálohy na daň", "Od čisté mzdy"],
+           "spravne": 2, "vysvetleni": "Záloha 15 % z hrubé mzdy se o slevy sníží. Hrubá mzda ani pojistné se nemění."},
+          {"typ": "ano-ne", "otazka": "Sleva na poplatníka náleží jen zaměstnancům s dítětem.",
+           "spravne": false, "vysvetleni": "Náleží každému zaměstnanci. Na dítě je zvláštní zvýhodnění."},
+          {"typ": "cislo", "otazka": "Hrubá mzda je 32 000 Kč. Kolik zaměstnanec zaplatí na sociálním pojištění?",
+           "spravne": 2272, "jednotka": "Kč", "vysvetleni": "7,1 % × 32 000 = 2 272 Kč."},
+          {"typ": "cislo", "otazka": "Hrubá mzda 30 000 Kč, zaměstnanec má prohlášení poplatníka a žádné dítě. Jaká je čistá mzda?",
+           "spravne": 24590, "jednotka": "Kč", "vysvetleni": "ZP 1 350, SP 2 130, záloha 4 500 − 2 570 = 1 930. 30 000 − 1 350 − 2 130 − 1 930 = 24 590 Kč."},
+          {"typ": "cislo", "otazka": "Hrubá mzda 40 000 Kč, prohlášení poplatníka, 2 děti. Jaká je čistá mzda?",
+           "spravne": 35057, "jednotka": "Kč", "vysvetleni": "ZP 1 800, SP 2 840, záloha 6 000 − 2 570 − 1 267 − 1 860 = 303. 40 000 − 1 800 − 2 840 − 303 = 35 057 Kč."},
+          {"typ": "cislo", "otazka": "Hrubá mzda 40 000 Kč. Kolik zaměstnance stojí zaměstnavatele celkem (hrubá mzda + jeho SP a ZP)?",
+           "spravne": 53520, "jednotka": "Kč", "vysvetleni": "SP 24,8 % = 9 920, ZP 9 % = 3 600. 40 000 + 9 920 + 3 600 = 53 520 Kč."},
+          {"typ": "jedna", "otazka": "Sociální pojištění je příjmem…",
+           "moznosti": ["fondu zdravotního pojištění", "státního rozpočtu", "zaměstnavatele", "obecního rozpočtu"],
+           "spravne": 1, "vysvetleni": "Zdravotní pojištění státní rozpočet nedostává – to jde do fondu zdravotního pojištění."},
+          {"typ": "vice", "otazka": "Co se hradí ze <b>sociálního pojištění</b>?",
+           "moznosti": ["Nemocenská a mateřská", "Důchody", "Podpora v nezaměstnanosti", "Rekvalifikace", "Léčebná péče"],
+           "spravne": [0, 1, 2, 3], "vysvetleni": "Léčebná péče se hradí ze zdravotního pojištění."},
+          {"typ": "jedna", "otazka": "Kdo jsou <b>plátci</b> sociálního a zdravotního pojištění?",
+           "moznosti": ["Zaměstnanci a OSVČ", "Zaměstnavatelé a OSVČ", "Jen zaměstnanci", "Zdravotní pojišťovny"],
+           "spravne": 1, "vysvetleni": "Poplatníci jsou zaměstnanci, zaměstnavatelé a OSVČ. Plátci, kteří odvádějí, jsou zaměstnavatelé a OSVČ."},
+          {"typ": "ano-ne", "otazka": "Pro zaměstnavatele je pojistné daňově uznatelným nákladem.",
+           "spravne": true, "vysvetleni": "Pro firmu náklad, pro zaměstnance srážka ze mzdy."},
+          {"typ": "vice", "otazka": "Které náležitosti jsou <b>podstatné</b> v pracovní smlouvě?",
+           "moznosti": ["Druh práce", "Místo výkonu práce", "Den nástupu do práce", "Výše mzdy", "Zkušební doba"],
+           "spravne": [0, 1, 2], "vysvetleni": "Mzda a zkušební doba jsou ostatní náležitosti – nemusí být přímo ve smlouvě, musí být ale sjednány písemně."},
+          {"typ": "jedna", "otazka": "Jak vzniká pracovní poměr ředitele, kterého určil majitel podniku?",
+           "moznosti": ["volbou", "jmenováním", "dohodou o pracovní činnosti", "uplynutím doby"],
+           "spravne": 1, "vysvetleni": "U řídících pracovníků je jmenuje jejich nadřízený."},
+          {"typ": "jedna", "otazka": "Který způsob ukončení je <b>jednostranný akt</b> bez ohledu na souhlas druhé strany?",
+           "moznosti": ["dohoda", "výpověď", "uplynutí sjednané doby", "smrt zaměstnance"],
+           "spravne": 1, "vysvetleni": "Dohoda je oboustranný akt. U uplynutí doby a smrti nikdo nic neoznamuje."},
+          {"typ": "ano-ne", "otazka": "Zaměstnavatel může dát výpověď z jakéhokoli důvodu.",
+           "spravne": false, "vysvetleni": "Zaměstnavatel jen z důvodů v zákoníku práce. Bez důvodu smí vypovědět zaměstnanec."},
+          {"typ": "ano-ne", "otazka": "Během sjednané zkušební doby může pracovní poměr ukončit kterákoli strana i bez uvedení důvodu.",
+           "spravne": true, "vysvetleni": "Stačí písemné oznámení doručené alespoň 3 dny před ukončením."},
+          {"typ": "jedna", "otazka": "Který důvod může zaměstnanci umožnit <b>okamžité zrušení</b> pracovního poměru?",
+           "moznosti": ["Nízká mzda oproti konkurenci", "Nevyplacení mzdy do 15 dnů od výplatního termínu", "Přeřazení na odpolední směny", "Nezájem o danou práci"],
+           "spravne": 1, "vysvetleni": "Je to výjimečný prostředek jen z důvodů v zákoníku práce."},
+          {"typ": "cislo", "otazka": "Zaměstnanec pracoval u firmy 18 měsíců a dostal výpověď pro nadbytečnost. Průměrný výdělek má 35 000 Kč. Jaké je minimální odstupné?",
+           "spravne": 70000, "jednotka": "Kč", "vysvetleni": "1 až 2 roky = 2 průměrné výdělky, tedy 2 × 35 000 = 70 000 Kč."},
+          {"typ": "jedna", "otazka": "Kolik hodin za rok může člověk u jednoho zaměstnavatele odpracovat na <b>DPP</b>?",
+           "moznosti": ["nejvýše 150 hodin", "nejvýše 300 hodin", "nejvýše 600 hodin", "bez omezení"],
+           "spravne": 1, "vysvetleni": "Limit DPP je 300 hodin za kalendářní rok u jednoho zaměstnavatele."},
+          {"typ": "jedna", "otazka": "Jaký časový limit platí u <b>DPČ</b>?",
+           "moznosti": ["Nejvýše 300 hodin za rok", "Průměrně polovina týdenní pracovní doby", "Nejvýše 10 hodin týdně", "Plná týdenní pracovní doba"],
+           "spravne": 1, "vysvetleni": "300 hodin je limit DPP, u DPČ se hlídá průměr za týden."},
+          {"typ": "ano-ne", "otazka": "DPP i DPČ se uzavírají písemně.",
+           "spravne": true, "vysvetleni": "Obě dohody vyžadují písemnou formu."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .rozpis { margin: 10px 0 12px; font-size: .94rem; }
+  .rozpis > div { display: flex; justify-content: space-between; gap: 14px; padding: 5px 0; border-bottom: 1px solid var(--border); }
+  .rozpis > div > span:last-child { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .rozpis__soucet { font-weight: 700; }
+  .mz-popisek { margin: 12px 0 6px; font-size: .88rem; font-weight: 500; }
+  .mz-deti { display: flex; flex-wrap: wrap; gap: 6px; }
+  .mz-deti .chip { cursor: pointer; min-width: 44px; }
+  .mz-volba { display: flex; gap: 8px; align-items: flex-start; margin: 12px 0; font-size: .88rem; }
+  .mz-volba input { margin-top: 4px; accent-color: var(--accent); }
+  .mz-kroky { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 6px; }
+  .mz-krok { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; padding: 9px 12px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .mz-krok--novy { animation: rozbal .3s var(--ease); }
+  .mz-krok__nazev { font-weight: 600; font-size: .94rem; }
+  .mz-krok__castka { font-family: var(--mono); font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .mz-krok small { flex-basis: 100%; color: var(--text-muted); font-size: .82rem; }
+  .mz-krok--soucet { background: var(--accent-soft); border-color: transparent; }
+  .mz-pas { display: flex; height: 18px; border-radius: 6px; overflow: hidden; gap: 1px; background: var(--surface); }
+  .mz-pas i { display: block; flex: 0 1 auto; width: 0; min-width: 0; transition: width .6s var(--ease); }
+  .legenda b { font-family: var(--mono); font-weight: 600; white-space: nowrap; }
+  .sm-mrizka { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 12px; }
+  .sm-mrizka label { display: flex; gap: 8px; align-items: center; font-size: .92rem; padding: 7px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .sm-mrizka input { accent-color: var(--accent); }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, kc, cislo, $, $$ } = window.Ucebna;
+
+  /* --- Mzdová kalkulačka krok za krokem (postup z podkladů, stav od 1. 1. 2024) --- */
+  (() => {
+    const box = $("#mzda");
+    const SLEVA_POPLATNIK = 2570, MIN_BONUS = 50;
+    const slevaNaDite = (i) => (i === 0 ? 1267 : i === 1 ? 1860 : 2320);
+    const nahoru = (cit, jm) => Math.ceil(cit / jm);
+    let deti = 1, krok = 1, novyKrok = -1;
+    const KROKU = 8;
+    const kroky = $(".mz-kroky", box), vysledek = $(".mz-vysledek", box);
+    const tlDalsi = $("[data-akce=dalsi]", box);
+
+    function spocti(h, pocetDeti, prohlaseni) {
+      const zp = nahoru(h * 45, 1000), sp = nahoru(h * 71, 1000);
+      const zaloha = nahoru(h * 15, 100);
+      const slevaP = prohlaseni ? Math.min(zaloha, SLEVA_POPLATNIK) : 0;
+      let slevaD = 0;
+      if (prohlaseni) for (let i = 0; i < pocetDeti; i++) slevaD += slevaNaDite(i);
+      const zbytek = zaloha - slevaP - slevaD;
+      const poSlevach = Math.max(0, zbytek);
+      const bonusVypocet = Math.max(0, -zbytek);
+      const bonus = bonusVypocet >= MIN_BONUS ? bonusVypocet : 0;
+      const cista = h - zp - sp - poSlevach + bonus;
+      const firmaSp = nahoru(h * 248, 1000), firmaZp = nahoru(h * 9, 100);
+      return { zp, sp, zaloha, slevaP, slevaD, poSlevach, bonus, bonusVypocet, cista, firmaSp, firmaZp, naklad: h + firmaSp + firmaZp };
+    }
+
+    // Procento s případným mezivýsledkem před zaokrouhlením
+    const vzorecNahoru = (popis, h, cit, jm) => {
+      const presne = h * cit / jm;
+      const text = Number.isInteger(presne) ? "" : ` = ${presne.toLocaleString("cs-CZ", { minimumFractionDigits: 2 })}, zaokrouhleno nahoru`;
+      return `${popis} × ${cislo(h)}${text}`;
+    };
+
+    function radek(i, nazev, castka, pozn, soucet) {
+      return `<li class="mz-krok${soucet ? " mz-krok--soucet" : ""}${i >= krok ? " skryte" : ""}${i === novyKrok ? " mz-krok--novy" : ""}">
+        <span class="mz-krok__nazev">${i + 1}. ${nazev}</span><span class="mz-krok__castka">${castka}</span>
+        <small>${pozn}</small></li>`;
+    }
+
+    function vykresli() {
+      const z = +$("#mz-z").value, p = +$("#mz-p").value, n = +$("#mz-n").value;
+      const prohl = $("#mz-prohl").checked;
+      const h = z + p + n, r = spocti(h, deti, prohl);
+      $("#mz-z-o").textContent = kc(z);
+      $("#mz-p-o").textContent = kc(p);
+      $("#mz-n-o").textContent = kc(n);
+      $$("[data-deti]", box).forEach((b) => {
+        const vybrano = +b.dataset.deti === deti;
+        b.classList.toggle("vybrany", vybrano);
+        b.setAttribute("aria-pressed", String(vybrano));
+      });
+
+      const rozpisDeti = !prohl ? "bez prohlášení se neuplatní"
+        : deti === 0 ? "žádné dítě"
+        : Array.from({ length: deti }, (_, i) => cislo(slevaNaDite(i))).join(" + ");
+      let tretiNazev, tretiCastka, tretiPozn;
+      if (r.bonus > 0) {
+        tretiNazev = "Daňový bonus"; tretiCastka = "+ " + kc(r.bonus);
+        tretiPozn = `Sleva na dítě je vyšší než zbylá daň. Záloha je 0 Kč a rozdíl stát doplatí (doplněno, v podkladech není).`;
+      } else if (r.bonusVypocet > 0) {
+        tretiNazev = "Záloha po slevách"; tretiCastka = kc(0);
+        tretiPozn = `Záloha je 0 Kč. Bonus ${kc(r.bonusVypocet)} je pod hranicí ${MIN_BONUS} Kč, takže se nevyplatí.`;
+      } else {
+        tretiNazev = "Záloha po slevách a zvýhodněních"; tretiCastka = kc(r.poSlevach);
+        tretiPozn = `${cislo(r.zaloha)} − ${cislo(r.slevaP)} − ${cislo(r.slevaD)}`;
+      }
+      const cistaVzorec = `${cislo(h)} − ${cislo(r.sp)} − ${cislo(r.zp)} − ${cislo(r.poSlevach)}` + (r.bonus ? ` + ${cislo(r.bonus)}` : "");
+
+      kroky.innerHTML = [
+        radek(0, "Hrubá mzda", kc(h), `základní mzda + pobídkové složky + náhrady: ${cislo(z)} + ${cislo(p)} + ${cislo(n)}`, true),
+        radek(1, "Zdravotní pojištění", kc(r.zp), vzorecNahoru("4,5 %", h, 45, 1000)),
+        radek(2, "Sociální pojištění", kc(r.sp), vzorecNahoru("7,1 %", h, 71, 1000)),
+        radek(3, "Záloha na daň z příjmu", kc(r.zaloha), `15 % × ${cislo(h)}`),
+        radek(4, "Sleva na poplatníka", "− " + kc(r.slevaP), prohl ? "náleží každému zaměstnanci" : "bez prohlášení se neuplatní"),
+        radek(5, "Sleva na dítě", "− " + kc(r.slevaD), rozpisDeti),
+        radek(6, tretiNazev, tretiCastka, tretiPozn),
+        radek(7, "Čistá mzda", kc(r.cista), cistaVzorec + (r.bonus ? " (hrubá − SP − ZP − záloha + bonus)" : " (hrubá − SP − ZP − záloha po slevách)"), true),
+      ].join("");
+      novyKrok = -1;
+
+      tlDalsi.disabled = krok >= KROKU;
+      vysledek.classList.toggle("skryte", krok < KROKU);
+      $("#mz-hruba").textContent = kc(h);
+      $("#mz-cista").textContent = kc(r.cista);
+      $("#mz-naklad").textContent = kc(r.naklad);
+
+      const firma = r.firmaSp + r.firmaZp;
+      const casti = { cista: r.cista, zp: r.zp, sp: r.sp, dan: r.poSlevach, firma };
+      const soucet = r.cista + r.zp + r.sp + r.poSlevach + firma;
+      Object.entries(casti).forEach(([k, v]) => { $(`[data-pas=${k}]`, box).style.width = (v / soucet * 100) + "%"; });
+      $("#mz-l-cista").textContent = kc(r.cista);
+      $("#mz-l-zp").textContent = kc(r.zp);
+      $("#mz-l-sp").textContent = kc(r.sp);
+      $("#mz-l-dan").textContent = kc(r.poSlevach);
+      $("#mz-l-firma").textContent = kc(firma);
+      const podil = (r.cista / r.naklad * 100).toLocaleString("cs-CZ", { maximumFractionDigits: 1 });
+      $("#mz-text").innerHTML = `Firmu stojí tvoje práce <strong>${kc(r.naklad)}</strong> (hrubá mzda + SP ${cislo(r.firmaSp)} + ZP ${cislo(r.firmaZp)}). Čistá mzda je z toho <strong>${podil} %</strong>.`;
+    }
+
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", vykresli));
+    $$("[data-deti]", box).forEach((b) => b.addEventListener("click", () => { deti = +b.dataset.deti; vykresli(); }));
+    tlDalsi.addEventListener("click", () => { krok = Math.min(KROKU, krok + 1); novyKrok = krok - 1; vykresli(); });
+    $("[data-akce=vse]", box).addEventListener("click", () => { krok = KROKU; vykresli(); });
+    $("[data-akce=priklad]", box).addEventListener("click", () => {
+      $("#mz-z").value = 25000; $("#mz-p").value = 1000; $("#mz-n").value = 0;
+      $("#mz-prohl").checked = true; deti = 1; krok = 1; vykresli();
+    });
+    vykresli();
+  })();
+
+  /* --- Sestav pracovní smlouvu --- */
+  (() => {
+    const box = $("#smlouva");
+    const mrizka = $(".sm-mrizka", box), vyrok = $(".sm-vyrok", box);
+    const POLOZKY = [
+      ["druh práce", true], ["výše mzdy", false], ["místo výkonu práce", true], ["délka pracovní doby", false],
+      ["den nástupu do práce", true], ["ujednání o dovolené", false], ["zkušební doba", false],
+    ];
+    const volby = POLOZKY.map(([text, podstatna]) => {
+      const vstup = el("input", { type: "checkbox" });
+      vstup.addEventListener("change", vyhodnot);
+      mrizka.append(el("label", {}, vstup, text));
+      return { text, podstatna, vstup };
+    });
+    function vyhodnot() {
+      const chybi = volby.filter((v) => v.podstatna && !v.vstup.checked).map((v) => v.text);
+      if (chybi.length) {
+        vyrok.className = "sm-vyrok vysledek bad";
+        vyrok.textContent = `Smlouva je neplatná. Chybí podstatná náležitost: ${chybi.join(", ")}.`;
+      } else {
+        const navic = volby.some((v) => !v.podstatna && v.vstup.checked);
+        vyrok.className = "sm-vyrok vysledek ok";
+        vyrok.textContent = navic
+          ? "Smlouva je platná. Ostatní náležitosti v ní být nemusí, ale sjednány musí být písemně."
+          : "Smlouva je platná: má všechny tři podstatné náležitosti. Ostatní je potřeba sjednat písemně mimo ni.";
+      }
+    }
+    vyhodnot();
+  })();
+
+  /* --- Odstupné při nadbytečnosti --- */
+  (() => {
+    function spocti() {
+      const r = +$("#od-r").value, v = +$("#od-v").value;
+      const n = r < 1 ? 1 : r < 2 ? 2 : 3;
+      $("#od-r-o").textContent = r.toLocaleString("cs-CZ") + (!Number.isInteger(r) ? " roku" : r === 1 ? " rok" : r < 5 ? " roky" : " let");
+      $("#od-v-o").textContent = kc(v);
+      $("#od-n").textContent = n + " ×";
+      $("#od-c").textContent = kc(n * v);
+    }
+    $("#odstupne").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Vejde se to do DPP, nebo DPČ --- */
+  (() => {
+    const LIMIT_DPP = 300, LIMIT_DPC = 20;
+    function spocti() {
+      const t = +$("#do-t").value, n = +$("#do-n").value, h = t * n;
+      const dpp = h <= LIMIT_DPP, dpc = t <= LIMIT_DPC;
+      $("#do-t-o").textContent = t + " h";
+      $("#do-n-o").textContent = n + (n === 1 ? " týden" : n < 5 ? " týdny" : " týdnů");
+      $("#do-h").textContent = cislo(h) + " h";
+      const nastav = (id, ok) => {
+        const b = $("#" + id);
+        b.textContent = ok ? "vejde se" : "nevejde se";
+        b.style.color = ok ? "var(--ok)" : "var(--bad)";
+      };
+      nastav("do-dpp", dpp);
+      nastav("do-dpc", dpc);
+      $("#do-t-text").textContent = dpp && dpc ? "Vejde se do obou dohod. Krátká práce obvykle na DPP, dlouhodobá pravidelná na DPČ."
+        : dpp ? "Na DPČ je toho týdně moc (průměr se ale počítá za celé období dohody, ne za jeden týden). DPP projde."
+        : dpc ? "Na DPP je to hodin za rok moc. Řešením je DPČ."
+        : "Na žádnou dohodu to nevyjde, takový rozsah patří do pracovního poměru.";
+    }
+    $("#dohoda").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+});
+</script>
+</body>
+</html>
