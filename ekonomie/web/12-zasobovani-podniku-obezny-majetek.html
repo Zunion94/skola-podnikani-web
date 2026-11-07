@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12. Zásobování podniku, oběžný majetek – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-12" data-nazev="12. Zásobování podniku, oběžný majetek" data-zpet="../../index.html" data-zdroj="../pdf/12 Zásobování podniku.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 12</span>
+    <h1>Zásobování podniku, oběžný majetek</h1>
+    <p class="hlavicka__perex">Peníze se v podniku pořád točí: stanou se z nich materiál, výrobky, pohledávky a zase peníze. Tady zjistíš, jak rychle se to má točit a kolik zásob držet, aby výroba jela a sklad zbytečně nestál peníze.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>vysvětlit, co je <strong>oběžný majetek</strong>, popsat jeho koloběh a <strong>rozdělit</strong> ho na zásoby, pohledávky a finanční majetek</li>
+        <li>spočítat <strong>počet obrátek</strong> a <strong>dobu obratu zásob</strong> a říct, jak je zlepšit</li>
+        <li>vysvětlit princip metody <strong>Just in Time</strong> a co vyžaduje</li>
+        <li>vyjmenovat <strong>zásady racionálního zásobování</strong></li>
+        <li>rozdělit zásoby <strong>metodou ABC</strong></li>
+        <li>nakreslit a popsat <strong>pilový diagram</strong> a čtyři druhy zásob</li>
+        <li>vysvětlit, čím se zabývá <strong>logistika</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Oběžný majetek ===== -->
+  <section class="kapitola" id="obezny-majetek" data-pozadavky="1">
+    <h2>Dělení oběžného majetku</h2>
+    <div class="box box--definice">
+      <p><strong>Oběžný (krátkodobý) majetek</strong> je majetek, který firma používá <strong>maximálně 1 rok</strong>, mění svou podobu a často se spotřebovává jednorázově.</p>
+    </div>
+    <p>Oběžný se jmenuje proto, že je neustále v pohybu (v oběhu). V podniku se vyskytuje v různých formách a jedna přechází v druhou. Za peníze firma nakoupí materiál a vyrobí z něj výrobky. Ty prodá, takže má <strong>pohledávku</strong>. Když odběratel zaplatí, má zase peníze.</p>
+
+    <h3>Koloběh oběžného majetku</h3>
+    <div class="simulace" id="kolobeh">
+      <svg viewBox="0 0 400 258" style="max-width:500px;margin:0 auto" aria-label="Koloběh: peníze, materiál, polotovary a nedokončená výroba, hotové výrobky a zpět peníze">
+        <defs>
+          <marker id="kol-hrot" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M1 1 L9 5 L1 9" class="f-none s-muted" stroke-width="2"/>
+          </marker>
+        </defs>
+        <path class="kol-sip" data-i="0" d="M252 32 Q325 32 335 106" marker-end="url(#kol-hrot)"/>
+        <path class="kol-sip" data-i="1" d="M335 154 Q335 225 272 228" marker-end="url(#kol-hrot)"/>
+        <path class="kol-sip" data-i="2" d="M128 228 Q65 225 65 154" marker-end="url(#kol-hrot)"/>
+        <path class="kol-sip" data-i="3" d="M65 106 Q75 32 148 32" marker-end="url(#kol-hrot)"/>
+        <text x="316" y="44" font-size="12" class="f-muted">nákup</text>
+        <text x="338" y="190" font-size="12" class="f-muted">výdej</text>
+        <text x="338" y="205" font-size="12" class="f-muted">ze skladu</text>
+        <text x="62" y="190" text-anchor="end" font-size="12" class="f-muted">převod</text>
+        <text x="62" y="205" text-anchor="end" font-size="12" class="f-muted">na sklad</text>
+        <text x="84" y="44" text-anchor="end" font-size="12" class="f-muted">prodej</text>
+        <g class="kol-uzel" data-i="0">
+          <rect x="150" y="14" width="100" height="36" rx="10"/>
+          <text class="kol-t" x="200" y="37" text-anchor="middle" font-size="13" font-weight="600">Peníze</text>
+        </g>
+        <g class="kol-uzel" data-i="1">
+          <rect x="280" y="108" width="110" height="44" rx="10"/>
+          <text class="kol-t" x="335" y="135" text-anchor="middle" font-size="13" font-weight="600">Materiál</text>
+        </g>
+        <g class="kol-uzel" data-i="2">
+          <rect x="130" y="206" width="140" height="44" rx="10"/>
+          <text class="kol-t" x="200" y="224" text-anchor="middle" font-size="13" font-weight="600">Polotovary a</text>
+          <text class="kol-t" x="200" y="241" text-anchor="middle" font-size="13" font-weight="600">nedokončená výroba</text>
+        </g>
+        <g class="kol-uzel" data-i="3">
+          <rect x="10" y="108" width="110" height="44" rx="10"/>
+          <text class="kol-t" x="65" y="135" text-anchor="middle" font-size="13" font-weight="600">Hotové výrobky</text>
+        </g>
+        <text x="200" y="118" text-anchor="middle" font-size="12" class="f-muted">teď je to</text>
+        <text class="kol-forma f-accent" x="200" y="138" text-anchor="middle" font-size="14" font-weight="700"></text>
+      </svg>
+      <p class="kol-text" style="margin:10px 0 0" aria-live="polite"></p>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="dalsi">Další krok</button>
+      </div>
+    </div>
+
+    <h3>Co do oběžného majetku patří</h3>
+    <div data-zalozky>
+      <section data-zalozka="1) Zásoby">
+        <p>Klepni na kartu.</p>
+        <div class="mrizka">
+          <div class="karta" data-flip>
+            <div class="karta__lic">Materiál</div>
+            <div class="karta__rub"><p style="margin:0">Oběžný majetek, ze kterého vznikají výrobky. Patří sem i to, co výrobek přímo netvoří – kvůli jednodušší evidenci.</p></div>
+          </div>
+          <div class="karta" data-flip>
+            <div class="karta__lic">Výrobky</div>
+            <div class="karta__rub"><p style="margin:0">Když mluvíme o výrobku, mluvíme o <strong>hotovém</strong> produktu.</p></div>
+          </div>
+          <div class="karta" data-flip>
+            <div class="karta__lic">Zboží</div>
+            <div class="karta__rub"><p style="margin:0">Statky nakoupené za účelem dalšího prodeje <strong>v nezměněné podobě</strong>.</p></div>
+          </div>
+          <div class="karta" data-flip>
+            <div class="karta__lic">Nedokončená výroba a polotovary</div>
+            <div class="karta__rub"><p style="margin:0">Rozpracované výrobky, které ještě nejsou hotové.</p></div>
+          </div>
+        </div>
+        <details class="odhal" open>
+          <summary>Co všechno je materiál</summary>
+          <div class="odhal__obsah">
+            <ul>
+              <li><strong>základní materiál</strong> – tvoří základ (podstatu) výrobku: látka u šatů, papír u knihy, dřevo u dřevěného stolu</li>
+              <li><strong>pomocný materiál</strong> – doplňuje výrobek: niti a knoflíky, lepidlo</li>
+              <li><strong>provozovací látky</strong> – nepoužívají se přímo k výrobě, ale jsou potřeba k provozu podniku: čisticí prostředky, oleje</li>
+              <li><strong>náhradní díly</strong> – výrobky, které slouží k opravám</li>
+              <li><strong>pohonné hmoty</strong></li>
+              <li><strong>drobné nářadí</strong></li>
+              <li><strong>obaly</strong></li>
+              <li><strong>kancelářské potřeby</strong></li>
+            </ul>
+          </div>
+        </details>
+        <details class="odhal">
+          <summary>Spotřební a kapitálové výrobky (z podkladu k MO 11)</summary>
+          <div class="odhal__obsah">
+            <ul>
+              <li><strong>spotřební statky</strong> – slouží k přímému užívání: televizor, nábytek, potraviny</li>
+              <li><strong>kapitálové statky</strong> – slouží k další výrobě jiných statků a služeb: mouka v pekárně, soustruh ve výrobním závodu</li>
+            </ul>
+          </div>
+        </details>
+        <div class="box box--pozor" style="margin-bottom:0">
+          <p>Do oběžného majetku (zásob) může firma zařadit i <strong>drobný hmotný dlouhodobý majetek</strong> – podle MO 11 je to majetek s pořizovací cenou pod 80 000 Kč. Záleží jen na organizaci, jestli ho zařadí do dlouhodobého hmotného, nebo do oběžného majetku.</p>
+        </div>
+      </section>
+      <section data-zalozka="2) Pohledávky">
+        <p><strong>Pohledávka</strong> je určitý nárok na zaplacení. Vzniká nejčastěji v rámci dodavatelsko-odběratelských vztahů.</p>
+        <p>Dodal jsi výrobky, poslal fakturu a odběratel ještě nezaplatil. Výrobky už nemáš, peníze ještě taky ne. Máš nárok na zaplacení.</p>
+      </section>
+      <section data-zalozka="3) Finanční majetek">
+        <p>U oběžného majetku tím myslíme hlavně <strong>hotové peníze a peníze na účtech</strong>.</p>
+        <p>Můžeme sem zařadit i <strong>krátkodobé cenné papíry</strong> a <strong>ceniny</strong> – stravenky, kolky, poštovní známky.</p>
+      </section>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Do které části oběžného majetku to patří?",
+        "kose": ["Zásoby", "Pohledávky", "Finanční majetek"],
+        "polozky": [
+          ["látka v krejčovské dílně", 0], ["rozpracovaný stůl", 0], ["hotové výrobky na skladě", 0], ["zboží v regálu obchodu", 0],
+          ["nezaplacená faktura od odběratele", 1], ["nárok na zaplacení za dodané výrobky", 1],
+          ["peníze na bankovním účtu", 2], ["hotovost v pokladně", 2], ["stravenky", 2], ["kolky", 2], ["krátkodobé cenné papíry", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jaký je to druh materiálu?",
+        "kose": ["Základní materiál", "Pomocný materiál", "Provozovací látky"],
+        "polozky": [
+          ["látka na šaty", 0], ["papír na knihu", 0], ["dřevo na stůl", 0],
+          ["niti", 1], ["knoflíky", 1], ["lepidlo", 1],
+          ["čisticí prostředky", 2], ["oleje", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 2. Oběh zásob ===== -->
+  <section class="kapitola" id="obeh-zasob" data-pozadavky="2 3">
+    <h2>Počet obrátek a doba obratu zásob</h2>
+    <p>Rychlost oběhu zásob měříme dvěma ukazateli. Oba říkají totéž z jiné strany: jak rychle se zásoba promění ve výrobu nebo v prodej.</p>
+
+    <h3>Počet obrátek</h3>
+    <div class="vzorec">počet obrátek = celková spotřeba / průměrná zásoba</div>
+    <div class="vzorec">nebo: počet obrátek = tržby / průměrná zásoba</div>
+    <p>Říká, kolikrát za rok se zásoba „otočí“ – spotřebuje se a nahradí novou.</p>
+
+    <h3>Doba obratu</h3>
+    <div class="vzorec">doba obratu = 365 / počet obrátek</div>
+    <div class="vzorec">nebo: doba obratu = průměrná zásoba / (tržby / 360)</div>
+    <p>Říká, kolik dní jedna obrátka trvá – jak dlouho zásoba v podniku leží, než se spotřebuje.</p>
+
+    <div class="box box--priklad">
+      <p>Celková spotřeba 1 200 000 Kč, průměrná zásoba 200 000 Kč.</p>
+      <p>Počet obrátek = 1 200 000 / 200 000 = <strong>6</strong>. Doba obratu = 365 / 6 = <strong>60,8 dne</strong>.</p>
+      <p style="margin-bottom:0">Když jsou tržby taky 1 200 000 Kč, druhý vzorec dá 200 000 / (1 200 000 / 360) = 200 000 / 3 333 = <strong>60 dní</strong>.</p>
+    </div>
+
+    <div class="simulace" id="obratky">
+      <p style="margin-top:0"><strong>Kalkulačka obrátek:</strong> posouvej a sleduj, jak se rok rozdělí na obrátky.</p>
+      <svg viewBox="0 0 400 44" style="max-width:560px;margin:0 auto" aria-label="Rok rozdělený na obrátky"></svg>
+      <div class="posuvnik"><label for="ob-s">Celková spotřeba za rok</label><output id="ob-s-o"></output><input id="ob-s" type="range" min="200000" max="3000000" step="100000" value="1200000"></div>
+      <div class="posuvnik"><label for="ob-z">Průměrná zásoba</label><output id="ob-z-o"></output><input id="ob-z" type="range" min="50000" max="600000" step="10000" value="200000"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Počet obrátek</small><b id="ob-n"></b></div>
+        <div class="ukazatel"><small>Doba obratu (365 / obrátky)</small><b id="ob-d"></b></div>
+        <div class="ukazatel"><small>Doba obratu při 360 dnech</small><b id="ob-d2"></b></div>
+      </div>
+      <p id="ob-t" style="margin:10px 0 0;font-size:.92rem" aria-live="polite"></p>
+      <div class="tridicka__ovladani">
+        <button class="btn btn--sek" type="button" data-akce="vychozi">Výchozí stav</button>
+        <button class="btn btn--sek" type="button" data-akce="m1">Možnost 1: výroba +25 %</button>
+        <button class="btn btn--sek" type="button" data-akce="m2">Možnost 2: zásoba −20 %</button>
+      </div>
+    </div>
+
+    <h3>Co chce podnikatel</h3>
+    <div class="box box--tip">
+      <p>Pro podnikatele je důležité <strong>zvyšovat počet obrátek a snižovat dobu obratu zásob</strong>. Zásoba ve skladu jsou peníze, které zrovna nevydělávají.</p>
+    </div>
+    <p>Vyššího počtu obrátek dosáhne dvěma způsoby. Vyzkoušej si je tlačítky v kalkulačce.</p>
+    <ol>
+      <li><strong>Zvyšovat objem výroby</strong> při zachování průměrné zásoby.</li>
+      <li><strong>Snižovat průměrnou zásobu</strong> při zachování celkové spotřeby za rok.</li>
+    </ol>
+
+    <div class="box box--pozor">
+      <p>Podklady uvádějí dva vzorce pro dobu obratu: jeden s <strong>365</strong> dny, druhý s <strong>360</strong> dny a tržbami. Výsledky se proto mírně liší (60,8 × 60 dní). U maturity řekni, se kterým vzorcem počítáš.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p><strong>360 dní</strong> je zjednodušený „finanční rok“ (12 měsíců po 30 dnech), běžně se používá ve finančních výpočtech.</p>
+      <p style="margin-bottom:0"><strong>Průměrná zásoba</strong> se nejjednodušeji spočítá jako (počáteční stav + konečný stav) / 2. Počet obrátek z <strong>tržeb</strong> vychází vyšší než ze spotřeby, protože v tržbách je i marže.</p>
+    </div>
+  </section>
+
+  <!-- ===== 3. Just in Time ===== -->
+  <section class="kapitola" id="jit" data-pozadavky="4">
+    <h2>Metoda Just in Time</h2>
+    <div class="box box--definice">
+      <p><strong>Just in Time (JIT)</strong> je metoda řízení logistiky (filozofie výroby), která organizuje logistické toky tak, aby byly minimalizovány <strong>dopravní a skladovací náklady</strong>.</p>
+    </div>
+    <p>„JIT“ znamená:</p>
+    <div class="mrizka" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
+      <div class="ukazatel"><small>ve správnou</small><b>dobu</b></div>
+      <div class="ukazatel"><small>na správném</small><b>místě</b></div>
+      <div class="ukazatel"><small>ve správném</small><b>množství</b></div>
+      <div class="ukazatel"><small>ve správné</small><b>kvalitě</b></div>
+      <div class="ukazatel"><small>a správné</small><b>ceně</b></div>
+    </div>
+    <p><strong>Princip:</strong> jednotlivé materiálové subdodávky přicházejí do výroby tak, aby byly k dispozici <strong>přesně v ten moment, kdy se mají ve výrobním procesu použít</strong>. Pohyb materiálu v podniku se minimalizuje a výrobní linky jsou organizované tak, aby se co nejvíc snižovaly skladovací a dopravní náklady.</p>
+
+    <figure class="ilustrace" aria-label="Klasické zásobování přes velký sklad a JIT s malými dávkami přímo k lince">
+      <svg viewBox="0 0 400 150" style="max-width:520px">
+        <text x="6" y="14" font-size="13" font-weight="600" class="f-ink">Klasicky: velké dodávky přes sklad</text>
+        <g class="vyjed" style="--d:.1s">
+          <rect x="6" y="24" width="84" height="34" rx="8" class="f-surface s-line"/>
+          <text x="48" y="46" text-anchor="middle" font-size="12.5" class="f-ink">Dodavatel</text>
+        </g>
+        <path d="M92 41 H148 M141 35 L148 41 L141 47" pathLength="1" class="kresli s-muted f-none" stroke-width="2" style="--d:.2s"/>
+        <g class="vyjed" style="--d:.4s">
+          <rect x="150" y="20" width="100" height="42" rx="8" class="f-warn-soft s-warn"/>
+          <text x="200" y="46" text-anchor="middle" font-size="13" class="f-ink">velký sklad</text>
+        </g>
+        <path d="M252 41 H308 M301 35 L308 41 L301 47" pathLength="1" class="kresli s-muted f-none" stroke-width="2" style="--d:.5s"/>
+        <g class="vyjed" style="--d:.7s">
+          <rect x="310" y="24" width="84" height="34" rx="8" class="f-surface s-line"/>
+          <text x="352" y="46" text-anchor="middle" font-size="12.5" class="f-ink">Linka</text>
+        </g>
+        <text x="6" y="90" font-size="13" font-weight="600" class="f-accent">JIT: malé dávky přímo k lince</text>
+        <g class="vyjed" style="--d:.9s">
+          <rect x="6" y="100" width="84" height="34" rx="8" class="f-surface s-line"/>
+          <text x="48" y="122" text-anchor="middle" font-size="12.5" class="f-ink">Dodavatel</text>
+        </g>
+        <path d="M92 117 H308 M301 111 L308 117 L301 123" pathLength="1" class="kresli s-accent f-none" stroke-width="2" style="--d:1s"/>
+        <g class="vyjed" style="--d:1.3s">
+          <rect x="120" y="111" width="12" height="12" rx="2" class="f-accent"/>
+          <rect x="160" y="111" width="12" height="12" rx="2" class="f-accent"/>
+          <rect x="200" y="111" width="12" height="12" rx="2" class="f-accent"/>
+          <rect x="240" y="111" width="12" height="12" rx="2" class="f-accent"/>
+          <rect x="280" y="111" width="12" height="12" rx="2" class="f-accent"/>
+        </g>
+        <g class="vyjed" style="--d:1.1s">
+          <rect x="310" y="100" width="84" height="34" rx="8" class="f-surface s-line"/>
+          <text x="352" y="122" text-anchor="middle" font-size="12.5" class="f-ink">Linka</text>
+        </g>
+      </svg>
+      <figcaption>JIT sklad skoro nepotřebuje. Díly přijíždějí po malých dávkách, když je linka zrovna potřebuje.</figcaption>
+    </figure>
+
+    <h3>Odkud to je</h3>
+    <p>Autorem konceptu JIT je japonská automobilka <strong>Toyota</strong>. Základy byly položeny už v roce <strong>1926</strong>, největší rozmach nastal v <strong>80. letech 20. století v Japonsku a USA</strong>.</p>
+
+    <div class="box box--pozor">
+      <p>JIT klade velmi vysoké nároky na <strong>naprosto přesnou koordinaci</strong> všech souvisejících procesů a toků a na <strong>absolutní spolehlivost dodavatelů</strong>. Sklad, který by zpoždění zachytil, tu skoro není.</p>
+    </div>
+
+    <div class="simulace" id="jit-sim">
+      <p style="margin-top:0"><strong>Kolik jistoty si koupíš?</strong> Modelová linka spotřebuje 100 dílů za hodinu, díl stojí 500 Kč a hodina stojící linky stojí 200 000 Kč.</p>
+      <svg viewBox="0 0 400 96" style="max-width:520px;margin:0 auto" aria-label="Porovnání zásoby a zpoždění dodávky v hodinách">
+        <text x="4" y="24" font-size="12.5" class="f-ink">zásoba</text>
+        <rect x="70" y="10" width="320" height="20" rx="3" class="f-surface2"/>
+        <rect class="jit-zasoba f-accent" x="70" y="10" width="0" height="20" rx="3"/>
+        <text x="4" y="58" font-size="12.5" class="f-ink">zpoždění</text>
+        <rect x="70" y="44" width="320" height="20" rx="3" class="f-surface2"/>
+        <rect class="jit-kryto f-warn" x="70" y="44" width="0" height="20" rx="3"/>
+        <rect class="jit-stoji f-bad" x="70" y="44" width="0" height="20" rx="3"/>
+        <text x="70" y="86" text-anchor="middle">0</text>
+        <text x="150" y="86" text-anchor="middle">12</text>
+        <text x="230" y="86" text-anchor="middle">24</text>
+        <text x="310" y="86" text-anchor="middle">36</text>
+        <text x="384" y="86" text-anchor="middle">48 h</text>
+      </svg>
+      <div class="posuvnik"><label for="jit-z">Zásoba u linky (na kolik hodin výroby)</label><output id="jit-z-o"></output><input id="jit-z" type="range" min="0" max="48" step="2" value="2"></div>
+      <div class="posuvnik"><label for="jit-d">Zpoždění dodávky</label><output id="jit-d-o"></output><input id="jit-d" type="range" min="0" max="48" step="2" value="0"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Peníze vázané v zásobě</small><b id="jit-v"></b></div>
+        <div class="ukazatel"><small>Linka stojí</small><b id="jit-s"></b></div>
+        <div class="ukazatel"><small>Ztráta ze stání</small><b id="jit-l"></b></div>
+      </div>
+      <p id="jit-t" style="margin:10px 0 0;font-size:.92rem" aria-live="polite"></p>
+    </div>
+
+    <div class="box box--doplneno">
+      <ul style="margin:0">
+        <li><strong>Výhody:</strong> málo peněz vázaných v zásobách, menší sklady, méně zásob, které se zkazí nebo zastarají.</li>
+        <li><strong>Riziko:</strong> výpadek jediného dodavatele může zastavit výrobu. Viděli jsme to v letech 2021–2022, kdy automobilky kvůli nedostatku čipů přerušovaly výrobu.</li>
+        <li><strong>Kanban:</strong> systém kartiček z Toyoty. Kartička je signál, že následující pracoviště potřebuje doplnit díly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 4. Zásady racionálního zásobování ===== -->
+  <section class="kapitola" id="zasady" data-pozadavky="5">
+    <h2>Zásady racionálního zásobování</h2>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)"><p style="margin:0">Nakupuj <strong>jen to, co potřebuješ</strong>.</p></div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)"><p style="margin:0">Nakupuj <strong>jen tolik, kolik potřebuješ</strong>.</p></div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)"><p style="margin:0"><strong>Zvažuj náklady</strong> na pořízení zásob a podle toho se rozhoduj, <strong>kdy a kolik</strong> nakoupit.</p></div>
+    </div>
+    <p>Základní předpoklad je <strong>co nejpřesnější znalost objemu výroby, který je firma schopna na trhu prodat</strong>. Bez ní nevíš, kolik materiálu budeš potřebovat.</p>
+    <p>Se zásobami jsou spojené náklady a finanční zdroje, proto musíme:</p>
+    <ol>
+      <li>zabezpečit <strong>plynulý chod výroby</strong>,</li>
+      <li>zajistit, aby <strong>celkové náklady</strong> se zásobami spojené byly <strong>co nejmenší</strong>.</li>
+    </ol>
+    <div class="box box--tip">
+      <p>Tyhle dva cíle jdou proti sobě. Velký sklad hlídá plynulou výrobu, ale stojí peníze. Malý sklad šetří, ale hrozí, že materiál dojde.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Kterou zásadu tady firma porušila?",
+        "kose": ["Jen to, co potřebuješ", "Jen tolik, kolik potřebuješ", "Zvaž náklady: kdy a kolik"],
+        "polozky": [
+          ["pekárna koupí mandle, ale žádný výrobek s nimi nepeče", 0],
+          ["truhlář si pořídí barvu na kov, kterou nikdy nepoužije", 0],
+          ["kavárna objedná mléko na půl roku a většina se zkazí", 1],
+          ["krejčí má látku na 5 000 šatů a prodá jich 500", 1],
+          ["firma objednává šrouby každý den a doprava stojí víc než šrouby", 2],
+          ["e-shop platí zvláštní kamion na každou krabici", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Kolik nakoupit najednou</h3>
+    <div class="box box--doplneno">
+      <p>Třetí zásadu ukazuje jednoduchý model. Maturita ho nevyžaduje, ale pomůže ti pochopit, proč „kolik nakoupit“ není jedno. Firma ročně spotřebuje <strong>3 600 ks</strong>, jedna objednávka (doprava, papírování) stojí <strong>500 Kč</strong> a skladování 1 ks stojí <strong>40 Kč za rok</strong>. Průměrná zásoba je polovina dodávky.</p>
+      <div class="simulace" id="davka" style="margin-bottom:0">
+        <div class="legenda">
+          <span style="--c:var(--warn)">náklady na pořízení</span>
+          <span style="--c:var(--accent)">náklady na skladování</span>
+          <span style="--c:var(--text)">celkem</span>
+        </div>
+        <svg viewBox="0 0 400 226" aria-label="Graf nákladů na pořízení a skladování podle velikosti dodávky"></svg>
+        <div class="posuvnik"><label for="da-q">Velikost jedné dodávky</label><output id="da-q-o"></output><input id="da-q" type="range" min="50" max="1000" step="50" value="100"></div>
+        <div class="ukazatele">
+          <div class="ukazatel"><small>Dodávek za rok</small><b id="da-n"></b></div>
+          <div class="ukazatel"><small>Pořízení za rok</small><b id="da-p"></b></div>
+          <div class="ukazatel"><small>Skladování za rok</small><b id="da-s"></b></div>
+          <div class="ukazatel"><small>Celkem za rok</small><b id="da-c"></b></div>
+        </div>
+        <p id="da-t" style="margin:10px 0 0;font-size:.92rem" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Metoda ABC ===== -->
+  <section class="kapitola" id="abc" data-pozadavky="6">
+    <h2>Metoda ABC</h2>
+    <div class="box box--definice">
+      <p><strong>ABC analýza</strong> je metoda řízení zásob. Vychází z <strong>Paretova pravidla</strong> a člení zásoby do 3 skupin.</p>
+    </div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">A – cca 80 %</h3>
+        <p style="margin:0">Základní suroviny, které firma nezbytně potřebuje pro výrobu. Tvoří cca <strong>80 % hodnoty spotřeby</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">B – cca 15 %</h3>
+        <p style="margin:0">Zásoby, které se snadno a rychle objednají a jejich spotřeba není tak nákladově významná. Musíme je hlídat a stanovit <strong>minimální skladový limit</strong>. Cca <strong>15 % hodnoty spotřeby</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--text-muted)">
+        <h3 style="margin-top:0">C – cca 5 %</h3>
+        <p style="margin:0"><strong>Největší co do počtu druhů</strong>, ale spotřeba vyjádřená ve financích je nejméně významná. Cca <strong>5 % hodnoty spotřeby</strong>.</p>
+      </div>
+    </div>
+    <div class="box box--pozor">
+      <p>Procenta jsou podíl na <strong>hodnotě spotřeby</strong>, ne na počtu druhů. Skupina C má nejvíc druhů a nejmenší hodnotu.</p>
+    </div>
+
+    <div class="box box--doplneno">
+      <figure class="ilustrace" style="margin:4px 0 12px" aria-label="Skupina A má málo druhů a velkou hodnotu, skupina C naopak">
+        <svg viewBox="0 0 400 128" style="max-width:520px">
+          <text x="10" y="16" font-size="12.5" class="f-ink">Podíl na počtu druhů (zhruba)</text>
+          <g class="vyjed" style="--d:.1s">
+            <rect x="10" y="24" width="76" height="30" class="f-accent"/>
+            <text x="48" y="44" text-anchor="middle" font-size="12" font-weight="600" style="fill:var(--accent-text)">A 20 %</text>
+            <rect x="86" y="24" width="114" height="30" class="f-accent-soft s-accent"/>
+            <text x="143" y="44" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">B 30 %</text>
+            <rect x="200" y="24" width="190" height="30" class="f-surface2 s-line"/>
+            <text x="295" y="44" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">C 50 %</text>
+          </g>
+          <text x="10" y="86" font-size="12.5" class="f-ink">Podíl na hodnotě spotřeby</text>
+          <text x="390" y="86" text-anchor="end" font-size="12" font-weight="600" class="f-ink">C 5 %</text>
+          <g class="vyjed" style="--d:.5s">
+            <rect x="10" y="94" width="304" height="30" class="f-accent"/>
+            <text x="162" y="114" text-anchor="middle" font-size="12" font-weight="600" style="fill:var(--accent-text)">A 80 %</text>
+            <rect x="314" y="94" width="57" height="30" class="f-accent-soft s-accent"/>
+            <text x="342" y="114" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">B 15 %</text>
+            <rect x="371" y="94" width="19" height="30" class="f-surface2 s-line"/>
+          </g>
+        </svg>
+        <figcaption>Málo druhů nese skoro všechny peníze. To je Paretovo pravidlo (80/20).</figcaption>
+      </figure>
+      <p><strong>Paretovo pravidlo:</strong> menšina příčin způsobuje většinu výsledku. Podíly druhů (20 / 30 / 50 %) jsou běžně uváděné orientační hodnoty.</p>
+      <p style="margin-bottom:0"><strong>Co s tím v praxi:</strong> skupinu A plánuj a kontroluj nejpřesněji, protože je v ní nejvíc peněz. Skupinu C objednávej ve větších dávkách a kontroluj méně často.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Truhlárna spotřebuje za rok materiál za 1 000 000 Kč. Rozděl ho metodou ABC: A dá dohromady 80 % hodnoty, B 15 % a C 5 %.",
+        "kose": ["A (cca 80 %)", "B (cca 15 %)", "C (cca 5 %)"],
+        "polozky": [
+          ["dubové dřevo: 520 000 Kč", 0], ["překližka: 280 000 Kč", 0],
+          ["lak: 70 000 Kč", 1], ["kování: 50 000 Kč", 1], ["lepidlo: 30 000 Kč", 1],
+          ["brusný papír: 15 000 Kč", 2], ["šrouby: 12 000 Kč", 2], ["pracovní rukavice: 9 000 Kč", 2], ["čisticí hadry: 8 000 Kč", 2], ["kancelářské potřeby: 6 000 Kč", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 6. Pilový diagram ===== -->
+  <section class="kapitola" id="pilovy-diagram" data-pozadavky="7">
+    <h2>Pilový diagram</h2>
+    <div class="box box--definice">
+      <p><strong>Pilový diagram</strong> představuje schéma pohybu výrobních zásob. Jsou v něm znázorněné jednotlivé typy zásob podle jejich funkčních složek.</p>
+    </div>
+    <p>Tahle klasifikace má význam pro <strong>operativní řízení zásob</strong>. To má zabezpečit udržování konkrétních druhů zásob v takové výši a struktuře, která odpovídá potřebám podniku.</p>
+
+    <h3>Druhy zásob</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">a) Běžná</div>
+        <div class="karta__rub"><p style="margin:0">Pokrývá každodenní spotřebu.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">b) Pojistná</div>
+        <div class="karta__rub"><p style="margin:0">Kryje zpoždění v dodávkách nebo náhlé zvýšení spotřeby v důsledku zvýšení poptávky.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">c) Technická</div>
+        <div class="karta__rub"><p style="margin:0">Materiál, který se musí před vstupem do výroby ještě upravit, např. sušení dřeva.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">d) Příležitostná</div>
+        <div class="karta__rub"><p style="margin:0">Využití výprodejů a množstevních slev. Může ji ovlivnit i sezóna nebo vhodné období.</p></div>
+      </div>
+    </div>
+
+    <h3>Jak diagram vypadá</h3>
+    <p>Čas je na vodorovné ose (0 až 24 dní), množství na svislé. Klesající čára je <strong>spotřeba</strong>, svislý skok nahoru je <strong>dodávka</strong>. Proto ty „zuby pily“. Projdi si je jeden po druhém.</p>
+    <div class="simulace" id="pila">
+      <div class="tridicka__ovladani" style="margin:0 0 10px">
+        <button class="chip" type="button" data-zub="0">1. zub</button>
+        <button class="chip" type="button" data-zub="1">2. zub</button>
+        <button class="chip" type="button" data-zub="2">3. zub</button>
+        <button class="chip" type="button" data-zub="3">4. zub</button>
+      </div>
+      <svg viewBox="0 0 400 226" aria-label="Pilový diagram z podkladů: hladiny zásob a stav materiálu za 24 dní"></svg>
+      <p class="pila-text" style="margin:10px 0 0" aria-live="polite"></p>
+    </div>
+    <div class="ukazatele" style="margin-bottom:16px">
+      <div class="ukazatel"><small>Příležitostná zásoba</small><b>hladina 100</b></div>
+      <div class="ukazatel"><small>Běžná zásoba</small><b>hladina 80</b></div>
+      <div class="ukazatel"><small>Technická zásoba</small><b>hladina 30</b></div>
+      <div class="ukazatel"><small>Pojistná zásoba</small><b>hladina 10</b></div>
+    </div>
+    <p>Příležitostná zásoba je horní hranice při mimořádném nákupu. Běžná je maximální běžný stav při dodávce materiálu. Pojistná je minimální rezervní stav.</p>
+
+    <h3>Postav si vlastní pilu</h3>
+    <div class="simulace" id="pil-sim">
+      <div class="legenda">
+        <span style="--c:var(--accent)">stav materiálu</span>
+        <span style="--c:var(--warn)">pojistná zásoba</span>
+        <span style="--c:var(--text-muted)">průměrná zásoba</span>
+        <span style="--c:var(--bad)">výroba stojí</span>
+      </div>
+      <svg viewBox="0 0 400 226" aria-label="Živý pilový diagram podle nastavené dodávky, spotřeby a pojistné zásoby"></svg>
+      <div class="posuvnik"><label for="pl-q">Velikost dodávky</label><output id="pl-q-o"></output><input id="pl-q" type="range" min="20" max="200" step="10" value="100"></div>
+      <div class="posuvnik"><label for="pl-d">Denní spotřeba</label><output id="pl-d-o"></output><input id="pl-d" type="range" min="5" max="40" step="1" value="10"></div>
+      <div class="posuvnik"><label for="pl-p">Pojistná zásoba</label><output id="pl-p-o"></output><input id="pl-p" type="range" min="0" max="60" step="5" value="20"></div>
+      <div class="posuvnik"><label for="pl-z">Zpoždění první dodávky</label><output id="pl-z-o"></output><input id="pl-z" type="range" min="0" max="10" step="1" value="0"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Dodávka každých</small><b id="pl-i"></b></div>
+        <div class="ukazatel"><small>Průměrná zásoba</small><b id="pl-a"></b></div>
+        <div class="ukazatel"><small>Počet obrátek za rok</small><b id="pl-n"></b></div>
+        <div class="ukazatel"><small>Doba obratu</small><b id="pl-o"></b></div>
+      </div>
+      <p id="pl-t" style="margin:10px 0 0;font-size:.92rem" aria-live="polite"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>V simulaci je <strong>průměrná zásoba = pojistná zásoba + dodávka / 2</strong>. Běžná zásoba klesá rovnoměrně z plné dodávky k nule, takže v průměru je jí polovina, a pojistná zásoba leží ve skladu pořád. Příklad: dodávka 100 ks a pojistná 20 ks dají průměr 20 + 50 = 70 ks. Opožděná dodávka v modelu doplní sklad zpátky na plný stav.</p>
+    </div>
+    <div class="box box--tip">
+      <p>Vidíš tu vazbu na obrátky? Menší a častější dodávky snižují průměrnou zásobu a zvyšují počet obrátek. Větší pojistná zásoba chrání výrobu, ale obrátky snižuje.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "O jaký druh zásoby jde?",
+        "kose": ["Běžná", "Pojistná", "Technická", "Příležitostná"],
+        "polozky": [
+          ["plechy na každodenní výrobu", 0], ["materiál, který se spotřebuje podle denního plánu", 0],
+          ["rezerva pro případ, že dodavatel přijede pozdě", 1], ["rezerva na náhlý růst poptávky", 1],
+          ["dřevo, které se suší před výrobou", 2], ["materiál, který se musí před výrobou upravit", 2],
+          ["nákup ve výprodeji", 3], ["nákup kvůli množstevní slevě", 3], ["nákup před sezónou", 3]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 7. Logistika ===== -->
+  <section class="kapitola" id="logistika" data-pozadavky="8">
+    <h2>Logistika</h2>
+    <p>Samotný proces zásobování v sobě skrývá několik činností, které musí podnik provést: <strong>plánování materiálu, pořízení materiálu, skladování materiálu a výdej materiálu do výroby</strong>.</p>
+    <div class="box box--definice">
+      <p><strong>Logistika</strong> se zabývá toky <strong>zboží, peněz a informací</strong> mezi dodavatelem a odběratelem i uvnitř jednotlivých firem, včetně různých systémů skladování zásob. Jejím účelem je tyto toky <strong>optimalizovat</strong> tak, aby pro firmu představovaly <strong>co nejmenší náklady</strong>.</p>
+    </div>
+    <div class="simulace" id="logi">
+      <div class="tridicka__ovladani" style="margin:0 0 10px">
+        <button class="chip" type="button" data-tok="zbozi">Zboží</button>
+        <button class="chip" type="button" data-tok="penize">Peníze</button>
+        <button class="chip" type="button" data-tok="info">Informace</button>
+      </div>
+      <svg viewBox="0 0 400 186" style="max-width:520px;margin:0 auto" aria-label="Toky zboží, peněz a informací mezi dodavatelem, podnikem a odběratelem">
+        <g class="logi-tok" data-tok="zbozi">
+          <path d="M94 58 H154 M147 52 L154 58 L147 64" class="s-accent f-none" stroke-width="2.5"/>
+          <path d="M246 58 H306 M299 52 L306 58 L299 64" class="s-accent f-none" stroke-width="2.5"/>
+        </g>
+        <g class="logi-tok" data-tok="penize">
+          <path d="M154 78 H94 M101 72 L94 78 L101 84" class="s-warn f-none" stroke-width="2.5"/>
+          <path d="M306 78 H246 M253 72 L246 78 L253 84" class="s-warn f-none" stroke-width="2.5"/>
+        </g>
+        <g class="logi-tok" data-tok="info">
+          <path d="M101 92 L94 98 L101 104 M94 98 H154 M147 92 L154 98 L147 104" class="s-muted f-none" stroke-width="2.5" stroke-dasharray="5 3"/>
+          <path d="M253 92 L246 98 L253 104 M246 98 H306 M299 92 L306 98 L299 104" class="s-muted f-none" stroke-width="2.5" stroke-dasharray="5 3"/>
+        </g>
+        <rect x="6" y="50" width="84" height="56" rx="10" class="f-surface s-line" stroke-width="1.5"/>
+        <text x="48" y="83" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">Dodavatel</text>
+        <rect x="158" y="50" width="84" height="56" rx="10" class="f-accent-soft s-accent" stroke-width="1.5"/>
+        <text x="200" y="83" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">Podnik</text>
+        <rect x="310" y="50" width="84" height="56" rx="10" class="f-surface s-line" stroke-width="1.5"/>
+        <text x="352" y="83" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">Odběratel</text>
+        <text x="200" y="134" text-anchor="middle" font-size="12" class="f-muted">uvnitř podniku:</text>
+        <rect x="4" y="146" width="88" height="32" rx="8" class="f-surface2"/>
+        <text x="48" y="166" text-anchor="middle" font-size="12" class="f-ink">plánování</text>
+        <rect x="98" y="146" width="88" height="32" rx="8" class="f-surface2"/>
+        <text x="142" y="166" text-anchor="middle" font-size="12" class="f-ink">pořízení</text>
+        <rect x="192" y="146" width="88" height="32" rx="8" class="f-surface2"/>
+        <text x="236" y="166" text-anchor="middle" font-size="12" class="f-ink">skladování</text>
+        <rect x="286" y="146" width="110" height="32" rx="8" class="f-surface2"/>
+        <text x="341" y="166" text-anchor="middle" font-size="12" class="f-ink">výdej do výroby</text>
+      </svg>
+      <p class="logi-text" style="margin:10px 0 0" aria-live="polite"></p>
+    </div>
+
+    <details class="odhal">
+      <summary>Co se děje v jednotlivých činnostech</summary>
+      <div class="odhal__obsah">
+        <div class="box box--doplneno" style="margin:0">
+          <ul style="margin:0">
+            <li><strong>Plánování materiálu</strong> – co, kolik a kdy bude výroba potřebovat.</li>
+            <li><strong>Pořízení materiálu</strong> – výběr dodavatele, objednávka, doprava, přejímka.</li>
+            <li><strong>Skladování materiálu</strong> – uložení, ochrana před poškozením, evidence.</li>
+            <li><strong>Výdej materiálu do výroby</strong> – včas a ve správném množství na správné pracoviště.</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "O jaký tok jde?",
+        "kose": ["Tok zboží", "Tok peněz", "Tok informací"],
+        "polozky": [
+          ["kamion veze plechy do závodu", 0], ["přesun palet ze skladu k lince", 0],
+          ["odběratel zaplatí fakturu", 1], ["firma uhradí zálohu dodavateli", 1],
+          ["objednávka poslaná e-mailem", 2], ["telefonát o zpoždění dodávky", 2], ["písemné potvrzení termínu dodávky", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – zásobování podniku, oběžný majetek",
+        "karty": [
+          ["Oběžný majetek", "Majetek, který firma používá maximálně 1 rok, mění svou podobu a často se spotřebovává jednorázově."],
+          ["Tři části oběžného majetku", "Zásoby, pohledávky, finanční majetek."],
+          ["Koloběh oběžného majetku", "Peníze → materiál → polotovary a nedokončená výroba → hotové výrobky → prodej → peníze."],
+          ["Co patří do zásob", "Materiál, výrobky, zboží, nedokončená výroba a polotovary."],
+          ["Druhy materiálu", "Základní, pomocný, provozovací látky, náhradní díly, pohonné hmoty, drobné nářadí, obaly, kancelářské potřeby."],
+          ["Zboží", "Statky nakoupené za účelem dalšího prodeje v nezměněné podobě."],
+          ["Pohledávka", "Určitý nárok na zaplacení. Vzniká nejčastěji v dodavatelsko-odběratelských vztazích."],
+          ["Finanční majetek", "Hotové peníze a peníze na účtech, krátkodobé cenné papíry, ceniny (stravenky, kolky, poštovní známky)."],
+          ["Počet obrátek", "Celková spotřeba / průměrná zásoba, nebo tržby / průměrná zásoba."],
+          ["Doba obratu", "365 / počet obrátek, nebo průměrná zásoba / (tržby / 360)."],
+          ["Jak zvýšit počet obrátek", "Zvyšovat objem výroby při stejné průměrné zásobě, nebo snižovat průměrnou zásobu při stejné spotřebě."],
+          ["Just in Time", "Materiál je k dispozici přesně ve chvíli, kdy se má použít ve výrobě. Cíl: co nejnižší dopravní a skladovací náklady."],
+          ["Co JIT vyžaduje", "Naprosto přesnou koordinaci všech procesů a toků a absolutní spolehlivost dodavatelů."],
+          ["Zásady racionálního zásobování", "Nakupuj jen to, co potřebuješ. Jen tolik, kolik potřebuješ. Zvažuj náklady a podle nich se rozhoduj, kdy a kolik nakoupit."],
+          ["Metoda ABC", "Člení zásoby podle Paretova pravidla: A cca 80 %, B cca 15 %, C cca 5 % hodnoty spotřeby."],
+          ["Skupina C", "Největší počet druhů, ale nejmenší hodnota spotřeby."],
+          ["Pilový diagram", "Schéma pohybu výrobních zásob. Spotřeba je klesající čára, dodávka svislý skok nahoru."],
+          ["Čtyři druhy zásob", "Běžná (každodenní spotřeba), pojistná (zpoždění, náhlý růst spotřeby), technická (úprava před výrobou), příležitostná (výprodeje, slevy, sezóna)."],
+          ["Logistika", "Toky zboží, peněz a informací mezi firmami i uvnitř nich. Účel: optimalizovat je na co nejmenší náklady."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Oběžný majetek – definice a koloběh (peníze, materiál, nedokončená výroba, výrobky, peníze).</li>
+          <li>Dělení: zásoby (materiál a jeho druhy, výrobky, zboží, nedokončená výroba), pohledávky, finanční majetek.</li>
+          <li>Oběh zásob – vzorce pro počet obrátek a dobu obratu, dvě cesty ke zvýšení obrátek.</li>
+          <li>Just in Time – princip, „správně“ v pěti bodech, Toyota, nároky na koordinaci a dodavatele.</li>
+          <li>Zásady racionálního zásobování, předpoklad (znalost prodejného objemu výroby) a dva cíle.</li>
+          <li>Metoda ABC – Paretovo pravidlo a tři skupiny s procenty.</li>
+          <li>Pilový diagram – nakreslit, popsat osy a čtyři druhy zásob.</li>
+          <li>Logistika – činnosti zásobování, toky zboží, peněz a informací, účel.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 9. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Jak dlouho firma nejvýše používá oběžný majetek?",
+           "moznosti": ["Maximálně 1 rok", "Maximálně 3 roky", "Maximálně 5 let", "Maximálně 10 let"],
+           "spravne": 0, "vysvetleni": "Majetek používaný déle než rok je dlouhodobý."},
+          {"typ": "vice", "otazka": "Co řadíme do oběžného majetku?",
+           "moznosti": ["Zásoby", "Pohledávky", "Finanční majetek", "Výrobní halu"],
+           "spravne": [0, 1, 2], "vysvetleni": "Výrobní hala slouží déle než rok, je to dlouhodobý hmotný majetek."},
+          {"typ": "jedna", "otazka": "Co v koloběhu oběžného majetku následuje hned po materiálu?",
+           "moznosti": ["Polotovary a nedokončená výroba", "Hotové výrobky", "Peníze", "Pohledávky"],
+           "spravne": 0, "vysvetleni": "Materiál se vydá ze skladu do výroby a vznikají polotovary a nedokončená výroba."},
+          {"typ": "jedna", "otazka": "Látka při výrobě šatů je…",
+           "moznosti": ["základní materiál", "pomocný materiál", "provozovací látka", "zboží"],
+           "spravne": 0, "vysvetleni": "Tvoří podstatu výrobku. Niti a knoflíky by byly pomocný materiál."},
+          {"typ": "jedna", "otazka": "Čisticí prostředky a oleje jsou…",
+           "moznosti": ["provozovací látky", "základní materiál", "pomocný materiál", "náhradní díly"],
+           "spravne": 0, "vysvetleni": "Nepoužívají se přímo k výrobě, ale jsou potřeba k provozu podniku."},
+          {"typ": "jedna", "otazka": "Zboží jsou statky…",
+           "moznosti": ["nakoupené k dalšímu prodeji v nezměněné podobě", "vyrobené ve vlastním podniku a připravené k prodeji", "rozpracované a ještě nedokončené ve výrobě", "nakoupené k opravám strojů a zařízení"],
+           "spravne": 0, "vysvetleni": "Firma zboží nijak neupravuje. Hotové výrobky z vlastní výroby jsou výrobky."},
+          {"typ": "vice", "otazka": "Co patří do <b>finančního majetku</b> v rámci oběžného majetku?",
+           "moznosti": ["Peníze na účtu", "Stravenky a kolky", "Krátkodobé cenné papíry", "Nezaplacená faktura od odběratele"],
+           "spravne": [0, 1, 2], "vysvetleni": "Nezaplacená faktura je pohledávka."},
+          {"typ": "ano-ne", "otazka": "Firma může drobný hmotný dlouhodobý majetek zařadit do oběžného majetku.",
+           "spravne": true, "vysvetleni": "Záleží na organizaci, jestli ho zařadí do dlouhodobého hmotného, nebo do oběžného majetku."},
+          {"typ": "ano-ne", "otazka": "Pohledávka je závazek firmy zaplatit dodavateli.",
+           "spravne": false, "vysvetleni": "Pohledávka je nárok na zaplacení. Firma má dostat peníze, ne je platit."},
+          {"typ": "cislo", "otazka": "Celková spotřeba za rok je 900 000 Kč, průměrná zásoba 150 000 Kč. Jaký je počet obrátek?",
+           "spravne": 6, "jednotka": "obrátek", "vysvetleni": "900 000 / 150 000 = 6."},
+          {"typ": "cislo", "otazka": "Zásoba se za rok otočí 5×. Jaká je doba obratu při 365 dnech?",
+           "spravne": 73, "jednotka": "dní", "vysvetleni": "365 / 5 = 73 dní."},
+          {"typ": "cislo", "otazka": "Průměrná zásoba je 100 000 Kč, tržby 720 000 Kč. Jaká je doba obratu podle vzorce s 360 dny?",
+           "spravne": 50, "jednotka": "dní", "vysvetleni": "Denní tržby: 720 000 / 360 = 2 000 Kč. Doba obratu: 100 000 / 2 000 = 50 dní."},
+          {"typ": "jedna", "otazka": "O co u oběhu zásob podnikateli jde?",
+           "moznosti": ["Zvyšovat počet obrátek a snižovat dobu obratu", "Snižovat počet obrátek a zvyšovat dobu obratu", "Zvyšovat počet obrátek i dobu obratu", "Snižovat počet obrátek i dobu obratu"],
+           "spravne": 0, "vysvetleni": "Čím rychleji se zásoba otočí, tím kratší dobu v ní leží peníze."},
+          {"typ": "vice", "otazka": "Jak lze zvýšit počet obrátek?",
+           "moznosti": ["Zvýšit objem výroby při stejné průměrné zásobě", "Snížit průměrnou zásobu při stejné roční spotřebě", "Zvýšit průměrnou zásobu při stejné roční spotřebě", "Snížit objem výroby při stejné průměrné zásobě"],
+           "spravne": [0, 1], "vysvetleni": "Počet obrátek je podíl spotřeby a zásoby. Roste, když roste spotřeba nebo klesá zásoba."},
+          {"typ": "jedna", "otazka": "Která firma je autorem konceptu Just in Time?",
+           "moznosti": ["Toyota", "Ford", "Volkswagen", "Honda"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "V čem je princip metody Just in Time?",
+           "moznosti": ["Materiál je k dispozici přesně ve chvíli, kdy se má použít", "Materiál se nakupuje do zásoby na celý rok dopředu", "Materiál se nakupuje hlavně ve výprodejích a se slevou", "Materiál se před výrobou nejdřív dlouho skladuje a upravuje"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Které náklady chce metoda Just in Time minimalizovat?",
+           "moznosti": ["Dopravní a skladovací", "Mzdové a sociální", "Odpisy a úroky", "Reklamní a prodejní"],
+           "spravne": 0},
+          {"typ": "vice", "otazka": "Co metoda Just in Time vyžaduje?",
+           "moznosti": ["Přesnou koordinaci všech procesů a toků", "Absolutní spolehlivost dodavatelů", "Velký sklad s vysokou pojistnou zásobou", "Nákup co největších dodávek najednou"],
+           "spravne": [0, 1], "vysvetleni": "JIT stojí na minimálních zásobách, takže zpoždění nic nezachytí."},
+          {"typ": "vice", "otazka": "Které věty jsou zásady racionálního zásobování?",
+           "moznosti": ["Nakupuj jen to, co potřebuješ", "Nakupuj jen tolik, kolik potřebuješ", "Zvažuj náklady a podle nich rozhoduj, kdy a kolik nakoupit", "Nakupuj vždy u nejlevnějšího dodavatele"],
+           "spravne": [0, 1, 2], "vysvetleni": "Nejnižší cena mezi zásadami není. Rozhodují celkové náklady."},
+          {"typ": "ano-ne", "otazka": "Základním předpokladem racionálního zásobování je co nejpřesnější znalost objemu výroby, který firma dokáže prodat.",
+           "spravne": true, "vysvetleni": "Bez ní firma neví, kolik materiálu bude potřebovat."},
+          {"typ": "jedna", "otazka": "Co musí podnik u zásob zajistit?",
+           "moznosti": ["Plynulý chod výroby a co nejmenší celkové náklady", "Co největší sklad a co nejvyšší pojistnou zásobu", "Nulové zásoby a co nejvyšší objem výroby", "Stálou výši zásob a stálého dodavatele"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Z čeho metoda ABC vychází?",
+           "moznosti": ["Z Paretova pravidla", "Z metody Just in Time", "Z pilového diagramu", "Z koloběhu oběžného majetku"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Jaký podíl na hodnotě spotřeby tvoří skupina <b>A</b>?",
+           "moznosti": ["cca 80 %", "cca 50 %", "cca 15 %", "cca 5 %"],
+           "spravne": 0, "vysvetleni": "B tvoří cca 15 % a C cca 5 %."},
+          {"typ": "jedna", "otazka": "Která skupina v metodě ABC je největší co do počtu druhů?",
+           "moznosti": ["C", "A", "B", "Všechny jsou stejně velké"],
+           "spravne": 0, "vysvetleni": "Skupina C má nejvíc druhů, ale ve financích je nejméně významná."},
+          {"typ": "jedna", "otazka": "U které skupiny metody ABC se podle podkladů stanovuje minimální skladový limit?",
+           "moznosti": ["B", "A", "C", "U žádné"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Sušení dřeva před vstupem do výroby je příklad zásoby…",
+           "moznosti": ["technické", "běžné", "pojistné", "příležitostné"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Nákup materiálu ve výprodeji vytvoří zásobu…",
+           "moznosti": ["příležitostnou", "běžnou", "pojistnou", "technickou"],
+           "spravne": 0},
+          {"typ": "jedna", "otazka": "Která zásoba kryje zpoždění v dodávkách nebo náhlé zvýšení spotřeby?",
+           "moznosti": ["Pojistná", "Běžná", "Technická", "Příležitostná"],
+           "spravne": 0},
+          {"typ": "ano-ne", "otazka": "V pilovém diagramu znamená klesající čára spotřebu a svislý skok nahoru dodávku.",
+           "spravne": true},
+          {"typ": "cislo", "otazka": "Dodávka je 100 ks a pojistná zásoba 20 ks. Jaká je průměrná zásoba podle modelu z kapitoly o pilovém diagramu?",
+           "spravne": 70, "jednotka": "ks", "vysvetleni": "20 + 100 / 2 = 70 ks."},
+          {"typ": "vice", "otazka": "Jakými toky se zabývá logistika?",
+           "moznosti": ["Toky zboží", "Toky peněz", "Toky informací", "Toky zaměstnanců mezi firmami"],
+           "spravne": [0, 1, 2]},
+          {"typ": "jedna", "otazka": "Jaký je účel logistiky?",
+           "moznosti": ["Optimalizovat toky, aby stály co nejméně", "Zvětšit sklady a zásoby podniku", "Zvýšit prodejní ceny výrobků", "Rozdělit zásoby do tří skupin"],
+           "spravne": 0},
+          {"typ": "ano-ne", "otazka": "Logistika se zabývá jen doručením zboží mezi firmami, co se děje uvnitř firmy, ji nezajímá.",
+           "spravne": false, "vysvetleni": "Zabývá se toky i uvnitř jednotlivých firem, včetně systémů skladování."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .kol-uzel rect { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; transition: fill .3s, stroke .3s; }
+  .kol-uzel .kol-t { fill: var(--text); transition: fill .3s; }
+  .kol-uzel.aktivni rect { fill: var(--accent); stroke: var(--accent); }
+  .kol-uzel.aktivni .kol-t { fill: var(--accent-text); }
+  .kol-sip { fill: none; stroke: var(--text-muted); stroke-width: 1.5; transition: stroke .3s, stroke-width .3s; }
+  .kol-sip.aktivni { stroke: var(--accent); stroke-width: 3; }
+  .jit-zasoba, .jit-kryto, .jit-stoji { transition: width .4s var(--ease), x .4s var(--ease); }
+  .logi-tok { opacity: .15; transition: opacity .3s; }
+  .logi-tok.aktivni { opacity: 1; }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { svg, kc, cislo, $, $$ } = window.Ucebna;
+  const dec = (n, d = 1) => n.toLocaleString("cs-CZ", { maximumFractionDigits: d });
+  const dny = (n) => {
+    const r = Math.round(n * 10) / 10;
+    if (!Number.isInteger(r)) return dec(r) + " dne";
+    return dec(r) + (r === 1 ? " den" : r >= 2 && r <= 4 ? " dny" : " dní");
+  };
+  const text = (x, y, s, a = "middle") => Object.assign(svg("text", { x, y, "text-anchor": a }), { textContent: s });
+
+  /* --- Koloběh oběžného majetku (krokovaný) --- */
+  (() => {
+    const box = $("#kolobeh");
+    const KROKY = [
+      { uzel: 0, sip: -1, forma: "finanční majetek", text: "Firma má peníze na účtu. Za ně nakoupí materiál." },
+      { uzel: 1, sip: 0, forma: "zásoby", text: "Nákupem se z peněz stal materiál. Leží ve skladu, dokud ho nepotřebuje výroba." },
+      { uzel: 2, sip: 1, forma: "zásoby", text: "Výdejem ze skladu jde materiál do výroby. Vznikají polotovary a nedokončená výroba." },
+      { uzel: 3, sip: 2, forma: "zásoby", text: "Výrobek je hotový a převede se na sklad. Čeká na prodej." },
+      { uzel: -1, sip: 3, forma: "pohledávka", text: "Firma výrobky prodá. Dokud odběratel nezaplatí, má pohledávku. Až zaplatí, jsou z ní zase peníze a kolo se točí znovu." },
+    ];
+    let krok = 0;
+    function ukaz() {
+      const k = KROKY[krok];
+      $$(".kol-uzel", box).forEach((u) => u.classList.toggle("aktivni", +u.dataset.i === k.uzel));
+      $$(".kol-sip", box).forEach((s) => s.classList.toggle("aktivni", +s.dataset.i === k.sip));
+      $(".kol-forma", box).textContent = k.forma;
+      $(".kol-text", box).textContent = k.text;
+    }
+    $("[data-akce=dalsi]", box).addEventListener("click", () => { krok = (krok + 1) % KROKY.length; ukaz(); });
+    ukaz();
+  })();
+
+  /* --- Kalkulačka počtu obrátek a doby obratu --- */
+  (() => {
+    const box = $("#obratky");
+    const plocha = $("svg", box), sp = $("#ob-s"), za = $("#ob-z");
+    function spocti() {
+      const s = +sp.value, z = +za.value, n = s / z;
+      $("#ob-s-o").textContent = kc(s);
+      $("#ob-z-o").textContent = kc(z);
+      $("#ob-n").textContent = dec(n, 2) + "×";
+      $("#ob-d").textContent = dny(365 / n);
+      $("#ob-d2").textContent = dny(360 / n);
+      $("#ob-t").textContent = `Sklad se za rok ${dec(n, 2)}× spotřebuje a nahradí novým. Jedna obrátka trvá ${dny(365 / n)}.`;
+      // Pruh roku: každý dílek = jedna obrátka, poslední může být neúplný
+      plocha.innerHTML = "";
+      const L = 10, S = 380, sirka = S / n;
+      for (let i = 0; i < Math.ceil(n); i++) {
+        const w = Math.min(sirka, S - i * sirka);
+        plocha.append(svg("rect", { x: L + i * sirka, y: 4, width: Math.max(0.5, w - 1), height: 20, rx: 2, class: "f-accent", opacity: i % 2 ? 0.45 : 0.9 }));
+      }
+      const popis = svg("text", { x: 200, y: 40, "text-anchor": "middle" });
+      popis.textContent = "1 rok";
+      plocha.append(popis);
+    }
+    const nastav = (s, z) => { sp.value = s; za.value = z; spocti(); };
+    [sp, za].forEach((i) => i.addEventListener("input", spocti));
+    $("[data-akce=vychozi]", box).addEventListener("click", () => {
+      nastav(1200000, 200000);
+    });
+    $("[data-akce=m1]", box).addEventListener("click", () => {
+      nastav(1500000, 200000);
+      $("#ob-t").textContent = "Možnost 1: spotřeba 1 500 000 Kč, zásoba stejná. Počet obrátek vzrostl ze 6 na 7,5 a doba obratu klesla ze 60,8 na 48,7 dne.";
+    });
+    $("[data-akce=m2]", box).addEventListener("click", () => {
+      nastav(1200000, 160000);
+      $("#ob-t").textContent = "Možnost 2: spotřeba stejná, zásoba 160 000 Kč. Výsledek je stejný jako u možnosti 1: 7,5 obrátky a 48,7 dne.";
+    });
+    spocti();
+  })();
+
+  /* --- Just in Time: zásoba proti zpoždění dodávky --- */
+  (() => {
+    const box = $("#jit-sim");
+    const NA_HODINU = 100 * 500, STANI = 200000, MERITKO = 320 / 48, X0 = 70;
+    function spocti() {
+      const z = +$("#jit-z").value, d = +$("#jit-d").value, stoji = Math.max(0, d - z);
+      $("#jit-z-o").textContent = z + " h";
+      $("#jit-d-o").textContent = d + " h";
+      $("#jit-v").textContent = kc(z * NA_HODINU);
+      const s = $("#jit-s"), l = $("#jit-l");
+      s.textContent = stoji + " h";
+      l.textContent = kc(stoji * STANI);
+      s.style.color = l.style.color = stoji > 0 ? "var(--bad)" : "var(--ok)";
+      $(".jit-zasoba", box).setAttribute("width", z * MERITKO);
+      $(".jit-kryto", box).setAttribute("width", Math.min(z, d) * MERITKO);
+      const st = $(".jit-stoji", box);
+      st.setAttribute("x", X0 + Math.min(z, d) * MERITKO);
+      st.setAttribute("width", stoji * MERITKO);
+      $("#jit-t").textContent = stoji > 0
+        ? `Zásoba nestačí a linka ${stoji} h stojí. Proto JIT potřebuje naprosto spolehlivé dodavatele.`
+        : d > 0
+          ? `Zásoba zpoždění pokryje, ale drží v ní ${kc(z * NA_HODINU)}. Tyhle peníze zatím nevydělávají.`
+          : `Dodávky chodí přesně, takže velká zásoba není potřeba. Čím menší, tím méně peněz v ní leží.`;
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Kolik nakoupit najednou: pořízení proti skladování --- */
+  (() => {
+    const box = $("#davka");
+    const plocha = $("svg", box), vstup = $("#da-q");
+    const ROCNE = 3600, OBJEDNAVKA = 500, SKLAD = 40, QMAX = 1000, YMAX = 40000;
+    const L = 48, R = 390, T = 14, B = 185;
+    const sx = (q) => L + (q / QMAX) * (R - L), sy = (y) => B - (y / YMAX) * (B - T);
+    const porizeni = (q) => (ROCNE / q) * OBJEDNAVKA, skladovani = (q) => (q / 2) * SKLAD;
+    const celkem = (q) => porizeni(q) + skladovani(q);
+    function spocti() {
+      const q = +vstup.value;
+      $("#da-q-o").textContent = cislo(q) + " ks";
+      $("#da-n").textContent = dec(ROCNE / q) + "×";
+      $("#da-p").textContent = kc(porizeni(q));
+      $("#da-s").textContent = kc(skladovani(q));
+      $("#da-c").textContent = kc(celkem(q));
+      $("#da-t").textContent = q === 300
+        ? "Tady jsou celkové náklady nejnižší: 12 000 Kč. Pořízení i skladování vyjdou shodně na 6 000 Kč."
+        : q < 300
+          ? "Malé a časté dodávky: šetříš na skladu, ale přeplácíš objednávky a dopravu."
+          : "Velké a řídké dodávky: šetříš na objednávkách, ale přeplácíš sklad.";
+      plocha.innerHTML = "";
+      for (let y = 0; y <= YMAX; y += 10000) {
+        plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.6" }), text(L - 5, sy(y) + 4, y ? cislo(y / 1000) + " tis." : "0", "end"));
+      }
+      for (let x = 200; x <= QMAX; x += 200) plocha.append(text(sx(x), B + 16, cislo(x)));
+      plocha.append(text(R, B + 34, "velikost dodávky (ks)", "end"));
+      const cara = (f, styl) => {
+        const body = [];
+        for (let x = 50; x <= QMAX; x += 10) body.push(`${sx(x)},${sy(f(x))}`);
+        plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke-linejoin:round;" + styl }));
+      };
+      cara(porizeni, "stroke:var(--warn);stroke-width:2.5");
+      cara(skladovani, "stroke:var(--accent);stroke-width:2.5");
+      cara(celkem, "stroke:var(--text);stroke-width:3");
+      plocha.append(
+        svg("line", { x1: sx(q), y1: T, x2: sx(q), y2: B, style: "stroke:var(--text-muted);stroke-dasharray:4 4" }),
+        svg("circle", { cx: sx(q), cy: sy(celkem(q)), r: 5, style: "fill:var(--text)" }));
+    }
+    vstup.addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Pilový diagram z podkladů (krokované zuby) --- */
+  (() => {
+    const box = $("#pila");
+    const plocha = $("svg", box);
+    const L = 34, R = 296, T = 14, B = 190;
+    const sx = (d) => L + (d / 24) * (R - L), sy = (v) => B - (v / 100) * (B - T);
+    const HLADINY = [[100, "příležitostná"], [80, "běžná"], [30, "technická"], [10, "pojistná"]];
+    // [den začátku, stav po dodávce, den konce, stav na konci, hladina k zvýraznění]
+    const ZUBY = [[0, 80, 4, 30, 30], [4, 80, 10, 10, 10], [10, 80, 18, 0, 10], [18, 100, 24, 30, 100]];
+    const POPISY = [
+      "Den 0 až 4: stav klesá spotřebou z 80 na 30, tedy na hladinu technické zásoby.",
+      "Den 4: nová dodávka zvedne stav na 80. Do dne 10 klesne spotřebou na 10. Čerpání jde až k pojistné zásobě.",
+      "Den 10: nová dodávka na 80. Do dne 18 stav klesne až na 0. Při zpoždění dodávky se vyčerpala i pojistná zásoba.",
+      "Den 18: velká (příležitostná) dodávka zvedne stav na 100. Do dne 24 klesne spotřebou na 30.",
+    ];
+    function ukaz(vyber) {
+      plocha.innerHTML = "";
+      plocha.append(
+        svg("line", { x1: L, y1: B, x2: R, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
+        svg("line", { x1: L, y1: T, x2: L, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
+        text(L - 5, B + 4, "0", "end"));
+      HLADINY.forEach(([v, nazev]) => {
+        const zvyr = ZUBY[vyber][4] === v;
+        plocha.append(
+          svg("line", { x1: L, y1: sy(v), x2: R, y2: sy(v), style: `stroke:var(--${zvyr ? "warn" : "border"});stroke-width:${zvyr ? 2 : 1.5};stroke-dasharray:5 4` }),
+          text(L - 5, sy(v) + 4, String(v), "end"));
+        const t = text(R + 6, sy(v) + 4, nazev, "start");
+        t.setAttribute("font-size", 12);
+        t.setAttribute("class", zvyr ? "f-warn" : "f-muted");
+        plocha.append(t);
+      });
+      [0, 4, 10, 18, 24].forEach((d) => plocha.append(text(sx(d), B + 16, String(d))));
+      plocha.append(text(R, B + 32, "počet dní", "end"));
+      ZUBY.forEach(([d0, v0, d1, v1], i) => {
+        const pred = i ? ZUBY[i - 1][3] : v0;
+        const jeVybrany = i === vyber;
+        plocha.append(svg("polyline", {
+          points: `${sx(d0)},${sy(pred)} ${sx(d0)},${sy(v0)} ${sx(d1)},${sy(v1)}`,
+          style: `fill:none;stroke-linejoin:round;stroke:var(--${jeVybrany ? "accent" : "text-muted"});stroke-width:${jeVybrany ? 4 : 2}`,
+        }));
+      });
+      $(".pila-text", box).textContent = POPISY[vyber];
+      $$("[data-zub]", box).forEach((b) => b.classList.toggle("vybrany", +b.dataset.zub === vyber));
+    }
+    $$("[data-zub]", box).forEach((b) => b.addEventListener("click", () => ukaz(+b.dataset.zub)));
+    ukaz(0);
+  })();
+
+  /* --- Živý pilový diagram --- */
+  (() => {
+    const box = $("#pil-sim");
+    const plocha = $("svg", box);
+    const L = 38, R = 392, T = 12, B = 195, H = 30, YMAX = 260;
+    const sx = (t) => L + (t / H) * (R - L), sy = (v) => B - (v / YMAX) * (B - T);
+    function spocti() {
+      const v = (id) => +$("#" + id).value;
+      const Q = v("pl-q"), d = v("pl-d"), P = v("pl-p"), z = v("pl-z");
+      const interval = Q / d, prumer = P + Q / 2, obratky = (d * 365) / prumer, vydrz = P / d;
+      $("#pl-q-o").textContent = cislo(Q) + " ks";
+      $("#pl-d-o").textContent = cislo(d) + " ks";
+      $("#pl-p-o").textContent = cislo(P) + " ks";
+      $("#pl-z-o").textContent = dny(z);
+      $("#pl-i").textContent = dny(interval);
+      $("#pl-a").textContent = dec(prumer) + " ks";
+      $("#pl-n").textContent = dec(obratky) + "×";
+      $("#pl-o").textContent = dny(365 / obratky);
+
+      // Průběh zásoby: spotřeba k pojistné zásobě, dodávka doplní na plný stav
+      const body = [[0, P + Q]], vypadky = [];
+      let t = 0, prvni = true;
+      while (t < H) {
+        t += interval;
+        if (prvni && z > 0) {
+          if (z > vydrz) {
+            vypadky.push([t + vydrz, t + z]);
+            body.push([t + vydrz, 0], [t + z, 0]);
+          } else {
+            body.push([t + z, P - d * z]);
+          }
+          t += z;
+        } else {
+          body.push([t, P]);
+        }
+        prvni = false;
+        body.push([t, P + Q]);
+      }
+
+      plocha.innerHTML = "";
+      const orez = svg("clipPath", { id: "pl-orez" });
+      orez.append(svg("rect", { x: L, y: 0, width: R - L, height: B + 3 }));
+      plocha.append(orez);
+      for (let y = 0; y <= 250; y += 50) {
+        plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.6" }), text(L - 5, sy(y) + 4, String(y), "end"));
+      }
+      for (let x = 0; x <= H; x += 5) plocha.append(text(sx(x), B + 16, String(x)));
+      plocha.append(text(R, B + 30, "dny", "end"));
+      if (P > 0) {
+        plocha.append(
+          svg("rect", { x: L, y: sy(P), width: R - L, height: B - sy(P), class: "f-warn-soft" }),
+          svg("line", { x1: L, y1: sy(P), x2: R, y2: sy(P), style: "stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 4" }));
+      }
+      plocha.append(svg("line", { x1: L, y1: sy(prumer), x2: R, y2: sy(prumer), style: "stroke:var(--text-muted);stroke-width:1.5;stroke-dasharray:2 4" }));
+      const g = svg("g", { "clip-path": "url(#pl-orez)" });
+      g.append(svg("polyline", { points: body.map(([x, y]) => `${sx(x)},${sy(y)}`).join(" "), style: "fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:round" }));
+      vypadky.forEach(([a, b]) => g.append(svg("line", { x1: sx(a), y1: sy(0), x2: sx(b), y2: sy(0), style: "stroke:var(--bad);stroke-width:5" })));
+      plocha.append(g);
+
+      const zprava = $("#pl-t");
+      zprava.style.color = "";
+      if (z === 0) {
+        zprava.textContent = P === 0
+          ? "Bez pojistné zásoby klesá sklad až na nulu. Jakékoli zpoždění dodávky zastaví výrobu."
+          : "Dodávky chodí včas, takže pojistná zásoba zůstává nedotčená.";
+      } else if (z <= vydrz) {
+        zprava.textContent = `Dodávka má zpoždění ${dny(z)}. Výrobu kryje pojistná zásoba, zbude z ní ${dec(P - d * z)} ks.`;
+      } else {
+        zprava.textContent = `Pojistná zásoba vydrží jen ${dny(vydrz)}. Pak výroba stojí ${dny(z - vydrz)}.`;
+        zprava.style.color = "var(--bad)";
+      }
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Logistika: tři toky --- */
+  (() => {
+    const box = $("#logi");
+    const TEXTY = {
+      zbozi: "Fyzické toky (doprava) zboží a jiných druhů zásob od dodavatele k odběrateli, tedy k zákazníkovi.",
+      penize: "Peníze tečou opačným směrem než zboží: odběratel platí podniku a podnik platí dodavateli.",
+      info: "Informační toky v písemné nebo i ústní podobě. Jdou oběma směry, třeba objednávka nebo potvrzení termínu.",
+    };
+    function ukaz(tok) {
+      $$(".logi-tok", box).forEach((g) => g.classList.toggle("aktivni", g.dataset.tok === tok));
+      $$("button[data-tok]", box).forEach((b) => b.classList.toggle("vybrany", b.dataset.tok === tok));
+      $(".logi-text", box).textContent = TEXTY[tok];
+    }
+    $$("button[data-tok]", box).forEach((b) => b.addEventListener("click", () => ukaz(b.dataset.tok)));
+    ukaz("zbozi");
+  })();
+});
+</script>
+</body>
+</html>

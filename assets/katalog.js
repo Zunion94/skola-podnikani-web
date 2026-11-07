@@ -128,7 +128,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 9, nazev: "Živnostenské podnikání",
+        c: 9, nazev: "Živnostenské podnikání", id: "ekonomie-9", soubor: "ekonomie/web/09-zivnostenske-podnikani.html",
         pozadavky: [
           "Podnik",
           "Podnikání",
@@ -142,7 +142,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 10, nazev: "Obchodní společnosti a družstva",
+        c: 10, nazev: "Obchodní společnosti a družstva", id: "ekonomie-10", soubor: "ekonomie/web/10-obchodni-spolecnosti-a-druzstva.html",
         pozadavky: [
           "Osobní společnosti a kapitálové společnosti",
           "Založení a vznik společnosti",
@@ -164,7 +164,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 12, nazev: "Zásobování podniku, oběžný majetek",
+        c: 12, nazev: "Zásobování podniku, oběžný majetek", id: "ekonomie-12", soubor: "ekonomie/web/12-zasobovani-podniku-obezny-majetek.html",
         pozadavky: [
           "Dělení oběžného majetku",
           "Počet obrátek",
