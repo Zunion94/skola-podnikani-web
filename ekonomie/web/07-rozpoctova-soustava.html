@@ -180,8 +180,8 @@
 
     <div class="box box--doplneno">
       <p><strong>Příklady daní</strong> (podrobně v MO 8): přímá je daň z příjmů, nepřímé jsou DPH a spotřební daně.</p>
-      <p><strong>Clo dnes:</strong> od vstupu do EU patří clo mezi vlastní zdroje rozpočtu EU. Česko odvádí 75 % vybraného cla a 25 % si nechává na náklady spojené s výběrem. U maturity řekni zařazení podle podkladů a tohle přidej jako poznámku.</p>
-      <p><strong>Oficiální členění se liší:</strong> ministerstvo financí dělí příjmy na daňové, nedaňové, kapitálové a přijaté transfery. <strong>Pojistné</strong> vykazuje mezi daňovými příjmy. Prodej státních dluhopisů a splácení jejich jistiny se počítá do <strong>financování</strong>, ne do příjmů a výdajů. Jinak by se schodek nedal poznat.</p>
+      <p><strong>Clo dnes:</strong> od vstupu do EU patří clo mezi vlastní zdroje rozpočtu EU. V období 2021–2027 Česko odvádí 75 % vybraného cla a 25 % si nechává na náklady spojené s výběrem. U maturity řekni zařazení podle podkladů a tohle přidej jako poznámku.</p>
+      <p><strong>Oficiální členění se liší:</strong> ministerstvo financí dělí příjmy na daňové, nedaňové, kapitálové a přijaté transfery. <strong>Pojistné</strong> vykazuje mezi daňovými příjmy, podklady ho mají mezi nedaňovými. Prodej státních dluhopisů a splácení jejich jistiny se počítá do <strong>financování</strong>, ne do příjmů a výdajů. Podklady přitom řadí prodej cenných papírů mezi příjmy a splátky úvěrů mezi výdaje. Kdyby se dluhopisy počítaly do příjmů, schodek by se z výsledku nedal poznat.</p>
     </div>
 
     <div data-tridicka>
@@ -234,7 +234,7 @@
     <div data-tridicka>
       <script type="application/json">
       {
-        "zadani": "Příjem, nebo výdaj státního rozpočtu?",
+        "zadani": "Příjem, nebo výdaj státního rozpočtu? (zařazení podle podkladů)",
         "kose": ["Příjem", "Výdaj"],
         "polozky": [
           ["splátky vládních úvěrů", 0], ["přijaté úroky", 0], ["příjmy z prodeje cenných papírů", 0], ["pokuty", 0], ["zisky státních podniků", 0],
@@ -332,7 +332,7 @@
           <text x="358" y="93" text-anchor="middle" font-size="12" class="f-muted">účet</text>
         </g>
       </svg>
-      <figcaption>Rozpočet na příští rok vzniká už v tom letošním. Účtuje se až po jeho skončení.</figcaption>
+      <figcaption>Rozpočet na příští rok vzniká už v tom letošním. Účtuje se až po jeho skončení. Termín 15. 9. je z podkladů, dnešní stav je níže.</figcaption>
     </figure>
 
     <h3>Projdi to krok za krokem</h3>
@@ -349,8 +349,8 @@
     </div>
 
     <div class="box box--doplneno">
-      <p><strong>Termín 15. 9. je z podkladů, dnes platí jiný.</strong> Ministerstvo financí předkládá návrh vládě do <strong>31. 8.</strong> a vláda ho předkládá sněmovně nejpozději <strong>3 měsíce před začátkem rozpočtového roku, tedy do 30. 9.</strong> Jednorázově to může změnit zvláštní zákon, jako se stalo u rozpočtu na rok 2021. U maturity uveď obě data a řekni, odkud jsou.</p>
-      <p><strong>Jen sněmovna:</strong> podle Ústavy návrh rozpočtu projednává a usnesení o něm přijímá jen Poslanecká sněmovna, Senát se k němu nevyjadřuje. Projednává se ve třech čteních.</p>
+      <p><strong>Termín 15. 9. je z podkladů, dnes platí jiný.</strong> Ministerstvo financí předkládá návrh vládě do <strong>31. 8.</strong> (zákon č. 218/2000 Sb.) a vláda ho předkládá sněmovně nejpozději <strong>3 měsíce před začátkem rozpočtového roku, tedy do 30. 9.</strong> (jednací řád sněmovny). Jednorázově to může změnit zvláštní zákon. U rozpočtu na rok 2021 to byl zákon č. 288/2020 Sb. s termínem do 30. 10. 2020. U maturity uveď obě data a řekni, odkud jsou.</p>
+      <p><strong>Jen sněmovna:</strong> podle čl. 42 Ústavy návrh rozpočtu projednává a usnáší se o něm jen Poslanecká sněmovna, Senát se k němu nevyjadřuje. Projednává se ve třech čteních. V prvním sněmovna schvaluje základní údaje (příjmy, výdaje, saldo), ve druhém se podávají pozměňovací návrhy a ve třetím se hlasuje.</p>
     </div>
   </section>
 
@@ -373,7 +373,7 @@
       </div>
       <div class="ukazatele">
         <div class="ukazatel"><small>Nejvýš za měsíc</small><b id="prov-mes"></b></div>
-        <div class="ukazatel"><small>Uvolněno za provizorium</small><b id="prov-cel"></b></div>
+        <div class="ukazatel"><small>Nejvýš za celé provizorium</small><b id="prov-cel"></b></div>
       </div>
     </div>
 
@@ -449,7 +449,7 @@
       </div>
     </div>
     <div class="box box--doplneno">
-      <p>Podklady píšou „Parlamentu“. Přesněji: podle Ústavy návrh státního závěrečného účtu projednává a schvaluje jen <strong>Poslanecká sněmovna</strong>. Hospodaření se státními prostředky navíc kontroluje <strong>Nejvyšší kontrolní úřad</strong> a ke státnímu závěrečnému účtu vydává stanovisko.</p>
+      <p>Podklady píšou „Parlamentu“. Přesněji: podle čl. 42 Ústavy návrh státního závěrečného účtu projednává a schvaluje jen <strong>Poslanecká sněmovna</strong>. Vláda jí ho předkládá nejpozději do 30. 4. následujícího roku. Hospodaření se státním majetkem a plnění rozpočtu navíc kontroluje <strong>Nejvyšší kontrolní úřad</strong> a k návrhu státního závěrečného účtu předkládá sněmovně stanovisko.</p>
     </div>
   </section>
 
@@ -578,7 +578,7 @@
           ["Výdaje na obyvatelstvo", "Důchody, podpora v nezaměstnanosti, přídavky, nemocenské a sociální dávky, …"],
           ["Další výdaje státu", "Organizační složky, rozpočtové a příspěvkové organizace, dotace podnikům, příspěvky obcím a krajům, splátky a poskytnuté úvěry, zdravotní pojišťovny, politické strany, emise státních cenných papírů, mezinárodní organizace."],
           ["Rozpočtové období v ČR", "Kalendářní rok."],
-          ["Průběh přípravy rozpočtu", "Ministerstvo financí s ministerstvy vypracuje návrh → schválí vláda → předloží sněmovně (podklady: do 15. 9.) → po schválení ve Sbírce zákonů."],
+          ["Průběh přípravy rozpočtu", "Ministerstvo financí s ministerstvy vypracuje návrh → schválí vláda → předloží sněmovně (podklady: do 15. 9., dnes do 30. 9.) → po schválení ve Sbírce zákonů."],
           ["Rozpočtové provizorium", "Rozpočet není schválen před 1. lednem. Platí objem příjmů a výdajů rozpočtu pro předchozí rok, výdaje do 1/12 roční částky měsíčně."],
           ["Kdo odpovídá za plnění rozpočtu", "Vláda Poslanecké sněmovně. Po pololetí jí předkládá zprávu."],
           ["Nečekaná potřeba peněz", "Hospodárnější provedení jiných úkolů, odsunutí méně naléhavého úkolu, mimorozpočtové zdroje, překročení rozpočtu, vládní rozpočtové rezervy."],
@@ -600,7 +600,7 @@
           <li>Státní rozpočet – definice, období 1 rok, vyrovnaný rozpočet, schodek, přebytek.</li>
           <li>Příjmy – daňové a nedaňové s příklady.</li>
           <li>Výdaje – veřejná spotřeba, obyvatelstvo a ostatní.</li>
-          <li>Rozpočtový proces – kalendářní rok, ministerstvo financí, vláda, sněmovna, Sbírka zákonů, termín.</li>
+          <li>Rozpočtový proces – kalendářní rok, ministerstvo financí, vláda, sněmovna, Sbírka zákonů, termín (podklady 15. 9., dnes 30. 9.).</li>
           <li>Rozpočtové provizorium – kdy nastane, předchozí rok, 1/12 měsíčně.</li>
           <li>Hodnocení plnění – odpovědnost vlády, zpráva po pololetí, účelovost, nečekané potřeby, rezervy 0,3 %, závěrečný účet.</li>
           <li>Místní rozpočty – příjmy a výdaje obcí a krajů, vazba na státní rozpočet.</li>
@@ -619,8 +619,8 @@
         "pocet": 15,
         "otazky": [
           {"typ": "jedna", "otazka": "Co je fiskální politika?",
-           "moznosti": ["Řízení úrokových sazeb a množství peněz centrální bankou", "Politika, pomocí které vláda realizuje své výdajové a příjmové programy", "Kontrola hospodaření obcí a krajů", "Regulace cen vybraného zboží a služeb"],
-           "spravne": 1, "vysvetleni": "Fiskální znamená rozpočtová. První možnost popisuje monetární politiku."},
+           "moznosti": ["Politika, pomocí které centrální banka řídí úrokové sazby a množství peněz", "Politika, pomocí které vláda realizuje své výdajové a příjmové programy", "Kontrola hospodaření obcí a krajů Nejvyšším kontrolním úřadem", "Regulace cen vybraného zboží a služeb ze strany státu"],
+           "spravne": 1, "vysvetleni": "Fiskální znamená rozpočtová. Řízení úrokových sazeb a množství peněz centrální bankou je monetární politika."},
           {"typ": "vice", "otazka": "Co tvoří rozpočtovou soustavu?",
            "moznosti": ["Soustava rozpočtů orgánů a institucí", "Soustava veřejných rozpočtů", "Vztahy spojené s tokem peněz v rámci soustavy", "Soustava komerčních bank"],
            "spravne": [0, 1, 2], "vysvetleni": "Komerční banky do rozpočtové soustavy nepatří, spravují se v nich soukromé i firemní peníze."},
@@ -628,7 +628,7 @@
            "moznosti": ["Č. 218/2000 Sb.", "Č. 23/2017 Sb.", "Č. 250/2000 Sb.", "Č. 243/2000 Sb."],
            "spravne": 2, "vysvetleni": "Zákon č. 218/2000 Sb. je o rozpočtových pravidlech státu, č. 250/2000 Sb. o těch územních."},
           {"typ": "jedna", "otazka": "Státní rozpočet je…",
-           "moznosti": ["souhrn dluhů státu za celou dobu jeho existence", "souhrn rozpočtů všech obcí a krajů", "seznam daní vybraných za uplynulý rok", "centralizovaný peněžní fond vytvářený státem na jeden rok"],
+           "moznosti": ["souhrn dluhů, které stát nasbíral za celou dobu své existence", "souhrn rozpočtů všech obcí a krajů za jeden kalendářní rok", "seznam daní a poplatků vybraných státem za uplynulý rok", "centralizovaný peněžní fond vytvářený státem na jeden rok"],
            "spravne": 3, "vysvetleni": "Vytvářejí, rozdělují a uplatňují ho ústřední státní orgány."},
           {"typ": "jedna", "otazka": "Když jsou výdaje vyšší než příjmy, jde o…",
            "moznosti": ["rozpočtový schodek", "rozpočtový přebytek", "vyrovnaný rozpočet", "rozpočtové provizorium"],
@@ -643,7 +643,7 @@
           {"typ": "vice", "otazka": "Které příjmy jsou podle podkladů <b>nedaňové</b>?",
            "moznosti": ["Pokuty", "DPH", "Zisky státních podniků", "Spotřební daň", "Přijaté úroky"],
            "spravne": [0, 2, 4], "vysvetleni": "DPH a spotřební daň jsou nepřímé daně, tedy daňové příjmy."},
-          {"typ": "jedna", "otazka": "Který z těchto toků je <b>příjem</b> státního rozpočtu?",
+          {"typ": "jedna", "otazka": "Který z těchto toků je podle podkladů <b>příjem</b> státního rozpočtu?",
            "moznosti": ["Poskytnuté úvěry", "Splátky úvěrů", "Splátky vládních úvěrů", "Výdaje na emisi státních cenných papírů"],
            "spravne": 2, "vysvetleni": "Splátky vládních úvěrů vrací státu někdo, komu stát půjčil. Splátky úvěrů naopak platí stát."},
           {"typ": "jedna", "otazka": "Důchody patří mezi výdaje…",
@@ -660,8 +660,8 @@
           {"typ": "jedna", "otazka": "Rozpočtovým obdobím v ČR je…",
            "moznosti": ["volební období sněmovny", "kalendářní rok", "pololetí", "školní rok"],
            "spravne": 1, "vysvetleni": "Začíná 1. ledna, proto musí být rozpočet schválen před tímto datem."},
-          {"typ": "jedna", "otazka": "Kdo vypracovává návrh státního rozpočtu?",
-           "moznosti": ["Česká národní banka", "Poslanecká sněmovna", "Ministerstvo financí ve spolupráci s ministerstvy", "Nejvyšší kontrolní úřad"],
+          {"typ": "jedna", "otazka": "Kdo ve spolupráci s jednotlivými ministerstvy vypracovává návrh státního rozpočtu?",
+           "moznosti": ["Česká národní banka", "Poslanecká sněmovna", "Ministerstvo financí", "Nejvyšší kontrolní úřad"],
            "spravne": 2, "vysvetleni": "Sněmovna o návrhu rozhoduje, ale nepíše ho."},
           {"typ": "jedna", "otazka": "Jaké je správné pořadí v rozpočtovém procesu?",
            "moznosti": ["Vláda → ministerstvo financí → Sbírka zákonů → sněmovna", "Ministerstvo financí → vláda → sněmovna → Sbírka zákonů", "Sněmovna → vláda → ministerstvo financí → Sbírka zákonů", "Ministerstvo financí → sněmovna → vláda → Sbírka zákonů"],
@@ -788,7 +788,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const KROKY = {
       navrh: { nazev: "Sestavení návrhu", faze: "Fáze 1", kdo: "Ministerstvo financí ve spolupráci s jednotlivými ministerstvy", kdy: "Každý rok, 1/2 roku před začátkem nového období", co: "Vypracuje návrh rozpočtu.", dalsi: [["Komu návrh předloží?", "vlada"]] },
       vlada: { nazev: "Schválení vládou", faze: "Fáze 2", kdo: "Vláda", kdy: "Po zpracování návrhu", co: "Návrh je předložen ke schválení vládě.", dalsi: [["Kam jde návrh dál?", "predlozeni"]] },
-      predlozeni: { nazev: "Předložení sněmovně", faze: "Fáze 2", kdo: "Vláda", kdy: "Nejpozději do 15. 9. (podle podkladů)", co: "Vláda návrh předkládá Poslanecké sněmovně.", dalsi: [["Co udělá sněmovna?", "snemovna"]] },
+      predlozeni: { nazev: "Předložení sněmovně", faze: "Fáze 2", kdo: "Vláda", kdy: "Nejpozději do 15. 9. (podle podkladů, dnes do 30. 9.)", co: "Vláda návrh předkládá Poslanecké sněmovně.", dalsi: [["Co udělá sněmovna?", "snemovna"]] },
       snemovna: { nazev: "Projednání a schválení", faze: "Fáze 2", kdo: "Poslanecká sněmovna", kdy: "Rozpočet má být schválen před 1. lednem", co: "Projedná návrh a rozhodne o něm. Stihne to včas?", dalsi: [["Schváleno před 1. 1.", "sbirka"], ["Neschváleno před 1. 1.", "provizorium"]] },
       provizorium: { nazev: "Rozpočtové provizorium", faze: "Odbočka", kdo: "Stát", kdy: "Od 1. ledna do schválení nového rozpočtu", co: "Řídí se objemem příjmů a výdajů rozpočtu schváleného pro předchozí rok. Výdaje se uvolňují do 1/12 roční částky v každém měsíci.", dalsi: [["Sněmovna rozpočet schválí", "sbirka"]] },
       sbirka: { nazev: "Zveřejnění", faze: "Fáze 2", kdo: "Sbírka zákonů", kdy: "Po schválení návrhu", co: "Rozpočet je uveřejněn ve Sbírce zákonů. Má podobu zákona.", dalsi: [["Co se děje během roku?", "pololeti"]] },
