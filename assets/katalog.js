@@ -90,7 +90,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 6, nazev: "Zahraniční obchod a celnictví",
+        c: 6, nazev: "Zahraniční obchod a celnictví", id: "ekonomie-6", soubor: "ekonomie/web/06-zahranicni-obchod-a-celnictvi.html",
         pozadavky: [
           "Charakteristika a předmět zahraničního obchodu",
           "Příčiny rozvoje",
@@ -151,7 +151,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 11, nazev: "Dlouhodobý majetek podniku",
+        c: 11, nazev: "Dlouhodobý majetek podniku", id: "ekonomie-11", soubor: "ekonomie/web/11-dlouhodoby-majetek-podniku.html",
         pozadavky: [
           "Dlouhodobý hmotný majetek",
           "Dlouhodobý nehmotný majetek",
@@ -190,7 +190,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 14, nazev: "Personální činnost podniku",
+        c: 14, nazev: "Personální činnost podniku", id: "ekonomie-14", soubor: "ekonomie/web/14-personalni-cinnost-podniku.html",
         pozadavky: [
           "Plánování pracovníků",
           "Získávání a výběr pracovníků",
