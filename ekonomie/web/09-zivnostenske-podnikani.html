@@ -193,6 +193,9 @@
         <div class="karta__rub"><p style="margin:0">Prostřednictvím <strong>statutárních orgánů</strong> (jednatel, představenstvo), nebo prostřednictvím <strong>zástupce</strong>.</p></div>
       </div>
     </div>
+    <div class="box box--doplneno">
+      <p>Podle § 423 občanského zákoníku je <strong>obchodní firma</strong> jméno, pod kterým je podnikatel zapsán do <strong>obchodního rejstříku</strong>. Živnostník, který v OR zapsaný není, podniká pod svým jménem a příjmením, ne pod obchodní firmou v tomto smyslu.</p>
+    </div>
 
     <details class="odhal">
       <summary>Prokura = zvláštní plná moc</summary>
@@ -203,6 +206,9 @@
           <li>Prokurista musí být <strong>zapsán v obchodním rejstříku</strong>, jinak je prokura neplatná.</li>
           <li>Prokurista může podepisovat bankovní operace, většinu smluv a v nepřítomnosti ředitele firmy ho zastupuje.</li>
         </ul>
+        <div class="box box--doplneno">
+          <p>Podle občanského zákoníku (§ 450–452) prokuru uděluje <strong>podnikatel zapsaný v obchodním rejstříku</strong> a právnické osobě ji udělit nelze. Prokurista se do OR zapisuje, ale prokura vzniká už jejím udělením, zápis není podmínkou platnosti. Nemovitost smí prokurista prodat nebo zatížit, jen když je to v prokuře <strong>výslovně uvedeno</strong>.</p>
+        </div>
         <div class="box box--pozor" style="margin-bottom:0">
           <p>Prokurista a odpovědný zástupce jsou dvě různé role. Prokurista za firmu <strong>jedná</strong>. Odpovědný zástupce <strong>odpovídá za řádný provoz živnosti</strong>.</p>
         </div>
@@ -601,7 +607,7 @@
     <p>Živnost je zaznamenána v <strong>živnostenském rejstříku</strong>, který plní funkci evidenční. Veřejně přístupná část je podle podkladů dostupná na internetu pod názvem <strong>ARES</strong> (administrativní registr ekonomických subjektů).</p>
     <p>Kontrolu dodržování živnostenského zákona provádějí <strong>živnostenské úřady</strong>. Za porušení zákona ukládají pokuty.</p>
     <div class="box box--doplneno">
-      <p>ARES je obecný registr ekonomických subjektů, který údaje z více rejstříků shromažďuje. Samotný živnostenský rejstřík má vlastní veřejnou část, <strong>RŽP</strong> (rejstřík živnostenského podnikání).</p>
+      <p>ARES je obecný registr ekonomických subjektů, který údaje z více rejstříků shromažďuje. Samotný živnostenský rejstřík má vlastní veřejnou část, <strong>RŽP</strong> (registr živnostenského podnikání, rzp.gov.cz).</p>
     </div>
   </section>
 
@@ -677,6 +683,9 @@
            "spravne": 0, "vysvetleni": "Obor, formu i rozdělení zisku volí podnikatel. Sazbu daně určuje stát."},
           {"typ": "ano-ne", "otazka": "Prokuru lze udělit právnické osobě.",
            "spravne": false, "vysvetleni": "Prokuru lze udělit pouze fyzické osobě, spolumajiteli nebo zaměstnanci firmy."},
+          {"typ": "jedna", "otazka": "Kdo je <b>podnikatel</b>?",
+           "moznosti": ["Kdo samostatně vykonává na vlastní účet a odpovědnost výdělečnou činnost za účelem zisku", "Kdo pracuje pro firmu na základě pracovní smlouvy", "Kdo vlastní akcie obchodní společnosti", "Kdo je zapsán v živnostenském rejstříku jako odpovědný zástupce"],
+           "spravne": 0, "vysvetleni": "Zaměstnanec nejedná samostatně, akcionář jen vlastní podíl a odpovědný zástupce odpovídá za provoz cizí živnosti."},
           {"typ": "jedna", "otazka": "Ke kterému úkonu prokura podle podkladů <b>nezmocňuje</b>?",
            "moznosti": ["K prodeji nemovitosti", "K podpisu většiny smluv", "K bankovním operacím", "K zastoupení ředitele v jeho nepřítomnosti"],
            "spravne": 0},
@@ -1033,7 +1042,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let t;
       if (nejhorsi.stav < 0) t = `<strong>Peníze dojdou.</strong> V ${nejhorsi.m}. měsíci ti chybí ${cislo(-nejhorsi.stav)} tis. Kč. Tohle má rozpočet odhalit předem: přidej vklad, úvěr, nebo sniž výdaje.`;
       else t = `<strong>Vystačíš.</strong> Nejméně peněz máš v ${nejhorsi.m}. měsíci: ${cislo(nejhorsi.stav)} tis. Kč.`;
-      if (v("rz-trzby") <= v("rz-vydaje")) t += " Ani po rozjezdu ale tržby nepokryjí běžné výdaje.";
+      if (v("rz-trzby") < v("rz-vydaje")) t += " Ani po rozjezdu ale tržby nepokryjí běžné výdaje.";
       $("#rz-t").innerHTML = t;
     }
     $("#rozpocet").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
