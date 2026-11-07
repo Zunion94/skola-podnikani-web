@@ -108,7 +108,7 @@
   <!-- ===== 2. Druhy inflace ===== -->
   <section class="kapitola" id="druhy-inflace" data-pozadavky="2 3">
     <h2>Druhy inflace</h2>
-    <p>Inflace se člení podle různých hledisek. Nejznámější jsou dvě: podle <strong>velikosti</strong> a podle <strong>podnětu</strong>, tedy co ji rozjelo.</p>
+    <p>Inflace se člení podle různých hledisek. Nejznámější jsou dvě: podle <strong>velikosti (rychlosti)</strong> a podle <strong>podnětu</strong>, tedy co ji rozjelo.</p>
     <div data-zalozky>
       <section data-zalozka="Podle velikosti">
         <ul>
@@ -136,7 +136,7 @@
       <p id="ve-t" style="margin-bottom:0;font-size:.92rem"></p>
     </div>
     <div class="box box--doplneno">
-      <p>Pro představu: v Česku byla průměrná roční inflace v roce 2022 <strong>15,1 %</strong>, tedy podle členění výš už pádivá. V roce 2025 to bylo <strong>2,5 %</strong> (mírná). Učebnicové příklady hyperinflace jsou Německo v roce 1923 a Zimbabwe kolem roku 2008.</p>
+      <p>Pro představu: v Česku byla průměrná roční inflace v roce 2022 <strong>15,1 %</strong>, tedy podle členění výš už pádivá. V roce 2025 to bylo <strong>2,5 %</strong> (mírná) a meziročně v září 2026 také 2,5 %. Učebnicové příklady hyperinflace jsou Německo v roce 1923 a Zimbabwe kolem roku 2008.</p>
     </div>
 
     <h3>Tažená poptávkou, nebo nabídkou?</h3>
@@ -545,6 +545,8 @@
           <li><strong>příjmy ze samozaměstnání</strong> – všechny formy plateb za výrobní faktory, jež používají samostatně podnikající osoby</li>
           <li><strong>renty</strong></li>
         </ul>
+        <div class="vzorec">HDP = mzdy a platy + hrubé zisky + čistý úrok + příjmy ze samozaměstnání + renty</div>
+        <div class="box box--priklad" style="margin-bottom:0"><p>Mzdy 500, hrubé zisky 250, čistý úrok 20, příjmy ze samozaměstnání 100, renty 30 (mld. Kč). HDP = 500 + 250 + 20 + 100 + 30 = <strong>900 mld. Kč</strong>.</p></div>
         <p style="margin-bottom:0">Sečtením těchto složek zjistíš výkonnost národního hospodářství.</p>
       </section>
       <section data-zalozka="Produktová">
@@ -661,6 +663,10 @@
       <p id="cy-t-text" style="margin-bottom:0;font-size:.92rem"></p>
     </div>
 
+    <div class="box box--doplneno">
+      <p>Údaje o nezaměstnanosti na vrcholu (nízká) a na dně (vysoká) v podkladech nejsou. Plynou z toho, že při expanzi nezaměstnanost klesá a v recesi roste. Ve skutečnosti trh práce reaguje se zpožděním, takže nezaměstnanost bývá nejvyšší až chvíli po dnu.</p>
+    </div>
+
     <h3>Čtyři fáze</h3>
     <ol>
       <li><strong>Expanze (růst)</strong> – roste agregátní poptávka (více se prodává), roste výroba, rostou investice, snižuje se nezaměstnanost. Produkt roste alespoň ve dvou po sobě jdoucích obdobích.</li>
@@ -725,6 +731,10 @@
 
     <h3>Vyrovnanost</h3>
     <p>Z účetního hlediska musí být platební bilance <strong>vždy vyrovnaná</strong>. K tomu slouží <strong>devizové rezervy</strong>, což je zahraniční měna.</p>
+    <ul>
+      <li>Příjmy &gt; výdaje: <strong>aktivní saldo</strong>, devizové rezervy se zvýší.</li>
+      <li>Příjmy &lt; výdaje: <strong>pasivní saldo</strong>, devizové rezervy se sníží.</li>
+    </ul>
     <div class="simulace" id="pb">
       <div class="posuvnik"><label for="pb-p">Příjmy ze zahraničí</label><output id="pb-p-o"></output><input id="pb-p" type="range" min="100" max="900" step="10" value="600"></div>
       <div class="posuvnik"><label for="pb-v">Výdaje do zahraničí</label><output id="pb-v-o"></output><input id="pb-v" type="range" min="100" max="900" step="10" value="500"></div>
@@ -887,6 +897,8 @@
            "spravne": [0, 1, 2], "vysvetleni": "Stát vyplácí podpory a dávky, výdaje tedy rostou."},
           {"typ": "cislo", "otazka": "C = 500, I<sub>g</sub> = 200, G = 300, NX = −50 (mld. Kč). Kolik je HDP výdajovou metodou?",
            "spravne": 950, "jednotka": "mld. Kč", "tolerance": 0, "vysvetleni": "500 + 200 + 300 − 50 = 950 mld. Kč."},
+          {"typ": "cislo", "otazka": "Mzdy a platy 600, hrubé zisky 300, čistý úrok 40, příjmy ze samozaměstnání 120, renty 40 (mld. Kč). Kolik je HDP důchodovou metodou?",
+           "spravne": 1100, "jednotka": "mld. Kč", "tolerance": 0, "vysvetleni": "600 + 300 + 40 + 120 + 40 = 1 100 mld. Kč."},
           {"typ": "jedna", "otazka": "Která metoda výpočtu HDP se jinak nazývá <b>zbožová</b>?",
            "moznosti": ["Výdajová", "Důchodová", "Produktová", "Příjmová"],
            "spravne": 0, "vysvetleni": "Výdajová = spotřební = zbožová. Důchodová se jinak jmenuje příjmová, produktová výrobní."},
@@ -979,7 +991,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $("#ve-i-o").textContent = cislo(i) + " %";
       const druh = i < 10 ? "mírná" : i < 1000 ? "pádivá" : "hyperinflace";
       $("#ve-druh").textContent = druh;
-      $("#ve-rohlik").textContent = d1(5 * (1 + i / 100)) + " Kč";
+      $("#ve-rohlik").textContent = (5 * (1 + i / 100)).toLocaleString("cs-CZ", { maximumFractionDigits: 2 }) + " Kč";
       $("#ve-obed").textContent = kc(200 * (1 + i / 100));
       $("#ve-t").textContent = i < 10
         ? "Lidé penězům důvěřují. Není to nebezpečné."
