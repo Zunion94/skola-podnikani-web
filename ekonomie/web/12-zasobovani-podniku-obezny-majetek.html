@@ -221,7 +221,7 @@
     </ol>
 
     <div class="box box--pozor">
-      <p>Podklady uvádějí dva vzorce pro dobu obratu: jeden s <strong>365</strong> dny, druhý s <strong>360</strong> dny a tržbami. Výsledky se proto mírně liší (60,8 × 60 dní). U maturity řekni, se kterým vzorcem počítáš.</p>
+      <p>Podklady uvádějí dva vzorce pro dobu obratu: jeden s <strong>365</strong> dny, druhý s <strong>360</strong> dny a tržbami. Výsledky se proto mírně liší (60,8 a 60 dní). U maturity řekni, se kterým vzorcem počítáš.</p>
     </div>
     <div class="box box--doplneno">
       <p><strong>360 dní</strong> je zjednodušený „finanční rok“ (12 měsíců po 30 dnech), běžně se používá ve finančních výpočtech.</p>
@@ -285,6 +285,9 @@
 
     <h3>Odkud to je</h3>
     <p>Autorem konceptu JIT je japonská automobilka <strong>Toyota</strong>. Základy byly položeny už v roce <strong>1926</strong>, největší rozmach nastal v <strong>80. letech 20. století v Japonsku a USA</strong>.</p>
+    <div class="box box--doplneno">
+      <p style="margin-bottom:0">Rok 1926 je údaj z podkladů, u maturity ho řekni. Automobilka Toyota ale tehdy ještě neexistovala, vznikla až v roce 1937. V roce 1926 založil Sakichi Toyoda továrnu na tkalcovské stavy Toyoda Automatic Loom Works. Myšlenka just in time se připisuje jeho synovi Kiichirovi Toyodovi (30. léta), do dnešní podoby ji po válce rozvinul Taiichi Ohno.</p>
+    </div>
 
     <div class="box box--pozor">
       <p>JIT klade velmi vysoké nároky na <strong>naprosto přesnou koordinaci</strong> všech souvisejících procesů a toků a na <strong>absolutní spolehlivost dodavatelů</strong>. Sklad, který by zpoždění zachytil, tu skoro není.</p>
@@ -319,7 +322,7 @@
     <div class="box box--doplneno">
       <ul style="margin:0">
         <li><strong>Výhody:</strong> málo peněz vázaných v zásobách, menší sklady, méně zásob, které se zkazí nebo zastarají.</li>
-        <li><strong>Riziko:</strong> výpadek jediného dodavatele může zastavit výrobu. Viděli jsme to v letech 2021–2022, kdy automobilky kvůli nedostatku čipů přerušovaly výrobu.</li>
+        <li><strong>Riziko:</strong> výpadek dodávek může zastavit výrobu, někdy stačí jediný dodavatel. Viděli jsme to v letech 2021–2022, kdy automobilky kvůli nedostatku čipů přerušovaly výrobu. Týkalo se to i Škody Auto.</li>
         <li><strong>Kanban:</strong> systém kartiček z Toyoty. Kartička je signál, že následující pracoviště potřebuje doplnit díly.</li>
       </ul>
     </div>
@@ -496,6 +499,9 @@
       <div class="ukazatel"><small>Pojistná zásoba</small><b>hladina 10</b></div>
     </div>
     <p>Příležitostná zásoba je horní hranice při mimořádném nákupu. Běžná je maximální běžný stav při dodávce materiálu. Pojistná je minimální rezervní stav.</p>
+    <div class="box box--doplneno">
+      <p style="margin-bottom:0">Podklad popisuje diagram dvakrát a popisy se liší. Ve výčtu klesá stav až do dne další dodávky, takže minima jsou ve dnech 4, 10, 18 a 24. V nakresleném grafu jsou minima dřív, zhruba ve dnech 2, 8, 14 a 22. Dodávky ve dnech 4, 10 a 18 i hladiny 100, 80, 30 a 10 se shodují. Graf nahoře jde podle výčtu. U maturity jde hlavně o princip: osy, zuby a čtyři hladiny.</p>
+    </div>
 
     <h3>Postav si vlastní pilu</h3>
     <div class="simulace" id="pil-sim">
@@ -879,7 +885,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $("#jit-t").textContent = stoji > 0
         ? `Zásoba nestačí a linka ${stoji} h stojí. Proto JIT potřebuje naprosto spolehlivé dodavatele.`
         : d > 0
-          ? `Zásoba zpoždění pokryje, ale drží v ní ${kc(z * NA_HODINU)}. Tyhle peníze zatím nevydělávají.`
+          ? `Zásoba zpoždění pokryje, ale leží v ní ${kc(z * NA_HODINU)}. Tyhle peníze zatím nevydělávají.`
           : `Dodávky chodí přesně, takže velká zásoba není potřeba. Čím menší, tím méně peněz v ní leží.`;
     }
     box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
@@ -891,7 +897,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const box = $("#davka");
     const plocha = $("svg", box), vstup = $("#da-q");
     const ROCNE = 3600, OBJEDNAVKA = 500, SKLAD = 40, QMAX = 1000, YMAX = 40000;
-    const L = 48, R = 390, T = 14, B = 185;
+    const L = 48, R = 380, T = 14, B = 185;
     const sx = (q) => L + (q / QMAX) * (R - L), sy = (y) => B - (y / YMAX) * (B - T);
     const porizeni = (q) => (ROCNE / q) * OBJEDNAVKA, skladovani = (q) => (q / 2) * SKLAD;
     const celkem = (q) => porizeni(q) + skladovani(q);
@@ -933,7 +939,7 @@ document.addEventListener("DOMContentLoaded", () => {
   (() => {
     const box = $("#pila");
     const plocha = $("svg", box);
-    const L = 34, R = 296, T = 14, B = 190;
+    const L = 34, R = 296, T = 28, B = 190;
     const sx = (d) => L + (d / 24) * (R - L), sy = (v) => B - (v / 100) * (B - T);
     const HLADINY = [[100, "příležitostná"], [80, "běžná"], [30, "technická"], [10, "pojistná"]];
     // [den začátku, stav po dodávce, den konce, stav na konci, hladina k zvýraznění]
@@ -949,7 +955,8 @@ document.addEventListener("DOMContentLoaded", () => {
       plocha.append(
         svg("line", { x1: L, y1: B, x2: R, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
         svg("line", { x1: L, y1: T, x2: L, y2: B, style: "stroke:var(--text-muted);stroke-width:1.5" }),
-        text(L - 5, B + 4, "0", "end"));
+        text(L - 5, B + 4, "0", "end"),
+        text(4, 14, "množství", "start"));
       HLADINY.forEach(([v, nazev]) => {
         const zvyr = ZUBY[vyber][4] === v;
         plocha.append(
@@ -981,7 +988,7 @@ document.addEventListener("DOMContentLoaded", () => {
   (() => {
     const box = $("#pil-sim");
     const plocha = $("svg", box);
-    const L = 38, R = 392, T = 12, B = 195, H = 30, YMAX = 260;
+    const L = 38, R = 386, T = 12, B = 190, H = 30, YMAX = 260;
     const sx = (t) => L + (t / H) * (R - L), sy = (v) => B - (v / YMAX) * (B - T);
     function spocti() {
       const v = (id) => +$("#" + id).value;
@@ -1045,7 +1052,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (z <= vydrz) {
         zprava.textContent = `Dodávka má zpoždění ${dny(z)}. Výrobu kryje pojistná zásoba, zbude z ní ${dec(P - d * z)} ks.`;
       } else {
-        zprava.textContent = `Pojistná zásoba vydrží jen ${dny(vydrz)}. Pak výroba stojí ${dny(z - vydrz)}.`;
+        zprava.textContent = P === 0
+          ? `Pojistná zásoba chybí, takže výroba hned stojí ${dny(z)}.`
+          : `Pojistná zásoba vydrží jen ${dny(vydrz)}. Pak výroba stojí ${dny(z - vydrz)}.`;
         zprava.style.color = "var(--bad)";
       }
     }

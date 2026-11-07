@@ -15,7 +15,7 @@ window.KATALOG = [
     popis: "Maturitní okruhy 1–20",
     temata: [
       {
-        c: 1, nazev: "Základní ekonomické pojmy",
+        c: 1, nazev: "Základní ekonomické pojmy", id: "ekonomie-1", soubor: "ekonomie/web/01-zakladni-ekonomicke-pojmy.html",
         pozadavky: [
           "Ekonomie",
           "Ekonomika",
@@ -30,7 +30,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 2, nazev: "Národní hospodářství",
+        c: 2, nazev: "Národní hospodářství", id: "ekonomie-2", soubor: "ekonomie/web/02-narodni-hospodarstvi.html",
         pozadavky: [
           "Charakteristika národního hospodářství",
           "Úroveň národního hospodářství",
@@ -61,7 +61,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 4, nazev: "Poruchy trhu",
+        c: 4, nazev: "Poruchy trhu", id: "ekonomie-4", soubor: "ekonomie/web/04-poruchy-trhu.html",
         pozadavky: [
           "Inflace",
           "Druhy inflace",
@@ -76,7 +76,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 5, nazev: "Hospodářská politika",
+        c: 5, nazev: "Hospodářská politika", id: "ekonomie-5", soubor: "ekonomie/web/05-hospodarska-politika.html",
         pozadavky: [
           "Pojem hospodářská politika",
           "Nositelé HP",
@@ -177,7 +177,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 13, nazev: "Výroba",
+        c: 13, nazev: "Výroba", id: "ekonomie-13", soubor: "ekonomie/web/13-vyroba.html",
         pozadavky: [
           "Charakteristika výroby",
           "Členění výroby podle používané techniky",
@@ -241,7 +241,7 @@ window.KATALOG = [
         ],
       },
       {
-        c: 18, nazev: "Odbytová funkce podniku",
+        c: 18, nazev: "Odbytová funkce podniku", id: "ekonomie-18", soubor: "ekonomie/web/18-odbytova-funkce-podniku.html",
         pozadavky: [
           "Charakteristika odbytu",
           "Tvorba prodejní strategie",

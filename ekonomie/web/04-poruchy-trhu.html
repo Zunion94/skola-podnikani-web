@@ -1,0 +1,1262 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4. Poruchy trhu – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-4" data-nazev="4. Poruchy trhu" data-zpet="../../index.html" data-zdroj="../pdf/4 Poruchy trhu.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 4</span>
+    <h1>Poruchy trhu</h1>
+    <p class="hlavicka__perex">Proč peníze ztrácejí hodnotu, proč lidé přicházejí o práci a jak se pozná, že se ekonomice daří. Inflace, nezaměstnanost, HDP a hospodářský cyklus.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li>vysvětlit, co je <strong>inflace</strong> a <strong>deflace</strong>, a popsat <strong>deflační spirálu</strong></li>
+        <li>rozlišit druhy inflace podle <strong>velikosti</strong> a podle <strong>podnětu</strong> (tažená poptávkou × nabídkou)</li>
+        <li>popsat <strong>měření inflace</strong> (CPI, PPI, deflátor HDP) a vyjmenovat její <strong>důsledky</strong></li>
+        <li>spočítat <strong>míru nezaměstnanosti</strong>, rozlišit <strong>druhy nezaměstnanosti</strong> a popsat její <strong>důsledky</strong></li>
+        <li>rozlišit <strong>HDP</strong> a <strong>HNP</strong> a spočítat produkt <strong>výdajovou (zbožovou)</strong> a <strong>důchodovou</strong> metodou</li>
+        <li>popsat čtyři fáze <strong>hospodářského cyklu</strong> a ukázat je na křivce</li>
+        <li>vysvětlit, co zachycuje <strong>platební bilance</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Inflace a deflace ===== -->
+  <section class="kapitola" id="inflace" data-pozadavky="1">
+    <h2>Inflace a deflace</h2>
+    <p>Ekonomika (společnost) se neobejde bez směny zboží. Prostředníkem směny a měřítkem ceny jsou <strong>peníze</strong>. Mají mnoho forem: hotovost, peníze na účtu, cizí měna, pohledávky, cenné papíry a další.</p>
+    <div class="box box--definice">
+      <p><strong>Inflace</strong> je snížení <strong>kupní síly peněz</strong> ve vnitřní ekonomice, které se projevuje <strong>růstem všeobecné cenové hladiny</strong>. Je to proces <strong>znehodnocování peněz</strong> v důsledku nadměrného rozmnožení oběživa.</p>
+    </div>
+    <div class="box box--pozor">
+      <p>„Všeobecná“ je důležité slovo. Když zdraží jen máslo, ještě to inflace není. Inflace znamená, že roste cenová hladina jako celek.</p>
+    </div>
+
+    <p>Zkus si, co inflace udělá s penězi, které jen tak leží. Částka zůstane stejná, koupíš si za ni ale méně.</p>
+    <div class="simulace" id="kupni-sila">
+      <div class="posuvnik"><label for="ks-c">Máš odložené peníze</label><output id="ks-c-o"></output><input id="ks-c" type="range" min="10000" max="500000" step="10000" value="100000"></div>
+      <div class="posuvnik"><label for="ks-i">Roční inflace (záporná = deflace)</label><output id="ks-i-o"></output><input id="ks-i" type="range" min="-5" max="30" step="0.5" value="3"></div>
+      <div class="posuvnik"><label for="ks-r">Počet let</label><output id="ks-r-o"></output><input id="ks-r" type="range" min="1" max="30" step="1" value="10"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Na účtu pořád je</small><b id="ks-na"></b></div>
+        <div class="ukazatel"><small>Kupní síla v dnešních cenách</small><b id="ks-sila"></b></div>
+        <div class="ukazatel"><small>Změna kupní síly</small><b id="ks-zm"></b></div>
+      </div>
+      <p id="ks-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <h3>Deflace</h3>
+    <div class="box box--definice">
+      <p><strong>Deflace</strong> je opak inflace: <strong>pokles cenové hladiny</strong> zboží a služeb.</p>
+    </div>
+    <p>Levnější zboží zní dobře, jenže deflace je taky velmi nebezpečná. Spustí totiž <strong>deflační spirálu</strong>:</p>
+    <figure class="ilustrace" aria-label="Deflační spirála: pokles cen, nižší nabídka, nižší výroba a investice, vyšší nezaměstnanost, nižší poptávka a znovu nižší nabídka">
+      <svg viewBox="0 0 400 240" style="max-width:500px">
+        <defs>
+          <marker id="sip-defl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-accent"/></marker>
+        </defs>
+        <g class="vyjed" style="--d:.1s">
+          <rect x="140" y="10" width="120" height="34" rx="17" class="f-accent-soft s-accent"/>
+          <text x="200" y="32" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">ceny klesají</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <path d="M260 34 L304 66" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-defl)"/>
+          <rect x="260" y="68" width="125" height="34" rx="17" class="f-surface s-line"/>
+          <text x="322" y="90" text-anchor="middle" font-size="13" class="f-ink">nižší nabídka</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <path d="M318 102 L296 164" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-defl)"/>
+          <rect x="215" y="166" width="135" height="50" rx="17" class="f-surface s-line"/>
+          <text x="282" y="187" text-anchor="middle" font-size="13" class="f-ink">nižší výroba</text>
+          <text x="282" y="204" text-anchor="middle" font-size="13" class="f-ink">a investice</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <path d="M215 191 L187 191" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-defl)"/>
+          <rect x="50" y="166" width="135" height="50" rx="17" class="f-surface s-line"/>
+          <text x="117" y="187" text-anchor="middle" font-size="13" class="f-ink">vyšší</text>
+          <text x="117" y="204" text-anchor="middle" font-size="13" class="f-ink">nezaměstnanost</text>
+        </g>
+        <g class="vyjed" style="--d:.9s">
+          <path d="M104 166 L84 104" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-defl)"/>
+          <rect x="15" y="68" width="125" height="34" rx="17" class="f-surface s-line"/>
+          <text x="77" y="90" text-anchor="middle" font-size="13" class="f-ink">nižší poptávka</text>
+        </g>
+        <g class="vyjed" style="--d:1.1s">
+          <path d="M140 85 Q200 110 258 85" class="s-accent f-none" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#sip-defl)"/>
+          <text x="200" y="130" text-anchor="middle" font-size="12" class="f-muted">nabídka klesá znovu</text>
+        </g>
+      </svg>
+      <figcaption>Nižší ceny znamenají nižší nabídku (zákon rostoucí nabídky). Nižší poptávka pak srazí nabídku znovu a kolo jede dál.</figcaption>
+    </figure>
+    <details class="odhal">
+      <summary>Jak bys deflační spirálu odříkal jednou větou?</summary>
+      <div class="odhal__obsah">
+        <p>Snížení cen znamená snížení nabídky, to vede ke snížení výroby a investic, to přinese vyšší nezaměstnanost, ta sníží poptávku a to znovu sníží nabídku.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 2. Druhy inflace ===== -->
+  <section class="kapitola" id="druhy-inflace" data-pozadavky="2 3">
+    <h2>Druhy inflace</h2>
+    <p>Inflace se člení podle různých hledisek. Nejznámější jsou dvě: podle <strong>velikosti</strong> a podle <strong>podnětu</strong>, tedy co ji rozjelo.</p>
+    <div data-zalozky>
+      <section data-zalozka="Podle velikosti">
+        <ul>
+          <li><strong>Mírná inflace</strong> – lidé a firmy penězům důvěřují. Nízká, zpravidla <strong>jednociferná</strong> míra. Není nebezpečná.</li>
+          <li><strong>Pádivá inflace</strong> – lidé ztrácejí důvěru k penězům a raději drží jiná finanční nebo věcná aktiva. <strong>Dvoj- až trojciferná</strong> míra.</li>
+          <li><strong>Hyperinflace</strong> – cenová hladina roste o <strong>tisíce a více procent</strong> ročně. Peníze přestávají fungovat, rozšiřuje se naturální směna a používání stabilnějších zahraničních měn. Většinou je nutná <strong>měnová reforma</strong>.</li>
+        </ul>
+      </section>
+      <section data-zalozka="Podle podnětu">
+        <ul>
+          <li><strong>Poptávková inflace</strong> (tažená poptávkou) – na trhu je <strong>více poptávky</strong> při stejném objemu nabídky. Lidé mají dost peněz, podnikatelé dostávají úvěry. Velký zájem spotřebitelů umožní výrobcům prodat i za vyšší ceny.</li>
+          <li><strong>Nákladová (nabídková) inflace</strong> (tažená nabídkou) – <strong>zvýší se ceny nákladů</strong>, tedy vstupů do výroby, např. surovin, energií, mezd.</li>
+        </ul>
+      </section>
+    </div>
+
+    <h3>Velikost inflace na vlastní oči</h3>
+    <div class="simulace" id="velikost">
+      <div class="posuvnik"><label for="ve-i">Roční míra inflace</label><output id="ve-i-o"></output><input id="ve-i" type="range" min="0" max="17" step="1" value="2"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Druh inflace</small><b id="ve-druh"></b></div>
+        <div class="ukazatel"><small>Rohlík za 5 Kč bude za rok stát</small><b id="ve-rohlik"></b></div>
+        <div class="ukazatel"><small>Oběd za 200 Kč bude za rok stát</small><b id="ve-obed"></b></div>
+      </div>
+      <p id="ve-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Pro představu: v Česku byla průměrná roční inflace v roce 2022 <strong>15,1 %</strong>, tedy podle členění výš už pádivá. V roce 2025 to bylo <strong>2,5 %</strong> (mírná). Učebnicové příklady hyperinflace jsou Německo v roce 1923 a Zimbabwe kolem roku 2008.</p>
+    </div>
+
+    <h3>Tažená poptávkou, nebo nabídkou?</h3>
+    <p>Obě inflace zvednou ceny. Liší se tím, co se přitom stane s výrobou. Pohni posuvníky a sleduj, kam se posune průsečík.</p>
+    <div class="simulace" id="adas">
+      <div class="legenda">
+        <span style="--c:var(--accent)">poptávka</span>
+        <span style="--c:var(--warn)">nabídka</span>
+        <span style="--c:var(--border)">původní stav</span>
+      </div>
+      <svg viewBox="0 0 400 260" style="max-width:480px;margin:0 auto" aria-label="Graf poptávky a nabídky v celé ekonomice"></svg>
+      <div class="posuvnik"><label for="ad-p">Lidé mají víc peněz (roste poptávka)</label><output id="ad-p-o"></output><input id="ad-p" type="range" min="0" max="40" step="2" value="20"></div>
+      <div class="posuvnik"><label for="ad-n">Zdraží vstupy do výroby (rostou náklady)</label><output id="ad-n-o"></output><input id="ad-n" type="range" min="0" max="40" step="2" value="0"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Cenová hladina</small><b id="ad-c"></b></div>
+        <div class="ukazatel"><small>Objem výroby</small><b id="ad-v"></b></div>
+      </div>
+      <p id="ad-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Graf je zjednodušený model, v podkladech není. Ukazuje běžné učivo: poptávková inflace ceny zvedá a výroba přitom roste, u nákladové ceny rostou a výroba klesá. Růstu cen spojenému s poklesem výroby se říká <strong>stagflace</strong>.</p>
+    </div>
+
+    <h3>Inflační spirála</h3>
+    <p>Stojí na vzájemném proplétání dvou vlivů: na <strong>požadavcích na růst mezd</strong> (mzda je pro firmu náklad, a tak ovlivňuje růst cen) a na <strong>rostoucí mzdě</strong>.</p>
+    <figure class="ilustrace" aria-label="Inflační spirála: růst mezd zvedá ceny a růst cen vyvolává další požadavky na růst mezd">
+      <svg viewBox="0 0 400 150" style="max-width:480px">
+        <defs>
+          <marker id="sip-infl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="f-accent"/></marker>
+        </defs>
+        <g class="vyjed" style="--d:.1s">
+          <rect x="20" y="53" width="120" height="44" rx="22" class="f-accent-soft s-accent"/>
+          <text x="80" y="80" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">růst mezd</text>
+        </g>
+        <g class="vyjed" style="--d:.4s">
+          <path d="M100 52 Q200 18 300 52" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-infl)"/>
+          <text x="200" y="18" text-anchor="middle" font-size="12" class="f-muted">mzda je náklad firmy</text>
+        </g>
+        <g class="vyjed" style="--d:.7s">
+          <rect x="260" y="53" width="120" height="44" rx="22" class="f-accent-soft s-accent"/>
+          <text x="320" y="80" text-anchor="middle" font-size="14" font-weight="600" class="f-ink">růst cen</text>
+        </g>
+        <g class="vyjed" style="--d:1s">
+          <path d="M300 98 Q200 132 100 98" class="s-accent f-none" stroke-width="1.5" marker-end="url(#sip-infl)"/>
+          <text x="200" y="142" text-anchor="middle" font-size="12" class="f-muted">lidé chtějí vyšší mzdy</text>
+        </g>
+      </svg>
+      <figcaption>Dražší život vede k požadavku na vyšší mzdu, vyšší mzda k dražším výrobkům. A znovu.</figcaption>
+    </figure>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Co inflaci rozjelo? Tažená poptávkou, nebo nabídkou (náklady)?",
+        "kose": ["Poptávková", "Nákladová (nabídková)"],
+        "polozky": [
+          ["lidé mají dost peněz a chtějí víc nakupovat", 0],
+          ["banky snadno půjčují podnikatelům", 0],
+          ["zájem zákazníků je větší, než co se vyrobí", 0],
+          ["firmy zjistí, že prodají i za vyšší ceny", 0],
+          ["zdraží ropa a další suroviny", 1],
+          ["vyletí ceny energií", 1],
+          ["firmám rostou mzdové náklady", 1],
+          ["zdraží vstupy do výroby", 1]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 3. Měření inflace ===== -->
+  <section class="kapitola" id="mereni" data-pozadavky="4">
+    <h2>Měření inflace</h2>
+    <p>Inflace se měří několika způsoby. Maturita chce tyhle tři. Klepni na kartu.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Index spotřebitelských cen (CPI)</div>
+        <div class="karta__rub"><p style="margin:0">Nejčastější a nejstarší způsob. Sleduje vývoj cen ve <strong>spotřebním koši</strong>. Používá se nejvíc, protože ho Český statistický úřad sleduje každý měsíc.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Index cen výrobců (PPI)</div>
+        <div class="karta__rub"><p style="margin:0">Průměrný cenový vývoj <strong>všech průmyslových výrobků</strong> vyrobených a prodaných na domácím trhu. Ceny se zjišťují měsíčně z údajů vybraných organizací za vybrané reprezentanty.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Deflátor HDP</div>
+        <div class="karta__rub"><p style="margin:0">Zahrnuje změny cen <strong>všech statků v ekonomice</strong>. Je přesnější než CPI, ale jde spočítat jen <strong>zpětně</strong>, až když statistický úřad vyjádří HDP za předcházející dva roky.</p></div>
+      </div>
+    </div>
+
+    <h3>Spotřební koš</h3>
+    <p>V koši jsou vybrané výrobky a služby, které domácnosti nakupují nejčastěji. <strong>Každá položka má svou váhu</strong> a inflace se počítá statistickým vzorcem. Proto zdražení bydlení bolí víc než zdražení kina. Vyzkoušej si to na zjednodušeném koši:</p>
+    <div class="simulace" id="kos">
+      <div class="posuvnik"><label for="ko-b">Bydlení a energie (váha 30 %)</label><output id="ko-b-o"></output><input id="ko-b" type="range" min="-10" max="30" step="1" value="4"></div>
+      <div class="posuvnik"><label for="ko-p">Potraviny a nápoje (váha 25 %)</label><output id="ko-p-o"></output><input id="ko-p" type="range" min="-10" max="30" step="1" value="3"></div>
+      <div class="posuvnik"><label for="ko-d">Doprava (váha 15 %)</label><output id="ko-d-o"></output><input id="ko-d" type="range" min="-10" max="30" step="1" value="1"></div>
+      <div class="posuvnik"><label for="ko-o">Všechno ostatní (váha 30 %)</label><output id="ko-o-o"></output><input id="ko-o" type="range" min="-10" max="30" step="1" value="2"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Míra inflace podle koše</small><b id="ko-i"></b></div>
+        <div class="ukazatel"><small>Nákup za 10 000 Kč teď stojí</small><b id="ko-n"></b></div>
+      </div>
+      <p id="ko-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Váhy v kalkulačce jsou ilustrační. Skutečný koš ČSÚ má stovky položek a váhy pravidelně aktualizuje. Míra inflace se z indexu spočítá takto:</p>
+      <div class="vzorec">míra inflace = (CPI letos − CPI loni) / CPI loni × 100</div>
+      <p>Příklad: CPI vzroste ze 120 na 126. Míra inflace je (126 − 120) / 120 × 100 = <strong>5 %</strong>.</p>
+      <p>ČSÚ uvádí hlavně <strong>meziroční</strong> míru (tento měsíc proti stejnému měsíci loni) a <strong>průměrnou roční</strong> míru. Česká národní banka má inflační cíl 2 %, s tolerancí jeden procentní bod na obě strany.</p>
+    </div>
+
+    <h3>Deflátor HDP</h3>
+    <p>Je to poměr HDP v běžných cenách k HDP ve stálých cenách určitého roku.</p>
+    <div class="vzorec">deflátor HDP = nominální HDP / reálný HDP × 100</div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Nominální HDP</h3>
+        <p style="margin-bottom:0">Hodnota vyprodukovaných statků a služeb v <strong>běžných cenách</strong> (v cenách daného roku). Nezohledňuje inflaci.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Reálný HDP</h3>
+        <p style="margin-bottom:0">Vyjádřený v cenách určitého zvoleného roku (<strong>stálé ceny</strong>). Je očištěný od inflace.</p>
+      </div>
+    </div>
+    <div class="simulace" id="deflator">
+      <div class="posuvnik"><label for="de-n">Nominální HDP</label><output id="de-n-o"></output><input id="de-n" type="range" min="800" max="1400" step="10" value="1100"></div>
+      <div class="posuvnik"><label for="de-r">Reálný HDP</label><output id="de-r-o"></output><input id="de-r" type="range" min="800" max="1400" step="10" value="1000"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Deflátor HDP</small><b id="de-d"></b></div>
+        <div class="ukazatel"><small>Co to znamená</small><b id="de-v"></b></div>
+      </div>
+    </div>
+    <div class="box box--pozor">
+      <p>Výsledná míra inflace je číslo převyšující hranici 100 %, takže deflátor 110 % neznamená inflaci 110 %. Znamená růst cen o <strong>10 %</strong> oproti zvolenému roku. Když je výsledek nižší než 100 %, rozdíl do 100 % znamená <strong>deflaci</strong>: 96 % je deflace 4 %.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Ke kterému ukazateli to patří?",
+        "kose": ["CPI", "PPI", "Deflátor HDP"],
+        "polozky": [
+          ["spotřební koš", 0],
+          ["nejčastější a nejstarší způsob měření", 0],
+          ["výrobky a služby, které domácnosti kupují nejčastěji", 0],
+          ["průmyslové výrobky prodané na domácím trhu", 1],
+          ["ceny z vybraných organizací za vybrané reprezentanty", 1],
+          ["změny cen všech statků v ekonomice", 2],
+          ["poměr nominálního a reálného HDP", 2],
+          ["jde spočítat jen zpětně", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 4. Důsledky inflace ===== -->
+  <section class="kapitola" id="dusledky-inflace" data-pozadavky="5">
+    <h2>Důsledky inflace</h2>
+    <p>Je jich pět. Klepni a zkus si je nejdřív říct sám.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Nestabilita</div>
+        <div class="karta__rub"><p style="margin:0">Inflace přispívá <strong>k ekonomické nestabilitě</strong>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Nejistota</div>
+        <div class="karta__rub"><p style="margin:0">Zvyšuje <strong>míru nejistoty</strong> vývoje ekonomických veličin.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Skrytá daň</div>
+        <div class="karta__rub"><p style="margin:0">Působí jako <strong>skrytá forma zdanění</strong>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Slabší peníze</div>
+        <div class="karta__rub"><p style="margin:0">Dochází <strong>k poklesu kupní síly peněz</strong>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Nižší reálné mzdy</div>
+        <div class="karta__rub"><p style="margin:0">Klesá <strong>hodnota reálných mezd a důchodů</strong> a roste tlak na jejich zvyšování (odbory, valorizace mezd a důchodů).</p></div>
+      </div>
+    </div>
+
+    <h3>Dostal jsi přidáno. Máš se opravdu líp?</h3>
+    <p>Rozhoduje, jestli mzda roste rychleji než ceny.</p>
+    <div class="simulace" id="realna">
+      <div class="posuvnik"><label for="re-m">Hrubá mzda teď</label><output id="re-m-o"></output><input id="re-m" type="range" min="20000" max="80000" step="1000" value="40000"></div>
+      <div class="posuvnik"><label for="re-n">Zvýšení mzdy (nominální růst)</label><output id="re-n-o"></output><input id="re-n" type="range" min="0" max="20" step="0.5" value="5"></div>
+      <div class="posuvnik"><label for="re-i">Inflace</label><output id="re-i-o"></output><input id="re-i" type="range" min="0" max="20" step="0.5" value="8"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Nová mzda na výplatnici</small><b id="re-nova"></b></div>
+        <div class="ukazatel"><small>Její hodnota v loňských cenách</small><b id="re-hod"></b></div>
+        <div class="ukazatel"><small>Změna reálné mzdy</small><b id="re-zm"></b></div>
+      </div>
+      <p id="re-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--tip">
+      <p>Rychlý odhad: reálný růst mzdy je zhruba <strong>růst mzdy minus inflace</strong>. Přidali ti 5 %, inflace je 8 %? Reálně jsi asi o 3 % níž.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p><strong>Proč skrytá daň:</strong> nikdo ti nic nestrhne, a přesto si za své peníze koupíš míň. Daně se navíc platí z nominálních příjmů, takže se odvádí i z části výdělku, která jen dohání růst cen.</p>
+      <p><strong>Kdo na inflaci tratí a kdo ne:</strong> tratí lidé s úsporami s nízkým úrokem, věřitelé a ti, jejichž příjem neroste s cenami. Pomůže naopak dlužníkům s pevným úrokem, protože splácejí znehodnocenými penězi.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5. Nezaměstnanost ===== -->
+  <section class="kapitola" id="nezamestnanost" data-pozadavky="6 7">
+    <h2>Nezaměstnanost a její důsledky</h2>
+    <div class="box box--definice">
+      <p><strong>Nezaměstnaná pracovní síla</strong> je ta část ekonomicky aktivního obyvatelstva, která není odpovídajícím způsobem plně využita. Za nezaměstnané se považují jen ti, kteří jsou <strong>evidováni na Úřadu práce</strong>. Nepatří sem třeba ženy v domácnosti, bezdomovci nebo bohatí lidé žijící z dědictví.</p>
+    </div>
+    <figure class="ilustrace" aria-label="Obyvatelstvo se dělí na ekonomicky aktivní a ostatní, ekonomicky aktivní na pracující a nezaměstnané">
+      <svg viewBox="0 0 400 150" style="max-width:500px">
+        <g class="vyjed" style="--d:.1s">
+          <rect x="10" y="8" width="380" height="32" rx="6" class="f-surface2 s-line"/>
+          <text x="200" y="29" text-anchor="middle" font-size="13" class="f-ink">obyvatelstvo</text>
+        </g>
+        <g class="vyjed" style="--d:.35s">
+          <rect x="10" y="48" width="240" height="32" rx="6" class="f-accent-soft s-accent"/>
+          <text x="130" y="69" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">ekonomicky aktivní (L + U)</text>
+          <rect x="260" y="48" width="130" height="32" rx="6" class="f-surface2 s-line"/>
+          <text x="325" y="69" text-anchor="middle" font-size="13" class="f-ink">ostatní</text>
+        </g>
+        <g class="vyjed" style="--d:.6s">
+          <rect x="10" y="88" width="190" height="32" rx="6" class="f-surface s-accent"/>
+          <text x="105" y="109" text-anchor="middle" font-size="13" class="f-ink">pracující (L)</text>
+          <rect x="205" y="88" width="45" height="32" rx="6" class="f-bad-soft s-bad"/>
+          <text x="227" y="109" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">U</text>
+          <text x="250" y="138" text-anchor="end" font-size="12" class="f-muted">nezaměstnaní</text>
+        </g>
+        <g class="vyjed" style="--d:.85s">
+          <text x="266" y="100" font-size="12" class="f-muted">ženy v domácnosti</text>
+          <text x="266" y="117" font-size="12" class="f-muted">bezdomovci</text>
+          <text x="266" y="134" font-size="12" class="f-muted">bohatí z dědictví</text>
+        </g>
+      </svg>
+      <figcaption>Míra nezaměstnanosti se nepočítá ze všech obyvatel, ale jen z ekonomicky aktivních.</figcaption>
+    </figure>
+
+    <h3>Míra nezaměstnanosti</h3>
+    <p>Vyjadřuje podíl nezaměstnaných, kteří aktivně usilují o nalezení práce a mohou to prokázat (úřady práce), na ekonomicky aktivním obyvatelstvu.</p>
+    <div class="vzorec">u = U / (L + U) × 100</div>
+    <p><strong>u</strong> = míra nezaměstnanosti, <strong>U</strong> = počet nezaměstnaných, <strong>L</strong> = počet pracujících, <strong>L + U</strong> = ekonomicky aktivní obyvatelstvo.</p>
+    <div class="simulace" id="mira">
+      <div class="posuvnik"><label for="mi-l">Pracující (L)</label><output id="mi-l-o"></output><input id="mi-l" type="range" min="4000" max="5500" step="50" value="5000"></div>
+      <div class="posuvnik"><label for="mi-u">Nezaměstnaní (U)</label><output id="mi-u-o"></output><input id="mi-u" type="range" min="50" max="1000" step="10" value="250"></div>
+      <div class="pruh" aria-hidden="true"><span id="mi-pruh-l" style="background:var(--accent)"></span><span id="mi-pruh-u" style="background:var(--bad)"></span></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Ekonomicky aktivní (L + U)</small><b id="mi-a"></b></div>
+        <div class="ukazatel"><small>Míra nezaměstnanosti (u)</small><b id="mi-m"></b></div>
+      </div>
+      <p id="mi-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <h3>Kdo nezaměstnanost měří</h3>
+    <p>Setkáš se se dvěma typy míry. Liší se způsobem zjišťování, metodikou výpočtu i institucí.</p>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Registrovaná míra</h3>
+        <p style="margin-bottom:0"><strong>Ministerstvo práce a sociálních věcí (MPSV)</strong>. Vychází ze statistik Úřadu práce, nezaměstnaní jsou ti, kdo jsou zaregistrovaní na úřadech práce.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Obecná míra</h3>
+        <p style="margin-bottom:0"><strong>Český statistický úřad (ČSÚ)</strong>. Každé čtvrtletí provádí vlastní <strong>Výběrové šetření pracovních sil</strong>.</p>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p>Od roku 2013 se v Česku místo registrované míry zveřejňuje <strong>podíl nezaměstnaných osob</strong> (dosažitelní uchazeči o práci ve věku 15–64 let vůči obyvatelstvu stejného věku). K 30. 9. 2026 byl <strong>5,0 %</strong> a Úřad práce evidoval 368 377 uchazečů. Číslo se každý měsíc mění.</p>
+      <p>Obecná míra evidenci na úřadu práce nevyžaduje. Podle mezinárodní metodiky je nezaměstnaný ten, kdo nepracuje, aktivně hledá práci a může rychle nastoupit. Definice „jen evidovaní na Úřadu práce“ proto přesně sedí jen na údaje z úřadů práce.</p>
+    </div>
+
+    <h3>Druhy nezaměstnanosti</h3>
+    <div data-zalozky>
+      <section data-zalozka="Podle dobrovolnosti">
+        <ul>
+          <li><strong>Dobrovolná</strong> – člověk sám dobrovolně ukončí práci a hledá si lepší místo za lepších podmínek.</li>
+          <li><strong>Nedobrovolná</strong> – člověk je nezaměstnaný nedobrovolně a hledá jakoukoliv práci, i za horších podmínek.</li>
+        </ul>
+      </section>
+      <section data-zalozka="Podle příčiny">
+        <ul>
+          <li><strong>Frikční</strong> – nejméně závažná. Vzniká nejčastěji přechodem z jednoho zaměstnání do druhého (např. kvůli stěhování). Je přechodná a krátkodobá.</li>
+          <li><strong>Strukturální</strong> – změny v požadované kvalifikaci kvůli změně technologických podmínek výroby nebo změna relativní konkurenční schopnosti odvětví. Často jediným řešením je <strong>rekvalifikace</strong> (např. textilní průmysl).</li>
+          <li><strong>Cyklická</strong> – snížení celkové úrovně výdajů v ekonomice. Souvisí s hospodářským cyklem: když se ekonomice daří, je nižší, když se nedaří, je vyšší.</li>
+          <li><strong>Sezónní</strong> – zaměstnání sezónního typu (zemědělství, cestovní ruch, stavebnictví). Mimo sezónu je vyšší.</li>
+          <li><strong>Technologická</strong> – kapitálově náročné technologie vedou k nahrazování práce kapitálem. Lidskou práci nahradí stroje.</li>
+        </ul>
+      </section>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jaký druh nezaměstnanosti to je?",
+        "kose": ["Frikční", "Strukturální", "Cyklická", "Sezónní", "Technologická"],
+        "polozky": [
+          ["přestěhoval se a měsíc hledá práci v novém městě", 0],
+          ["dala výpověď a za dva týdny nastupuje jinam", 0],
+          ["textilka zanikla a šička se musí rekvalifikovat", 1],
+          ["obor upadl kvůli levnější konkurenci", 1],
+          ["v recesi firma propouští, protože klesly zakázky", 2],
+          ["celkové výdaje v ekonomice poklesly", 2],
+          ["instruktor lyžování v létě bez práce", 3],
+          ["zedník v zimě bez zakázek", 3],
+          ["svařovače ve výrobě nahradil robot", 4],
+          ["automatická linka nahradila deset dělníků", 4]
+        ]
+      }
+      </script>
+    </div>
+    <div class="box box--doplneno">
+      <p>Nulová nezaměstnanost není reálná. Frikční a strukturální nezaměstnanost existují i v dobrých časech a dohromady tvoří <strong>přirozenou míru nezaměstnanosti</strong>.</p>
+    </div>
+
+    <h3>Důsledky nezaměstnanosti</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Pro ekonomiku</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Ztráta produkce</strong>, kterou by nezaměstnaní vyrobili.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Pro stát</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Zvýšené výdaje státního rozpočtu</strong> na výplatu podpory a dávek.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Pro lidi</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Sociální důsledky</strong>: pokles životní úrovně, stres, ztráta návyků, růst trestných činů.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. HDP a HNP ===== -->
+  <section class="kapitola" id="hdp-hnp" data-pozadavky="8 9">
+    <h2>Hrubý domácí a národní produkt</h2>
+    <p><strong>Produkt</strong> je ukazatel, kterým sledujeme výkonnost ekonomiky daného státu. Využívá se k porovnání v čase (jak daný stát hospodařil) nebo v prostoru (v porovnání s jinými státy).</p>
+    <div class="mrizka">
+      <div class="box box--definice" style="margin:0">
+        <p><strong>Hrubý domácí produkt (HDP)</strong> je výstup vyprodukovaný výrobními faktory <strong>na území daného státu</strong> bez ohledu na to, kdo je jejich vlastníkem. Nezáleží na tom, zda ho vyrobila firma daného státu, nebo zahraniční firma.</p>
+      </div>
+      <div class="box box--definice" style="margin:0">
+        <p><strong>Hrubý národní produkt (HNP)</strong> je výstup vyprodukovaný výrobními faktory <strong>ve vlastnictví občanů daného státu</strong>, bez ohledu na zemi, kde je uplatnili. Tedy subjekty daného státu doma i v zahraničí.</p>
+      </div>
+    </div>
+    <p>V Evropě se používá ukazatel <strong>HDP</strong>, v USA ukazatel <strong>HNP</strong>.</p>
+    <div class="box box--doplneno">
+      <p>Dělení na Evropu a USA je už historické: USA přešly jako na hlavní ukazatel na HDP (GDP) v roce 1991. Místo HNP se dnes ve statistikách většinou uvádí <strong>hrubý národní důchod (HND, GNI)</strong>.</p>
+    </div>
+
+    <p>Rozdíl je jen v tom, co se započítá. Přepínej a hýbej posuvníky.</p>
+    <div class="simulace" id="hdp-hnp-sim">
+      <div class="urci__radek">
+        <button class="chip vybrany" type="button" data-pohled="hdp">HDP Česka</button>
+        <button class="chip" type="button" data-pohled="hnp">HNP Česka</button>
+      </div>
+      <svg viewBox="0 0 400 180" style="max-width:500px;margin:8px auto" aria-label="Co se započítá do HDP a co do HNP Česka">
+        <text x="12" y="15" font-size="13" font-weight="600" class="f-ink">Česko</text>
+        <text x="276" y="15" font-size="13" font-weight="600" class="f-ink">Zahraničí</text>
+        <rect x="6" y="22" width="254" height="150" rx="10" class="f-none s-muted" stroke-width="1.5"/>
+        <rect x="270" y="22" width="124" height="150" rx="10" class="f-none s-muted" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <g data-dlazdice="a">
+          <rect x="16" y="38" width="112" height="118" rx="8" stroke-width="2"/>
+          <text x="72" y="72" text-anchor="middle" font-size="12" class="f-ink">české firmy</text>
+          <text x="72" y="89" text-anchor="middle" font-size="12" class="f-ink">v Česku</text>
+          <text id="hh-a-t" x="72" y="122" text-anchor="middle" font-size="15" font-weight="700" class="f-ink"></text>
+        </g>
+        <g data-dlazdice="b">
+          <rect x="138" y="38" width="112" height="118" rx="8" stroke-width="2"/>
+          <text x="194" y="72" text-anchor="middle" font-size="12" class="f-ink">zahraniční</text>
+          <text x="194" y="89" text-anchor="middle" font-size="12" class="f-ink">firmy v Česku</text>
+          <text id="hh-b-t" x="194" y="122" text-anchor="middle" font-size="15" font-weight="700" class="f-ink"></text>
+        </g>
+        <g data-dlazdice="c">
+          <rect x="280" y="38" width="104" height="118" rx="8" stroke-width="2"/>
+          <text x="332" y="72" text-anchor="middle" font-size="12" class="f-ink">české firmy</text>
+          <text x="332" y="89" text-anchor="middle" font-size="12" class="f-ink">v zahraničí</text>
+          <text id="hh-c-t" x="332" y="122" text-anchor="middle" font-size="15" font-weight="700" class="f-ink"></text>
+        </g>
+      </svg>
+      <div class="posuvnik"><label for="hh-a">České firmy a lidé v Česku</label><output id="hh-a-o"></output><input id="hh-a" type="range" min="100" max="800" step="10" value="400"></div>
+      <div class="posuvnik"><label for="hh-b">Zahraniční firmy v Česku (třeba Hyundai v Nošovicích)</label><output id="hh-b-o"></output><input id="hh-b" type="range" min="0" max="400" step="10" value="200"></div>
+      <div class="posuvnik"><label for="hh-c">České firmy a lidé v zahraničí</label><output id="hh-c-o"></output><input id="hh-c" type="range" min="0" max="400" step="10" value="50"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>HDP = na území</small><b id="hh-hdp"></b></div>
+        <div class="ukazatel"><small>HNP = podle vlastnictví</small><b id="hh-hnp"></b></div>
+      </div>
+    </div>
+
+    <h3>Tři metody výpočtu produktu</h3>
+    <div data-zalozky>
+      <section data-zalozka="Výdajová">
+        <p><strong>Výdajová (spotřební, zbožová) metoda</strong> je součet výdajů na nákup <strong>finálních statků</strong> v ekonomice. Sčítá výdaje na nákup hodnoty nově vytvořené v dané ekonomice.</p>
+        <div class="vzorec">HDP = C + I<sub>g</sub> + G + NX</div>
+        <ul>
+          <li><strong>C</strong> – výdaje domácností na osobní spotřebu: nákup statků a služeb</li>
+          <li><strong>I<sub>g</sub></strong> – výdaje firem (hrubé investice) do budov, zařízení a zásob</li>
+          <li><strong>G</strong> – vládní výdaje na státní spotřebu a státní investice <strong>mimo transferových plateb</strong></li>
+          <li><strong>NX</strong> – čistý vývoz: saldo obchodní bilance, tedy porovnání vývozu a dovozu statků a služeb</li>
+        </ul>
+        <div class="box box--pozor" style="margin-bottom:0">
+          <p><strong>Transferové platby</strong> jsou platby občanům, za které stát nedostane žádnou protihodnotu: důchody, sociální dávky, podpora v nezaměstnanosti. Do G nepatří.</p>
+        </div>
+      </section>
+      <section data-zalozka="Důchodová">
+        <p><strong>Důchodová (příjmová) metoda</strong> je souhrn plateb podniků domácnostem za prodané výrobní faktory za určité období, ke kterým se připočtou všechny zisky podniků. Patří sem:</p>
+        <ul>
+          <li><strong>mzdy a další platy</strong> zaměstnanců</li>
+          <li><strong>hrubé zisky</strong> firem</li>
+          <li><strong>čistý úrok</strong> – rozdíl mezi úroky, které domácnosti získají, a úroky, které zaplatí jiným subjektům</li>
+          <li><strong>příjmy ze samozaměstnání</strong> – všechny formy plateb za výrobní faktory, jež používají samostatně podnikající osoby</li>
+          <li><strong>renty</strong></li>
+        </ul>
+        <p style="margin-bottom:0">Sečtením těchto složek zjistíš výkonnost národního hospodářství.</p>
+      </section>
+      <section data-zalozka="Produktová">
+        <p><strong>Produktová (výrobní) metoda</strong> sčítá hodnotu <strong>finálních statků a služeb</strong>, které firmy prodávají domácnostem. Sčítá také polotovary a komponenty, které firmy poskytují ostatním firmám, a <strong>kapitálové statky</strong> (stroje), které slouží k výrobě mnoho let. Jejich hodnota se do hodnoty produktu přenáší postupně formou opotřebení (odpisy majetku).</p>
+      </section>
+    </div>
+
+    <div class="box box--tip">
+      <p>V maturitním zadání je „<strong>zbožová</strong>“ metoda. Je to totéž co <strong>výdajová</strong>.</p>
+    </div>
+
+    <h3>Jedna ekonomika, tři pohledy</h3>
+    <p>Co jeden utratí, druhý vydělá, a někdo to musel vyrobit. Proto v modelu všechny tři metody dají stejný výsledek. Zkus pohnout transfery a sleduj, že se HDP nezmění.</p>
+    <div class="simulace" id="tri-metody">
+      <div class="posuvnik"><label for="tm-c">Spotřeba domácností (C)</label><output id="tm-c-o"></output><input id="tm-c" type="range" min="350" max="650" step="10" value="450"></div>
+      <div class="posuvnik"><label for="tm-i">Hrubé investice (I<sub>g</sub>)</label><output id="tm-i-o"></output><input id="tm-i" type="range" min="150" max="350" step="10" value="250"></div>
+      <div class="posuvnik"><label for="tm-g">Vládní výdaje bez transferů (G)</label><output id="tm-g-o"></output><input id="tm-g" type="range" min="150" max="300" step="10" value="200"></div>
+      <div class="posuvnik"><label for="tm-x">Vývoz (X)</label><output id="tm-x-o"></output><input id="tm-x" type="range" min="600" max="800" step="10" value="700"></div>
+      <div class="posuvnik"><label for="tm-m">Dovoz (M)</label><output id="tm-m-o"></output><input id="tm-m" type="range" min="500" max="700" step="10" value="600"></div>
+      <div class="posuvnik"><label for="tm-t">Transferové platby (důchody, dávky)</label><output id="tm-t-o"></output><input id="tm-t" type="range" min="0" max="300" step="10" value="150"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Čistý vývoz NX = X − M</small><b id="tm-nx"></b></div>
+        <div class="ukazatel"><small>HDP = C + I<sub>g</sub> + G + NX</small><b id="tm-hdp"></b></div>
+      </div>
+      <div id="tm-radky"></div>
+      <p style="margin:10px 0 0;font-size:.85rem;color:var(--text-muted)">Částky v mld. Kč, model s vymyšlenými čísly. Rozdělení změny mezi složky je zjednodušené.</p>
+    </div>
+
+    <div class="box box--doplneno">
+      <p><strong>Přidaná hodnota:</strong> kdyby se sečetly všechny prodeje včetně polotovarů, tatáž mouka by se započítala několikrát (<strong>dvojí započítání</strong>). Statistici proto u výrobní metody sčítají jen <strong>přidanou hodnotu</strong> každého výrobce. Její součet se rovná ceně finálního výrobku.</p>
+      <figure class="ilustrace" aria-label="Řetěz od farmáře k obchodu: prodeje 20, 50, 80 a 100 Kč, přidaná hodnota 20, 30, 30 a 20 Kč">
+        <svg viewBox="0 0 400 160" style="max-width:460px">
+          <path d="M20 132 H380" class="s-muted" stroke-width="1.2"/>
+          <g class="vyjed" style="--d:.1s">
+            <rect x="35" y="112" width="60" height="20" class="f-accent"/>
+            <text x="65" y="126" text-anchor="middle" font-size="12" style="fill:var(--accent-text)">+20</text>
+            <text x="65" y="106" text-anchor="middle" font-size="12" class="f-ink">20 Kč</text>
+            <text x="65" y="150" text-anchor="middle" font-size="13" class="f-ink">farmář</text>
+          </g>
+          <g class="vyjed" style="--d:.35s">
+            <rect x="125" y="82" width="60" height="30" class="f-accent"/>
+            <rect x="125" y="112" width="60" height="20" class="f-surface2 s-line"/>
+            <text x="155" y="102" text-anchor="middle" font-size="12" style="fill:var(--accent-text)">+30</text>
+            <text x="155" y="76" text-anchor="middle" font-size="12" class="f-ink">50 Kč</text>
+            <text x="155" y="150" text-anchor="middle" font-size="13" class="f-ink">mlýn</text>
+          </g>
+          <g class="vyjed" style="--d:.6s">
+            <rect x="215" y="82" width="60" height="50" class="f-surface2 s-line"/>
+            <rect x="215" y="52" width="60" height="30" class="f-accent"/>
+            <text x="245" y="72" text-anchor="middle" font-size="12" style="fill:var(--accent-text)">+30</text>
+            <text x="245" y="46" text-anchor="middle" font-size="12" class="f-ink">80 Kč</text>
+            <text x="245" y="150" text-anchor="middle" font-size="13" class="f-ink">pekárna</text>
+          </g>
+          <g class="vyjed" style="--d:.85s">
+            <rect x="305" y="52" width="60" height="80" class="f-surface2 s-line"/>
+            <rect x="305" y="32" width="60" height="20" class="f-accent"/>
+            <text x="335" y="46" text-anchor="middle" font-size="12" style="fill:var(--accent-text)">+20</text>
+            <text x="335" y="26" text-anchor="middle" font-size="12" class="f-ink">100 Kč</text>
+            <text x="335" y="150" text-anchor="middle" font-size="13" class="f-ink">obchod</text>
+          </g>
+        </svg>
+        <figcaption>Součet prodejů je 250 Kč, ale do HDP jde jen 20 + 30 + 30 + 20 = 100 Kč, tedy cena finálního výrobku.</figcaption>
+      </figure>
+      <p style="margin-bottom:0">Důchodová a výdajová metoda v praxi vycházejí stejně až po statistických úpravách. Např. k důchodům se ještě přičítají nepřímé daně a odpisy, pokud nejsou v hrubých ziscích.</p>
+    </div>
+
+    <h3>Vyjádření a srovnávání HDP</h3>
+    <ul>
+      <li><strong>Nominální HDP</strong> je v běžných cenách, tj. v cenách daného roku.</li>
+      <li><strong>Reálný HDP</strong> je ve stálých cenách, tj. v cenách určitého zvoleného roku.</li>
+    </ul>
+    <p>Pro posuzování vyspělosti ekonomiky a srovnávání států se nejčastěji používají ukazatele hrubého národního či domácího produktu. Při porovnávání se uvádějí <strong>přepočítané na 1 obyvatele</strong> (nejčastěji v USD).</p>
+    <details class="odhal">
+      <summary>Proč nestačí sledovat nominální HDP?</summary>
+      <div class="odhal__obsah">
+        <p>Nominální HDP může růst i jen proto, že zdražilo zboží, i když se nevyrobilo o nic víc. Reálný HDP je od inflace očištěný. Když nominální HDP vzroste o 5 % a ceny také o 5 %, ekonomika reálně nevyrostla.</p>
+      </div>
+    </details>
+    <div class="box box--doplneno">
+      <p>Pro představu: reálný HDP Česka v roce 2025 meziročně vzrostl o 2,6 %.</p>
+    </div>
+  </section>
+
+  <!-- ===== 7. Hospodářský cyklus ===== -->
+  <section class="kapitola" id="cyklus" data-pozadavky="10">
+    <h2>Hospodářský cyklus</h2>
+    <div class="box box--definice">
+      <p><strong>Hospodářský cyklus</strong> ukazuje, jak se vyvíjí ekonomika dané země v čase. Jde o porovnání <strong>potenciálního</strong> a <strong>reálného (skutečného) HDP</strong>, o kolísání reálného produktu okolo potenciálního.</p>
+    </div>
+    <div class="box box--definice">
+      <p><strong>Potenciální produkt</strong> je produkt vytvořený za podmínek plného využití pracovních a ostatních výrobních zdrojů, které má ekonomika k dispozici.</p>
+    </div>
+    <p>Posuň se časem po křivce, nebo klepni na fázi.</p>
+    <div class="simulace" id="cyklus-sim">
+      <div class="urci__radek">
+        <button class="chip" type="button" data-t="5">expanze</button>
+        <button class="chip" type="button" data-t="14">vrchol</button>
+        <button class="chip" type="button" data-t="25">recese</button>
+        <button class="chip" type="button" data-t="36">dno</button>
+      </div>
+      <div class="legenda">
+        <span style="--c:var(--accent)">reálný HDP</span>
+        <span style="--c:var(--text-muted)">potenciální HDP</span>
+      </div>
+      <svg viewBox="0 0 400 245" style="max-width:520px;margin:0 auto" aria-label="Křivka hospodářského cyklu"></svg>
+      <div class="posuvnik"><label for="cy-t">Čas</label><output id="cy-t-o"></output><input id="cy-t" type="range" min="0" max="100" step="1" value="5"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Fáze</small><b id="cy-f"></b></div>
+        <div class="ukazatel"><small>Poptávka</small><b id="cy-p"></b></div>
+        <div class="ukazatel"><small>Výroba</small><b id="cy-v"></b></div>
+        <div class="ukazatel"><small>Investice</small><b id="cy-i"></b></div>
+        <div class="ukazatel"><small>Nezaměstnanost</small><b id="cy-n"></b></div>
+      </div>
+      <p id="cy-t-text" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <h3>Čtyři fáze</h3>
+    <ol>
+      <li><strong>Expanze (růst)</strong> – roste agregátní poptávka (více se prodává), roste výroba, rostou investice, snižuje se nezaměstnanost. Produkt roste alespoň ve dvou po sobě jdoucích obdobích.</li>
+      <li><strong>Vrchol</strong> – skutečný produkt dosahuje svého maxima. Ekonomice se velmi daří, velká poptávka, hodně se vyrábí a investuje.</li>
+      <li><strong>Recese (pokles)</strong> – výrazný pokles agregátní poptávky, klesají nákupy spotřebních statků, klesají investice, omezuje se výroba, roste nezaměstnanost. Produkt klesá alespoň ve dvou po sobě jdoucích obdobích. Když recese trvá dlouhou dobu, jde o tzv. <strong>depresi</strong>.</li>
+      <li><strong>Dno</strong> – skutečný produkt dosahuje svého minima. Téměř žádné investice, malá poptávka.</li>
+    </ol>
+    <div class="box box--tip">
+      <p>Tady se téma propojuje: v recesi roste <strong>cyklická nezaměstnanost</strong>, při expanzi klesá.</p>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Do které fáze hospodářského cyklu to patří?",
+        "kose": ["Expanze", "Vrchol", "Recese", "Dno"],
+        "polozky": [
+          ["produkt roste aspoň ve dvou po sobě jdoucích obdobích", 0],
+          ["více se prodává a nezaměstnanost se snižuje", 0],
+          ["skutečný produkt dosahuje maxima", 1],
+          ["ekonomice se velmi daří, velká poptávka", 1],
+          ["produkt klesá aspoň ve dvou po sobě jdoucích obdobích", 2],
+          ["klesají nákupy spotřebních statků, roste nezaměstnanost", 2],
+          ["skutečný produkt dosahuje minima", 3],
+          ["téměř žádné investice, malá poptávka", 3]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 8. Platební bilance ===== -->
+  <section class="kapitola" id="platebni-bilance">
+    <h2>Platební bilance</h2>
+    <p>Není v maturitním zadání, ale v podkladech je. A navazuje na čistý vývoz z výpočtu HDP.</p>
+    <div class="box box--definice">
+      <p><strong>Platební bilance</strong> zachycuje veškeré platební transakce ekonomiky daného státu se zahraničím.</p>
+    </div>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Běžný účet</h3>
+        <p>Porovnává:</p>
+        <ul style="margin-bottom:0">
+          <li>platby za dovoz a vývoz statků a služeb (<strong>obchodní bilance</strong>)</li>
+          <li>jednostranné převody (dary, dědictví)</li>
+          <li>placení mezd, zisků, úroků, dividend</li>
+        </ul>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Kapitálový (finanční) účet</h3>
+        <p>Porovnává pohyby kapitálu:</p>
+        <ul style="margin-bottom:0">
+          <li>přímé investice</li>
+          <li>nákup cenných papírů</li>
+          <li>půjčky</li>
+          <li>ukládání peněz u zahraničních bank</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p>V dnešní statistice ČNB se účty uvádějí odděleně: <strong>běžný</strong>, <strong>kapitálový</strong> a <strong>finanční</strong>. Přímé investice, cenné papíry a půjčky pak patří do finančního účtu.</p>
+    </div>
+
+    <h3>Vyrovnanost</h3>
+    <p>Z účetního hlediska musí být platební bilance <strong>vždy vyrovnaná</strong>. K tomu slouží <strong>devizové rezervy</strong>, což je zahraniční měna.</p>
+    <div class="simulace" id="pb">
+      <div class="posuvnik"><label for="pb-p">Příjmy ze zahraničí</label><output id="pb-p-o"></output><input id="pb-p" type="range" min="100" max="900" step="10" value="600"></div>
+      <div class="posuvnik"><label for="pb-v">Výdaje do zahraničí</label><output id="pb-v-o"></output><input id="pb-v" type="range" min="100" max="900" step="10" value="500"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Saldo platební bilance</small><b id="pb-s"></b></div>
+        <div class="ukazatel"><small>Druh salda</small><b id="pb-d"></b></div>
+        <div class="ukazatel"><small>Devizové rezervy (začátek 1 000)</small><b id="pb-r"></b></div>
+      </div>
+      <p id="pb-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Na který účet platební bilance to patří?",
+        "kose": ["Běžný účet", "Kapitálový (finanční) účet"],
+        "polozky": [
+          ["vývoz aut do Německa", 0],
+          ["dovoz ropy", 0],
+          ["dar do zahraničí", 0],
+          ["výplata dividend zahraničnímu akcionáři", 0],
+          ["zahraniční firma postaví v Česku továrnu", 1],
+          ["nákup zahraničních cenných papírů", 1],
+          ["půjčka od zahraniční banky", 1],
+          ["uložení peněz u zahraniční banky", 1]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 9. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – poruchy trhu",
+        "karty": [
+          ["Inflace", "Snížení kupní síly peněz, projevuje se růstem všeobecné cenové hladiny. Znehodnocování peněz kvůli nadměrnému rozmnožení oběživa."],
+          ["Deflace", "Pokles cenové hladiny zboží a služeb."],
+          ["Deflační spirála", "Nižší ceny → nižší nabídka → nižší výroba a investice → vyšší nezaměstnanost → nižší poptávka → znovu nižší nabídka."],
+          ["Druhy inflace podle velikosti", "Mírná (jednociferná), pádivá (dvoj- až trojciferná), hyperinflace (tisíce a více % ročně)."],
+          ["Poptávková inflace", "Více poptávky při stejném objemu nabídky. Lidé mají dost peněz, výrobci prodají i za vyšší ceny."],
+          ["Nákladová (nabídková) inflace", "Zvýšení cen vstupů do výroby: surovin, energií, mezd."],
+          ["Inflační spirála", "Proplétání požadavků na růst mezd a růstu cen: mzda je náklad firmy, a tak ovlivňuje ceny."],
+          ["Měření inflace", "CPI (spotřební koš), PPI (průmyslové výrobky na domácím trhu), deflátor HDP."],
+          ["Deflátor HDP", "Nominální HDP / reálný HDP × 100. Nad 100 % = inflace, pod 100 % = deflace. Jde spočítat jen zpětně."],
+          ["Důsledky inflace", "Ekonomická nestabilita, nejistota, skrytá forma zdanění, pokles kupní síly, pokles reálných mezd a důchodů a tlak na jejich zvyšování."],
+          ["Míra nezaměstnanosti", "u = U / (L + U) × 100. L + U = ekonomicky aktivní obyvatelstvo."],
+          ["Registrovaná × obecná míra", "Registrovaná: MPSV, statistiky úřadů práce. Obecná: ČSÚ, čtvrtletní Výběrové šetření pracovních sil."],
+          ["Druhy nezaměstnanosti podle příčiny", "Frikční, strukturální, cyklická, sezónní, technologická."],
+          ["Důsledky nezaměstnanosti", "Ztráta produkce, vyšší výdaje státního rozpočtu, sociální důsledky (pokles životní úrovně, stres, ztráta návyků, růst trestných činů)."],
+          ["HDP", "Výstup vyprodukovaný na území státu, bez ohledu na vlastníka výrobních faktorů."],
+          ["HNP", "Výstup vyprodukovaný faktory ve vlastnictví občanů státu, doma i v zahraničí."],
+          ["Výdajová (zbožová) metoda", "HDP = C + I<sub>g</sub> + G + NX. Vládní výdaje bez transferových plateb."],
+          ["Důchodová metoda", "Mzdy a platy, hrubé zisky, čistý úrok, příjmy ze samozaměstnání, renty."],
+          ["Nominální × reálný HDP", "Nominální v běžných cenách, reálný ve stálých cenách (očištěný od inflace)."],
+          ["Fáze hospodářského cyklu", "Expanze, vrchol, recese, dno. Dlouhá recese = deprese."],
+          ["Platební bilance", "Veškeré platební transakce se zahraničím. Běžný a kapitálový (finanční) účet. Vyrovnávají ji devizové rezervy."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Inflace: definice, deflace a deflační spirála.</li>
+          <li>Druhy inflace: podle velikosti (mírná, pádivá, hyperinflace) a podle podnětu (poptávková, nákladová). Inflační spirála.</li>
+          <li>Měření: CPI a spotřební koš, PPI, deflátor HDP se vzorcem.</li>
+          <li>Důsledky inflace.</li>
+          <li>Nezaměstnanost: definice, vzorec míry, registrovaná a obecná míra.</li>
+          <li>Druhy nezaměstnanosti: dobrovolná × nedobrovolná, frikční, strukturální, cyklická, sezónní, technologická. Důsledky.</li>
+          <li>HDP × HNP: území × vlastnictví. Nominální × reálný HDP, přepočet na obyvatele.</li>
+          <li>Výpočet: výdajová (zbožová) metoda se vzorcem, důchodová metoda se složkami, produktová metoda.</li>
+          <li>Hospodářský cyklus: potenciální × reálný produkt, čtyři fáze, deprese.</li>
+          <li>Navíc z podkladů: platební bilance, dva účty, devizové rezervy, aktivní a pasivní saldo.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 10. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "jedna", "otazka": "Co je inflace?",
+           "moznosti": ["Snížení kupní síly peněz projevující se růstem všeobecné cenové hladiny", "Zvýšení kupní síly peněz projevující se poklesem všeobecné cenové hladiny", "Zdražení jednoho výrobku projevující se poklesem jeho prodeje", "Zvýšení objemu výroby projevující se růstem reálného HDP"],
+           "spravne": 0, "vysvetleni": "Inflace je růst cenové hladiny jako celku, ne zdražení jedné věci."},
+          {"typ": "ano-ne", "otazka": "Deflace je pro ekonomiku neškodná, protože zboží zlevňuje.",
+           "spravne": false, "vysvetleni": "Může spustit deflační spirálu: nižší nabídka, výroba a investice, vyšší nezaměstnanost, nižší poptávka."},
+          {"typ": "jedna", "otazka": "Co v deflační spirále následuje hned po <b>snížení výroby a investic</b>?",
+           "moznosti": ["Vyšší nezaměstnanost", "Vyšší poptávka", "Vyšší cenová hladina", "Vyšší nabídka"],
+           "spravne": 0, "vysvetleni": "Pořadí: nižší ceny, nižší nabídka, nižší výroba a investice, vyšší nezaměstnanost, nižší poptávka."},
+          {"typ": "jedna", "otazka": "Lidé ztrácejí důvěru k penězům a inflace je dvoj- až trojciferná. Která to je?",
+           "moznosti": ["Pádivá", "Mírná", "Hyperinflace", "Nákladová"],
+           "spravne": 0, "vysvetleni": "Mírná je jednociferná, hyperinflace dosahuje tisíců procent. Nákladová je členění podle podnětu."},
+          {"typ": "ano-ne", "otazka": "Při hyperinflaci se rozšiřuje naturální směna a většinou je nutná měnová reforma.",
+           "spravne": true, "vysvetleni": "Peníze přestávají fungovat, lidé přecházejí i na stabilnější zahraniční měny."},
+          {"typ": "jedna", "otazka": "Prudce zdraží ropa a energie a firmy to promítnou do cen. Jaká je to inflace?",
+           "moznosti": ["Nákladová (nabídková)", "Poptávková", "Pádivá", "Mírná"],
+           "spravne": 0, "vysvetleni": "Podnětem je zvýšení cen vstupů do výroby."},
+          {"typ": "jedna", "otazka": "Lidé mají dost peněz, firmy snadno získávají úvěry a výrobci prodají i za vyšší ceny. Jaká je to inflace?",
+           "moznosti": ["Poptávková", "Nákladová (nabídková)", "Technologická", "Sezónní"],
+           "spravne": 0, "vysvetleni": "Na trhu je více poptávky při stejném objemu nabídky."},
+          {"typ": "vice", "otazka": "Co může rozjet <b>nákladovou</b> inflaci?",
+           "moznosti": ["Růst cen surovin", "Růst cen energií", "Růst mezd", "Větší zájem spotřebitelů", "Snadnější úvěry pro podnikatele"],
+           "spravne": [0, 1, 2], "vysvetleni": "Větší zájem spotřebitelů a snadné úvěry patří k poptávkové inflaci."},
+          {"typ": "jedna", "otazka": "Co se navzájem proplétá v inflační spirále?",
+           "moznosti": ["Mzdy a ceny", "Vývoz a dovoz", "Nominální a reálný HDP", "Běžný a kapitálový účet"],
+           "spravne": 0, "vysvetleni": "Mzda je pro firmu náklad, a ovlivňuje tak růst cen. Ten vede k dalším požadavkům na mzdy."},
+          {"typ": "jedna", "otazka": "Který ukazatel sleduje vývoj cen ve <b>spotřebním koši</b>?",
+           "moznosti": ["CPI", "PPI", "Deflátor HDP", "HNP"],
+           "spravne": 0, "vysvetleni": "PPI sleduje průmyslové výrobky, deflátor všechny statky v ekonomice."},
+          {"typ": "jedna", "otazka": "Který ukazatel měří cenový vývoj průmyslových výrobků vyrobených a prodaných na domácím trhu?",
+           "moznosti": ["PPI", "CPI", "Deflátor HDP", "Reálný HDP"],
+           "spravne": 0},
+          {"typ": "ano-ne", "otazka": "Deflátor HDP lze spočítat jen zpětně.",
+           "spravne": true, "vysvetleni": "Až když statistický úřad vyjádří HDP za předcházející dva roky."},
+          {"typ": "cislo", "otazka": "Nominální HDP je 1 320 mld. Kč, reálný HDP 1 200 mld. Kč. Kolik je deflátor HDP?",
+           "spravne": 110, "jednotka": "%", "tolerance": 0, "vysvetleni": "1 320 / 1 200 × 100 = 110 %."},
+          {"typ": "ano-ne", "otazka": "Deflátor HDP 96 % znamená deflaci.",
+           "spravne": true, "vysvetleni": "Výsledek pod 100 %: rozdíl do 100 % (zde 4 %) znamená deflaci."},
+          {"typ": "jedna", "otazka": "Reálný HDP je vyjádřen…",
+           "moznosti": ["ve stálých cenách zvoleného roku", "v běžných cenách daného roku", "v cenách zahraničních trhů", "v průměrných cenách spotřebního koše"],
+           "spravne": 0, "vysvetleni": "Je očištěný od inflace. V běžných cenách je nominální HDP."},
+          {"typ": "vice", "otazka": "Které důsledky má inflace?",
+           "moznosti": ["Pokles kupní síly peněz", "Skrytá forma zdanění", "Pokles hodnoty reálných mezd a důchodů", "Větší jistota vývoje ekonomických veličin", "Vyšší ekonomická stabilita"],
+           "spravne": [0, 1, 2], "vysvetleni": "Inflace naopak přispívá k nestabilitě a zvyšuje nejistotu."},
+          {"typ": "cislo", "otazka": "Mzda vzrostla o 8 %, inflace je 3 %. O kolik procent zhruba vzrostla reálná mzda? (odhad: růst mzdy minus inflace)",
+           "spravne": 5, "jednotka": "%", "tolerance": 0.2, "vysvetleni": "8 − 3 = 5 %. Přesně 1,08 / 1,03 − 1 = 4,85 %, proto tolerance."},
+          {"typ": "cislo", "otazka": "V zemi pracuje 950 000 lidí a 50 000 je nezaměstnaných. Jaká je míra nezaměstnanosti?",
+           "spravne": 5, "jednotka": "%", "tolerance": 0, "vysvetleni": "50 000 / (950 000 + 50 000) × 100 = 5 %."},
+          {"typ": "jedna", "otazka": "Kdo provádí každé čtvrtletí Výběrové šetření pracovních sil?",
+           "moznosti": ["Český statistický úřad", "Ministerstvo práce a sociálních věcí", "Česká národní banka", "Úřad práce"],
+           "spravne": 0, "vysvetleni": "Z něj vzniká obecná míra nezaměstnanosti. Údaje z úřadů práce jsou registrovaná míra."},
+          {"typ": "ano-ne", "otazka": "Nedobrovolně nezaměstnaný hledá jakoukoliv práci, i za horších podmínek.",
+           "spravne": true, "vysvetleni": "Dobrovolně nezaměstnaný sám ukončil práci a hledá lepší místo."},
+          {"typ": "jedna", "otazka": "Textilka zanikla a její zaměstnankyně se musí rekvalifikovat. O jakou nezaměstnanost jde?",
+           "moznosti": ["Strukturální", "Frikční", "Cyklická", "Sezónní"],
+           "spravne": 0, "vysvetleni": "Změna konkurenční schopnosti odvětví. Řešením bývá rekvalifikace."},
+          {"typ": "jedna", "otazka": "Která nezaměstnanost je považována za nejméně závažnou?",
+           "moznosti": ["Frikční", "Strukturální", "Cyklická", "Technologická"],
+           "spravne": 0, "vysvetleni": "Je přechodná a krátkodobá, vzniká přechodem mezi zaměstnáními."},
+          {"typ": "jedna", "otazka": "Kvůli poklesu celkových výdajů v ekonomice firmy propouštějí. O jakou nezaměstnanost jde?",
+           "moznosti": ["Cyklická", "Sezónní", "Frikční", "Technologická"],
+           "spravne": 0, "vysvetleni": "Souvisí s hospodářským cyklem: když se nedaří, je vyšší."},
+          {"typ": "jedna", "otazka": "Kapitálově náročná linka nahradí dělníky. O jakou nezaměstnanost jde?",
+           "moznosti": ["Technologická", "Sezónní", "Frikční", "Cyklická"],
+           "spravne": 0, "vysvetleni": "Práce je nahrazována kapitálem."},
+          {"typ": "vice", "otazka": "Které jsou důsledky nezaměstnanosti?",
+           "moznosti": ["Ztráta produkce", "Vyšší výdaje státního rozpočtu", "Pokles životní úrovně a stres", "Nižší výdaje státního rozpočtu", "Růst potenciálního produktu"],
+           "spravne": [0, 1, 2], "vysvetleni": "Stát vyplácí podpory a dávky, výdaje tedy rostou."},
+          {"typ": "cislo", "otazka": "C = 500, I<sub>g</sub> = 200, G = 300, NX = −50 (mld. Kč). Kolik je HDP výdajovou metodou?",
+           "spravne": 950, "jednotka": "mld. Kč", "tolerance": 0, "vysvetleni": "500 + 200 + 300 − 50 = 950 mld. Kč."},
+          {"typ": "jedna", "otazka": "Která metoda výpočtu HDP se jinak nazývá <b>zbožová</b>?",
+           "moznosti": ["Výdajová", "Důchodová", "Produktová", "Příjmová"],
+           "spravne": 0, "vysvetleni": "Výdajová = spotřební = zbožová. Důchodová se jinak jmenuje příjmová, produktová výrobní."},
+          {"typ": "ano-ne", "otazka": "Důchody a sociální dávky se započítávají do vládních výdajů G ve výdajové metodě.",
+           "spravne": false, "vysvetleni": "Jsou to transferové platby, za které stát nedostane žádnou protihodnotu."},
+          {"typ": "vice", "otazka": "Co se sčítá v <b>důchodové</b> metodě?",
+           "moznosti": ["Mzdy a platy", "Hrubé zisky firem", "Renty", "Čistý úrok", "Čistý vývoz", "Vládní výdaje"],
+           "spravne": [0, 1, 2, 3], "vysvetleni": "Čistý vývoz a vládní výdaje patří k výdajové metodě."},
+          {"typ": "jedna", "otazka": "Hyundai vyrábí auta v Nošovicích. Kam se tato výroba započítá?",
+           "moznosti": ["Do HDP Česka, ne do HNP Česka", "Do HNP Česka, ne do HDP Česka", "Do HDP i HNP Česka", "Ani do HDP, ani do HNP Česka"],
+           "spravne": 0, "vysvetleni": "HDP řeší území, HNP vlastnictví. Vyrobeno v Česku, vlastník je zahraniční."},
+          {"typ": "cislo", "otazka": "České firmy vyrobí v Česku 700, zahraniční firmy v Česku 300 a české firmy v zahraničí 100. Kolik je HNP Česka?",
+           "spravne": 800, "tolerance": 0, "vysvetleni": "HNP = 700 + 100 = 800. HDP by bylo 700 + 300 = 1 000."},
+          {"typ": "jedna", "otazka": "Co je potenciální produkt?",
+           "moznosti": ["Produkt při plném využití pracovních a ostatních výrobních zdrojů", "Produkt v běžných cenách daného roku", "Produkt očištěný od inflace ve stálých cenách", "Produkt vytvořený občany státu v zahraničí"],
+           "spravne": 0, "vysvetleni": "Reálný produkt kolem něj kolísá, to je hospodářský cyklus."},
+          {"typ": "jedna", "otazka": "Klesají nákupy spotřebních statků i investice a roste nezaměstnanost. Která je to fáze cyklu?",
+           "moznosti": ["Recese", "Expanze", "Vrchol", "Dno"],
+           "spravne": 0, "vysvetleni": "Na dně už je produkt na minimu, recese je cesta dolů."},
+          {"typ": "jedna", "otazka": "Ve které fázi dosahuje skutečný produkt svého <b>minima</b>?",
+           "moznosti": ["Dno", "Recese", "Expanze", "Vrchol"],
+           "spravne": 0},
+          {"typ": "ano-ne", "otazka": "Recesi, která trvá dlouhou dobu, říkáme deprese.",
+           "spravne": true},
+          {"typ": "jedna", "otazka": "Co patří na <b>běžný účet</b> platební bilance?",
+           "moznosti": ["Platby za dovoz a vývoz statků a služeb", "Přímé investice", "Nákup cenných papírů", "Ukládání peněz u zahraničních bank"],
+           "spravne": 0, "vysvetleni": "Ostatní možnosti jsou pohyby kapitálu."},
+          {"typ": "jedna", "otazka": "Příjmy platební bilance jsou vyšší než výdaje. Co nastane?",
+           "moznosti": ["Aktivní saldo, devizové rezervy se zvýší", "Aktivní saldo, devizové rezervy se sníží", "Pasivní saldo, devizové rezervy se zvýší", "Pasivní saldo, devizové rezervy se sníží"],
+           "spravne": 0, "vysvetleni": "Příjmy > výdaje = aktivní saldo a rezervy rostou. Při pasivním saldu klesají."},
+          {"typ": "ano-ne", "otazka": "Z účetního hlediska musí být platební bilance vždy vyrovnaná.",
+           "spravne": true, "vysvetleni": "Vyrovnává ji změna devizových rezerv."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .urci__radek { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+  .urci__radek .chip { cursor: pointer; }
+  .pruh { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin: 10px 0; background: var(--surface-2); }
+  .pruh span { display: block; transition: width .4s var(--ease); }
+  .tm__radek { margin-top: 12px; }
+  .tm__hlava { display: flex; justify-content: space-between; gap: 8px; font-size: .88rem; font-weight: 600; }
+  .tm__seznam { font-size: .82rem; color: var(--text-muted); margin-top: 3px; }
+  #tm-radky .pruh span { background: var(--accent); }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, svg, kc, cislo, $, $$ } = window.Ucebna;
+  const d1 = (n) => n.toLocaleString("cs-CZ", { minimumFractionDigits: 0, maximumFractionDigits: 1 });
+  const zn = (n) => (n > 0 ? "+" : n < 0 ? "−" : "") + d1(Math.abs(n));
+  const barva = (prvek, n) => { prvek.style.color = n > 0 ? "var(--ok)" : n < 0 ? "var(--bad)" : ""; };
+
+  /* --- Kupní síla peněz --- */
+  (() => {
+    function spocti() {
+      const c = +$("#ks-c").value, i = +$("#ks-i").value, r = +$("#ks-r").value;
+      $("#ks-c-o").textContent = kc(c);
+      $("#ks-i-o").textContent = zn(i) + " %";
+      $("#ks-r-o").textContent = cislo(r);
+      const sila = c / Math.pow(1 + i / 100, r);
+      const zm = (sila / c - 1) * 100;
+      $("#ks-na").textContent = kc(c);
+      $("#ks-sila").textContent = kc(Math.round(sila));
+      const z = $("#ks-zm");
+      z.textContent = zn(zm) + " %";
+      barva(z, zm);
+      $("#ks-t").innerHTML = i > 0
+        ? "Bankovky jsou pořád stejné, ale koupíš si za ně míň. To je <strong>pokles kupní síly</strong>."
+        : i < 0
+          ? "Tvoje peníze mají větší kupní sílu. Přesně proto lidé při deflaci odkládají nákupy a poptávka klesá."
+          : "Ceny stojí, kupní síla se nemění.";
+    }
+    $("#kupni-sila").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Velikost inflace --- */
+  (() => {
+    const HODNOTY = [1, 2, 3, 5, 8, 10, 15, 20, 30, 50, 80, 100, 200, 500, 1000, 2000, 5000, 10000];
+    function spocti() {
+      const i = HODNOTY[+$("#ve-i").value];
+      $("#ve-i-o").textContent = cislo(i) + " %";
+      const druh = i < 10 ? "mírná" : i < 1000 ? "pádivá" : "hyperinflace";
+      $("#ve-druh").textContent = druh;
+      $("#ve-rohlik").textContent = d1(5 * (1 + i / 100)) + " Kč";
+      $("#ve-obed").textContent = kc(200 * (1 + i / 100));
+      $("#ve-t").textContent = i < 10
+        ? "Lidé penězům důvěřují. Není to nebezpečné."
+        : i < 1000
+          ? "Lidé ztrácejí důvěru k penězům a utíkají k jiným finančním nebo věcným aktivům."
+          : "Peníze přestávají fungovat. Rozšiřuje se naturální směna a stabilnější cizí měny. Většinou je nutná měnová reforma.";
+    }
+    $("#ve-i").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Inflace tažená poptávkou a nabídkou (poptávka: P = 200 + a − Q, nabídka: P = b + Q) --- */
+  (() => {
+    const g = $("#adas svg");
+    const X = (q) => 50 + (q - 60) * 4;          // q 60–140 → x 50–370
+    const Y = (p) => 225 - (p - 40) * 1.5;       // p 40–180 → y 225–15
+    const cara = (x1, y1, x2, y2, tr, navic = {}) => svg("line", { x1, y1, x2, y2, class: tr, "stroke-width": 2.5, "stroke-linecap": "round", ...navic });
+    const text = (x, y, t, attrs = {}) => { const e = svg("text", { x, y, "font-size": 12, class: "f-muted", ...attrs }); e.textContent = t; return e; };
+    function kresli(a, b) {
+      g.innerHTML = "";
+      g.append(
+        svg("path", { d: "M50 15 V225 H380", class: "s-muted f-none", "stroke-width": 1.2 }),
+        text(56, 22, "cenová hladina"),
+        text(380, 243, "objem výroby", { "text-anchor": "end" }),
+        cara(X(60), Y(140), X(140), Y(60), "s-line", { "stroke-dasharray": "5 5", "stroke-width": 2 }),
+        cara(X(60), Y(60), X(140), Y(140), "s-line", { "stroke-dasharray": "5 5", "stroke-width": 2 }),
+        cara(X(60), Y(140 + a), X(140), Y(60 + a), "s-accent"),
+        cara(X(60), Y(60 + b), X(140), Y(140 + b), "s-warn"),
+        text(370, Y(60 + a) - 8, "poptávka", { "text-anchor": "end", class: "f-accent", "font-weight": 600 }),
+        text(370, Y(140 + b) + 18, "nabídka", { "text-anchor": "end", class: "f-warn", "font-weight": 600 })
+      );
+      const q = 100 + (a - b) / 2, p = 100 + (a + b) / 2;
+      g.append(
+        svg("path", { d: `M50 ${Y(p)} H${X(q)} V225`, class: "s-muted f-none", "stroke-width": 1, "stroke-dasharray": "3 3" }),
+        svg("circle", { cx: X(100), cy: Y(100), r: 4, class: "f-surface s-muted", "stroke-width": 1.5 }),
+        svg("circle", { cx: X(q), cy: Y(p), r: 6, class: "f-accent s-accent" })
+      );
+      return { q, p };
+    }
+    function spocti() {
+      const a = +$("#ad-p").value, b = +$("#ad-n").value;
+      $("#ad-p-o").textContent = "+" + a;
+      $("#ad-n-o").textContent = "+" + b;
+      const { q, p } = kresli(a, b);
+      const dp = p - 100, dq = q - 100;
+      $("#ad-c").textContent = zn(dp) + " %";
+      const v = $("#ad-v");
+      v.textContent = zn(dq) + " %";
+      barva(v, dq);
+      $("#ad-t").innerHTML = dp === 0
+        ? "Nic se neděje, ceny stojí."
+        : a > b
+          ? "Převažuje <strong>poptávková inflace</strong>: ceny rostou a výroba se zvyšuje, protože firmy chtějí vyhovět zájmu zákazníků."
+          : a < b
+            ? "Převažuje <strong>nákladová inflace</strong>: ceny rostou a výroba klesá, protože vyrábět je dražší."
+            : "Oba tlaky jsou stejně silné: výroba zůstane stejná, ale ceny vyskočí o to víc.";
+    }
+    $("#adas").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Spotřební koš --- */
+  (() => {
+    const VAHY = { "ko-b": 0.3, "ko-p": 0.25, "ko-d": 0.15, "ko-o": 0.3 };
+    function spocti() {
+      let i = 0;
+      Object.entries(VAHY).forEach(([id, w]) => {
+        const n = +$("#" + id).value;
+        $("#" + id + "-o").textContent = zn(n) + " %";
+        i += w * n;
+      });
+      i = Math.round(i * 100) / 100;
+      $("#ko-i").textContent = zn(i) + " %";
+      $("#ko-n").textContent = kc(10000 * (1 + i / 100));
+      $("#ko-t").innerHTML = i > 0 ? "Cenová hladina roste: <strong>inflace</strong>." : i < 0 ? "Cenová hladina klesá: <strong>deflace</strong>." : "Cenová hladina se nemění.";
+    }
+    $("#kos").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Deflátor HDP --- */
+  (() => {
+    function spocti() {
+      const n = +$("#de-n").value, r = +$("#de-r").value;
+      $("#de-n-o").textContent = cislo(n) + " mld. Kč";
+      $("#de-r-o").textContent = cislo(r) + " mld. Kč";
+      const d = n / r * 100;
+      $("#de-d").textContent = d1(d) + " %";
+      const v = $("#de-v"), roz = Math.round(Math.abs(d - 100) * 10) / 10;
+      v.textContent = roz === 0 ? "ceny stojí" : d > 100 ? "inflace " + d1(roz) + " %" : "deflace " + d1(roz) + " %";
+    }
+    $("#deflator").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Reálná mzda --- */
+  (() => {
+    function spocti() {
+      const m = +$("#re-m").value, n = +$("#re-n").value, i = +$("#re-i").value;
+      $("#re-m-o").textContent = kc(m);
+      $("#re-n-o").textContent = "+" + d1(n) + " %";
+      $("#re-i-o").textContent = "+" + d1(i) + " %";
+      const nova = m * (1 + n / 100), hod = nova / (1 + i / 100), zm = (hod / m - 1) * 100;
+      $("#re-nova").textContent = kc(nova);
+      $("#re-hod").textContent = kc(hod);
+      const z = $("#re-zm");
+      z.textContent = zn(zm) + " %";
+      barva(z, zm);
+      $("#re-t").innerHTML = n > i
+        ? "Mzda roste rychleji než ceny, <strong>reálná mzda roste</strong>."
+        : n < i
+          ? "Na výplatnici je víc, ale koupíš si míň. <strong>Reálná mzda klesá</strong> a odbory budou tlačit na zvýšení."
+          : "Přidáno dohání jen růst cen. Reálná mzda se nemění.";
+    }
+    $("#realna").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Míra nezaměstnanosti --- */
+  (() => {
+    function spocti() {
+      const l = +$("#mi-l").value, u = +$("#mi-u").value, a = l + u, m = u / a * 100;
+      $("#mi-l-o").textContent = cislo(l) + " tis.";
+      $("#mi-u-o").textContent = cislo(u) + " tis.";
+      $("#mi-a").textContent = cislo(a) + " tis.";
+      $("#mi-m").textContent = d1(m) + " %";
+      $("#mi-pruh-l").style.width = (100 - m) + "%";
+      $("#mi-pruh-u").style.width = m + "%";
+      $("#mi-t").textContent = `${cislo(u)} / (${cislo(l)} + ${cislo(u)}) × 100 = ${d1(m)} %`;
+    }
+    $("#mira").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- HDP × HNP --- */
+  (() => {
+    const box = $("#hdp-hnp-sim");
+    const ZAHRNUTO = { hdp: ["a", "b"], hnp: ["a", "c"] };
+    let pohled = "hdp";
+    function spocti() {
+      const a = +$("#hh-a").value, b = +$("#hh-b").value, c = +$("#hh-c").value;
+      [["a", a], ["b", b], ["c", c]].forEach(([k, n]) => {
+        $(`#hh-${k}-o`).textContent = cislo(n) + " mld.";
+        $(`#hh-${k}-t`).textContent = cislo(n);
+        const dlazdice = box.querySelector(`[data-dlazdice="${k}"]`), ano = ZAHRNUTO[pohled].includes(k);
+        dlazdice.querySelector("rect").setAttribute("class", ano ? "f-accent-soft s-accent" : "f-surface2 s-line");
+        dlazdice.style.opacity = ano ? 1 : 0.45;
+      });
+      $("#hh-hdp").textContent = `${cislo(a + b)} mld.`;
+      $("#hh-hnp").textContent = `${cislo(a + c)} mld.`;
+    }
+    $$("[data-pohled]", box).forEach((tl) => tl.addEventListener("click", () => {
+      pohled = tl.dataset.pohled;
+      $$("[data-pohled]", box).forEach((x) => x.classList.toggle("vybrany", x === tl));
+      spocti();
+    }));
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Tři metody výpočtu HDP --- */
+  (() => {
+    const box = $("#tri-metody"), radky = $("#tm-radky");
+    const MAX = 1600, ZAKLAD = 1000;
+    const metody = (c, ig, g, nx, d) => [
+      ["Výdajová (zbožová)", [["C", c], ["Ig", ig], ["G", g], ["NX", nx]]],
+      ["Důchodová", [["mzdy a platy", 520 + 0.5 * d], ["hrubé zisky", 300 + 0.3 * d], ["čistý úrok", 30], ["samozaměstnání", 100 + 0.2 * d], ["renty", 50]]],
+      ["Výrobní (přidaná hodnota)", [["zemědělství a těžba", 60 + 0.1 * d], ["průmysl a stavebnictví", 370 + 0.3 * d], ["služby", 570 + 0.6 * d]]],
+    ];
+    function spocti() {
+      const v = (id) => +$("#" + id).value;
+      const c = v("tm-c"), ig = v("tm-i"), g = v("tm-g"), x = v("tm-x"), m = v("tm-m"), nx = x - m, hdp = c + ig + g + nx;
+      ["tm-c", "tm-i", "tm-g", "tm-x", "tm-m", "tm-t"].forEach((id) => { $("#" + id + "-o").textContent = cislo(v(id)); });
+      $("#tm-nx").textContent = zn(nx);
+      $("#tm-hdp").textContent = cislo(hdp);
+      radky.innerHTML = "";
+      metody(c, ig, g, nx, hdp - ZAKLAD).forEach(([nazev, slozky]) => {
+        const soucet = slozky.reduce((s, [, n]) => s + n, 0);
+        const radek = el("div", { class: "tm__radek" },
+          el("div", { class: "tm__hlava" }, el("span", {}, nazev), el("span", {}, cislo(soucet))));
+        const pruh = el("div", { class: "pruh", style: "margin:4px 0 0;background:transparent" });
+        slozky.forEach(([, n], i) => {
+          const dil = el("span");
+          dil.style.width = Math.max(0, n) / MAX * 100 + "%";
+          dil.style.opacity = 1 - i * 0.17;
+          dil.style.borderRight = "2px solid var(--surface)";
+          pruh.append(dil);
+        });
+        radek.append(pruh, el("div", { class: "tm__seznam" }, slozky.map(([k, n]) => `${k} ${n < 0 ? "−" : ""}${cislo(Math.abs(n))}`).join(" · ")));
+        radky.append(radek);
+      });
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+
+  /* --- Hospodářský cyklus: reálný HDP = potenciál + 25 × sin(7,2° × t) --- */
+  (() => {
+    const box = $("#cyklus-sim"), g = box.querySelector("svg"), vstup = $("#cy-t");
+    const potencial = (t) => 100 + 0.5 * t;
+    const realny = (t) => potencial(t) + 25 * Math.sin(7.2 * t * Math.PI / 180);
+    const X = (t) => 40 + 3.4 * t;
+    const Y = (v) => 210 - (v - 70) * 190 / 110;
+    const FAZE = {
+      expanze: { n: "expanze", tr: "f-ok", p: "roste", v: "roste", i: "rostou", u: "klesá", t: "Produkt roste aspoň ve dvou po sobě jdoucích obdobích. Více se prodává." },
+      vrchol: { n: "vrchol", tr: "f-accent", p: "velká", v: "maximum", i: "vysoké", u: "nízká", t: "Skutečný produkt je na maximu. Ekonomice se velmi daří." },
+      recese: { n: "recese", tr: "f-bad", p: "klesá", v: "klesá", i: "klesají", u: "roste", t: "Produkt klesá aspoň ve dvou po sobě jdoucích obdobích. Když to trvá dlouho, je to deprese." },
+      dno: { n: "dno", tr: "f-accent", p: "malá", v: "minimum", i: "téměř žádné", u: "vysoká", t: "Skutečný produkt je na minimu. Odsud se ekonomika znovu odráží do expanze." },
+    };
+    const faze = (t) => {
+      const u = (7.2 * t) % 360;
+      if (u >= 88 && u < 110) return FAZE.vrchol;
+      if (u >= 110 && u < 250) return FAZE.recese;
+      if (u >= 250 && u < 272) return FAZE.dno;
+      return FAZE.expanze;
+    };
+    const text = (x, y, t, attrs = {}) => { const e = svg("text", { x, y, "font-size": 12, class: "f-muted", ...attrs }); e.textContent = t; return e; };
+    let krivka = "";
+    for (let t = 0; t <= 100; t++) krivka += `${t ? "L" : "M"}${X(t).toFixed(1)} ${Y(realny(t)).toFixed(1)} `;
+    g.append(
+      svg("path", { d: "M40 14 V220 H388", class: "s-muted f-none", "stroke-width": 1.2 }),
+      text(46, 22, "HDP"),
+      text(388, 237, "čas", { "text-anchor": "end" }),
+      svg("line", { x1: X(0), y1: Y(potencial(0)), x2: X(100), y2: Y(potencial(100)), class: "s-muted", "stroke-width": 1.5, "stroke-dasharray": "6 5" }),
+      svg("path", { d: krivka, class: "s-accent f-none", "stroke-width": 2.5, "stroke-linecap": "round" }),
+      text(380, 60, "potenciální HDP", { "text-anchor": "end" }),
+      text(380, 150, "reálný HDP", { "text-anchor": "end", class: "f-accent", "font-weight": 600 }),
+      text(X(13.76), Y(realny(13.76)) - 8, "vrchol", { "text-anchor": "middle", class: "f-ink" }),
+      text(X(36.2), Y(realny(36.2)) + 18, "dno", { "text-anchor": "middle", class: "f-ink" }),
+      text(130, 112, "recese", { class: "f-ink" }),
+      text(212, 92, "expanze", { "text-anchor": "end", class: "f-ink" })
+    );
+    const svislice = svg("line", { y2: 220, class: "s-muted", "stroke-width": 1, "stroke-dasharray": "3 3" });
+    const bod = svg("circle", { r: 7, class: "s-surface", "stroke-width": 2 });
+    g.append(svislice, bod);
+    function spocti() {
+      const t = +vstup.value, f = faze(t), x = X(t), y = Y(realny(t));
+      $("#cy-t-o").textContent = cislo(t);
+      svislice.setAttribute("x1", x); svislice.setAttribute("x2", x); svislice.setAttribute("y1", y);
+      bod.setAttribute("cx", x); bod.setAttribute("cy", y);
+      bod.setAttribute("class", f.tr);
+      $("#cy-f").textContent = f.n;
+      $("#cy-p").textContent = f.p;
+      $("#cy-v").textContent = f.v;
+      $("#cy-i").textContent = f.i;
+      $("#cy-n").textContent = f.u;
+      const rozdil = realny(t) - potencial(t);
+      $("#cy-t-text").textContent = `${f.t} Reálný HDP je teď ${Math.abs(rozdil) < 0.5 ? "na úrovni potenciálního" : rozdil > 0 ? "nad potenciálním" : "pod potenciálním"}.`;
+      $$("[data-t]", box).forEach((c) => c.classList.toggle("vybrany", c.textContent === f.n));
+    }
+    $$("[data-t]", box).forEach((c) => c.addEventListener("click", () => { vstup.value = c.dataset.t; spocti(); }));
+    vstup.addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Platební bilance a devizové rezervy --- */
+  (() => {
+    const POCATEK = 1000;
+    function spocti() {
+      const p = +$("#pb-p").value, v = +$("#pb-v").value, s = p - v;
+      $("#pb-p-o").textContent = cislo(p) + " mld.";
+      $("#pb-v-o").textContent = cislo(v) + " mld.";
+      const sal = $("#pb-s");
+      sal.textContent = zn(s);
+      barva(sal, s);
+      $("#pb-d").textContent = s > 0 ? "aktivní" : s < 0 ? "pasivní" : "vyrovnané";
+      $("#pb-r").textContent = cislo(POCATEK + s);
+      $("#pb-t").innerHTML = s > 0
+        ? "Příjmy &gt; výdaje: <strong>aktivní saldo</strong>, devizové rezervy se zvýší."
+        : s < 0
+          ? "Příjmy &lt; výdaje: <strong>pasivní saldo</strong>, devizové rezervy se sníží."
+          : "Příjmy a výdaje se rovnají, rezervy se nemění.";
+    }
+    $("#pb").querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+});
+</script>
+</body>
+</html>

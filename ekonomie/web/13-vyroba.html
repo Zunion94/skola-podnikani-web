@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13. Výroba – Ekonomie</title>
+  <link rel="stylesheet" href="../../assets/ucebna.css">
+  <script src="../../assets/katalog.js"></script>
+  <script src="../../assets/ucebna.js" defer></script>
+</head>
+<body data-predmet="ekonomie">
+<main class="obal" data-tema="ekonomie-13" data-nazev="13. Výroba" data-zpet="../../index.html" data-zdroj="../pdf/13 Vyroba.pdf">
+
+  <!-- ===== Hlavička ===== -->
+  <div class="hlavicka">
+    <span class="stitek">Ekonomie · otázka 13</span>
+    <h1>Výroba</h1>
+    <p class="hlavicka__perex">Jak se ze vstupů stane výrobek nebo služba, jak se výroba třídí, jak se rozmístí v hale a jak se plánuje, aby podnik vyráběl to správné ve správný čas.</p>
+    <div class="cile">
+      <h2>Po prostudování budeš umět</h2>
+      <ul>
+        <li><strong>charakterizovat výrobu</strong> – vstupy, výstupy a fáze výrobního procesu</li>
+        <li>rozdělit výrobu podle <strong>použité techniky</strong> a podle <strong>vyráběného množství</strong> a přiřadit k tomu reálné výrobky</li>
+        <li>rozlišit <strong>základní a pomocnou výrobu</strong> a čtyři druhy základní výroby</li>
+        <li>vysvětlit <strong>organizaci výroby</strong> a porovnat <strong>technologické a předmětné uspořádání</strong></li>
+        <li>popsat, co určuje <strong>plán výroby</strong>, z čeho se vychází a jak se dělí výroba do časových úseků</li>
+        <li>vyjmenovat tři stránky <strong>přípravy výroby</strong> a kdo je má na starosti</li>
+        <li>vysvětlit, co je <strong>výrobní program</strong>, z čeho vychází a jaké má skupiny výrobků</li>
+        <li>popsat <strong>jakost výrobků</strong> a kde všude se má kontrolovat</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 1. Charakteristika výroby ===== -->
+  <section class="kapitola" id="charakteristika" data-pozadavky="1">
+    <h2>Charakteristika výroby</h2>
+    <div class="box box--definice">
+      <p><strong>Výroba</strong> je hlavní činností výrobního podniku. Jde o činnost, během níž se <strong>vstupy přeměňují na výstupy</strong>. Vstupy označujeme jako <strong>výrobní faktory</strong> (stroje a zařízení, suroviny a materiál, pracovní síla). Výstupem je <strong>výrobek nebo služba</strong>.</p>
+    </div>
+
+    <div class="simulace" id="tok">
+      <p style="margin-top:0"><strong>Vyber si podnik</strong> a podívej se, co do výroby vstupuje a co z ní vychází.</p>
+      <div class="vyber" role="group" aria-label="Výběr podniku">
+        <button class="chip" type="button" data-podnik="0">Pekárna</button>
+        <button class="chip" type="button" data-podnik="1">Truhlárna</button>
+        <button class="chip" type="button" data-podnik="2">Pivovar</button>
+        <button class="chip" type="button" data-podnik="3">Autoservis</button>
+      </div>
+      <figure class="ilustrace" style="margin:10px 0 0" aria-label="Vstupy, výroba a výstup vybraného podniku">
+        <svg viewBox="0 0 400 186" style="max-width:520px">
+          <g class="vyjed" style="--d:.1s">
+            <rect x="4" y="4" width="150" height="54" rx="8" class="f-accent-soft s-line"/>
+            <text x="79" y="25" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">Stroje a zařízení</text>
+            <text id="tok-stroje" x="79" y="44" text-anchor="middle" font-size="12" class="f-muted"></text>
+          </g>
+          <g class="vyjed" style="--d:.2s">
+            <rect x="4" y="66" width="150" height="54" rx="8" class="f-accent-soft s-line"/>
+            <text x="79" y="87" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">Suroviny a materiál</text>
+            <text id="tok-suroviny" x="79" y="106" text-anchor="middle" font-size="12" class="f-muted"></text>
+          </g>
+          <g class="vyjed" style="--d:.3s">
+            <rect x="4" y="128" width="150" height="54" rx="8" class="f-accent-soft s-line"/>
+            <text x="79" y="149" text-anchor="middle" font-size="12" font-weight="600" class="f-ink">Pracovní síla</text>
+            <text id="tok-sila" x="79" y="168" text-anchor="middle" font-size="12" class="f-muted"></text>
+          </g>
+          <path d="M154 31 L186 72" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.45s"/>
+          <path d="M154 93 H186" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.5s"/>
+          <path d="M154 155 L186 114" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.55s"/>
+          <g class="vyjed" style="--d:.7s">
+            <rect x="186" y="60" width="80" height="66" rx="10" class="f-accent"/>
+            <text x="226" y="98" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">výroba</text>
+          </g>
+          <path d="M266 93 H292" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:.85s"/>
+          <path d="M286 87 L293 93 L286 99" class="vyjed s-accent f-none" stroke-width="2" style="--d:1s"/>
+          <g class="vyjed" style="--d:1s">
+            <rect x="298" y="50" width="98" height="86" rx="10" class="f-surface s-accent" stroke-width="1.5"/>
+            <text x="347" y="74" text-anchor="middle" font-size="12" class="f-muted">výstup</text>
+            <text id="tok-vystup" x="347" y="96" text-anchor="middle" font-size="13" font-weight="700" class="f-ink"></text>
+            <text id="tok-druh" x="347" y="118" text-anchor="middle" font-size="12" class="f-muted"></text>
+          </g>
+        </svg>
+        <figcaption>Vlevo výrobní faktory, vpravo výstup. Výstupem nemusí být věc – u autoservisu je to služba.</figcaption>
+      </figure>
+    </div>
+
+    <p>Výroba se řídí <strong>výrobním postupem</strong>. Jeho základem je <strong>technologie výroby</strong>. Ta v poslední době hraje stále důležitější roli, hlavně při <strong>snižování výrobních nákladů</strong>.</p>
+
+    <h3>Fáze výroby</h3>
+    <p>Výroba je proces, který obsahuje několik fází. Jsou to hlavně tyhle tři:</p>
+    <figure class="ilustrace" aria-label="Tři fáze výroby za sebou: příprava výroby, vlastní výroba, skladování výrobků">
+      <svg viewBox="0 0 400 76" style="max-width:520px">
+        <path d="M65 26 H335" pathLength="1" class="kresli s-accent" stroke-width="2.5"/>
+        <g class="vyjed" style="--d:.2s">
+          <circle cx="65" cy="26" r="15" class="f-accent"/>
+          <text x="65" y="31" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">a</text>
+          <text x="65" y="64" text-anchor="middle" font-size="13" class="f-ink">příprava výroby</text>
+        </g>
+        <g class="vyjed" style="--d:.5s">
+          <circle cx="200" cy="26" r="15" class="f-accent"/>
+          <text x="200" y="31" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">b</text>
+          <text x="200" y="64" text-anchor="middle" font-size="13" class="f-ink">vlastní výroba</text>
+        </g>
+        <g class="vyjed" style="--d:.8s">
+          <circle cx="335" cy="26" r="15" class="f-accent"/>
+          <text x="335" y="31" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">c</text>
+          <text x="335" y="64" text-anchor="middle" font-size="13" class="f-ink">skladování výrobků</text>
+        </g>
+      </svg>
+      <figcaption>Výroba nezačíná u stroje a nekončí posledním šroubkem.</figcaption>
+    </figure>
+
+    <div class="box box--tip">
+      <p>Proč na tom tolik záleží: výroba a její příprava má <strong>rozhodující vliv na konkurenceschopnost</strong> podniku, a tím i na dosahování jeho ekonomických cílů. Tady se rozhoduje o <strong>sortimentu</strong>, o <strong>vlastnostech výrobků</strong> a o <strong>snižování nákladů</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ===== 2. Členění podle odvětví a techniky ===== -->
+  <section class="kapitola" id="technika" data-pozadavky="2">
+    <h2>Členění výroby: co se vyrábí a jakou technikou</h2>
+    <p>Výrobu jde rozdělit z několika hledisek. U maturity se chce hlavně členění podle techniky, množství a významu. V podkladech je navíc ještě členění podle toho, co se vyrábí.</p>
+    <div data-zalozky>
+      <section data-zalozka="Podle techniky">
+        <p>Podle <strong>použité výrobní techniky a uplatňované dělby práce</strong>:</p>
+        <div class="mrizka">
+          <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+            <h3 style="margin-top:0">Řemeslná (ruční) výroba</h3>
+            <ul>
+              <li>založená na <strong>ruční práci</strong></li>
+              <li><strong>žádná nebo minimální</strong> dělba práce</li>
+              <li>malé množství výrobků</li>
+              <li>produktivita práce <strong>nízká</strong>, výrobní náklady <strong>vysoké</strong></li>
+              <li>např. výroba kraslic, krojů</li>
+            </ul>
+          </div>
+          <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+            <h3 style="margin-top:0">Průmyslová výroba</h3>
+            <ul>
+              <li>používají se <strong>stroje</strong></li>
+              <li><strong>velká</strong> dělba práce</li>
+              <li>produktivita <strong>vyšší</strong>, náklady <strong>nižší</strong></li>
+            </ul>
+            <p style="margin-bottom:0">Má dvě podoby – klepni na kartu níž.</p>
+          </div>
+        </div>
+        <div class="mrizka">
+          <div class="karta" data-flip>
+            <div class="karta__lic">Strojová výroba</div>
+            <div class="karta__rub"><p style="margin:0">Na stroji <strong>pracují dělníci</strong>. Třeba švadlena u šicího stroje v oděvní továrně.</p></div>
+          </div>
+          <div class="karta" data-flip>
+            <div class="karta__lic">Automatizovaná výroba</div>
+            <div class="karta__rub"><p style="margin:0">Výroba je <strong>plně automatizovaná</strong>. Třeba linka, která sama plní a uzavírá plechovky.</p></div>
+          </div>
+        </div>
+        <div class="box box--doplneno">
+          <p><strong>Dělba práce</strong> znamená, že každý dělá jen malou část celého výrobku a umí ji rychle a dobře. <strong>Produktivita práce</strong> říká, kolik se toho vyrobí za jednotku času (např. kusů na pracovníka za hodinu).</p>
+        </div>
+      </section>
+      <section data-zalozka="Co se vyrábí">
+        <p>Podle <strong>toho, co se vyrábí</strong>, rozlišujeme výrobu:</p>
+        <ul>
+          <li><strong>zemědělskou</strong> – včetně lesního a vodního hospodářství</li>
+          <li><strong>průmyslovou</strong> – chemický průmysl, potravinářství, textilní průmysl apod.</li>
+          <li><strong>stavebnictví</strong></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="box box--pozor">
+      <p>Slovo <strong>průmyslová</strong> se tu objeví dvakrát. Jednou znamená <em>obor</em> (chemie, potraviny, textil), podruhé <em>způsob výroby</em> (stroje a dělba práce). Když se tě zkoušející zeptá, vždycky si ujasni, o kterém členění mluvíš.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Jakou technikou se to vyrábí?",
+        "kose": ["Řemeslná", "Strojová", "Automatizovaná"],
+        "polozky": [
+          ["ručně malované kraslice", 0],
+          ["kroj vyšívaný v ruce", 0],
+          ["ručně pletený proutěný košík", 0],
+          ["dělník obsluhuje soustruh", 1],
+          ["švadleny šijí trička na šicích strojích", 1],
+          ["dělník zakládá plech do lisu a spouští ho", 1],
+          ["linka sama plní a uzavírá plechovky", 2],
+          ["roboti svařují karoserie bez dělníků u linky", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Co se vyrábí? Zařaď do oboru.",
+        "kose": ["Zemědělská", "Průmyslová", "Stavebnictví"],
+        "polozky": [
+          ["pěstování pšenice", 0],
+          ["těžba a pěstování dřeva v lese", 0],
+          ["chov ryb v rybníce", 0],
+          ["výroba hnojiv v chemičce", 1],
+          ["výroba jogurtů v mlékárně", 1],
+          ["tkaní látek v textilce", 1],
+          ["stavba mostu", 2],
+          ["stavba rodinného domu", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 3. Členění podle množství ===== -->
+  <section class="kapitola" id="mnozstvi" data-pozadavky="3">
+    <h2>Členění podle vyráběného množství</h2>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Hromadná</h3>
+        <p>Převládá výroba <strong>jednoho nebo malého počtu</strong> výrobků ve <strong>velkém množství</strong>.</p>
+        <p style="margin-bottom:0">Produktivita práce je <strong>vysoká</strong>, výrobní náklady <strong>nízké</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--text-muted)">
+        <h3 style="margin-top:0">Sériová</h3>
+        <p><strong>Mezistupeň</strong> hromadné a kusové výroby. Výrobky se zhotovují v <strong>sériích, které se střídají</strong> – vyrábí se menší počet druhů, ale ve větším množství. Může být <strong>malosériová</strong> a <strong>velkosériová</strong>.</p>
+        <p style="margin-bottom:0">Produktivita práce je <strong>vyšší</strong>, náklady <strong>nižší</strong>.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Kusová</h3>
+        <p><strong>Neopakovatelné</strong> výrobky – originály. Od každého druhu se zhotovuje <strong>jen jeden kus</strong>. Často jde o výrobu <strong>na zakázku</strong>.</p>
+        <p style="margin-bottom:0">Náklady jsou <strong>poměrně vysoké</strong>. Např. stavba lodí, zakázková výroba oděvů, obuvi.</p>
+      </div>
+    </div>
+    <div class="box box--tip">
+      <p>U sériové výroby se „vyšší“ a „nižší“ čte jako srovnání s kusovou výrobou. Pořadí si pamatuj jako schody: čím větší množství, tím vyšší produktivita a nižší náklady na kus.</p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Hromadná, sériová, nebo kusová výroba?",
+        "kose": ["Hromadná", "Sériová", "Kusová"],
+        "polozky": [
+          ["cukr krystal v cukrovaru", 0],
+          ["cement v cementárně", 0],
+          ["hřebíky jednoho rozměru po milionech", 0],
+          ["500 školních lavic, pak se linka přestaví na židle", 1],
+          ["jarní kolekce bund, po ní podzimní", 1],
+          ["série 2 000 párů bot, pak jiný model", 1],
+          ["zaoceánská loď", 2],
+          ["svatební šaty šité na míru", 2],
+          ["boty na míru pro jednoho zákazníka", 2]
+        ]
+      }
+      </script>
+    </div>
+
+    <h3>Proč se velké množství vyplatí</h3>
+    <p>Čím víc kusů vyrobíš, tím menší díl nákladů na stroje a přípravu připadne na jeden kus. Drahá linka se ale vyplatí až od určitého množství. Čísla jsou vymyšlená, jen pro představu – v podkladech žádná nejsou.</p>
+    <div class="simulace" id="kusy">
+      <p style="margin-top:0"><strong>Výroba bot:</strong> kolik párů chceš vyrobit a která výroba je při tom množství nejlevnější?</p>
+      <div class="legenda">
+        <span style="--c:var(--warn)">kusová</span>
+        <span style="--c:var(--text-muted)">sériová</span>
+        <span style="--c:var(--accent)">hromadná</span>
+      </div>
+      <svg viewBox="0 0 400 246" aria-label="Náklad na jeden pár bot podle vyrobeného množství"></svg>
+      <div class="posuvnik"><label for="ku-n">Vyrobené množství</label><output id="ku-n-o"></output><input id="ku-n" type="range" min="0" max="60" step="1" value="30"></div>
+      <div class="ukazatele">
+        <div class="ukazatel" data-v="0"><small>Kusová (přípravné náklady 50 000 Kč + 8 000 Kč/pár)</small><b id="ku-0"></b></div>
+        <div class="ukazatel" data-v="1"><small>Sériová (1 000 000 Kč + 1 500 Kč/pár)</small><b id="ku-1"></b></div>
+        <div class="ukazatel" data-v="2"><small>Hromadná (20 000 000 Kč + 200 Kč/pár)</small><b id="ku-2"></b></div>
+      </div>
+      <p id="ku-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+    <div class="box box--priklad">
+      <p>Náklad na pár = přípravné náklady / počet párů + náklad na jeden pár. Sériově při 10 000 párech: 1 000 000 / 10 000 + 1 500 = <strong>1 600 Kč</strong>. Při tomhle zadání vychází kusová výroba nejlevněji zhruba do 146 párů, sériová zhruba do 14 600 párů a nad tím hromadná.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p><strong>Velkosériová</strong> výroba má dlouhé série a blíží se hromadné (třeba osobní auta). <strong>Malosériová</strong> má krátké série a blíží se kusové (třeba speciální stroje).</p>
+    </div>
+  </section>
+
+  <!-- ===== 4. Členění podle významu ===== -->
+  <section class="kapitola" id="vyznam" data-pozadavky="4">
+    <h2>Členění podle významu ve výrobním programu</h2>
+    <figure class="ilustrace" aria-label="Výroba se dělí na základní a pomocnou, základní na hlavní, vedlejší, doplňkovou a přidruženou">
+      <svg viewBox="0 0 400 186" style="max-width:540px">
+        <path d="M200 36 L145 60" pathLength="1" class="kresli s-line" stroke-width="1.5" style="--d:.2s"/>
+        <path d="M200 36 L347 60" pathLength="1" class="kresli s-line" stroke-width="1.5" style="--d:.2s"/>
+        <path d="M145 106 L38 130 M145 106 L109 130 M145 106 L180 130 M145 106 L251 130" pathLength="1" class="kresli s-line f-none" stroke-width="1.5" style="--d:.5s"/>
+        <g class="vyjed">
+          <rect x="155" y="6" width="90" height="30" rx="15" class="f-accent"/>
+          <text x="200" y="26" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--accent-text)">Výroba</text>
+        </g>
+        <g class="vyjed" style="--d:.3s">
+          <rect x="5" y="60" width="280" height="46" rx="8" class="f-accent-soft s-accent"/>
+          <text x="145" y="80" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Základní výroba</text>
+          <text x="145" y="97" text-anchor="middle" font-size="12" class="f-muted">výkony určené k prodeji</text>
+        </g>
+        <g class="vyjed" style="--d:.4s">
+          <rect x="298" y="60" width="98" height="64" rx="8" class="f-surface s-line"/>
+          <text x="347" y="79" text-anchor="middle" font-size="13" font-weight="700" class="f-ink">Pomocná</text>
+          <text x="347" y="97" text-anchor="middle" font-size="12" class="f-muted">hlavně pro</text>
+          <text x="347" y="113" text-anchor="middle" font-size="12" class="f-muted">spotřebu podniku</text>
+        </g>
+        <g class="vyjed" style="--d:.65s">
+          <rect x="5" y="130" width="66" height="28" rx="6" class="f-surface s-line"/>
+          <text x="38" y="149" text-anchor="middle" font-size="12" class="f-ink">hlavní</text>
+          <text x="38" y="176" text-anchor="middle" font-size="12" class="f-muted">účel firmy</text>
+        </g>
+        <g class="vyjed" style="--d:.75s">
+          <rect x="76" y="130" width="66" height="28" rx="6" class="f-surface s-line"/>
+          <text x="109" y="149" text-anchor="middle" font-size="12" class="f-ink">vedlejší</text>
+          <text x="109" y="176" text-anchor="middle" font-size="12" class="f-muted">náhr. díly</text>
+        </g>
+        <g class="vyjed" style="--d:.85s">
+          <rect x="147" y="130" width="66" height="28" rx="6" class="f-surface s-line"/>
+          <text x="180" y="149" text-anchor="middle" font-size="12" class="f-ink">doplňková</text>
+          <text x="180" y="176" text-anchor="middle" font-size="12" class="f-muted">z odpadu</text>
+        </g>
+        <g class="vyjed" style="--d:.95s">
+          <rect x="218" y="130" width="66" height="28" rx="6" class="f-surface s-line"/>
+          <text x="251" y="149" text-anchor="middle" font-size="12" class="f-ink">přidružená</text>
+          <text x="251" y="176" text-anchor="middle" font-size="12" class="f-muted">jiný obor</text>
+        </g>
+      </svg>
+      <figcaption>První otázka: jde výkon k prodeji, nebo ho spotřebuje hlavně sám podnik?</figcaption>
+    </figure>
+
+    <div class="box box--definice">
+      <p><strong>Základní výroba</strong> produkuje výkony určené k prodeji. <strong>Pomocná výroba</strong> má výkony určené především ke spotřebě v podniku (např. vlastní výroba elektrické energie).</p>
+    </div>
+    <p>Základní výroba může být čtyř druhů. Klepni na kartu.</p>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Hlavní</div>
+        <div class="karta__rub"><p style="margin:0">Vyrábí se výrobky, <strong>pro které byl podnik zřízen</strong>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Vedlejší</div>
+        <div class="karta__rub"><p style="margin:0">Např. výroba <strong>náhradních dílů</strong> k hlavním výrobkům.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Doplňková</div>
+        <div class="karta__rub"><p style="margin:0">Většinou zpracovává <strong>výrobní odpad</strong>.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Přidružená</div>
+        <div class="karta__rub"><p style="margin:0">Výrobky <strong>odlišného výrobního oboru</strong>, než je hlavní výroba.</p></div>
+      </div>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Podnik je nábytkárna. Kam patří která činnost?",
+        "kose": ["Hlavní", "Vedlejší", "Doplňková", "Přidružená", "Pomocná"],
+        "polozky": [
+          ["skříně a postele", 0],
+          ["kuchyňské linky", 0],
+          ["náhradní dvířka ke skříním", 1],
+          ["náhradní rošty k postelím", 1],
+          ["brikety z pilin na prodej", 2],
+          ["štěpka z odřezků na prodej", 2],
+          ["výroba svíček na prodej", 3],
+          ["plastové květináče na prodej", 3],
+          ["elektřina z vlastního kotle pro dílny", 4],
+          ["vlastní přípravky a nástroje pro dílny", 4]
+        ]
+      }
+      </script>
+    </div>
+    <div class="box box--pozor">
+      <p>Brikety z pilin na prodej jsou <strong>doplňková</strong> výroba. Když ale z pilin topíš a elektřinu spotřebuješ ve vlastních dílnách, je to <strong>pomocná</strong> výroba. Rozhoduje, komu výkon slouží.</p>
+    </div>
+  </section>
+
+  <!-- ===== 5. Organizace výroby ===== -->
+  <section class="kapitola" id="organizace" data-pozadavky="5">
+    <h2>Organizace výroby v podniku</h2>
+    <p>Aby firma vyráběla výrobky požadovaných vlastností při co <strong>nejnižších nákladech</strong>, musí být výroba dobře organizovaná. To zahrnuje <strong>uspořádání výroby a výrobních útvarů</strong>.</p>
+    <div class="box box--definice">
+      <p><strong>Výrobní proces</strong> je souhrn řady dílčích pracovních činností. Jeho základní složkou je <strong>operace</strong> – stejnorodá pracovní činnost vykonávaná na určitém místě člověkem nebo skupinou lidí (např. stříhání látky, lisování dveří).</p>
+    </div>
+
+    <h3>Co výrobní proces zahrnuje</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Procesy pracovní</div>
+        <div class="karta__rub"><p style="margin:0">Vyžadují <strong>přímou účast člověka</strong>. Jsou nejdůležitější.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Procesy přírodní</div>
+        <div class="karta__rub"><p style="margin:0">Jen v některých případech výroby: <strong>kynutí těsta, zrání vína, kvašení piva</strong> apod.</p></div>
+      </div>
+    </div>
+
+    <p>Uspořádání výrobního procesu se řeší při <strong>technologické přípravě výroby</strong>. Stanoví se při ní <strong>postup výroby</strong>, <strong>pracoviště s vybavením</strong> a <strong>čas</strong>, jak dlouho bude operace trvat.</p>
+
+    <h3>Prostorové uspořádání výroby</h3>
+    <p>Základním článkem firmy je prostor, v němž se vyrábí. Cílem prostorového řešení je co nejvýhodnější uspořádání pracoviště tak, aby výroba byla <strong>jednoduchá, přehledná, efektivní a plynulá</strong>. Možnosti jsou dvě:</p>
+    <div class="mrizka">
+      <div class="box" style="margin:0;border-top:5px solid var(--warn)">
+        <h3 style="margin-top:0">Technologické uspořádání</h3>
+        <p>Seskupení strojů a zařízení podle <strong>technologické příbuznosti</strong>, tedy stejných či podobných zařízení. Vznikají jednotlivé úseky (útvary) a výrobek jimi postupně prochází.</p>
+        <p><strong>Výhoda:</strong> jednoduchá organizace práce.</p>
+        <p style="margin-bottom:0"><strong>Nevýhoda:</strong> velké přesuny nedokončené výroby mezi úseky.</p>
+      </div>
+      <div class="box" style="margin:0;border-top:5px solid var(--accent)">
+        <h3 style="margin-top:0">Předmětné uspořádání</h3>
+        <p>Seskupení <strong>různorodých</strong> strojů a zařízení podle technologického postupu výroby. Výrobek se na určitém místě vyrábí <strong>od začátku až do konce</strong>. Pracoviště jsou uspořádána do <strong>výrobních linek</strong> – tzv. <strong>proudová výroba</strong> (např. výroba obuvi).</p>
+        <p><strong>Výhoda:</strong> malé přesuny nedokončené výroby.</p>
+        <p style="margin-bottom:0"><strong>Nevýhoda:</strong> složitější řízení; při změně programu je většinou nutné přestavět celou dílnu.</p>
+      </div>
+    </div>
+    <div class="box box--doplneno">
+      <p>V podkladech u předmětného uspořádání stojí „podle technologického zařízení výroby“. V běžném učivu se říká <strong>podle technologického postupu</strong>: stroje stojí za sebou v pořadí, v jakém je výrobek potřebuje.</p>
+    </div>
+
+    <div class="simulace" id="dilna">
+      <p style="margin-top:0"><strong>Projdi s botou halou:</strong> přepni uspořádání a klikej na další operaci. Sleduj, kolik metrů bota nachodí. Vzdálenosti jsou jen ilustrační.</p>
+      <div class="vyber" role="group" aria-label="Výběr uspořádání">
+        <button class="chip" type="button" data-usporadani="tech">Technologické</button>
+        <button class="chip" type="button" data-usporadani="pred">Předmětné</button>
+      </div>
+      <svg viewBox="0 0 400 215" style="max-width:520px;margin:8px auto 0" aria-label="Půdorys dílny a cesta výrobku"></svg>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="dalsi">Další operace</button>
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+      </div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Operace</small><b id="di-op"></b></div>
+        <div class="ukazatel"><small>Ušlá dráha</small><b id="di-m"></b></div>
+      </div>
+      <p id="di-t" style="margin-bottom:0;font-size:.92rem"></p>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Pracovní, nebo přírodní proces?",
+        "kose": ["Pracovní", "Přírodní"],
+        "polozky": [
+          ["stříhání látky", 0],
+          ["lisování dveří", 0],
+          ["vážení mouky do hnětače", 0],
+          ["lakování karoserie", 0],
+          ["kynutí těsta", 1],
+          ["zrání vína", 1],
+          ["kvašení piva", 1],
+          ["vysychání řeziva na vzduchu", 1]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 6. Plánování a příprava výroby ===== -->
+  <section class="kapitola" id="planovani" data-pozadavky="6 7">
+    <h2>Plánování a příprava výroby</h2>
+    <p><strong>Plánování předchází vlastní výrobě.</strong> V plánu se stanoví množství jednotlivých druhů výrobků, termíny apod. Plán výroby je součástí <strong>celkového plánu podniku</strong> a velmi úzce souvisí s <strong>plánem prodeje</strong>.</p>
+
+    <h3>Cíl plánu výroby</h3>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Určit sortiment</div>
+        <div class="karta__rub"><p style="margin:0">Co se bude vyrábět – vlastnosti, jakost apod.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Určit objem</div>
+        <div class="karta__rub"><p style="margin:0">Kolik se vyrobí – množství výrobků.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Rozložit do času</div>
+        <div class="karta__rub"><p style="margin:0">Kdy se to vyrobí – rozvržení na časové období (rok, měsíc apod.).</p></div>
+      </div>
+    </div>
+
+    <h3>Z čeho se vychází</h3>
+    <figure class="ilustrace" aria-label="Pět podkladů vstupuje do ročního plánu výroby, z něj vycházejí operativní plány">
+      <svg viewBox="0 0 400 166" style="max-width:540px">
+        <g class="vyjed" style="--d:.1s"><rect x="4" y="4" width="148" height="26" rx="13" class="f-surface s-line"/><text x="78" y="22" text-anchor="middle" font-size="12" class="f-ink">marketingová koncepce</text></g>
+        <g class="vyjed" style="--d:.2s"><rect x="4" y="36" width="148" height="26" rx="13" class="f-surface s-line"/><text x="78" y="54" text-anchor="middle" font-size="12" class="f-ink">sledování trhu</text></g>
+        <g class="vyjed" style="--d:.3s"><rect x="4" y="68" width="148" height="26" rx="13" class="f-surface s-line"/><text x="78" y="86" text-anchor="middle" font-size="12" class="f-ink">odběratelé a zakázky</text></g>
+        <g class="vyjed" style="--d:.4s"><rect x="4" y="100" width="148" height="26" rx="13" class="f-surface s-line"/><text x="78" y="118" text-anchor="middle" font-size="12" class="f-ink">kapacita a její využití</text></g>
+        <g class="vyjed" style="--d:.5s"><rect x="4" y="132" width="148" height="26" rx="13" class="f-surface s-line"/><text x="78" y="150" text-anchor="middle" font-size="12" class="f-ink">ekonomické propočty</text></g>
+        <path d="M152 17 L180 60 M152 49 L180 70 M152 81 H180 M152 113 L180 92 M152 145 L180 102" pathLength="1" class="kresli s-accent f-none" stroke-width="1.5" style="--d:.6s"/>
+        <g class="vyjed" style="--d:.8s">
+          <rect x="180" y="51" width="88" height="60" rx="10" class="f-accent"/>
+          <text x="224" y="77" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-text)">roční plán</text>
+          <text x="224" y="94" text-anchor="middle" font-size="13" font-weight="700" style="fill:var(--accent-text)">výroby</text>
+        </g>
+        <path d="M268 81 H290" pathLength="1" class="kresli s-accent" stroke-width="2" style="--d:1s"/>
+        <path d="M284 75 L291 81 L284 87" class="vyjed s-accent f-none" stroke-width="2" style="--d:1.1s"/>
+        <g class="vyjed" style="--d:1.1s">
+          <rect x="294" y="51" width="102" height="60" rx="10" class="f-surface s-accent" stroke-width="1.5"/>
+          <text x="345" y="72" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">operativní</text>
+          <text x="345" y="88" text-anchor="middle" font-size="13" font-weight="600" class="f-ink">plány</text>
+          <text x="345" y="103" text-anchor="middle" font-size="12" class="f-muted">kratší období</text>
+        </g>
+      </svg>
+      <figcaption>Pět podkladů dá roční plán. Operativní plány ho na kratší období konkretizují a zpřesňují.</figcaption>
+    </figure>
+    <p>Při sestavování <strong>ročního plánu výroby</strong> se vychází z:</p>
+    <ul>
+      <li>dlouhodobější <strong>marketingové koncepce</strong> a činnosti podniku</li>
+      <li>poznatků získaných neustálým <strong>sledováním trhu</strong></li>
+      <li><strong>jednání s odběrateli</strong> a z uzavřených zakázek</li>
+      <li><strong>kapacity výroby</strong> a jejího využití</li>
+      <li><strong>ekonomických propočtů</strong> – náklady a výnosy při různých objemech výroby a cenách vstupů a výstupů</li>
+    </ul>
+    <p>Z ročního plánu vycházejí <strong>plány operativní</strong> na kratší časové období, kde se roční plán konkretizuje a zpřesňuje. Plánování musí být <strong>flexibilní</strong>.</p>
+
+    <div class="box box--doplneno">
+      <p><strong>Výrobní kapacita</strong> je největší množství výrobků, které podnik dokáže vyrobit za určité období. <strong>Využití kapacity</strong> = plánovaná výroba / kapacita × 100 %. Kapacita 1 000 ks za měsíc je 12 000 ks za rok. Plán 9 000 ks za rok ji využije na 75 %.</p>
+    </div>
+
+    <div class="simulace" id="plan">
+      <p style="margin-top:0"><strong>Sestav roční plán.</strong> Vyrábíš zimní bundy a nejvíc se jich prodá ve 4. čtvrtletí. Začínáš podle prodeje, jenže kapacita to na konci roku nestíhá. Rozlož výrobu tak, aby na zákazníky zbylo. Čísla jsou vymyšlená, v podkladech žádná nejsou.</p>
+      <div class="legenda">
+        <span style="--c:var(--text-muted)">plán prodeje</span>
+        <span style="--c:var(--accent)">plán výroby</span>
+        <span style="--c:var(--warn)">kapacita za čtvrtletí</span>
+      </div>
+      <svg viewBox="0 0 400 226" aria-label="Plán prodeje a výroby po čtvrtletích"></svg>
+      <div class="posuvnik"><label for="pl-k">Kapacita za čtvrtletí</label><output id="pl-k-o"></output><input id="pl-k" type="range" min="2000" max="5000" step="500" value="3500"></div>
+      <div class="posuvnik"><label for="pl-0">Výroba v 1. čtvrtletí</label><output id="pl-0-o"></output><input id="pl-0" type="range" min="0" max="3500" step="250" value="3000"></div>
+      <div class="posuvnik"><label for="pl-1">Výroba ve 2. čtvrtletí</label><output id="pl-1-o"></output><input id="pl-1" type="range" min="0" max="3500" step="250" value="1000"></div>
+      <div class="posuvnik"><label for="pl-2">Výroba ve 3. čtvrtletí</label><output id="pl-2-o"></output><input id="pl-2" type="range" min="0" max="3500" step="250" value="2000"></div>
+      <div class="posuvnik"><label for="pl-3">Výroba ve 4. čtvrtletí</label><output id="pl-3-o"></output><input id="pl-3" type="range" min="0" max="3500" step="250" value="3500"></div>
+      <div class="tridicka__ovladani">
+        <button class="btn" type="button" data-akce="rovnomerne">Ukaž rovnoměrný plán</button>
+        <button class="btn btn--sek" type="button" data-akce="znovu">Znovu</button>
+      </div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Objem výroby za rok</small><b id="pl-obj"></b></div>
+        <div class="ukazatel"><small>Využití kapacity</small><b id="pl-vyu"></b></div>
+        <div class="ukazatel"><small>Nedodáno zákazníkům</small><b id="pl-ned"></b></div>
+        <div class="ukazatel"><small>Výsledek propočtu</small><b id="pl-vh"></b></div>
+      </div>
+      <p id="pl-t" style="margin-bottom:0;font-size:.92rem"></p>
+      <p style="margin:.5em 0 0;font-size:.82rem;color:var(--text-muted)">Zjednodušený propočet: cena 1 000 Kč, variabilní náklady 600 Kč/ks vyrobený, fixní náklady 1 000 000 Kč za rok, sklad 50 Kč za kus na konci každého čtvrtletí.</p>
+    </div>
+
+    <h3>Příprava výroby</h3>
+    <div class="box box--definice">
+      <p><strong>Příprava výroby</strong> je souhrn činností, jejichž cílem je připravit budoucí výrobu po stránce technické, organizační a ekonomické. Cílem je, aby se vyráběly <strong>vysoce kvalitní a technicky vyspělé výrobky za co nejnižší cenu</strong>, tedy aby byla výroba co nejvíce efektivní.</p>
+    </div>
+    <div class="mrizka">
+      <div class="karta" data-flip>
+        <div class="karta__lic">Technická příprava</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Vlastnosti výrobku.</strong> Provádí ji většinou technické oddělení.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Organizační příprava</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Způsob a místo výroby.</strong> Provádí ji výrobní oddělení.</p></div>
+      </div>
+      <div class="karta" data-flip>
+        <div class="karta__lic">Ekonomická příprava</div>
+        <div class="karta__rub"><p style="margin:0"><strong>Náklady, cena, financování</strong> apod. Provádí ji ekonomické oddělení.</p></div>
+      </div>
+    </div>
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Firma chystá novou sekačku na trávu. Které oddělení to řeší?",
+        "kose": ["Technické", "Výrobní", "Ekonomické"],
+        "polozky": [
+          ["jak silný bude motor", 0],
+          ["jak široký bude záběr nože", 0],
+          ["ve které hale se bude vyrábět", 1],
+          ["vyrábět na lince, nebo po dílnách", 1],
+          ["kolik bude stát výroba jednoho kusu", 2],
+          ["za kolik se bude prodávat", 2],
+          ["z čeho se zaplatí nová linka", 2]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 7. Výrobní program ===== -->
+  <section class="kapitola" id="program" data-pozadavky="8">
+    <h2>Výrobní program</h2>
+    <div class="box box--definice">
+      <p><strong>Výrobní program</strong> je soubor vyráběných výrobků nebo poskytovaných služeb, jejich sortiment a množství, které se má v určitém plánovaném období vyrobit.</p>
+    </div>
+    <p>Výrobní program (neboli <strong>zaměření podniku</strong>) je jedno z rozhodujících <strong>strategických rozhodnutí</strong> podniku, protože vyráběné výrobky jsou hlavním zdrojem výkonů, tzn. zisku.</p>
+    <div class="box box--doplneno">
+      <p>Přesněji: <strong>výkony</strong> jsou to, co podnik vyrobí a poskytne. <strong>Zisk</strong> z nich zbude až po odečtení nákladů. Výkony a zisk tedy nejsou totéž.</p>
+    </div>
+    <p>Výrobní program vychází z <strong>průzkumu trhu</strong>, <strong>požadavků zákazníků</strong> a <strong>záměrů konkurence</strong>.</p>
+
+    <h3>Základní skupiny výrobků</h3>
+    <p>Ve výrobním programu jsou <strong>nové výrobky</strong>, <strong>dnešní nosné výrobky</strong> a <strong>útlumové výrobky</strong>. Podklady je jen vyjmenovávají, proto je níž doplněné vysvětlení.</p>
+    <div class="box box--doplneno">
+      <div class="mrizka" style="margin-bottom:0">
+        <div class="karta" data-flip>
+          <div class="karta__lic">Nové výrobky</div>
+          <div class="karta__rub"><p style="margin:0">Právě se dostávají na trh. Zatím prodávají málo, ale mají budoucnost.</p></div>
+        </div>
+        <div class="karta" data-flip>
+          <div class="karta__lic">Dnešní nosné výrobky</div>
+          <div class="karta__rub"><p style="margin:0">Přinášejí podniku dnes nejvíc peněz.</p></div>
+        </div>
+        <div class="karta" data-flip>
+          <div class="karta__lic">Útlumové výrobky</div>
+          <div class="karta__rub"><p style="margin:0">Prodej klesá a podnik je postupně přestává vyrábět.</p></div>
+        </div>
+      </div>
+    </div>
+    <p>Důležitou součástí výrobkové strategie jsou <strong>inovace výrobního programu</strong>. Co se stane bez nich, si vyzkoušej:</p>
+
+    <div class="simulace" id="inovace">
+      <div class="legenda">
+        <span style="--c:var(--accent);opacity:.55">nové</span>
+        <span style="--c:var(--accent)">nosné</span>
+        <span style="--c:var(--text-muted)">útlumové</span>
+      </div>
+      <svg viewBox="0 0 400 206" aria-label="Tržby podniku za 12 let podle skupin výrobků"></svg>
+      <div class="posuvnik"><label for="in-k">Nový výrobek uvedeš na trh</label><output id="in-k-o"></output><input id="in-k" type="range" min="2" max="7" step="1" value="3"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Tržby ve 12. roce</small><b id="in-t12"></b></div>
+        <div class="ukazatel"><small>Nejhorší rok</small><b id="in-min"></b></div>
+      </div>
+      <p id="in-t" style="margin-bottom:0;font-size:.92rem"></p>
+      <p style="margin:.5em 0 0;font-size:.82rem;color:var(--text-muted)">Čísla jsou vymyšlená, jen pro představu. Podnik začíná se třemi výrobky různého stáří a každý výrobek se prodává 8 let.</p>
+    </div>
+
+    <div class="box box--doplneno">
+      <p>Skupiny výrobků odpovídají <strong>životnímu cyklu výrobku</strong>: zavedení, růst, zralost, útlum. <strong>Inovace</strong> je zavedení nového nebo výrazně zlepšeného výrobku nebo postupu. Stojí peníze na vývoj, ale bez ní program stárne.</p>
+    </div>
+  </section>
+
+  <!-- ===== 8. Jakost výrobků ===== -->
+  <section class="kapitola" id="jakost">
+    <h2>Jakost výrobků</h2>
+    <div class="box box--definice">
+      <p><strong>Jakost</strong> je souhrn vlastností vyjadřujících způsobilost výrobku plnit funkce, pro které je určen, tj. uspokojovat lidské potřeby. Většinou je stanovena <strong>technickými normami</strong> (ČSN, ISO apod.).</p>
+    </div>
+    <p>Mezi základní <strong>užitné vlastnosti</strong> výrobku patří funkčnost, spolehlivost, bezpečnost, trvanlivost, ovladatelnost, nezávadnost, estetičnost apod.</p>
+    <div class="box box--doplneno">
+      <p><strong>ČSN</strong> jsou české technické normy, <strong>ISO</strong> jsou normy mezinárodní.</p>
+    </div>
+
+    <h3>Kontrola</h3>
+    <p>Jedna z nejdůležitějších činností při výrobě je <strong>kontrola</strong>. Může probíhat po ukončení výrobního procesu, ale i v jeho průběhu. Kontrola během výroby může odhalit možné problémy včas a zabránit tak zbytečným dalším nákladům.</p>
+    <p>Kontrolovat by se mělo:</p>
+    <ul>
+      <li>kvalita vstupů – <strong>vstupní kontrola</strong></li>
+      <li>kvalita výrobních procesů – <strong>mezioperační kontrola</strong></li>
+      <li>kvalita výstupů (hotové výrobky) – <strong>výstupní kontrola</strong></li>
+      <li><strong>skladování</strong></li>
+      <li><strong>servis</strong></li>
+    </ul>
+
+    <div class="simulace" id="vada">
+      <p style="margin-top:0"><strong>Kde vadu chytíš?</strong> V dodávce přišel vadný plech. Čím později vadu odhalíš, tím víc práce jsi do kusu zbytečně vložil. Čísla jsou vymyšlená.</p>
+      <div class="vada__radky"></div>
+      <div class="posuvnik"><label for="va-kde">Kde se vada odhalí</label><output id="va-kde-o"></output><input id="va-kde" type="range" min="0" max="3" step="1" value="1"></div>
+      <div class="posuvnik"><label for="va-n">Počet vadných kusů</label><output id="va-n-o"></output><input id="va-n" type="range" min="10" max="200" step="10" value="50"></div>
+      <div class="ukazatele">
+        <div class="ukazatel"><small>Ztráta na kus</small><b id="va-kus"></b></div>
+        <div class="ukazatel"><small>Ztráta celkem</small><b id="va-celkem"></b></div>
+      </div>
+    </div>
+
+    <div data-tridicka>
+      <script type="application/json">
+      {
+        "zadani": "Podnik vyrábí pračky. Co se kde kontroluje?",
+        "kose": ["Vstupní", "Mezioperační", "Výstupní", "Skladování", "Servis"],
+        "polozky": [
+          ["tloušťka plechu od dodavatele", 0],
+          ["kvalita dodaných motorů", 0],
+          ["rozměr bubnu po lisování, než jde na svařování", 1],
+          ["svary po svařování, než se bubny smontují", 1],
+          ["zkušební praní hotové pračky", 2],
+          ["vzhled hotové pračky před balením", 2],
+          ["vlhkost v hale s hotovými pračkami", 3],
+          ["jestli se krabice v regálech nepomačkaly", 3],
+          ["jak dobře technik opravil pračku u zákazníka", 4],
+          ["jak rychle se vyřídila oprava v záruce", 4]
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+  <!-- ===== 9. Opakování ===== -->
+  <section class="kapitola" id="opakovani">
+    <h2>Opakování</h2>
+    <p>Přečti si pojem, zkus si ho říct nahlas a teprve pak kartu otoč. Co neumíš, se vrátí na konec balíčku.</p>
+    <div data-karticky>
+      <script type="application/json">
+      {
+        "nazev": "Pojmy – výroba",
+        "karty": [
+          ["Výroba", "Hlavní činnost výrobního podniku. Přeměna vstupů (výrobních faktorů) na výstupy (výrobek nebo služba)."],
+          ["Výrobní faktory", "Stroje a zařízení, suroviny a materiál, pracovní síla."],
+          ["Fáze výroby", "Příprava výroby, vlastní výroba, skladování výrobků."],
+          ["Řemeslná výroba", "Ruční práce, žádná nebo minimální dělba práce, malé množství, nízká produktivita, vysoké náklady. Kraslice, kroje."],
+          ["Průmyslová výroba", "Stroje, velká dělba práce, vyšší produktivita, nižší náklady. Strojová nebo automatizovaná."],
+          ["Hromadná výroba", "Jeden nebo málo výrobků ve velkém množství. Vysoká produktivita, nízké náklady."],
+          ["Sériová výroba", "Mezistupeň. Série, které se střídají. Malosériová a velkosériová."],
+          ["Kusová výroba", "Neopakovatelné originály, často na zakázku, poměrně vysoké náklady. Stavba lodí."],
+          ["Základní × pomocná výroba", "Základní: výkony k prodeji. Pomocná: výkony především ke spotřebě v podniku."],
+          ["Druhy základní výroby", "Hlavní (proč byl podnik zřízen), vedlejší (náhradní díly), doplňková (výrobní odpad), přidružená (jiný obor)."],
+          ["Procesy pracovní a přírodní", "Pracovní: přímá účast člověka, nejdůležitější. Přírodní: jen někdy – kynutí, zrání, kvašení."],
+          ["Operace", "Základní složka výrobního procesu. Stejnorodá pracovní činnost na určitém místě, člověk nebo skupina lidí."],
+          ["Technologické uspořádání", "Stejné nebo podobné stroje v úsecích. Plus: jednoduchá organizace práce. Minus: velké přesuny nedokončené výroby."],
+          ["Předmětné uspořádání", "Různorodé stroje do linek, proudová výroba. Plus: malé přesuny. Minus: složitější řízení, přestavba při změně programu."],
+          ["Cíl plánu výroby", "Určit sortiment, určit objem, rozložit výrobu do časových úseků."],
+          ["Z čeho vychází roční plán výroby", "Marketingová koncepce, sledování trhu, odběratelé a zakázky, kapacita a její využití, ekonomické propočty."],
+          ["Příprava výroby", "Technická (technické odd.), organizační (výrobní odd.), ekonomická (ekonomické odd.)."],
+          ["Výrobní program", "Soubor výrobků nebo služeb, jejich sortiment a množství na plánované období. Strategické rozhodnutí."],
+          ["Skupiny výrobků v programu", "Nové, dnešní nosné, útlumové. Vychází z průzkumu trhu, požadavků zákazníků a záměrů konkurence."],
+          ["Jakost a kontrola", "Jakost: způsobilost plnit funkce, normy ČSN, ISO. Kontrola: vstupní, mezioperační, výstupní, skladování, servis."]
+        ]
+      }
+      </script>
+    </div>
+
+    <details class="odhal">
+      <summary>Osnova odpovědi u maturity</summary>
+      <div class="odhal__obsah">
+        <ol>
+          <li>Definice výroby, vstupy a výstupy, výrobní postup a technologie, tři fáze, vliv na konkurenceschopnost.</li>
+          <li>Členění podle toho, co se vyrábí: zemědělská, průmyslová, stavebnictví.</li>
+          <li>Členění podle techniky: řemeslná a průmyslová (strojová, automatizovaná).</li>
+          <li>Členění podle množství: hromadná, sériová, kusová, s příklady.</li>
+          <li>Členění podle významu: základní (hlavní, vedlejší, doplňková, přidružená) a pomocná.</li>
+          <li>Organizace: výrobní proces, procesy pracovní a přírodní, operace, technologické a předmětné uspořádání s výhodami a nevýhodami.</li>
+          <li>Plán výroby: cíle, podklady ročního plánu, operativní plány, flexibilita.</li>
+          <li>Příprava výroby: technická, organizační, ekonomická a kdo ji dělá.</li>
+          <li>Výrobní program: definice, z čeho vychází, tři skupiny výrobků, inovace.</li>
+          <li>Jakost: definice, normy, užitné vlastnosti, kde všude se kontroluje.</li>
+        </ol>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===== 10. Test ===== -->
+  <section class="kapitola" id="test" data-bez-hotovo>
+    <h2>Závěrečný test</h2>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <div data-test>
+      <script type="application/json">
+      {
+        "pocet": 15,
+        "otazky": [
+          {"typ": "vice", "otazka": "Co patří mezi <b>výrobní faktory</b> podle učiva?",
+           "moznosti": ["Stroje a zařízení", "Hotové výrobky", "Suroviny a materiál", "Pracovní síla"],
+           "spravne": [0, 2, 3], "vysvetleni": "Hotový výrobek je výstup výroby, ne vstup."},
+          {"typ": "jedna", "otazka": "Která trojice jsou hlavní <b>fáze výroby</b>?",
+           "moznosti": ["Plánování prodeje, prodej a poskytování servisu", "Příprava výroby, vlastní výroba, skladování výrobků", "Nákup surovin, kontrola jakosti a expedice výrobků", "Vstupní kontrola, operace a vyřízení reklamací"],
+           "spravne": 1, "vysvetleni": "Výroba začíná přípravou a končí skladováním hotových výrobků."},
+          {"typ": "ano-ne", "otazka": "Výstupem výroby může být i služba.",
+           "spravne": true, "vysvetleni": "Výstupem je výrobek nebo služba, třeba oprava auta."},
+          {"typ": "jedna", "otazka": "Co je základem výrobního postupu?",
+           "moznosti": ["Plán prodeje", "Výrobní program", "Technologie výroby", "Dělba práce"],
+           "spravne": 2, "vysvetleni": "Výroba se řídí výrobním postupem a jeho základem je technologie."},
+          {"typ": "jedna", "otazka": "Ruční výroba krojů s minimální dělbou práce je výroba…",
+           "moznosti": ["automatizovaná", "strojová", "sériová", "řemeslná"],
+           "spravne": 3, "vysvetleni": "Ruční práce a žádná nebo minimální dělba práce znamenají řemeslnou výrobu."},
+          {"typ": "jedna", "otazka": "Čím se liší <b>strojová</b> výroba od <b>automatizované</b>?",
+           "moznosti": ["Na stroji pracují dělníci", "Má nižší produktivitu než řemeslná", "Probíhá jen na zakázku", "Používá jen ruční nástroje"],
+           "spravne": 0, "vysvetleni": "Obě jsou průmyslové, ale automatizovaná běží plně automaticky a na strojové pracují dělníci."},
+          {"typ": "ano-ne", "otazka": "Průmyslová výroba má proti řemeslné vyšší produktivitu a nižší náklady.",
+           "spravne": true, "vysvetleni": "Díky strojům a velké dělbě práce."},
+          {"typ": "jedna", "otazka": "Pod výrobu <b>zemědělskou</b> se podle podkladů řadí i…",
+           "moznosti": ["potravinářský průmysl", "lesní a vodní hospodářství", "textilní průmysl a oděvnictví", "chemický průmysl a hnojiva"],
+           "spravne": 1, "vysvetleni": "Potravinářství, textil a chemie patří do průmyslové výroby."},
+          {"typ": "jedna", "otazka": "Stavba zaoceánské lodi je typicky výroba…",
+           "moznosti": ["kusová", "hromadná", "velkosériová", "malosériová"],
+           "spravne": 0, "vysvetleni": "Loď je originál, vyrábí se od druhu jen jeden kus."},
+          {"typ": "jedna", "otazka": "Výroba, kde se střídají série výrobků, je výroba…",
+           "moznosti": ["hromadná", "kusová", "sériová", "pomocná"],
+           "spravne": 2, "vysvetleni": "Sériová výroba je mezistupeň mezi hromadnou a kusovou."},
+          {"typ": "ano-ne", "otazka": "Hromadná výroba má vysokou produktivitu práce a nízké výrobní náklady.",
+           "spravne": true, "vysvetleni": "Vyrábí se jeden nebo málo výrobků ve velkém množství."},
+          {"typ": "cislo", "otazka": "Přípravné náklady na sérii bot jsou 1 000 000 Kč a na každý pár dalších 1 500 Kč. Kolik vyjde jeden pár při 10 000 párech?",
+           "spravne": 1600, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "1 000 000 / 10 000 + 1 500 = 100 + 1 500 = 1 600 Kč."},
+          {"typ": "jedna", "otazka": "Podnik zpracovává své výrobní odpady na výrobek k prodeji. Jde o výrobu…",
+           "moznosti": ["vedlejší", "přidruženou", "pomocnou", "doplňkovou"],
+           "spravne": 3, "vysvetleni": "Doplňková výroba většinou zpracovává výrobní odpad."},
+          {"typ": "jedna", "otazka": "Automobilka vyrábí náhradní díly ke svým autům. Jde o výrobu…",
+           "moznosti": ["vedlejší", "doplňkovou", "přidruženou", "hlavní"],
+           "spravne": 0, "vysvetleni": "Náhradní díly k hlavním výrobkům jsou příklad vedlejší výroby."},
+          {"typ": "jedna", "otazka": "Podnik si vyrábí elektřinu pro vlastní provoz. Jde o výrobu…",
+           "moznosti": ["doplňkovou", "pomocnou", "přidruženou", "vedlejší"],
+           "spravne": 1, "vysvetleni": "Výkony pomocné výroby jsou určené především ke spotřebě v podniku."},
+          {"typ": "jedna", "otazka": "Výrobky odlišného oboru, než je hlavní výroba, vznikají ve výrobě…",
+           "moznosti": ["doplňkové", "vedlejší", "přidružené", "pomocné"],
+           "spravne": 2, "vysvetleni": "Vedlejší výroba zůstává u hlavních výrobků, přidružená je z jiného oboru."},
+          {"typ": "vice", "otazka": "Které procesy jsou <b>přírodní</b>?",
+           "moznosti": ["Kynutí těsta", "Stříhání látky", "Zrání vína", "Kvašení piva"],
+           "spravne": [0, 2, 3], "vysvetleni": "Stříhání látky je operace s přímou účastí člověka, tedy pracovní proces."},
+          {"typ": "jedna", "otazka": "Co je <b>operace</b>?",
+           "moznosti": ["Souhrn všech procesů v podniku", "Rozdělení výroby do časových úseků", "Přesun nedokončené výroby mezi úseky", "Stejnorodá pracovní činnost na určitém místě"],
+           "spravne": 3, "vysvetleni": "Operace je základní složka výrobního procesu, např. lisování dveří."},
+          {"typ": "jedna", "otazka": "Stejné stroje jsou seskupené do úseků a výrobek jimi postupně prochází. Jde o uspořádání…",
+           "moznosti": ["předmětné", "technologické", "proudové", "operativní"],
+           "spravne": 1, "vysvetleni": "Technologické uspořádání seskupuje stroje podle technologické příbuznosti."},
+          {"typ": "jedna", "otazka": "Jaká je nevýhoda <b>předmětného</b> uspořádání?",
+           "moznosti": ["Velké přesuny nedokončené výroby", "Žádná dělba práce", "Přestavba dílny při změně programu", "Nízká produktivita práce"],
+           "spravne": 2, "vysvetleni": "Velké přesuny jsou nevýhoda technologického uspořádání. U předmětného je navíc složitější řízení."},
+          {"typ": "ano-ne", "otazka": "Výrobní linky a proudová výroba patří k předmětnému uspořádání.",
+           "spravne": true, "vysvetleni": "Výrobek se na jednom místě vyrábí od začátku do konce, např. obuv."},
+          {"typ": "vice", "otazka": "Co je <b>cílem plánu výroby</b>?",
+           "moznosti": ["Určit vyráběný sortiment", "Určit objem výroby", "Rozložit výrobu do časových úseků", "Vybrat pracovníky do vedení"],
+           "spravne": [0, 1, 2], "vysvetleni": "Plán výroby řeší co, kolik a kdy."},
+          {"typ": "ano-ne", "otazka": "Operativní plány jsou na delší období než roční plán výroby.",
+           "spravne": false, "vysvetleni": "Jsou na kratší období a roční plán konkretizují a zpřesňují."},
+          {"typ": "cislo", "otazka": "Kapacita je 1 000 ks za měsíc a roční plán výroby 9 000 ks. Na kolik procent je využitá kapacita za rok?",
+           "spravne": 75, "jednotka": "%", "tolerance": 0, "vysvetleni": "Roční kapacita je 12 000 ks. 9 000 / 12 000 × 100 = 75 %."},
+          {"typ": "cislo", "otazka": "Prodej po čtvrtletích je 3 000, 1 000, 2 000 a 6 000 ks. Vyrábíš 3 000 ks každé čtvrtletí a začínáš s prázdným skladem. Kolik kusů máš na skladě po 3. čtvrtletí?",
+           "spravne": 3000, "jednotka": "ks", "tolerance": 0, "vysvetleni": "Po 1. čtvrtletí 0, po 2. je to 2 000, po 3. je to 2 000 + 3 000 − 2 000 = 3 000 ks."},
+          {"typ": "jedna", "otazka": "Způsob a místo výroby řeší příprava…",
+           "moznosti": ["organizační", "technická", "ekonomická", "marketingová"],
+           "spravne": 0, "vysvetleni": "Organizační přípravu provádí výrobní oddělení. Technická řeší vlastnosti výrobku, ekonomická náklady a cenu."},
+          {"typ": "jedna", "otazka": "Ekonomickou přípravu výroby provádí většinou…",
+           "moznosti": ["technické oddělení", "výrobní oddělení", "ekonomické oddělení", "vrcholové vedení"],
+           "spravne": 2, "vysvetleni": "Řeší náklady, cenu a financování."},
+          {"typ": "vice", "otazka": "Z čeho vychází <b>výrobní program</b>?",
+           "moznosti": ["Z průzkumu trhu", "Z požadavků zákazníků", "Ze záměrů konkurence", "Z mezioperační kontroly"],
+           "spravne": [0, 1, 2], "vysvetleni": "Kontrola sleduje jakost, program určuje trh, zákazníci a konkurence."},
+          {"typ": "jedna", "otazka": "Která skupina <b>nepatří</b> mezi základní skupiny výrobků ve výrobním programu?",
+           "moznosti": ["Nové výrobky", "Dnešní nosné výrobky", "Útlumové výrobky", "Pomocné výrobky"],
+           "spravne": 3, "vysvetleni": "Pomocná je druh výroby podle významu, ne skupina výrobků v programu."},
+          {"typ": "jedna", "otazka": "Kontrola kvality výrobních procesů se nazývá…",
+           "moznosti": ["vstupní", "mezioperační", "výstupní", "servisní"],
+           "spravne": 1, "vysvetleni": "Vstupní hlídá vstupy, výstupní hotové výrobky. Včasná mezioperační kontrola šetří další náklady."}
+        ]
+      }
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<style>
+  /* Widgety tohoto tématu */
+  .vyber { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .vyber .chip { cursor: pointer; }
+  .ukazatel.vyhra { border-color: var(--accent); background: var(--accent-soft); }
+  .plan-sloup { transform-box: fill-box; transform-origin: bottom; transition: transform .4s var(--ease); }
+  .di-bota { transition: transform .5s var(--ease); }
+  .vada__radek { display: grid; grid-template-columns: 112px 1fr auto; gap: 8px; align-items: center; margin: 7px 0; font-size: .85rem; }
+  .vada__drah { background: var(--bg); border-radius: 4px; height: 12px; overflow: hidden; }
+  .vada__pruh { display: block; height: 100%; background: var(--text-muted); border-radius: 4px; transition: background .3s; }
+  .vada__radek.vybrany { font-weight: 650; }
+  .vada__radek.vybrany .vada__pruh { background: var(--bad); }
+  .vada__cena { font-family: var(--mono); font-size: .8rem; font-variant-numeric: tabular-nums; }
+</style>
+
+<script>
+/* ===== Widgety specifické pro toto téma ===== */
+document.addEventListener("DOMContentLoaded", () => {
+  const { el, svg, kc, cislo, $, $$ } = window.Ucebna;
+  const text = (x, y, s, attrs = {}) => Object.assign(svg("text", { x, y, ...attrs }), { textContent: s });
+
+  /* --- Tok výroby: vstupy a výstup vybraného podniku --- */
+  (() => {
+    const box = $("#tok");
+    const PODNIKY = [
+      { stroje: "hnětač, pec", suroviny: "mouka, droždí, sůl", sila: "pekař", vystup: "chléb", druh: "výrobek" },
+      { stroje: "pila, frézka", suroviny: "dřevo, lepidlo", sila: "truhlář", vystup: "skříň", druh: "výrobek" },
+      { stroje: "varna, tanky", suroviny: "slad, chmel, voda", sila: "sládek", vystup: "pivo", druh: "výrobek" },
+      { stroje: "zvedák, diagnostika", suroviny: "náhradní díly, olej", sila: "automechanik", vystup: "oprava auta", druh: "služba" },
+    ];
+    function ukaz(i) {
+      const p = PODNIKY[i];
+      $("#tok-stroje").textContent = p.stroje;
+      $("#tok-suroviny").textContent = p.suroviny;
+      $("#tok-sila").textContent = p.sila;
+      $("#tok-vystup").textContent = p.vystup;
+      $("#tok-druh").textContent = p.druh;
+      $$("[data-podnik]", box).forEach((b) => b.classList.toggle("vybrany", +b.dataset.podnik === i));
+    }
+    $$("[data-podnik]", box).forEach((b) => b.addEventListener("click", () => ukaz(+b.dataset.podnik)));
+    ukaz(0);
+  })();
+
+  /* --- Náklad na kus podle vyráběného množství --- */
+  (() => {
+    const box = $("#kusy");
+    const plocha = $("svg", box);
+    const L = 56, R = 392, T = 12, B = 208;
+    const VYROBY = [
+      { nazev: "kusová", fc: 50000, vc: 8000, styl: "stroke:var(--warn);stroke-width:3" },
+      { nazev: "sériová", fc: 1000000, vc: 1500, styl: "stroke:var(--text-muted);stroke-width:3;stroke-dasharray:7 4" },
+      { nazev: "hromadná", fc: 20000000, vc: 200, styl: "stroke:var(--accent);stroke-width:3" },
+    ];
+    const naKus = (v, n) => v.fc / n + v.vc;
+    const sx = (n) => L + (Math.log10(n) / 6) * (R - L);
+    const sy = (c) => B - ((Math.log10(c) - 2) / 3) * (B - T);
+    const zaokrouhli = (n) => {
+      if (n < 100) return Math.round(n);
+      const rad = 10 ** (Math.floor(Math.log10(n)) - 1);
+      return Math.round(n / rad) * rad;
+    };
+    const POPISKY_X = [[1, "1"], [100, "100"], [10000, "10 tis."], [1000000, "1 mil."]];
+    const POPISKY_Y = [[100, "100 Kč"], [1000, "1 tis."], [10000, "10 tis."], [100000, "100 tis."]];
+    for (const [n, s] of POPISKY_X) {
+      plocha.append(svg("line", { x1: sx(n), y1: T, x2: sx(n), y2: B, style: "stroke:var(--border);opacity:.6" }));
+      const a = n === 1 ? "start" : n === 1000000 ? "end" : "middle";
+      plocha.append(text(sx(n), B + 16, s, { "text-anchor": a }));
+    }
+    for (const [c, s] of POPISKY_Y) {
+      plocha.append(svg("line", { x1: L, y1: sy(c), x2: R, y2: sy(c), style: "stroke:var(--border);opacity:.6" }));
+      plocha.append(text(L - 5, sy(c) + 4, s, { "text-anchor": "end" }));
+    }
+    plocha.append(text(R, B + 31, "párů bot (každý dílek = 100×)", { "text-anchor": "end" }));
+    for (const v of VYROBY) {
+      const body = [];
+      for (let i = 0; i <= 120; i++) {
+        const n = 10 ** (i / 20), c = naKus(v, n);
+        if (c <= 100000) body.push(`${sx(n)},${sy(c)}`);
+      }
+      plocha.append(svg("polyline", { points: body.join(" "), style: "fill:none;stroke-linejoin:round;" + v.styl }));
+    }
+    const svisla = svg("line", { y1: T, y2: B, style: "stroke:var(--text);stroke-dasharray:2 4" });
+    plocha.append(svisla);
+    const body = VYROBY.map(() => {
+      const b = svg("circle", { r: 5, style: "fill:var(--surface);stroke:var(--text);stroke-width:2" });
+      plocha.append(b);
+      return b;
+    });
+    function spocti() {
+      const n = zaokrouhli(10 ** (+$("#ku-n").value / 10));
+      $("#ku-n-o").textContent = cislo(n) + " párů";
+      svisla.setAttribute("x1", sx(n));
+      svisla.setAttribute("x2", sx(n));
+      const ceny = VYROBY.map((v) => naKus(v, n));
+      const nej = ceny.indexOf(Math.min(...ceny));
+      ceny.forEach((c, i) => {
+        $("#ku-" + i).textContent = kc(c);
+        $(`[data-v="${i}"]`, box).classList.toggle("vyhra", i === nej);
+        const vGrafu = c <= 100000;
+        body[i].style.display = vGrafu ? "" : "none";
+        if (vGrafu) { body[i].setAttribute("cx", sx(n)); body[i].setAttribute("cy", sy(c)); }
+      });
+      $("#ku-t").innerHTML = `Při ${cislo(n)} párech je nejlevnější <strong>${VYROBY[nej].nazev}</strong> výroba: ${kc(ceny[nej])} za pár.`;
+    }
+    $("#ku-n").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Cesta výrobku halou: technologické × předmětné uspořádání --- */
+  (() => {
+    const box = $("#dilna");
+    const plocha = $("svg", box);
+    const OPERACE = ["stříhání", "šití", "lisování", "přišití", "balení"];
+    const USPORADANI = {
+      tech: {
+        mistnosti: [
+          { nazev: "Střihárna", cx: 75, cy: 50, w: 130, stroje: 3 },
+          { nazev: "Šicí dílna", cx: 325, cy: 50, w: 130, stroje: 3 },
+          { nazev: "Lisovna", cx: 75, cy: 165, w: 130, stroje: 3 },
+          { nazev: "Balírna", cx: 325, cy: 165, w: 130, stroje: 3 },
+        ],
+        trasa: [0, 1, 2, 1, 3],
+        text: "Stejné stroje jsou pohromadě, takže se práce organizuje jednoduše. Bota ale musí mezi úseky tam a zpět: šije se, jde do lisovny a vrací se znovu do šicí dílny.",
+      },
+      pred: {
+        mistnosti: OPERACE.map((n, i) => ({ nazev: n, cx: 44 + i * 78, cy: 108, w: 68, stroje: 1 })),
+        trasa: [0, 1, 2, 3, 4],
+        text: "Různé stroje stojí v lince za sebou, v pořadí operací. Přesuny jsou malé. Když se ale začne vyrábět něco jiného, musí se většinou přestavět celá dílna.",
+      },
+    };
+    let druh = "tech", krok = 0, drahaJednotek = 0, bota, body;
+    const dalsi = $("[data-akce=dalsi]", box);
+    const bod = (m) => [m.cx, m.cy + 18];
+    function vykresli() {
+      const u = USPORADANI[druh];
+      plocha.innerHTML = "";
+      krok = 0;
+      drahaJednotek = 0;
+      for (const m of u.mistnosti) {
+        plocha.append(svg("rect", { x: m.cx - m.w / 2, y: m.cy - 40, width: m.w, height: 80, rx: 8, class: "f-surface2 s-line" }));
+        plocha.append(text(m.cx, m.cy - 22, m.nazev, { "text-anchor": "middle", "font-size": 12, "font-weight": 600, class: "f-ink" }));
+        for (let i = 0; i < m.stroje; i++) {
+          const x = m.cx - (m.stroje * 22 - 6) / 2 + i * 22;
+          plocha.append(svg("rect", { x, y: m.cy - 14, width: 16, height: 12, rx: 2, class: "f-muted" }));
+        }
+      }
+      body = u.trasa.map((i) => bod(u.mistnosti[i]));
+      plocha.append(svg("polyline", { points: body.map((b) => b.join(",")).join(" "), class: "f-none s-muted", "stroke-width": 1.5, "stroke-dasharray": "4 4" }));
+      bota = svg("circle", { r: 8, cx: 0, cy: 0, class: "di-bota f-accent" });
+      bota.style.transform = `translate(${body[0][0]}px, ${body[0][1]}px)`;
+      plocha.append(bota);
+      $("#di-t").textContent = u.text;
+      $$("[data-usporadani]", box).forEach((b) => b.classList.toggle("vybrany", b.dataset.usporadani === druh));
+      ukaz();
+    }
+    function ukaz() {
+      $("#di-op").textContent = `${krok + 1} z ${OPERACE.length}: ${OPERACE[krok]}`;
+      $("#di-m").textContent = cislo(drahaJednotek / 10) + " m";
+      dalsi.disabled = krok === OPERACE.length - 1;
+    }
+    dalsi.addEventListener("click", () => {
+      if (krok >= OPERACE.length - 1) return;
+      const [x1, y1] = body[krok], [x2, y2] = body[krok + 1];
+      drahaJednotek += Math.hypot(x2 - x1, y2 - y1);
+      const usek = svg("line", { x1, y1, x2, y2, class: "s-accent", "stroke-width": 3, "stroke-linecap": "round" });
+      plocha.insertBefore(usek, bota);
+      krok++;
+      bota.style.transform = `translate(${x2}px, ${y2}px)`;
+      ukaz();
+    });
+    $("[data-akce=znovu]", box).addEventListener("click", vykresli);
+    $$("[data-usporadani]", box).forEach((b) => b.addEventListener("click", () => { druh = b.dataset.usporadani; vykresli(); }));
+    vykresli();
+  })();
+
+  /* --- Plán výroby po čtvrtletích --- */
+  (() => {
+    const box = $("#plan");
+    const plocha = $("svg", box);
+    const PRODEJ = [3000, 1000, 2000, 6000];
+    const VYCHOZI = [3000, 1000, 2000, 3500];
+    const CENA = 1000, VC = 600, FC = 1000000, SKLAD = 50;
+    const T = 20, B = 168, MAX = 6500;
+    const sy = (v) => B - (v / MAX) * (B - T);
+    const vstupy = [0, 1, 2, 3].map((i) => $("#pl-" + i));
+    const kapacita = $("#pl-k");
+    plocha.append(svg("line", { x1: 4, y1: B, x2: 396, y2: B, style: "stroke:var(--border);stroke-width:2" }));
+    const sloupy = PRODEJ.map((_, i) => {
+      const x = 12 + i * 96;
+      const sloup = (dx, cls, styl) => {
+        const r = svg("rect", { x: x + dx, y: T, width: 34, height: B - T, rx: 3, class: "plan-sloup " + cls, style: styl });
+        plocha.append(r);
+        return r;
+      };
+      const pr = sloup(0, "f-muted", "opacity:.55");
+      const vy = sloup(38, "f-accent", "");
+      const tPr = text(x + 17, 0, "", { "text-anchor": "middle" });
+      const tVy = text(x + 55, 0, "", { "text-anchor": "middle" });
+      const sklad = text(x + 36, 202, "", { "text-anchor": "middle", class: "f-muted", "font-size": 12 });
+      const ned = text(x + 36, 219, "", { "text-anchor": "middle", class: "f-bad", "font-size": 12, "font-weight": 600 });
+      plocha.append(tPr, tVy, text(x + 36, 185, `${i + 1}. čtvrtletí`, { "text-anchor": "middle", class: "f-ink", "font-size": 12 }), sklad, ned);
+      return { pr, vy, tPr, tVy, sklad, ned };
+    });
+    const cara = svg("line", { x1: 4, x2: 396, style: "stroke:var(--warn);stroke-width:2;stroke-dasharray:6 4" });
+    plocha.append(cara);
+
+    function spocti() {
+      const kap = +kapacita.value;
+      $("#pl-k-o").textContent = cislo(kap) + " ks";
+      vstupy.forEach((v) => { v.max = kap; });
+      let sklad = 0, prodano = 0, vyrobeno = 0, nedodano = 0, kusoctvrtleti = 0;
+      const problemy = [];
+      vstupy.forEach((v, i) => {
+        const vyr = +v.value;
+        $(`#pl-${i}-o`).textContent = cislo(vyr) + " ks";
+        const prod = Math.min(PRODEJ[i], sklad + vyr);
+        const chybi = PRODEJ[i] - prod;
+        sklad = sklad + vyr - prod;
+        prodano += prod; vyrobeno += vyr; nedodano += chybi; kusoctvrtleti += sklad;
+        if (chybi) problemy.push(i + 1);
+        const s = sloupy[i];
+        s.pr.style.transform = `scaleY(${PRODEJ[i] / MAX})`;
+        s.vy.style.transform = `scaleY(${vyr / MAX})`;
+        s.tPr.textContent = cislo(PRODEJ[i]);
+        s.tPr.setAttribute("y", sy(PRODEJ[i]) - 4);
+        s.tVy.textContent = cislo(vyr);
+        s.tVy.setAttribute("y", sy(vyr) - 4);
+        s.sklad.textContent = "sklad " + cislo(sklad);
+        s.ned.textContent = chybi ? "chybí " + cislo(chybi) : "";
+      });
+      cara.setAttribute("y1", sy(kap));
+      cara.setAttribute("y2", sy(kap));
+      const rocniKap = kap * 4, poptavka = PRODEJ.reduce((a, b) => a + b, 0);
+      const vysledek = prodano * CENA - vyrobeno * VC - FC - kusoctvrtleti * SKLAD;
+      $("#pl-obj").textContent = cislo(vyrobeno) + " ks";
+      $("#pl-vyu").textContent = Math.round(vyrobeno / rocniKap * 100) + " %";
+      const ned = $("#pl-ned");
+      ned.textContent = cislo(nedodano) + " ks";
+      ned.style.color = nedodano ? "var(--bad)" : "var(--ok)";
+      const vh = $("#pl-vh");
+      vh.textContent = kc(vysledek);
+      vh.style.color = vysledek >= 0 ? "var(--ok)" : "var(--bad)";
+      let zprava;
+      if (rocniKap < poptavka) zprava = `Roční kapacita ${cislo(rocniKap)} ks nestačí na roční prodej ${cislo(poptavka)} ks. Musíš zvýšit kapacitu, nebo snížit plán prodeje.`;
+      else if (nedodano) zprava = `Zákazníkům chybí zboží (čtvrtletí: ${problemy.join(", ")}). Kapacitu nepřekročíš, takže musíš vyrábět dopředu na sklad.`;
+      else if (sklad) zprava = `Zákazníci dostali všechno, ale na konci roku ti na skladě zbylo ${cislo(sklad)} ks. Ty stály peníze a v propočtu se neprodaly.`;
+      else zprava = "Plán sedí: zákazníci dostali všechno a sklad je na konci roku prázdný. Plán výroby a plán prodeje spolu ladí.";
+      $("#pl-t").textContent = zprava;
+    }
+    function nastav(hodnoty) {
+      vstupy.forEach((v, i) => { v.max = kapacita.value; v.value = Math.min(hodnoty[i], +kapacita.value); });
+      spocti();
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    $("[data-akce=rovnomerne]", box).addEventListener("click", () => nastav([3000, 3000, 3000, 3000]));
+    $("[data-akce=znovu]", box).addEventListener("click", () => { kapacita.value = 3500; nastav(VYCHOZI); });
+    spocti();
+  })();
+
+  /* --- Inovace výrobního programu --- */
+  (() => {
+    const box = $("#inovace");
+    const plocha = $("svg", box);
+    const TRZBY = [10, 30, 60, 80, 70, 40, 15, 5];
+    const L = 34, R = 396, T = 16, B = 180, YMAX = 160, ROKU = 12;
+    const NIKDY = 7;
+    const sy = (v) => B - (v / YMAX) * (B - T);
+    const skupina = (vek) => (vek <= 1 ? 0 : vek <= 5 ? 1 : 2);
+    const TRIDY = ["f-accent", "f-accent", "f-muted"];
+    const OPACITY = [".55", "1", ".6"];
+    const popisK = (k) => (k === NIKDY ? "nikdy" : k <= 4 ? `každé ${k} roky` : `každých ${k} let`);
+    function spocti() {
+      const k = +$("#in-k").value;
+      $("#in-k-o").textContent = popisK(k);
+      plocha.innerHTML = "";
+      for (const y of [0, 40, 80, 120, 160]) {
+        plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.6" }));
+        plocha.append(text(L - 5, sy(y) + 4, String(y), { "text-anchor": "end" }));
+      }
+      plocha.append(text(2, 10, "mil. Kč"), text(R, B + 22, "rok", { "text-anchor": "end" }));
+      const sirka = (R - L) / ROKU;
+      const soucty = [];
+      for (let rok = 0; rok < ROKU; rok++) {
+        const veky = [rok + 1, rok + 4, rok + 7];
+        if (k !== NIKDY) for (let z = k; z <= rok; z += k) veky.push(rok - z);
+        const podily = [0, 0, 0];
+        veky.forEach((v) => { if (v < TRZBY.length) podily[skupina(v)] += TRZBY[v]; });
+        let vrch = 0;
+        const x = L + rok * sirka + 4;
+        [2, 1, 0].forEach((g) => {
+          if (!podily[g]) return;
+          plocha.append(svg("rect", { x, y: sy(vrch + podily[g]), width: sirka - 8, height: sy(vrch) - sy(vrch + podily[g]), class: TRIDY[g], style: "opacity:" + OPACITY[g] }));
+          vrch += podily[g];
+        });
+        soucty.push(vrch);
+        plocha.append(text(x + (sirka - 8) / 2, B + 14, String(rok + 1), { "text-anchor": "middle" }));
+      }
+      $("#in-t12").textContent = cislo(soucty[ROKU - 1]) + " mil. Kč";
+      $("#in-min").textContent = cislo(Math.min(...soucty)) + " mil. Kč";
+      $("#in-t").textContent = k === NIKDY
+        ? "Bez inovací výrobky postupně skončí v útlumu a tržby klesnou až na nulu."
+        : k >= 4
+          ? "Nové výrobky přicházejí pozdě. Tržby mezi nimi výrazně kolísají, protože mezitím chybí nosné výrobky."
+          : "Program je vyvážený: staré výrobky odcházejí a nové je včas nahrazují.";
+    }
+    $("#in-k").addEventListener("input", spocti);
+    spocti();
+  })();
+
+  /* --- Cena vady podle místa kontroly --- */
+  (() => {
+    const box = $("#vada");
+    const MISTA = [
+      ["vstupní kontrola", 100],
+      ["mezioperační", 250],
+      ["výstupní kontrola", 500],
+      ["až u zákazníka", 1500],
+    ];
+    const radky = MISTA.map(([nazev, cena]) => {
+      const pruh = el("span", { class: "vada__pruh", style: `width:${cena / 1500 * 100}%` });
+      const r = el("div", { class: "vada__radek" }, el("span", {}, nazev), el("span", { class: "vada__drah" }, pruh), el("span", { class: "vada__cena" }, kc(cena)));
+      $(".vada__radky", box).append(r);
+      return r;
+    });
+    function spocti() {
+      const kde = +$("#va-kde").value, n = +$("#va-n").value;
+      const cena = MISTA[kde][1];
+      $("#va-kde-o").textContent = MISTA[kde][0];
+      $("#va-n-o").textContent = cislo(n) + " ks";
+      $("#va-kus").textContent = kc(cena);
+      $("#va-celkem").textContent = kc(cena * n);
+      radky.forEach((r, i) => r.classList.toggle("vybrany", i === kde));
+    }
+    box.querySelectorAll("input").forEach((i) => i.addEventListener("input", spocti));
+    spocti();
+  })();
+});
+</script>
+</body>
+</html>
