@@ -106,7 +106,7 @@
           <text x="335" y="64" text-anchor="middle" font-size="13" class="f-ink">skladování výrobků</text>
         </g>
       </svg>
-      <figcaption>Výroba nezačíná u stroje a nekončí posledním šroubkem.</figcaption>
+      <figcaption>Výroba začíná přípravou a končí skladováním hotových výrobků.</figcaption>
     </figure>
 
     <div class="box box--tip">
@@ -177,7 +177,7 @@
         "kose": ["Řemeslná", "Strojová", "Automatizovaná"],
         "polozky": [
           ["ručně malované kraslice", 0],
-          ["kroj vyšívaný v ruce", 0],
+          ["ručně vyšívaný kroj", 0],
           ["ručně pletený proutěný košík", 0],
           ["dělník obsluhuje soustruh", 1],
           ["švadleny šijí trička na šicích strojích", 1],
@@ -196,7 +196,7 @@
         "kose": ["Zemědělská", "Průmyslová", "Stavebnictví"],
         "polozky": [
           ["pěstování pšenice", 0],
-          ["těžba a pěstování dřeva v lese", 0],
+          ["pěstování a těžba dřeva v lese", 0],
           ["chov ryb v rybníce", 0],
           ["výroba hnojiv v chemičce", 1],
           ["výroba jogurtů v mlékárně", 1],
@@ -206,6 +206,9 @@
         ]
       }
       </script>
+    </div>
+    <div class="box box--doplneno">
+      <p>Chov ryb a těžba dřeva v podkladech výslovně nejsou. Do zemědělské výroby je řadí statistická klasifikace NACE: sekce A se jmenuje zemědělství, lesnictví a rybářství a chov ryb v ní spadá pod akvakulturu. Podklady k zemědělské výrobě počítají lesní a vodní hospodářství, tedy příbuzné obory.</p>
     </div>
   </section>
 
@@ -229,8 +232,8 @@
         <p style="margin-bottom:0">Náklady jsou <strong>poměrně vysoké</strong>. Např. stavba lodí, zakázková výroba oděvů, obuvi.</p>
       </div>
     </div>
-    <div class="box box--tip">
-      <p>U sériové výroby se „vyšší“ a „nižší“ čte jako srovnání s kusovou výrobou. Pořadí si pamatuj jako schody: čím větší množství, tím vyšší produktivita a nižší náklady na kus.</p>
+    <div class="box box--doplneno">
+      <p>Podklady u sériové výroby píšou jen „vyšší“ a „nižší“. Čti to jako srovnání s kusovou výrobou. Pořadí si pamatuj jako schody: čím větší množství, tím vyšší produktivita a nižší náklady na kus.</p>
     </div>
 
     <div data-tridicka>
@@ -254,7 +257,9 @@
     </div>
 
     <h3>Proč se velké množství vyplatí</h3>
-    <p>Čím víc kusů vyrobíš, tím menší díl nákladů na stroje a přípravu připadne na jeden kus. Drahá linka se ale vyplatí až od určitého množství. Čísla jsou vymyšlená, jen pro představu – v podkladech žádná nejsou.</p>
+    <div class="box box--doplneno">
+      <p>Čím víc kusů vyrobíš, tím menší díl nákladů na stroje a přípravu připadne na jeden kus. Drahá linka se ale vyplatí až od určitého množství. Čísla níž jsou vymyšlená, jen pro představu – v podkladech žádná nejsou.</p>
+    </div>
     <div class="simulace" id="kusy">
       <p style="margin-top:0"><strong>Výroba bot:</strong> kolik párů chceš vyrobit a která výroba je při tom množství nejlevnější?</p>
       <div class="legenda">
@@ -272,7 +277,7 @@
       <p id="ku-t" style="margin-bottom:0;font-size:.92rem"></p>
     </div>
     <div class="box box--priklad">
-      <p>Náklad na pár = přípravné náklady / počet párů + náklad na jeden pár. Sériově při 10 000 párech: 1 000 000 / 10 000 + 1 500 = <strong>1 600 Kč</strong>. Při tomhle zadání vychází kusová výroba nejlevněji zhruba do 146 párů, sériová zhruba do 14 600 párů a nad tím hromadná.</p>
+      <p>Modelový příklad s čísly ze simulace. Náklad na pár = přípravné náklady / počet párů + náklad na jeden pár. Sériově při 10 000 párech: 1 000 000 / 10 000 + 1 500 = <strong>1 600 Kč</strong>. Při tomhle zadání vychází kusová výroba nejlevněji zhruba do 146 párů, sériová zhruba do 14 600 párů a nad tím hromadná.</p>
     </div>
     <div class="box box--doplneno">
       <p><strong>Velkosériová</strong> výroba má dlouhé série a blíží se hromadné (třeba osobní auta). <strong>Malosériová</strong> má krátké série a blíží se kusové (třeba speciální stroje).</p>
@@ -370,7 +375,7 @@
       </script>
     </div>
     <div class="box box--pozor">
-      <p>Brikety z pilin na prodej jsou <strong>doplňková</strong> výroba. Když ale z pilin topíš a elektřinu spotřebuješ ve vlastních dílnách, je to <strong>pomocná</strong> výroba. Rozhoduje, komu výkon slouží.</p>
+      <p>Brikety z pilin na prodej jsou <strong>doplňková</strong> výroba. Když ale z pilin vyrobíš elektřinu a spotřebuješ ji ve vlastních dílnách, je to <strong>pomocná</strong> výroba. Rozhoduje, komu výkon slouží.</p>
     </div>
   </section>
 
@@ -407,7 +412,7 @@
       </div>
       <div class="box" style="margin:0;border-top:5px solid var(--accent)">
         <h3 style="margin-top:0">Předmětné uspořádání</h3>
-        <p>Seskupení <strong>různorodých</strong> strojů a zařízení podle technologického postupu výroby. Výrobek se na určitém místě vyrábí <strong>od začátku až do konce</strong>. Pracoviště jsou uspořádána do <strong>výrobních linek</strong> – tzv. <strong>proudová výroba</strong> (např. výroba obuvi).</p>
+        <p>Seskupení <strong>různorodých</strong> strojů a zařízení podle technologického zařízení výroby. Výrobek se na určitém místě vyrábí <strong>od začátku až do konce</strong>. Pracoviště jsou uspořádána do <strong>výrobních linek</strong> – tzv. <strong>proudová výroba</strong> (např. výroba obuvi).</p>
         <p><strong>Výhoda:</strong> malé přesuny nedokončené výroby.</p>
         <p style="margin-bottom:0"><strong>Nevýhoda:</strong> složitější řízení; při změně programu je většinou nutné přestavět celou dílnu.</p>
       </div>
@@ -511,7 +516,7 @@
     <p>Z ročního plánu vycházejí <strong>plány operativní</strong> na kratší časové období, kde se roční plán konkretizuje a zpřesňuje. Plánování musí být <strong>flexibilní</strong>.</p>
 
     <div class="box box--doplneno">
-      <p><strong>Výrobní kapacita</strong> je největší množství výrobků, které podnik dokáže vyrobit za určité období. <strong>Využití kapacity</strong> = plánovaná výroba / kapacita × 100 %. Kapacita 1 000 ks za měsíc je 12 000 ks za rok. Plán 9 000 ks za rok ji využije na 75 %.</p>
+      <p><strong>Výrobní kapacita</strong> je největší množství výrobků, které podnik dokáže vyrobit za určité období. <strong>Využití kapacity</strong> = plánovaná výroba / kapacita × 100 %. Modelový příklad: kapacita 1 000 ks za měsíc je 12 000 ks za rok. Plán 9 000 ks za rok ji využije na 75 %.</p>
     </div>
 
     <div class="simulace" id="plan">
@@ -616,11 +621,11 @@
         <span style="--c:var(--accent)">nosné</span>
         <span style="--c:var(--text-muted)">útlumové</span>
       </div>
-      <svg viewBox="0 0 400 206" aria-label="Tržby podniku za 12 let podle skupin výrobků"></svg>
+      <svg viewBox="0 0 400 226" aria-label="Tržby podniku za 12 let podle skupin výrobků"></svg>
       <div class="posuvnik"><label for="in-k">Nový výrobek uvedeš na trh</label><output id="in-k-o"></output><input id="in-k" type="range" min="2" max="7" step="1" value="3"></div>
       <div class="ukazatele">
         <div class="ukazatel"><small>Tržby ve 12. roce</small><b id="in-t12"></b></div>
-        <div class="ukazatel"><small>Nejhorší rok</small><b id="in-min"></b></div>
+        <div class="ukazatel"><small>Tržby v nejhorším roce</small><b id="in-min"></b></div>
       </div>
       <p id="in-t" style="margin-bottom:0;font-size:.92rem"></p>
       <p style="margin:.5em 0 0;font-size:.82rem;color:var(--text-muted)">Čísla jsou vymyšlená, jen pro představu. Podnik začíná se třemi výrobky různého stáří a každý výrobek se prodává 8 let.</p>
@@ -742,7 +747,7 @@
   <!-- ===== 10. Test ===== -->
   <section class="kapitola" id="test" data-bez-hotovo>
     <h2>Závěrečný test</h2>
-    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení.</p>
+    <p>Každý pokus vybere jiné otázky. Po odpovědi hned uvidíš vysvětlení. Výpočtové otázky jsou modelové: čísla jsou vymyšlená a v podkladech nejsou.</p>
     <div data-test>
       <script type="application/json">
       {
@@ -778,7 +783,7 @@
            "spravne": 2, "vysvetleni": "Sériová výroba je mezistupeň mezi hromadnou a kusovou."},
           {"typ": "ano-ne", "otazka": "Hromadná výroba má vysokou produktivitu práce a nízké výrobní náklady.",
            "spravne": true, "vysvetleni": "Vyrábí se jeden nebo málo výrobků ve velkém množství."},
-          {"typ": "cislo", "otazka": "Přípravné náklady na sérii bot jsou 1 000 000 Kč a na každý pár dalších 1 500 Kč. Kolik vyjde jeden pár při 10 000 párech?",
+          {"typ": "cislo", "otazka": "Modelový příklad: přípravné náklady na sérii bot jsou 1 000 000 Kč a na každý pár dalších 1 500 Kč. Kolik vyjde jeden pár při 10 000 párech?",
            "spravne": 1600, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "1 000 000 / 10 000 + 1 500 = 100 + 1 500 = 1 600 Kč."},
           {"typ": "jedna", "otazka": "Podnik zpracovává své výrobní odpady na výrobek k prodeji. Jde o výrobu…",
            "moznosti": ["vedlejší", "přidruženou", "pomocnou", "doplňkovou"],
@@ -811,9 +816,9 @@
            "spravne": [0, 1, 2], "vysvetleni": "Plán výroby řeší co, kolik a kdy."},
           {"typ": "ano-ne", "otazka": "Operativní plány jsou na delší období než roční plán výroby.",
            "spravne": false, "vysvetleni": "Jsou na kratší období a roční plán konkretizují a zpřesňují."},
-          {"typ": "cislo", "otazka": "Kapacita je 1 000 ks za měsíc a roční plán výroby 9 000 ks. Na kolik procent je využitá kapacita za rok?",
+          {"typ": "cislo", "otazka": "Modelový příklad: kapacita je 1 000 ks za měsíc a roční plán výroby 9 000 ks. Na kolik procent je využitá kapacita za rok?",
            "spravne": 75, "jednotka": "%", "tolerance": 0, "vysvetleni": "Roční kapacita je 12 000 ks. 9 000 / 12 000 × 100 = 75 %."},
-          {"typ": "cislo", "otazka": "Prodej po čtvrtletích je 3 000, 1 000, 2 000 a 6 000 ks. Vyrábíš 3 000 ks každé čtvrtletí a začínáš s prázdným skladem. Kolik kusů máš na skladě po 3. čtvrtletí?",
+          {"typ": "cislo", "otazka": "Modelový příklad: prodej po čtvrtletích je 3 000, 1 000, 2 000 a 6 000 ks. Vyrábíš 3 000 ks každé čtvrtletí a začínáš s prázdným skladem. Kolik kusů máš na skladě po 3. čtvrtletí?",
            "spravne": 3000, "jednotka": "ks", "tolerance": 0, "vysvetleni": "Po 1. čtvrtletí 0, po 2. je to 2 000, po 3. je to 2 000 + 3 000 − 2 000 = 3 000 ks."},
           {"typ": "jedna", "otazka": "Způsob a místo výroby řeší příprava…",
            "moznosti": ["organizační", "technická", "ekonomická", "marketingová"],
@@ -827,6 +832,11 @@
           {"typ": "jedna", "otazka": "Která skupina <b>nepatří</b> mezi základní skupiny výrobků ve výrobním programu?",
            "moznosti": ["Nové výrobky", "Dnešní nosné výrobky", "Útlumové výrobky", "Pomocné výrobky"],
            "spravne": 3, "vysvetleni": "Pomocná je druh výroby podle významu, ne skupina výrobků v programu."},
+          {"typ": "jedna", "otazka": "Co je <b>výrobní program</b>?",
+           "moznosti": ["Soubor výrobků nebo služeb, jejich sortiment a množství na plánované období", "Postup operací, kterými výrobek prochází od začátku do konce výroby", "Rozmístění strojů a pracovišť v prostoru výrobní haly podniku", "Souhrn vlastností, které určují způsobilost výrobku plnit funkce"],
+           "spravne": 0, "vysvetleni": "Ostatní možnosti popisují výrobní postup, prostorové uspořádání a jakost."},
+          {"typ": "ano-ne", "otazka": "Jakost výrobku je většinou stanovena technickými normami, například ČSN nebo ISO.",
+           "spravne": true, "vysvetleni": "Jakost je souhrn vlastností vyjadřujících způsobilost výrobku plnit funkce, pro které je určen."},
           {"typ": "jedna", "otazka": "Kontrola kvality výrobních procesů se nazývá…",
            "moznosti": ["vstupní", "mezioperační", "výstupní", "servisní"],
            "spravne": 1, "vysvetleni": "Vstupní hlídá vstupy, výstupní hotové výrobky. Včasná mezioperační kontrola šetří další náklady."}
@@ -928,7 +938,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     function spocti() {
       const n = zaokrouhli(10 ** (+$("#ku-n").value / 10));
-      $("#ku-n-o").textContent = cislo(n) + " párů";
+      $("#ku-n-o").textContent = n === 1 ? "1 pár" : n <= 4 ? n + " páry" : cislo(n) + " párů";
       svisla.setAttribute("x1", sx(n));
       svisla.setAttribute("x2", sx(n));
       const ceny = VYROBY.map((v) => naKus(v, n));
@@ -940,7 +950,7 @@ document.addEventListener("DOMContentLoaded", () => {
         body[i].style.display = vGrafu ? "" : "none";
         if (vGrafu) { body[i].setAttribute("cx", sx(n)); body[i].setAttribute("cy", sy(c)); }
       });
-      $("#ku-t").innerHTML = `Při ${cislo(n)} párech je nejlevnější <strong>${VYROBY[nej].nazev}</strong> výroba: ${kc(ceny[nej])} za pár.`;
+      $("#ku-t").innerHTML = `Při ${n === 1 ? "1 páru" : cislo(n) + " párech"} je nejlevnější <strong>${VYROBY[nej].nazev}</strong> výroba: ${kc(ceny[nej])} za pár.`;
     }
     $("#ku-n").addEventListener("input", spocti);
     spocti();
@@ -1082,7 +1092,7 @@ document.addEventListener("DOMContentLoaded", () => {
       vh.style.color = vysledek >= 0 ? "var(--ok)" : "var(--bad)";
       let zprava;
       if (rocniKap < poptavka) zprava = `Roční kapacita ${cislo(rocniKap)} ks nestačí na roční prodej ${cislo(poptavka)} ks. Musíš zvýšit kapacitu, nebo snížit plán prodeje.`;
-      else if (nedodano) zprava = `Zákazníkům chybí zboží (čtvrtletí: ${problemy.join(", ")}). Kapacitu nepřekročíš, takže musíš vyrábět dopředu na sklad.`;
+      else if (nedodano) zprava = `Zákazníkům chybí zboží (čtvrtletí: ${problemy.join(", ")}). Vyrob víc. Kde na to kapacita čtvrtletí nestačí, vyráběj dopředu na sklad.`;
       else if (sklad) zprava = `Zákazníci dostali všechno, ale na konci roku ti na skladě zbylo ${cislo(sklad)} ks. Ty stály peníze a v propočtu se neprodaly.`;
       else zprava = "Plán sedí: zákazníci dostali všechno a sklad je na konci roku prázdný. Plán výroby a plán prodeje spolu ladí.";
       $("#pl-t").textContent = zprava;
@@ -1102,7 +1112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const box = $("#inovace");
     const plocha = $("svg", box);
     const TRZBY = [10, 30, 60, 80, 70, 40, 15, 5];
-    const L = 34, R = 396, T = 16, B = 180, YMAX = 160, ROKU = 12;
+    const L = 34, R = 396, T = 28, B = 192, YMAX = 160, ROKU = 12;
     const NIKDY = 7;
     const sy = (v) => B - (v / YMAX) * (B - T);
     const skupina = (vek) => (vek <= 1 ? 0 : vek <= 5 ? 1 : 2);
@@ -1117,7 +1127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         plocha.append(svg("line", { x1: L, y1: sy(y), x2: R, y2: sy(y), style: "stroke:var(--border);opacity:.6" }));
         plocha.append(text(L - 5, sy(y) + 4, String(y), { "text-anchor": "end" }));
       }
-      plocha.append(text(2, 10, "mil. Kč"), text(R, B + 22, "rok", { "text-anchor": "end" }));
+      plocha.append(text(2, 13, "mil. Kč"), text(R, B + 30, "rok", { "text-anchor": "end" }));
       const sirka = (R - L) / ROKU;
       const soucty = [];
       for (let rok = 0; rok < ROKU; rok++) {

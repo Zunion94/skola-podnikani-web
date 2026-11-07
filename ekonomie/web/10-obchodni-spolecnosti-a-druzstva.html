@@ -155,7 +155,7 @@
   <!-- ===== 2. Založení a vznik ===== -->
   <section class="kapitola" id="zalozeni" data-pozadavky="2">
     <h2>Založení a vznik společnosti</h2>
-    <p>Čtyři slova, která se u maturity pletou nejčastěji. Klepni na každou etapu života společnosti.</p>
+    <p>Čtyři slova, která se snadno pletou. Klepni na každou etapu života společnosti.</p>
     <div class="simulace" id="osa">
       <svg viewBox="0 0 400 74" style="max-width:560px;margin:0 auto" aria-label="Časová osa: založení, vznik, zrušení, zánik">
         <path d="M40 40 H360" class="s-line" stroke-width="3" stroke-linecap="round"/>
@@ -185,7 +185,7 @@
     </div>
 
     <div class="box box--tip">
-      <p>Založit můžeš smlouvou v kanceláři, ale <strong>vznikáš až zápisem</strong>. Stejně jako na konci: zrušit se dá rozhodnutím, ale <strong>zanikáš až výmazem</strong>.</p>
+      <p>Založit společnost můžeš smlouvou, ale <strong>vznikne až zápisem</strong>. Stejně je to na konci: zrušit se dá rozhodnutím, ale <strong>zanikne až výmazem</strong>.</p>
     </div>
 
     <div data-tridicka>
@@ -222,7 +222,7 @@
     </details>
     <div class="box box--doplneno">
       <p><strong>Přesnější stav:</strong> ne každá právnická osoba je v obchodním rejstříku. Třeba spolky a nadace mají vlastní veřejné rejstříky (spolkový, nadační). Obchodní rejstřík je dnes součástí veřejných rejstříků a je volně k nahlédnutí na or.justice.cz.</p>
-      <p><strong>Forma smlouvy:</strong> u v.o.s. a k.s. stačí písemná smlouva s úředně ověřenými podpisy. U s.r.o., a.s. a družstva je potřeba <strong>veřejná listina</strong>, tedy notářský zápis.</p>
+      <p><strong>Forma smlouvy:</strong> u v.o.s. a k.s. stačí písemná smlouva s úředně ověřenými podpisy (§ 6 zákona o obchodních korporacích). U s.r.o. a a.s. je potřeba <strong>veřejná listina</strong>, v praxi notářský zápis (§ 8). U družstva se veřejnou listinou osvědčuje přijetí stanov na ustavující schůzi (§ 560).</p>
     </div>
   </section>
 
@@ -369,6 +369,9 @@
         <p><strong>Komanditisté</strong> ručí jen <strong>do výše svých nesplacených vkladů</strong> (komanditní suma). <strong>Komplementáři</strong> ručí <strong>neomezeně celým svým majetkem</strong>.</p>
       </section>
     </div>
+    <div class="box box--doplneno">
+      <p>Dělení zisku rovným dílem u v.o.s. i na dvě poloviny u k.s. platí, jen když společenská smlouva neurčí jiný poměr (§ 112 a § 126 zákona o obchodních korporacích).</p>
+    </div>
 
     <div class="simulace" id="ks">
       <p style="margin-top:0"><strong>Rozděl zisk komanditní společnosti:</strong> dva komanditisté, A a B, a nastavitelný počet komplementářů.</p>
@@ -448,7 +451,10 @@
       <div class="pruhy" id="sro-pruhy"></div>
     </div>
     <div class="box box--pozor">
-      <p>Vklad <strong>1 Kč</strong> je minimum na jednoho společníka, ne celý kapitál firmy. A ručení do výše <strong>nesplaceného</strong> vkladu znamená: kdo vklad už celý splatil, soukromým majetkem neručí vůbec.</p>
+      <p>Vklad <strong>1 Kč</strong> je minimum na jednoho společníka, ne celý kapitál firmy. A ručení do výše <strong>nesplacených</strong> vkladů znamená: když jsou všechny vklady splacené a zapsané v rejstříku, soukromým majetkem neručí nikdo.</p>
+    </div>
+    <div class="box box--doplneno">
+      <p>Společníci ručí <strong>společně a nerozdílně</strong> (§ 132 zákona o obchodních korporacích). Podle výkladu v odborné literatuře se proto počítá součet nesplacených vkladů všech společníků. Věřitel tak může chtít peníze i po tom, kdo svůj vklad už splatil, pokud jiný společník svůj nesplatil. Rozhoduje stav zapsaný v obchodním rejstříku.</p>
     </div>
   </section>
 
@@ -583,6 +589,7 @@
     </div>
     <div class="box box--doplneno">
       <p>V družstvu s <strong>méně než 50 členy</strong> mohou stanovy určit, že se představenstvo nezřizuje a statutárním orgánem je <strong>předseda družstva</strong>. Kontrolní komise se tam nezřizuje, pokud stanovy neurčí jinak (§ 726 zákona o obchodních korporacích). Tři orgány z podkladů jsou tedy základní model.</p>
+      <p>Ustavující schůze dnes není jediná cesta. Družstvo lze založit i dohodou zakladatelů, stanovy pak mají formu veřejné listiny (§ 561a).</p>
     </div>
     <div class="box box--tip">
       <p>Družstvo = <strong>členové</strong>, a.s. = <strong>akcionáři</strong>, s.r.o. = <strong>společníci</strong>. Nejvyšší orgán družstva je členská schůze, u s.r.o. a a.s. valná hromada.</p>
@@ -734,7 +741,7 @@
            "moznosti": ["Sepsání a přijetí smlouvy o založení", "Získání živnostenského oprávnění", "Případné splacení části základního kapitálu", "Výmaz z obchodního rejstříku"],
            "spravne": [0, 1, 2], "vysvetleni": "Výmaz z rejstříku znamená zánik, je to úplný konec života podniku."},
           {"typ": "jedna", "otazka": "Obchodní rejstřík je vedený u…",
-           "moznosti": ["rejstříkového soudu v místě krajského soudu", "živnostenského úřadu", "finančního úřadu", "obecního úřadu v místě sídla"],
+           "moznosti": ["rejstříkového soudu v místě krajského soudu", "živnostenského úřadu v místě sídla firmy", "finančního úřadu podle sídla společnosti", "obecního úřadu v místě sídla společnosti"],
            "spravne": 0, "vysvetleni": "Živnostenský úřad vede živnostenský rejstřík, obchodní rejstřík vede soud."},
           {"typ": "jedna", "otazka": "Podnik <b>zaniká</b>…",
            "moznosti": ["výmazem z obchodního rejstříku", "rozhodnutím o zrušení", "prodejem majetku", "vyrovnáním závazků věřitelům"],
@@ -748,7 +755,7 @@
           {"typ": "cislo", "otazka": "Firma při likvidaci utržila za majetek 1 200 000 Kč a má závazky 900 000 Kč. Kolik Kč dostanou vlastníci?",
            "spravne": 300000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "1 200 000 − 900 000 = 300 000 Kč."},
           {"typ": "jedna", "otazka": "Hlavní výhoda v.o.s. je, že…",
-           "moznosti": ["společníci nemusí povinně vytvářet základní kapitál", "společníci za dluhy neručí", "stačí jeden zakladatel", "zisk se dělí podle vkladů"],
+           "moznosti": ["společníci nemusí povinně vytvářet základní kapitál", "společníci za dluhy společnosti vůbec neručí", "k založení stačí jediný zakladatel bez vkladu", "zisk se mezi společníky dělí podle vkladů"],
            "spravne": 0, "vysvetleni": "Hlavní nevýhodou je naopak neomezené ručení veškerým majetkem."},
           {"typ": "cislo", "otazka": "V.o.s. má 3 společníky a zisk 900 000 Kč. Kolik Kč dostane jeden společník, když smlouva neurčuje nic jiného?",
            "spravne": 300000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "V.o.s. dělí zisk rovným dílem: 900 000 / 3 = 300 000 Kč."},
@@ -762,9 +769,9 @@
            "spravne": 0, "vysvetleni": "Neomezeně ručí komplementář."},
           {"typ": "ano-ne", "otazka": "Smrtí komanditisty se komanditní společnost vždy ruší.",
            "spravne": false, "vysvetleni": "Smrtí komanditisty zaniká jen jeho účast na společnosti."},
-          {"typ": "cislo", "otazka": "K.s. má zisk 1 000 000 Kč a 2 komplementáře. Kolik Kč dostane jeden komplementář?",
+          {"typ": "cislo", "otazka": "K.s. má zisk 1 000 000 Kč a 2 komplementáře a smlouva neurčuje nic jiného. Kolik Kč dostane jeden komplementář?",
            "spravne": 250000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "Polovina zisku je 500 000 Kč a komplementáři si ji dělí stejným dílem: 500 000 / 2 = 250 000 Kč."},
-          {"typ": "cislo", "otazka": "K.s. má zisk 1 000 000 Kč. Komanditista A vložil 100 000 Kč, komanditista B 300 000 Kč. Kolik Kč dostane B?",
+          {"typ": "cislo", "otazka": "K.s. má zisk 1 000 000 Kč. Komanditista A vložil 100 000 Kč, komanditista B 300 000 Kč a smlouva neurčuje nic jiného. Kolik Kč dostane B?",
            "spravne": 375000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "Komanditistům patří polovina, tedy 500 000 Kč. B má 3/4 vkladů: 500 000 × 3/4 = 375 000 Kč."},
           {"typ": "jedna", "otazka": "Když s.r.o. zakládá jediná osoba, sepisuje se…",
            "moznosti": ["zakladatelská listina", "společenská smlouva", "ustavující zápis", "akciová listina"],
@@ -777,12 +784,18 @@
            "spravne": [0, 1], "vysvetleni": "Dozorčí rada je jen případná. Představenstvo má a.s. a družstvo."},
           {"typ": "cislo", "otazka": "S.r.o. má zisk 600 000 Kč. Společník A vložil 100 000 Kč, společník B 300 000 Kč a smlouva neurčuje nic jiného. Kolik Kč dostane B?",
            "spravne": 450000, "jednotka": "Kč", "tolerance": 0, "vysvetleni": "Zisk se dělí podle vkladů. B má 3/4 všech vkladů: 600 000 × 3/4 = 450 000 Kč."},
+          {"typ": "jedna", "otazka": "Jak podle podkladů ručí společníci <b>s.r.o.</b> za závazky společnosti?",
+           "moznosti": ["Do výše nesplacených vkladů", "Neomezeně celým majetkem", "Vůbec neručí", "Do výše základního kapitálu"],
+           "spravne": 0, "vysvetleni": "Neomezeně ručí společníci v.o.s. a komplementáři. Akcionáři a členové družstva neručí."},
           {"typ": "jedna", "otazka": "Základní kapitál a.s. podle § 246 zákona činí alespoň…",
            "moznosti": ["2 000 000 Kč", "1 Kč", "200 000 Kč", "1 000 000 Kč"],
            "spravne": 0, "vysvetleni": "Nebo 80 000 EUR. U s.r.o. stačí vklad 1 Kč."},
           {"typ": "vice", "otazka": "Jaká práva dává akcie vlastníkovi?",
            "moznosti": ["Podílet se na řízení společnosti", "Podíl na zisku (dividendy)", "Případný likvidační zůstatek", "Jmenovat jednatele společnosti"],
            "spravne": [0, 1, 2], "vysvetleni": "Jednatele má s.r.o. A.s. má představenstvo."},
+          {"typ": "vice", "otazka": "Které z těchto pojmů jsou <b>druhy akcií</b>?",
+           "moznosti": ["Na jméno", "Na majitele", "Kmenové", "Prioritní", "Komanditní"],
+           "spravne": [0, 1, 2, 3], "vysvetleni": "Na jméno a na majitele je jedno hledisko, kmenové a prioritní druhé. Komanditní je společnost, ne akcie."},
           {"typ": "jedna", "otazka": "Statutárním orgánem a.s. s představenstvem a dozorčí radou je…",
            "moznosti": ["představenstvo", "valná hromada", "dozorčí rada", "kontrolní komise"],
            "spravne": 0, "vysvetleni": "Valná hromada je nejvyšší orgán, dozorčí rada kontrolní. Kontrolní komisi má družstvo."},
@@ -934,7 +947,9 @@ document.addEventListener("DOMContentLoaded", () => {
       pis("as-div", (Math.round(div * 100) / 100).toLocaleString("cs-CZ") + " Kč");
       pis("as-moje", kc(div * 100));
       pis("as-t", (zk >= MIN ? "Základní kapitál splňuje minimum 2 000 000 Kč. " : "Základní kapitál nedosahuje minima 2 000 000 Kč, takhle a.s. založit nejde. ")
-        + (d === 0 ? "Valná hromada nerozhodla o výplatě, dividendy nejsou." : "Dividendy se vyplatí, protože o nich rozhodla valná hromada."));
+        + (z === 0 ? "Společnost nemá zisk, není z čeho vyplácet dividendy."
+          : d === 0 ? "Valná hromada nerozhodla o výplatě, dividendy nejsou."
+          : "Dividendy se vyplatí, protože o nich rozhodla valná hromada."));
     });
   })();
 
@@ -974,8 +989,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const box = $("#ruc");
     const TEXTY = {
       "v.o.s.": "Co nezaplatí společnost, doplatí společníci. Ručí neomezeně veškerým svým majetkem.",
-      "k.s.": "Komanditista doplatí jen svůj nesplacený vklad, zbytek jde na komplementáře, který ručí neomezeně.",
-      "s.r.o.": "Společníci doplatí jen to, co ještě nesplatili ze svých vkladů. Víc věřitel nedostane.",
+      "k.s.": "Komanditista doplatí nejvýš svůj nesplacený vklad, zbytek jde na komplementáře, který ručí neomezeně.",
+      "s.r.o.": "Společníci doplatí nejvýš to, co ještě nesplatili ze svých vkladů. Víc po nich věřitel chtít nemůže.",
       "a.s.": "Akcionáři neručí. Na co nestačí majetek společnosti, to věřitel nedostane.",
       "družstvo": "Členové neručí. Na co nestačí majetek družstva, to věřitel nedostane.",
     };
