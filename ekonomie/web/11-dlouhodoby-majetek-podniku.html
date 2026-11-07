@@ -460,7 +460,7 @@
     </div>
 
     <div class="box box--doplneno">
-      <p><strong>Zvýšená vstupní cena</strong> vzniká po technickém zhodnocení (třeba po přístavbě). Vstupní cena se o něj zvýší a od té doby se počítá se sloupcem „Zvýšená vstupní cena“. Zrychleně se v prvním roce po zvýšení dělí dvojnásobek zvýšené zůstatkové ceny koeficientem z tohoto sloupce.</p>
+      <p><strong>Zvýšená vstupní cena</strong> vzniká po technickém zhodnocení (třeba po přístavbě). Vstupní cena se o něj zvýší a od té doby se počítá se sloupcem „Zvýšená vstupní cena“. Zrychleně se v prvním roce po zvýšení dělí dvojnásobek zvýšené zůstatkové ceny koeficientem z tohoto sloupce. Zákon tenhle sloupec u zrychleného odepisování proto nazývá „pro zvýšenou zůstatkovou cenu“.</p>
       <p>Daňový odpis se <strong>zaokrouhluje na celé koruny nahoru</strong>. Kalkulačka to dělá taky. Sazby a koeficienty pro první a další roky odpovídají zákonu ve znění od 1. 8. 2026.</p>
     </div>
 
@@ -778,6 +778,12 @@
   .odp-tab--plan { font-size: .76rem; }
   .odp-tab--plan th, .odp-tab--plan td { padding: 5px 3px; }
   .odp-tab--plan th { background: var(--surface); position: sticky; top: 0; font-size: .7rem; }
+  .odp-tab--plan td { white-space: nowrap; }
+  @media (max-width: 420px) {
+    .odp-tab--plan { font-size: .7rem; }
+    .odp-tab--plan th { font-size: .64rem; }
+    .odp-tab--plan th, .odp-tab--plan td { padding: 4px 2px; }
+  }
   .kalk__skupiny { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
   .kalk__skupiny .chip { cursor: pointer; }
   .pruh { display: flex; height: 26px; border-radius: var(--radius-sm); overflow: hidden; background: var(--surface-2); margin: 10px 0 6px; }
