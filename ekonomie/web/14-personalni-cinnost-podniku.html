@@ -822,6 +822,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const roky = (n) => {
       const t = String(n).replace(".", ",");
       if (n === 1) return "1 rok";
+      if (!Number.isInteger(n)) return t + " roku";
       if (n === 2 || n === 3 || n === 4) return t + " roky";
       return t + " let";
     };
